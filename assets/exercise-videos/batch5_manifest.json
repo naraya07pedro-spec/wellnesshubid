@@ -1,0 +1,98 @@
+[
+  {
+    "id": "side-lying-leg-raise",
+    "source": "Gunakan_gambar_referensi_kar (14).mp4",
+    "start": 0,
+    "duration": 3.34,
+    "mp4": "side-lying-leg-raise.mp4",
+    "poster": "side-lying-leg-raise.webp"
+  },
+  {
+    "id": "fire-hydrant",
+    "source": "Gunakan_gambar_referensi_kar (14).mp4",
+    "start": 3.34,
+    "duration": 3.33,
+    "mp4": "fire-hydrant.mp4",
+    "poster": "fire-hydrant.webp"
+  },
+  {
+    "id": "plank-jack",
+    "source": "Gunakan_gambar_referensi_kar (14).mp4",
+    "start": 6.67,
+    "duration": 3.33,
+    "mp4": "plank-jack.mp4",
+    "poster": "plank-jack.webp"
+  },
+  {
+    "id": "commando-plank",
+    "source": "Gunakan_gambar_referensi_kar (15).mp4",
+    "start": 0,
+    "duration": 3.34,
+    "mp4": "commando-plank.mp4",
+    "poster": "commando-plank.webp"
+  },
+  {
+    "id": "side-plank",
+    "source": "Gunakan_gambar_referensi_kar (15).mp4",
+    "start": 3.34,
+    "duration": 3.33,
+    "mp4": "side-plank.mp4",
+    "poster": "side-plank.webp"
+  },
+  {
+    "id": "side-plank-hip-dip",
+    "source": "Gunakan_gambar_referensi_kar (15).mp4",
+    "start": 6.67,
+    "duration": 3.33,
+    "mp4": "side-plank-hip-dip.mp4",
+    "poster": "side-plank-hip-dip.webp"
+  },
+  {
+    "id": "side-plank-reach-through",
+    "source": "Gunakan_gambar_referensi_kar (16).mp4",
+    "start": 0,
+    "duration": 3.34,
+    "mp4": "side-plank-reach-through.mp4",
+    "poster": "side-plank-reach-through.webp"
+  },
+  {
+    "id": "reverse-tabletop",
+    "source": "Gunakan_gambar_referensi_kar (16).mp4",
+    "start": 3.34,
+    "duration": 3.33,
+    "mp4": "reverse-tabletop.mp4",
+    "poster": "reverse-tabletop.webp"
+  },
+  {
+    "id": "reverse-crunch",
+    "source": "Gunakan_gambar_referensi_kar (16).mp4",
+    "start": 6.67,
+    "duration": 3.33,
+    "mp4": "reverse-crunch.mp4",
+    "poster": "reverse-crunch.webp"
+  },
+  {
+    "id": "leg-raise",
+    "source": "Gunakan_gambar_referensi_kar (17).mp4",
+    "start": 0,
+    "duration": 3.34,
+    "mp4": "leg-raise.mp4",
+    "poster": "leg-raise.webp"
+  },
+  {
+    "id": "v-up",
+    "source": "Gunakan_gambar_referensi_kar (17).mp4",
+    "start": 3.34,
+    "duration": 3.33,
+    "mp4": "v-up.mp4",
+    "poster": "v-up.webp"
+  },
+  {
+    "id": "jackknife-sit-up",
+    "source": "Gunakan_gambar_referensi_kar (17).mp4",
+    "start": 6.67,
+    "duration": 3.33,
+    "mp4": "jackknife-sit-up.mp4",
+    "poster": "jackknife-sit-up.webp"
+  }
+]

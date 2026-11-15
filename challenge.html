@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discipline Challenge | WellnessHubID</title>
+<meta name="description" content="WellnessHubID Discipline Challenge — bangun streak, poin, dan kebiasaan sehat harian.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{--bg:#050605;--card:#0c110e;--card2:#101713;--line:rgba(255,255,255,.08);--text:#f4f7f5;--muted:#a6b1aa;--green:#33d46f;--green2:#77ff9f;--shadow:0 24px 70px rgba(0,0,0,.45);--font:'Plus Jakarta Sans',system-ui,sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:var(--font);background:radial-gradient(circle at 12% 10%,rgba(51,212,111,.15),transparent 28%),radial-gradient(circle at 82% 18%,rgba(51,212,111,.09),transparent 26%),linear-gradient(180deg,#050605,#050605);color:var(--text);min-height:100vh;overflow-x:hidden;}a{text-decoration:none;color:inherit}.wrap{width:min(1220px,calc(100% - 32px));margin:0 auto}.topbar{position:sticky;top:0;z-index:20;background:rgba(5,6,5,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.topbar-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;flex-direction:column;line-height:1}.brand .a{font-size:1.35rem;font-weight:900;letter-spacing:-.04em}.brand .b{font-size:.68rem;letter-spacing:.32em;color:var(--green);font-weight:800;text-transform:uppercase}.nav{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.nav a{padding:10px 14px;border-radius:999px;color:var(--muted);font-weight:700;font-size:.92rem}.nav a:hover,.nav a.active{background:rgba(51,212,111,.10);color:#dfffe7}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 24px;border-radius:999px;border:0;background:linear-gradient(180deg,var(--green2),var(--green));color:#061108;font-weight:900;font-size:1rem;cursor:pointer;box-shadow:0 14px 38px rgba(51,212,111,.25);transition:.2s}.btn:hover{transform:translateY(-2px);filter:saturate(1.05)}.btn.dark{background:#121813;color:#e9f5ed;border:1px solid var(--line);box-shadow:none}.hero{padding:58px 0 24px;display:grid;grid-template-columns:1.02fr .98fr;gap:28px;align-items:stretch}.badge{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:999px;background:rgba(51,212,111,.09);border:1px solid rgba(51,212,111,.22);color:#baffcd;font-size:.78rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:18px}.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:.94;letter-spacing:-.065em;font-weight:900;text-transform:uppercase;margin-bottom:18px}.green{color:var(--green)}.hero p{max-width:62ch;color:var(--muted);line-height:1.8;font-size:1.04rem}.hero-panel{border:1px solid var(--line);border-radius:34px;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));box-shadow:var(--shadow);position:relative;overflow:hidden}.hero-panel:before{content:'';position:absolute;inset:auto -20% -25% auto;width:340px;height:340px;border-radius:50%;background:rgba(51,212,111,.12);filter:blur(34px)}.quick-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;position:relative}.stat{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:22px;padding:18px}.stat strong{display:block;font-size:2rem;color:var(--green);letter-spacing:-.04em}.stat span{color:var(--muted);font-size:.88rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:22px auto 34px}.card{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:24px;box-shadow:0 16px 48px rgba(0,0,0,.24)}.section-title{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}.section-title h2{font-size:1.45rem;letter-spacing:-.04em}.challenge-list{display:grid;gap:14px}.challenge{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;padding:16px;border-radius:22px;border:1px solid var(--line);background:#101713;cursor:pointer;transition:.22s}.challenge:hover{transform:translateY(-2px);border-color:rgba(51,212,111,.34)}.challenge.active{background:rgba(51,212,111,.08);border-color:rgba(51,212,111,.55);box-shadow:0 0 0 3px rgba(51,212,111,.10)}.icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:rgba(51,212,111,.11);border:1px solid rgba(51,212,111,.20);color:var(--green);font-size:1.25rem}.challenge h3{font-size:1.05rem;margin-bottom:4px}.challenge p{color:var(--muted);font-size:.92rem;line-height:1.55}.pill{padding:8px 12px;border-radius:999px;background:rgba(51,212,111,.10);border:1px solid rgba(51,212,111,.18);color:#dfffe7;font-weight:800;font-size:.82rem;white-space:nowrap}.progress-header{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}.days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin:20px 0}.day{min-height:84px;border-radius:18px;background:#101713;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-weight:900}.day.done{background:rgba(51,212,111,.12);border-color:rgba(51,212,111,.45);color:#fff}.day.done i{color:var(--green)}.proof-upload{margin-top:18px;border:1px dashed rgba(255,255,255,.18);border-radius:24px;padding:18px;background:rgba(255,255,255,.025)}.proof-upload label{display:flex;align-items:center;justify-content:space-between;gap:14px;cursor:pointer;color:#dbe9df;font-weight:800}.proof-upload input{display:none}.preview{margin-top:14px;display:none}.preview img{width:100%;max-height:260px;object-fit:cover;border-radius:20px;border:1px solid var(--line)}.actions{display:grid;grid-template-columns:1.2fr .8fr;gap:12px;margin-top:18px}.message{margin-top:14px;color:var(--muted);line-height:1.7}.reward-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}.reward{padding:18px;border-radius:20px;background:#101713;border:1px solid var(--line)}.reward i{color:var(--green);font-size:1.4rem;margin-bottom:12px}.reward h3{font-size:1rem;margin-bottom:6px}.reward p{font-size:.9rem;color:var(--muted);line-height:1.6}.footer-cta{margin:8px auto 44px;padding:26px;border-radius:30px;border:1px solid var(--line);background:linear-gradient(90deg,rgba(51,212,111,.10),rgba(255,255,255,.03));display:flex;align-items:center;justify-content:space-between;gap:18px}.footer-cta h2{font-size:1.6rem;letter-spacing:-.04em}.footer-cta p{color:var(--muted);line-height:1.7}@media(max-width:980px){.hero,.grid{grid-template-columns:1fr}.progress-header,.reward-grid{grid-template-columns:1fr}.days{grid-template-columns:repeat(2,1fr)}.footer-cta{flex-direction:column;align-items:flex-start}.actions{grid-template-columns:1fr}.nav a:not(:first-child){display:none}}@media(max-width:620px){.quick-stats{grid-template-columns:1fr}.challenge{grid-template-columns:1fr}.days{grid-template-columns:1fr}.hero h1{letter-spacing:-.045em}.card,.hero-panel{padding:20px}}
+
+/* Smooth page transition */
+@keyframes whPageEnter{from{opacity:0;transform:translateY(10px) scale(.997);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+body{animation:whPageEnter .48s cubic-bezier(.16,1,.3,1) both;}
+body.wh-page-exit{opacity:0!important;transform:translateY(8px) scale(.997)!important;filter:blur(3px);transition:opacity .22s ease,transform .22s ease,filter .22s ease;}
+@media (prefers-reduced-motion:reduce){body{animation:none!important}.wh-page-exit{transition:none!important}}
+
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+  <!-- Favicon / browser tab icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#050605">
+  <link rel="manifest" href="manifest.json">
+  <script src="./analytics.js" defer></script>
+</head>
+<body>
+<header class="topbar"><div class="wrap topbar-inner"><a class="brand" href="index.html"><span class="a">Wellness</span><span class="b">Hub Indonesia</span></a><nav class="nav"><a href="index.html">Beranda</a><a href="calculator.html">Kalori</a><a href="meal.html">Meal</a><a href="offline.html">Offline</a><a href="daily.html">Check-in</a><a class="active" href="challenge.html">Challenge</a><a href="tribe.html">Tribe</a><a href="music.html">Radio</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><div><div class="badge"><i class="fa-solid fa-bolt"></i> Discipline Operating System</div><h1>Bangun disiplin, <span class="green">bukan cuma niat.</span></h1><p>Pilih challenge, lakukan check-in harian, upload bukti, dan kumpulkan poin. Ini fitur yang bikin user balik lagi — bukan cuma buka kalkulator sekali lalu hilang.</p></div><div class="hero-panel"><div class="badge"><i class="fa-solid fa-trophy"></i> Progress Lo</div><div class="quick-stats"><div class="stat"><strong id="heroStreak">0</strong><span>Streak hari</span></div><div class="stat"><strong id="heroPoints">0</strong><span>Poin disiplin</span></div><div class="stat"><strong id="heroProgress">0/7</strong><span>Progress</span></div></div><p class="message" id="heroMessage">Pilih challenge dulu, lalu mulai check-in harian.</p></div></section>
+<section class="grid"><div class="card"><div class="section-title"><h2>Pilih Challenge</h2><span class="pill">Gratis</span></div><div class="challenge-list">
+<div class="challenge" data-title="7 Hari Olahraga 15 Menit" data-days="7" onclick="selectChallenge(this)"><div class="icon"><i class="fa-solid fa-dumbbell"></i></div><div><h3>7 Hari Olahraga</h3><p>Olahraga minimal 15 menit setiap hari. Cocok buat mulai dari nol.</p></div><span class="pill">+10/hari</span></div>
+<div class="challenge" data-title="7 Hari No Makan Asal" data-days="7" onclick="selectChallenge(this)"><div class="icon"><i class="fa-solid fa-utensils"></i></div><div><h3>7 Hari No Makan Asal</h3><p>Kontrol makanan harian dan berhenti makan tanpa arah.</p></div><span class="pill">+10/hari</span></div>
+<div class="challenge" data-title="14 Hari Bulking Disiplin" data-days="14" onclick="selectChallenge(this)"><div class="icon"><i class="fa-solid fa-fire-flame-curved"></i></div><div><h3>14 Hari Bulking</h3><p>Surplus kalori, latihan beban, dan konsistensi makan.</p></div><span class="pill">+12/hari</span></div>
+<div class="challenge" data-title="14 Hari Cutting Disiplin" data-days="14" onclick="selectChallenge(this)"><div class="icon"><i class="fa-solid fa-person-running"></i></div><div><h3>14 Hari Cutting</h3><p>Defisit kalori, gerak harian, dan disiplin pola makan.</p></div><span class="pill">+12/hari</span></div>
+</div></div>
+<div class="card"><div class="section-title"><h2 id="challengeTitle">Belum pilih challenge</h2><span class="pill" id="challengeStatus">Ready</span></div><div class="progress-header"><div class="stat"><strong id="streak">0</strong><span>Streak</span></div><div class="stat"><strong id="points">0</strong><span>Poin</span></div><div class="stat"><strong id="completed">0/7</strong><span>Selesai</span></div></div><div class="days" id="daysContainer"></div><div class="proof-upload"><label for="proof"><span><i class="fa-solid fa-cloud-arrow-up green"></i> Upload bukti hari ini</span><span class="pill">Foto/video</span></label><input type="file" id="proof" accept="image/*,video/*"><div class="preview" id="previewBox"><img id="previewImg" alt="Preview bukti challenge"></div></div><div class="actions"><button class="btn" onclick="completeToday()">Saya Selesai Hari Ini <i class="fa-solid fa-arrow-right"></i></button><button class="btn dark" onclick="resetChallenge()">Reset</button></div><p class="message" id="message">Pilih challenge dulu untuk mulai.</p></div></section>
+<section class="card"><div class="section-title"><h2>Reward yang Bisa Dibuka</h2><span class="pill">Roadmap</span></div><div class="reward-grid"><div class="reward"><i class="fa-solid fa-file-pdf"></i><h3>70 Poin</h3><p>Unlock checklist PDF 7 hari buat bantu disiplin.</p></div><div class="reward"><i class="fa-solid fa-book-open"></i><h3>150 Poin</h3><p>Unlock mini guide meal plan murah Indonesia.</p></div><div class="reward"><i class="fa-solid fa-medal"></i><h3>300 Poin</h3><p>Unlock program premium / diskon affiliate.</p></div></div></section>
+<section class="footer-cta"><div><h2>Mau challenge yang lebih serius?</h2><p>Coba Tribe-Commit Protocol: squad, bukti harian, komitmen simulasi, dan reward loop.</p></div><div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="tribe.html">Coba Tribe-Commit <i class="fa-solid fa-arrow-right"></i></a><a class="btn dark" href="calculator.html">Hitung Kalori Dulu</a></div></section>
+</main>
+<script>
+let selectedChallenge=localStorage.getItem('wh_challenge_title')||'';let totalDays=Number(localStorage.getItem('wh_total_days'))||7;let completedDays=Number(localStorage.getItem('wh_completed_days'))||0;let points=Number(localStorage.getItem('wh_points'))||0;
+function save(){localStorage.setItem('wh_challenge_title',selectedChallenge);localStorage.setItem('wh_total_days',totalDays);localStorage.setItem('wh_completed_days',completedDays);localStorage.setItem('wh_points',points)}
+function render(){document.getElementById('challengeTitle').innerText=selectedChallenge||'Belum pilih challenge';document.getElementById('streak').innerText=completedDays;document.getElementById('points').innerText=points;document.getElementById('completed').innerText=`${completedDays}/${totalDays}`;document.getElementById('heroStreak').innerText=completedDays;document.getElementById('heroPoints').innerText=points;document.getElementById('heroProgress').innerText=`${completedDays}/${totalDays}`;document.getElementById('challengeStatus').innerText=completedDays>=totalDays?'Completed':'Active';document.getElementById('heroMessage').innerText=selectedChallenge?`${selectedChallenge} sedang berjalan. Jangan putus streak.`:'Pilih challenge dulu, lalu mulai check-in harian.';const c=document.getElementById('daysContainer');c.innerHTML='';for(let i=1;i<=totalDays;i++){const d=document.createElement('div');d.className='day'+(i<=completedDays?' done':'');d.innerHTML=i<=completedDays?`<i class="fa-solid fa-circle-check"></i><span>Hari ${i}</span>`:`<i class="fa-regular fa-circle"></i><span>Hari ${i}</span>`;c.appendChild(d)}document.querySelectorAll('.challenge').forEach(x=>x.classList.toggle('active',x.dataset.title===selectedChallenge))}
+function selectChallenge(el){selectedChallenge=el.dataset.title;totalDays=Number(el.dataset.days)||7;completedDays=0;points=0;save();document.getElementById('message').innerText='Challenge dipilih. Mulai hari pertama lo sekarang.';render()}
+function completeToday(){if(!selectedChallenge){alert('Pilih challenge dulu bro.');return}if(completedDays>=totalDays){document.getElementById('message').innerText='Challenge sudah selesai. Mantap, lo berhasil.';return}completedDays++;points+=totalDays===14?12:10;save();document.getElementById('message').innerText=completedDays>=totalDays?'🔥 Challenge selesai. Ini bukti lo bisa konsisten.':`Hari ${completedDays} selesai. Lanjut besok, jangan putus streak.`;render()}
+function resetChallenge(){selectedChallenge='';totalDays=7;completedDays=0;points=0;localStorage.removeItem('wh_challenge_title');localStorage.removeItem('wh_total_days');localStorage.removeItem('wh_completed_days');localStorage.removeItem('wh_points');document.getElementById('message').innerText='Progress direset. Pilih challenge baru untuk mulai lagi.';render()}
+document.getElementById('proof').addEventListener('change',function(){const file=this.files[0];if(!file)return;const box=document.getElementById('previewBox');const img=document.getElementById('previewImg');if(file.type.startsWith('image/')){img.src=URL.createObjectURL(file);box.style.display='block';document.getElementById('message').innerText='Bukti berhasil dipilih. Klik selesai hari ini kalau tugas sudah dilakukan.'}else{box.style.display='none';document.getElementById('message').innerText='Video sudah dipilih. Preview video belum ditampilkan di versi ringan ini.'}});render();
+</script>
+
+<script>
+(function(){
+  window.addEventListener('pageshow',function(){document.body.classList.remove('wh-page-exit')});
+  document.addEventListener('click',function(e){
+    const a=e.target.closest('a');
+    if(!a) return;
+    const href=a.getAttribute('href')||'';
+    if(!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+    if(a.target==='_blank' || a.hasAttribute('download')) return;
+    let url;
+    try{url=new URL(a.href, window.location.href)}catch(err){return;}
+    if(url.origin!==window.location.origin) return;
+    e.preventDefault();
+    document.body.classList.add('wh-page-exit');
+    setTimeout(function(){window.location.href=a.href},180);
+  });
+})();
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('service-worker.js').catch(function(){});
+  });
+}
+</script>
+</body>
+</html>

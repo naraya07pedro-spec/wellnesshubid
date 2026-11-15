@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workout Reminder — WellnessHubID</title>
+<meta name="description" content="Set reminder olahraga harian dengan gaya coach WellnessHubID. Gratis, tersimpan di browser, dan bisa kirim notifikasi saat waktunya gerak.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#050605">
+  <link rel="manifest" href="manifest.json">
+
+<style>
+:root{
+  --bg:#050605;
+  --card:#0c110e;
+  --card2:#111713;
+  --line:rgba(255,255,255,.08);
+  --green:#33d46f;
+  --green3:#77ff9f;
+  --text:#f4f7f5;
+  --muted:#a6b1aa;
+  --muted2:#7f8a84;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:var(--font);
+  background:
+    radial-gradient(circle at 18% 10%, rgba(51,212,111,.16), transparent 30%),
+    radial-gradient(circle at 85% 18%, rgba(51,212,111,.08), transparent 26%),
+    linear-gradient(180deg,#050605,#050605);
+  color:var(--text);
+  min-height:100vh;
+  padding:28px 18px 44px;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,100%);margin:0 auto}
+.top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:8px 0 28px;
+}
+.brand{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+  gap:2px;
+  font-weight:900;
+  text-transform:uppercase;
+}
+.brand .a{font-size:1.22rem;letter-spacing:-.04em}
+.brand .b{font-size:.68rem;letter-spacing:.28em;color:var(--green)}
+.nav-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+.nav-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:11px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  border:1px solid var(--line);
+  color:#e8f2eb;
+  font-size:.88rem;
+  font-weight:800;
+  transition:.2s ease;
+}
+.nav-btn:hover{border-color:rgba(51,212,111,.35);background:rgba(51,212,111,.08)}
+.hero{
+  display:grid;
+  grid-template-columns:1fr .86fr;
+  gap:22px;
+  align-items:stretch;
+}
+.panel{
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
+  border:1px solid var(--line);
+  border-radius:32px;
+  padding:30px;
+  box-shadow:0 24px 64px rgba(0,0,0,.36);
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:9px 14px;
+  border-radius:999px;
+  background:rgba(51,212,111,.10);
+  border:1px solid rgba(51,212,111,.22);
+  color:#dfffe7;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+h1{
+  font-size:clamp(2.6rem,7vw,5.6rem);
+  line-height:.92;
+  letter-spacing:-.065em;
+  font-weight:900;
+  text-transform:uppercase;
+  max-width:10ch;
+  margin-bottom:18px;
+}
+.green{color:var(--green)}
+.sub{
+  color:var(--muted);
+  line-height:1.8;
+  font-size:1.02rem;
+  max-width:58ch;
+}
+.reminder-form{
+  display:grid;
+  gap:18px;
+  margin-top:26px;
+}
+.group label{
+  display:block;
+  font-weight:800;
+  margin-bottom:10px;
+}
+.input,select{
+  width:100%;
+  min-height:58px;
+  background:#101612;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:18px;
+  padding:0 16px;
+  font-family:var(--font);
+  font-size:1rem;
+  outline:none;
+  transition:.2s ease;
+}
+.input:focus,select:focus{
+  border-color:rgba(51,212,111,.55);
+  box-shadow:0 0 0 4px rgba(51,212,111,.10);
+}
+.quick-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.quick{
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.04);
+  border-radius:18px;
+  padding:15px;
+  cursor:pointer;
+  transition:.2s ease;
+  color:#e8f2eb;
+  font-weight:800;
+}
+.quick:hover,.quick.active{
+  border-color:rgba(51,212,111,.42);
+  background:rgba(51,212,111,.10);
+  transform:translateY(-1px);
+}
+.quick span{display:block;color:var(--muted);font-size:.82rem;font-weight:650;margin-top:4px;line-height:1.45}
+.btn{
+  width:100%;
+  min-height:64px;
+  border:none;
+  border-radius:999px;
+  background:linear-gradient(180deg,var(--green3),var(--green));
+  color:#06100a;
+  font-weight:900;
+  font-size:1.05rem;
+  font-family:var(--font);
+  cursor:pointer;
+  transition:.2s ease;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.btn:hover{transform:translateY(-1px);filter:saturate(1.06)}
+.btn.ghost{
+  background:rgba(255,255,255,.04);
+  color:#e8f2eb;
+  border:1px solid rgba(255,255,255,.10);
+}
+.stack{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.visual{
+  position:relative;
+  overflow:hidden;
+  min-height:100%;
+  border-radius:32px;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(180deg,rgba(5,6,5,.05),rgba(5,6,5,.72)),
+    url('assets/daily-command-hero.jpg') center/cover no-repeat;
+  box-shadow:0 24px 64px rgba(0,0,0,.36);
+}
+.visual::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 72% 20%,rgba(51,212,111,.20),transparent 30%),
+    linear-gradient(180deg,transparent,rgba(5,6,5,.78));
+}
+.glass{
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:22px;
+  z-index:2;
+  background:rgba(5,6,5,.54);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:24px;
+  padding:20px;
+  backdrop-filter:blur(14px);
+}
+.glass h2{font-size:1.45rem;line-height:1.1;margin-bottom:8px}
+.glass p{color:#d8e6dd;line-height:1.7;font-size:.94rem}
+.status-card{
+  margin-top:22px;
+  background:#101612;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:22px;
+}
+.status-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:14px;
+}
+.status{
+  background:rgba(255,255,255,.035);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;
+  padding:16px;
+}
+.status h3{font-size:1.55rem;color:var(--green);margin-bottom:4px}
+.status p{color:var(--muted);font-size:.86rem;line-height:1.45}
+.note{
+  color:var(--muted2);
+  font-size:.9rem;
+  line-height:1.65;
+  margin-top:14px;
+}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .visual{min-height:420px}
+  .quick-grid,.status-grid,.stack{grid-template-columns:1fr}
+  .top{align-items:flex-start;flex-direction:column}
+}
+
+/* Smooth page transition */
+@keyframes whPageEnter{from{opacity:0;transform:translateY(10px) scale(.997);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+body{animation:whPageEnter .48s cubic-bezier(.16,1,.3,1) both;}
+body.wh-page-exit{opacity:0!important;transform:translateY(8px) scale(.997)!important;filter:blur(3px);transition:opacity .22s ease,transform .22s ease,filter .22s ease;}
+@media (prefers-reduced-motion:reduce){body{animation:none!important}.wh-page-exit{transition:none!important}}
+
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+  <script src="./analytics.js" defer></script>
+</head>
+
+<body>
+<div class="container">
+  <div class="top">
+    <a class="brand" href="index.html">
+      <span class="a">Wellness</span>
+      <span class="b">Hub Indonesia</span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-btn" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+      <a class="nav-btn" href="challenge.html"><i class="fa-solid fa-fire"></i> Challenge</a>
+      <a class="nav-btn" href="daily.html"><i class="fa-solid fa-bolt"></i> Daily</a>
+    </div>
+  </div>
+
+  <div class="hero">
+    <section class="panel">
+      <div class="badge"><i class="fa-solid fa-bell"></i> Workout Reminder</div>
+      <h1>Jangan nunggu <span class="green">ingat.</span></h1>
+      <p class="sub">
+        Set jam olahraga lo. Saat waktunya tiba, WellnessHubID bakal ngingetin lewat notifikasi browser.
+        Cocok buat lo yang sering lupa karena scroll, kerja, atau rebahan terlalu nyaman.
+      </p>
+
+      <div class="reminder-form">
+        <div class="group">
+          <label>Jam olahraga</label>
+          <input id="reminderTime" class="input" type="time">
+        </div>
+
+        <div class="group">
+          <label>Pilih aktivitas</label>
+          <div class="quick-grid" id="activityOptions">
+            <button class="quick active" type="button" data-activity="Olahraga 15 menit"><i class="fa-solid fa-dumbbell"></i> 15 Menit<span>Gerak ringan dulu</span></button>
+            <button class="quick" type="button" data-activity="Jalan 20 menit"><i class="fa-solid fa-person-walking"></i> Jalan<span>Buat reset badan</span></button>
+            <button class="quick" type="button" data-activity="Latihan sesuai goal"><i class="fa-solid fa-fire-flame-curved"></i> Goal<span>Bulking/cutting/fit</span></button>
+          </div>
+        </div>
+
+        <div class="group">
+          <label>Coach mode</label>
+          <select id="coachMode">
+            <option value="santai">Santai</option>
+            <option value="tegas" selected>Tegas</option>
+            <option value="brutal">Brutal Lucu</option>
+          </select>
+        </div>
+
+        <button class="btn" onclick="saveReminder()">
+          <i class="fa-solid fa-floppy-disk"></i>
+          Simpan Reminder
+        </button>
+
+        <div class="stack">
+          <button class="btn ghost" onclick="testNotification()">
+            <i class="fa-solid fa-paper-plane"></i>
+            Test Notifikasi
+          </button>
+          <button class="btn ghost" onclick="clearReminder()">
+            <i class="fa-solid fa-trash"></i>
+            Hapus Reminder
+          </button>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <div class="badge"><i class="fa-solid fa-chart-line"></i> Status</div>
+        <p id="statusText" class="sub">Belum ada reminder aktif.</p>
+        <div class="status-grid">
+          <div class="status"><h3 id="savedTime">--:--</h3><p>Jam aktif</p></div>
+          <div class="status"><h3 id="savedStreak">0</h3><p>Reminder tersimpan</p></div>
+          <div class="status"><h3 id="savedMode">-</h3><p>Coach mode</p></div>
+        </div>
+        <p class="note">
+          Catatan: versi gratis ini berjalan lewat browser. Supaya notifikasi stabil, halaman ini sebaiknya tetap pernah dibuka dan izin notifikasi harus diaktifkan.
+        </p>
+      </div>
+    </section>
+
+    <aside class="visual" aria-label="Workout reminder visual">
+      <div class="glass">
+        <h2>Lo nggak butuh ingatan kuat. Lo butuh sistem.</h2>
+        <p>Reminder ini jadi alarm kecil biar komitmen harian lo nggak kalah sama distraksi.</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script>
+let selectedActivity = localStorage.getItem('whReminderActivity') || 'Olahraga 15 menit';
+
+document.querySelectorAll('.quick').forEach(btn=>{
+  if(btn.dataset.activity === selectedActivity){ btn.classList.add('active') }
+  else { btn.classList.remove('active') }
+
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.quick').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedActivity = btn.dataset.activity;
+  });
+});
+
+function coachText(mode){
+  if(mode === 'santai'){
+    return 'Waktunya gerak. Mulai kecil aja, 10 menit juga tetap menang.';
+  }
+  if(mode === 'brutal'){
+    return 'Kasur nggak bakal bikin progress. Bangun, gerak dulu, baru debat.';
+  }
+  return 'Lo udah pilih target. Sekarang waktunya buktiin. Selesaikan sesi hari ini.';
+}
+
+function requestPermission(){
+  if(!('Notification' in window)){
+    alert('Browser ini belum mendukung notifikasi.');
+    return Promise.resolve(false);
+  }
+
+  if(Notification.permission === 'granted') return Promise.resolve(true);
+
+  return Notification.requestPermission().then(permission => permission === 'granted');
+}
+
+function saveReminder(){
+  const time = document.getElementById('reminderTime').value;
+  const mode = document.getElementById('coachMode').value;
+
+  if(!time){
+    alert('Pilih jam olahraga dulu.');
+    return;
+  }
+
+  requestPermission().then(ok=>{
+    if(!ok){
+      alert('Izin notifikasi belum aktif. Reminder tetap tersimpan, tapi notifikasi tidak akan muncul.');
+    }
+
+    localStorage.setItem('whReminderTime', time);
+    localStorage.setItem('whReminderMode', mode);
+    localStorage.setItem('whReminderActivity', selectedActivity);
+    localStorage.setItem('whReminderCount', String((Number(localStorage.getItem('whReminderCount'))||0)+1));
+
+    updateUI();
+    alert('Reminder berhasil disimpan.');
+  });
+}
+
+function sendReminderNotification(test=false){
+  const mode = localStorage.getItem('whReminderMode') || 'tegas';
+  const activity = localStorage.getItem('whReminderActivity') || 'Olahraga 15 menit';
+  const body = `${activity}. ${coachText(mode)}`;
+
+  if(('Notification' in window) && Notification.permission === 'granted'){
+    new Notification(test ? 'Test Reminder WellnessHubID' : '🔥 Waktunya olahraga', {
+      body,
+      icon:'favicon-192.png'
+    });
+  }else{
+    alert(body);
+  }
+}
+
+function testNotification(){
+  requestPermission().then(()=>sendReminderNotification(true));
+}
+
+function clearReminder(){
+  localStorage.removeItem('whReminderTime');
+  localStorage.removeItem('whReminderMode');
+  localStorage.removeItem('whReminderActivity');
+  localStorage.removeItem('whReminderLastDate');
+  updateUI();
+}
+
+function updateUI(){
+  const time = localStorage.getItem('whReminderTime');
+  const mode = localStorage.getItem('whReminderMode') || '-';
+  const activity = localStorage.getItem('whReminderActivity') || '-';
+  const count = Number(localStorage.getItem('whReminderCount')) || 0;
+
+  document.getElementById('savedTime').innerText = time || '--:--';
+  document.getElementById('savedStreak').innerText = count;
+  document.getElementById('savedMode').innerText = mode === '-' ? '-' : mode.charAt(0).toUpperCase()+mode.slice(1);
+
+  if(time){
+    document.getElementById('statusText').innerText = `Reminder aktif jam ${time} untuk: ${activity}.`;
+    document.getElementById('reminderTime').value = time;
+    document.getElementById('coachMode').value = mode;
+  }else{
+    document.getElementById('statusText').innerText = 'Belum ada reminder aktif.';
+  }
+}
+
+function checkReminder(){
+  const time = localStorage.getItem('whReminderTime');
+  if(!time) return;
+
+  const now = new Date();
+  const hh = String(now.getHours()).padStart(2,'0');
+  const mm = String(now.getMinutes()).padStart(2,'0');
+  const current = `${hh}:${mm}`;
+  const today = now.toISOString().slice(0,10);
+  const last = localStorage.getItem('whReminderLastDate');
+
+  if(current === time && last !== today){
+    localStorage.setItem('whReminderLastDate', today);
+    sendReminderNotification(false);
+  }
+}
+
+updateUI();
+setInterval(checkReminder, 15000);
+</script>
+
+<script>
+(function(){
+  window.addEventListener('pageshow',function(){document.body.classList.remove('wh-page-exit')});
+  document.addEventListener('click',function(e){
+    const a=e.target.closest('a');
+    if(!a) return;
+    const href=a.getAttribute('href')||'';
+    if(!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+    if(a.target==='_blank' || a.hasAttribute('download')) return;
+    let url;
+    try{url=new URL(a.href, window.location.href)}catch(err){return;}
+    if(url.origin!==window.location.origin) return;
+    e.preventDefault();
+    document.body.classList.add('wh-page-exit');
+    setTimeout(function(){window.location.href=a.href},180);
+  });
+})();
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('service-worker.js').catch(function(){});
+  });
+}
+</script>
+</body>
+</html>

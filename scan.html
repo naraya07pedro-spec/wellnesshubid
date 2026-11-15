@@ -1,0 +1,500 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Scan Tubuh | WellnessHubID</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
+:root{--bg:#050605;--panel:#0c110e;--card:#101713;--line:rgba(255,255,255,.08);--muted:#9aa39d;--green:#31e66e;--green2:#76ff9f;--white:#f4f7f5;--font:'Plus Jakarta Sans',sans-serif;}
+*{box-sizing:border-box;margin:0;padding:0} body{font-family:var(--font);background:radial-gradient(circle at 10% 5%,rgba(49,230,110,.16),transparent 28%),radial-gradient(circle at 90% 70%,rgba(49,230,110,.08),transparent 30%),#050605;color:var(--white);min-height:100vh;overflow-x:hidden;} a{text-decoration:none;color:inherit}.page{width:min(1160px,calc(100% - 32px));margin:auto;padding:32px 0 48px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:42px}.brand{line-height:1}.brand b{font-size:1.35rem;font-weight:900;letter-spacing:-.04em}.brand span{display:block;color:var(--green);font-size:.7rem;font-weight:800;letter-spacing:.32em;text-transform:uppercase}.pill{display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;border:1px solid rgba(49,230,110,.22);background:rgba(49,230,110,.08);color:#caffd8;font-weight:900;font-size:.82rem;text-transform:uppercase;letter-spacing:.05em}.back{color:var(--muted);font-weight:700}.btn{border:0;border-radius:999px;background:linear-gradient(180deg,var(--green2),var(--green));color:#061108;font-weight:900;padding:18px 28px;font-size:1.05rem;cursor:pointer;display:inline-flex;justify-content:center;align-items:center;gap:10px;box-shadow:0 16px 38px rgba(49,230,110,.22);transition:.2s}.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn.secondary{background:#121713;color:var(--white);border:1px solid var(--line);box-shadow:none}.headline{font-size:clamp(2.6rem,7vw,5.2rem);line-height:.92;letter-spacing:-.07em;font-weight:900;text-transform:uppercase}.headline span{color:var(--green);display:block}.sub{color:var(--muted);font-size:1.04rem;line-height:1.8;max-width:680px;margin-top:18px}.panel{background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:34px;box-shadow:0 30px 80px rgba(0,0,0,.42)}
+
+.scan-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:28px;align-items:start}.hero-photo{min-height:720px;border-radius:34px;overflow:hidden;position:relative;background:url('assets/body-scan-hero.jpg') center/cover no-repeat;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.42)}.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,5,.14),rgba(5,6,5,.72)),radial-gradient(circle at 75% 20%,rgba(49,230,110,.12),transparent 35%)}.photo-copy{position:absolute;left:26px;right:26px;bottom:26px;z-index:2;background:rgba(5,6,5,.58);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.10);border-radius:24px;padding:22px}.photo-copy h2{font-size:2rem;line-height:1.05;margin-bottom:10px}.photo-copy p{color:#d6ded9;line-height:1.65}.form{padding:34px}.form-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0}label{display:block;font-weight:800;margin-bottom:10px}input,select{width:100%;height:62px;background:#101612;border:1px solid var(--line);border-radius:18px;color:white;padding:0 16px;font-size:1rem;outline:none}input:focus,select:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(49,230,110,.11)}.upload{height:180px;border:1.5px dashed rgba(49,230,110,.28);border-radius:24px;background:rgba(49,230,110,.04);display:grid;place-items:center;text-align:center;cursor:pointer;overflow:hidden;margin-top:14px}.upload img{width:100%;height:100%;object-fit:cover;display:none}.upload .u-text{color:#cfeedd;font-weight:800;line-height:1.7}.choice-title{font-size:1.05rem;font-weight:900;margin:24px 0 14px}.choices{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.choice{border:1px solid var(--line);background:#101612;border-radius:22px;padding:18px;cursor:pointer;transition:.2s;min-height:116px}.choice:hover{transform:translateY(-2px);border-color:rgba(49,230,110,.4)}.choice.active{border-color:var(--green);background:rgba(49,230,110,.08);box-shadow:0 0 0 3px rgba(49,230,110,.10)}.choice i{font-size:1.4rem;color:var(--green);margin-bottom:12px}.choice h3{font-size:1rem;margin-bottom:5px}.choice p{color:var(--muted);font-size:.86rem;line-height:1.5}.actions{display:flex;gap:14px;margin-top:30px}.actions .btn{flex:1}.note{color:var(--muted);font-size:.88rem;line-height:1.7;margin-top:18px}@media(max-width:960px){.scan-grid{grid-template-columns:1fr}.hero-photo{min-height:460px}.form-row,.choices{grid-template-columns:1fr}.actions{flex-direction:column}}.loading-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,7,6,.78);backdrop-filter:blur(16px);z-index:9999;opacity:0;pointer-events:none;transition:opacity .28s ease}.loading-overlay.show{opacity:1;pointer-events:auto}.loading-card{width:min(92vw,420px);background:linear-gradient(180deg,rgba(15,21,18,.96),rgba(9,14,11,.96));border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:26px 24px;box-shadow:0 30px 80px rgba(0,0,0,.45);text-align:center;position:relative;overflow:hidden}.loading-glow{position:absolute;inset:-30% auto auto 50%;width:240px;height:240px;transform:translateX(-50%);background:radial-gradient(circle,rgba(49,230,110,.18),transparent 60%);filter:blur(10px)}.loading-ring{width:78px;height:78px;margin:6px auto 18px;border-radius:50%;border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;position:relative;background:rgba(255,255,255,.02)}.loading-ring::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:3px solid transparent;border-top-color:#66ff9d;border-right-color:rgba(102,255,157,.32);animation:spin 1s linear infinite}.loading-core{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#7cffaa,#1cb85d);box-shadow:0 0 28px rgba(49,230,110,.35);animation:pulse 1.2s ease-in-out infinite}.loading-title{font-size:1.15rem;font-weight:900;letter-spacing:-.03em;margin-bottom:8px}.loading-text{color:#9aa39d;line-height:1.65;font-size:.95rem;min-height:48px}.loading-progress{height:10px;border-radius:999px;background:rgba(255,255,255,.07);overflow:hidden;margin-top:18px;border:1px solid rgba(255,255,255,.06)}.loading-progress span{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,#2cda69,#73ffad);box-shadow:0 0 18px rgba(49,230,110,.32);transition:width .32s ease}.loading-note{margin-top:12px;color:#7f8a84;font-size:.82rem}.page-is-loading{overflow:hidden}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{0%,100%{transform:scale(.92);opacity:.85}50%{transform:scale(1);opacity:1}}
+
+/* Smooth page transition */
+@keyframes whPageEnter{from{opacity:0;transform:translateY(10px) scale(.997);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+body{animation:whPageEnter .48s cubic-bezier(.16,1,.3,1) both;}
+body.wh-page-exit{opacity:0!important;transform:translateY(8px) scale(.997)!important;filter:blur(3px);transition:opacity .22s ease,transform .22s ease,filter .22s ease;}
+@media (prefers-reduced-motion:reduce){body{animation:none!important}.wh-page-exit{transition:none!important}}
+
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+  <!-- Favicon / browser tab icon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#050605">
+  <link rel="manifest" href="manifest.json">
+  <script src="./analytics.js" defer></script>
+
+<link rel="stylesheet" href="bodyfit-mobile-safe-v577.css">
+
+<style id="wh-v683-exact-svg-wave-nav">
+/* V6.83 — exact SVG wave nav, based on approved navbar-only prototype */
+body{
+  padding-bottom:calc(118px + env(safe-area-inset-bottom))!important;
+}
+
+.bf-bottom-nav{
+  position:fixed!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:calc(6px + env(safe-area-inset-bottom))!important;
+  transform:translateX(-50%)!important;
+  width:min(620px,calc(100% - 8px))!important;
+  height:112px!important;
+  min-height:112px!important;
+  max-height:112px!important;
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:end!important;
+  gap:0!important;
+  padding:0 10px 10px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  overflow:visible!important;
+  z-index:999!important;
+}
+
+.bf-bottom-nav::before,
+.bf-bottom-nav::after{
+  content:none!important;
+  display:none!important;
+}
+
+.bf-nav-shape-svg-v683{
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  width:100%!important;
+  height:112px!important;
+  overflow:visible!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  filter:drop-shadow(0 22px 54px rgba(0,0,0,.62))!important;
+}
+
+.bf-nav-shape-svg-v683 .nav-main-v683{
+  fill:url(#whNavFillV683)!important;
+  stroke:rgba(255,255,255,.16)!important;
+  stroke-width:1.25!important;
+}
+
+.bf-nav-shape-svg-v683 .nav-line-v683{
+  fill:none!important;
+  stroke:rgba(88,245,143,.45)!important;
+  stroke-width:1.25!important;
+  filter:url(#whNavSoftGlowV683)!important;
+}
+
+.bf-nav-glow-v683{
+  position:absolute!important;
+  left:50%!important;
+  top:4px!important;
+  transform:translateX(-50%)!important;
+  width:150px!important;
+  height:92px!important;
+  border-radius:999px!important;
+  background:radial-gradient(circle,rgba(88,245,143,.30),rgba(88,245,143,.11) 42%,transparent 74%)!important;
+  filter:blur(13px)!important;
+  pointer-events:none!important;
+  z-index:1!important;
+}
+
+.bf-bottom-nav a,
+.bf-bottom-nav button{
+  font-family:inherit!important;
+  text-decoration:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+
+/* Grid lock: SVG tidak dihitung karena absolute, menu tetap 5 kolom */
+.bf-bottom-nav .bf-nav-item:nth-of-type(1){grid-column:1!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(2){grid-column:2!important;}
+.bf-bottom-nav .bf-nav-scan{grid-column:3!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(3){grid-column:4!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(4){grid-column:5!important;}
+
+.bf-bottom-nav .bf-nav-item{
+  position:relative!important;
+  z-index:3!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#d7ddd8!important;
+  border-radius:0!important;
+  height:64px!important;
+  min-height:64px!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  font-size:.74rem!important;
+  line-height:1!important;
+  font-weight:950!important;
+  letter-spacing:-.015em!important;
+}
+
+.bf-bottom-nav .bf-nav-item i{
+  font-size:1.34rem!important;
+  line-height:1!important;
+  color:#d9dfdb!important;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.36))!important;
+}
+
+.bf-bottom-nav .bf-nav-item span{
+  display:block!important;
+  white-space:nowrap!important;
+}
+
+.bf-bottom-nav .bf-nav-item.active{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#58f58f!important;
+}
+
+.bf-bottom-nav .bf-nav-item.active i{
+  color:#58f58f!important;
+  filter:drop-shadow(0 0 12px rgba(57,233,120,.34))!important;
+}
+
+/* Scan tetap di kolom tengah, bukan absolute, jadi tidak numpuk */
+.bf-bottom-nav .bf-nav-scan{
+  position:relative!important;
+  z-index:4!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  color:#effff4!important;
+  cursor:pointer!important;
+  width:auto!important;
+  min-width:0!important;
+  height:92px!important;
+  min-height:92px!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:6px!important;
+  transform:translateY(-9px)!important;
+}
+
+.bf-bottom-nav .bf-nav-scan::before{
+  content:none!important;
+  display:none!important;
+}
+
+.bf-bottom-nav .bf-scan-circle{
+  width:58px!important;
+  height:58px!important;
+  border-radius:999px!important;
+  display:grid!important;
+  place-items:center!important;
+  background:
+    radial-gradient(circle at 42% 26%,rgba(255,255,255,.30),transparent 31%),
+    linear-gradient(180deg,#78ffa8,#35d96e)!important;
+  color:#041008!important;
+  border:3px solid rgba(154,255,188,.62)!important;
+  box-shadow:
+    0 14px 32px rgba(57,233,120,.34),
+    0 0 0 8px rgba(57,233,120,.065),
+    inset 0 1px 0 rgba(255,255,255,.44)!important;
+}
+
+.bf-bottom-nav .bf-scan-circle i{
+  font-size:1.22rem!important;
+  line-height:1!important;
+  color:#041008!important;
+}
+
+.bf-bottom-nav .bf-scan-label{
+  font-size:.76rem!important;
+  line-height:1!important;
+  font-weight:950!important;
+  color:#f1fff5!important;
+  text-shadow:0 2px 10px rgba(0,0,0,.55)!important;
+  position:relative!important;
+  z-index:2!important;
+}
+
+/* Fix tulisan "Pilih scan" muncul di atas: sheet default harus hidden */
+.wh-scan-sheet-v664{
+  position:fixed!important;
+  left:50%!important;
+  bottom:calc(104px + env(safe-area-inset-bottom))!important;
+  transform:translate(-50%,14px)!important;
+  width:min(540px,calc(100% - 18px))!important;
+  background:linear-gradient(180deg,rgba(8,16,11,.98),rgba(4,8,5,.98))!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  border-radius:24px!important;
+  box-shadow:0 22px 70px rgba(0,0,0,.55)!important;
+  padding:14px!important;
+  z-index:998!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transition:.18s ease!important;
+}
+
+.wh-scan-sheet-v664.open{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translate(-50%,0)!important;
+}
+
+.wh-scan-sheet-v664 h3{
+  margin:0 0 4px!important;
+  font-size:1rem!important;
+}
+.wh-scan-sheet-v664 p{
+  margin:0 0 10px!important;
+  color:rgba(255,255,255,.68)!important;
+  font-size:.82rem!important;
+}
+.wh-scan-sheet-grid-v664{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:10px!important;
+}
+.wh-scan-choice-v664{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:4px!important;
+  padding:12px!important;
+  border-radius:16px!important;
+  background:rgba(255,255,255,.045)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  color:#fff!important;
+  text-decoration:none!important;
+}
+.wh-scan-choice-v664 i{color:#58f58f!important;}
+.wh-scan-choice-v664 span{font-size:.74rem!important;color:rgba(255,255,255,.64)!important;}
+
+@media(max-width:520px){
+  body{
+    padding-bottom:calc(104px + env(safe-area-inset-bottom))!important;
+  }
+  .bf-bottom-nav{
+    width:calc(100% - 4px)!important;
+    height:96px!important;
+    min-height:96px!important;
+    max-height:96px!important;
+    bottom:calc(6px + env(safe-area-inset-bottom))!important;
+    padding:0 7px 8px!important;
+  }
+  .bf-nav-shape-svg-v683{
+    height:96px!important;
+  }
+  .bf-nav-glow-v683{
+    top:4px!important;
+    width:122px!important;
+    height:72px!important;
+    filter:blur(10px)!important;
+  }
+  .bf-bottom-nav .bf-nav-item{
+    height:52px!important;
+    min-height:52px!important;
+    gap:5px!important;
+    font-size:.64rem!important;
+  }
+  .bf-bottom-nav .bf-nav-item i{
+    font-size:1.10rem!important;
+  }
+  .bf-bottom-nav .bf-nav-scan{
+    height:80px!important;
+    min-height:80px!important;
+    transform:translateY(-8px)!important;
+    gap:5px!important;
+  }
+  .bf-bottom-nav .bf-scan-circle{
+    width:52px!important;
+    height:52px!important;
+    box-shadow:
+      0 13px 28px rgba(57,233,120,.31),
+      0 0 0 6px rgba(57,233,120,.06),
+      inset 0 1px 0 rgba(255,255,255,.44)!important;
+  }
+  .bf-bottom-nav .bf-scan-circle i{
+    font-size:1.10rem!important;
+  }
+  .bf-bottom-nav .bf-scan-label{
+    font-size:.66rem!important;
+  }
+  .wh-scan-sheet-v664{
+    bottom:calc(96px + env(safe-area-inset-bottom))!important;
+  }
+}
+
+@media(max-width:380px){
+  .bf-bottom-nav{
+    height:92px!important;
+    min-height:92px!important;
+    max-height:92px!important;
+    padding-left:5px!important;
+    padding-right:5px!important;
+  }
+  .bf-nav-shape-svg-v683{
+    height:92px!important;
+  }
+  .bf-bottom-nav .bf-nav-item{
+    height:50px!important;
+    min-height:50px!important;
+    font-size:.59rem!important;
+    gap:4px!important;
+  }
+  .bf-bottom-nav .bf-nav-item i{
+    font-size:1rem!important;
+  }
+  .bf-bottom-nav .bf-nav-scan{
+    height:76px!important;
+    min-height:76px!important;
+    transform:translateY(-7px)!important;
+  }
+  .bf-bottom-nav .bf-scan-circle{
+    width:50px!important;
+    height:50px!important;
+  }
+  .bf-bottom-nav .bf-scan-circle i{
+    font-size:1.04rem!important;
+  }
+}
+</style>
+</head><body>
+<nav class="bf-bottom-nav" aria-label="BodyFit Hub menu"><svg class="bf-nav-shape-svg-v683" viewBox="0 0 1000 132" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="whNavFillV683" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(11,23,16,.985)"/>
+      <stop offset="100%" stop-color="rgba(3,8,5,.985)"/>
+    </linearGradient>
+    <filter id="whNavSoftGlowV683" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path class="nav-main-v683"
+    d="M58 52
+       H386
+       C424 52 436 19 466 12
+       C478 9 491 8 500 8
+       C509 8 522 9 534 12
+       C564 19 576 52 614 52
+       H942
+       C978 52 996 72 996 94
+       C996 119 976 128 942 128
+       H58
+       C24 128 4 119 4 94
+       C4 72 22 52 58 52
+       Z" />
+  <path class="nav-line-v683"
+    d="M58 52
+       H386
+       C424 52 436 19 466 12
+       C478 9 491 8 500 8
+       C509 8 522 9 534 12
+       C564 19 576 52 614 52
+       H942" />
+</svg><div class="bf-nav-glow-v683" aria-hidden="true"></div><a class="bf-nav-item" href="bodyfit.html"><i class="fa-solid fa-house"></i><span>Home</span></a><a class="bf-nav-item" href="meal.html"><i class="fa-solid fa-utensils"></i><span>Meal</span></a><button class="bf-nav-scan is-active" type="button" data-wh-scan-v664 aria-label="Buka pilihan scan"><span class="bf-scan-circle"><i class="fa-solid fa-expand"></i></span><span class="bf-scan-label">Scan</span></button><a class="bf-nav-item" href="training-guide.html"><i class="fa-solid fa-dumbbell"></i><span>Latihan</span></a><a class="bf-nav-item" href="progress.html"><i class="fa-solid fa-chart-line"></i><span>Progress</span></a></nav><div class="wh-scan-sheet-v664" id="whScanSheetV664" aria-label="Pilihan Scan"><h3>Pilih scan</h3><p>Akses scan dipusatkan di tombol tengah.</p><div class="wh-scan-sheet-grid-v664"><a class="wh-scan-choice-v664" href="bioscan.html"><i class="fa-solid fa-fingerprint"></i><strong>Scan Tubuh</strong><span>Cek kebutuhan badan & kalori.</span></a><a class="wh-scan-choice-v664" href="food-scanner.html"><i class="fa-solid fa-camera"></i><strong>Scan Makanan</strong><span>Estimasi kalori dari foto makanan.</span></a></div></div>
+
+<div class="page"><div class="top"><a class="brand" href="index.html"><b>WELLNESS <span>HUB INDONESIA</span></b></a><a class="back" href="index.html">← Kembali</a></div><div class="scan-grid"><div class="hero-photo"><div class="photo-copy"><span class="pill"><i class="fa-solid fa-user-check"></i> Body Scan Lite</span><h2>Kenali kondisi tubuh lo dulu.</h2><p>Upload foto sebagai preview, lalu isi data tubuh. Sistem akan kasih estimasi awal dan rekomendasi latihan yang cocok.</p></div></div><div class="panel form"><span class="pill"><i class="fa-solid fa-bolt"></i> Step 1 dari 1</span><h1 class="headline" style="font-size:clamp(2.3rem,5vw,4.2rem);margin-top:22px">Scan <span>Tubuh Lo.</span></h1><p class="sub">Ini bukan diagnosis medis. Ini analisa awal untuk bantu lo tahu arah latihan dan fokus kesehatan.</p><label for="photo">Upload foto tubuh</label><input id="photo" type="file" accept="image/*" style="display:none"><div class="upload" id="uploadBox" onclick="document.getElementById('photo').click()"><img id="preview" alt="Preview foto"><div class="u-text"><i class="fa-solid fa-cloud-arrow-up"></i><br>Klik buat pilih foto<br><small>Opsional, hanya untuk preview</small></div></div><div class="form-row"><div><label>Umur</label><input id="age" type="number" placeholder="Misal: 19"></div><div><label>Tinggi</label><input id="height" type="number" placeholder="Misal: 170"></div><div><label>Berat</label><input id="weight" type="number" placeholder="Misal: 60"></div></div><div class="choice-title">Bentuk tubuh</div><div class="choices selectable" data-name="body"><div class="choice" data-value="kurus"><i class="fa-solid fa-person"></i><h3>Kurus</h3><p>Berat cenderung rendah.</p></div><div class="choice" data-value="ideal"><i class="fa-solid fa-user-check"></i><h3>Ideal</h3><p>Proporsi cukup seimbang.</p></div><div class="choice" data-value="berisi"><i class="fa-solid fa-weight-scale"></i><h3>Berisi</h3><p>Lemak tubuh lebih terasa.</p></div></div><div class="choice-title">Postur tubuh</div><div class="choices selectable" data-name="posture"><div class="choice" data-value="bungkuk"><i class="fa-solid fa-person-walking"></i><h3>Bungkuk</h3><p>Bahu/posisi tubuh maju.</p></div><div class="choice" data-value="normal"><i class="fa-solid fa-street-view"></i><h3>Normal</h3><p>Postur cukup netral.</p></div><div class="choice" data-value="tegap"><i class="fa-solid fa-person-rays"></i><h3>Tegap</h3><p>Postur cukup kuat.</p></div></div><div class="choice-title">Goal utama</div><div class="choices selectable" data-name="goal"><div class="choice" data-value="cutting"><i class="fa-solid fa-fire"></i><h3>Fat Loss</h3><p>Turun lemak.</p></div><div class="choice" data-value="maintenance"><i class="fa-solid fa-heart-pulse"></i><h3>Fit Body</h3><p>Sehat & stabil.</p></div><div class="choice" data-value="bulking"><i class="fa-solid fa-dumbbell"></i><h3>Bulking</h3><p>Naik massa otot.</p></div></div><div class="actions"><button class="btn" onclick="goResult()">Lihat Hasil Scan <i class="fa-solid fa-arrow-right"></i></button><a class="btn secondary" href="calculator.html">Hitung Kalori</a></div><p class="note">Catatan: hasil ini estimasi awal, bukan pengganti konsultasi profesional.</p></div></div></div><script>
+
+
+function startFancyLoading(onDone, steps=[{title:'Ngitung kebutuhan tubuh...',text:'BMR, aktivitas, dan goal lagi dihitung.'},{title:'Nyusun plan yang cocok...',text:'Kalori, makanan, dan latihan disesuaikan biar nggak ribet.'},{title:'Finishing hasil lo...',text:'Tampilan lagi dirapihin biar nyaman dibaca.'}], totalMs=720){
+  const loadingOverlay=document.getElementById('loadingOverlay');
+  const loadingTitle=document.getElementById('loadingTitle');
+  const loadingText=document.getElementById('loadingText');
+  const loadingBar=document.getElementById('loadingBar');
+  if(!loadingOverlay||!loadingTitle||!loadingText||!loadingBar){onDone();return;}
+  document.body.classList.add('page-is-loading');
+  loadingOverlay.classList.add('show');
+  loadingBar.style.width='10%';
+  const stepMs=Math.max(170, Math.floor(totalMs/steps.length));
+  steps.forEach((step,index)=>{
+    setTimeout(()=>{
+      loadingTitle.textContent=step.title;
+      loadingText.textContent=step.text;
+      loadingBar.style.width=`${Math.min(100, 20 + Math.round(((index+1)/steps.length)*80))}%`;
+    }, index*stepMs);
+  });
+  setTimeout(()=>{loadingBar.style.width='100%';}, Math.max(200,totalMs-180));
+  setTimeout(()=>{onDone();}, totalMs);
+}
+document.querySelectorAll('.selectable').forEach(group=>{group.querySelectorAll('.choice').forEach(choice=>{choice.addEventListener('click',()=>{group.querySelectorAll('.choice').forEach(c=>c.classList.remove('active'));choice.classList.add('active');})})});document.getElementById('photo').addEventListener('change',e=>{const file=e.target.files[0]; if(!file)return; const reader=new FileReader(); reader.onload=()=>{sessionStorage.setItem('scanPhoto', reader.result); const img=document.getElementById('preview'); img.src=reader.result; img.style.display='block'; document.querySelector('.u-text').style.display='none';}; reader.readAsDataURL(file);});function selected(name){const el=document.querySelector(`[data-name="${name}"] .choice.active`); return el?el.dataset.value:'';}function goResult(){const age=document.getElementById('age').value;const height=document.getElementById('height').value;const weight=document.getElementById('weight').value;const body=selected('body');const posture=selected('posture');const goal=selected('goal');if(!age||!height||!weight||!body||!posture||!goal){alert('Isi data dan pilih semua opsi dulu ya.');return;}startFancyLoading(()=>{window.location.href=`scan-result.html?age=${age}&height=${height}&weight=${weight}&body=${body}&posture=${posture}&goal=${goal}`;},[{title:'Membaca data tubuh...',text:'BMI, bentuk tubuh, dan goal lagi dianalisa.'},{title:'Nyusun rekomendasi awal...',text:'Sistem lagi pilih fokus latihan yang paling masuk akal.'},{title:'Menyiapkan hasil scan...',text:'Biar hasil body scan lo rapi dan gampang dipahami.'}],1250);}</script><div class="loading-overlay" id="loadingOverlay" aria-hidden="true"><div class="loading-card"><div class="loading-glow"></div><div class="loading-ring"><div class="loading-core"></div></div><div class="loading-title" id="loadingTitle">Memproses data lo...</div><div class="loading-text" id="loadingText">Sistem lagi nyusun hasil yang enak dilihat dan gampang dipakai.</div><div class="loading-progress"><span id="loadingBar"></span></div><div class="loading-note">Bentar aja ya, biar hasilnya berasa premium.</div></div></div>
+
+<script>
+(function(){
+  window.addEventListener('pageshow',function(){document.body.classList.remove('wh-page-exit')});
+  document.addEventListener('click',function(e){
+    const a=e.target.closest('a');
+    if(!a) return;
+    const href=a.getAttribute('href')||'';
+    if(!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+    if(a.target==='_blank' || a.hasAttribute('download')) return;
+    let url;
+    try{url=new URL(a.href, window.location.href)}catch(err){return;}
+    if(url.origin!==window.location.origin) return;
+    e.preventDefault();
+    document.body.classList.add('wh-page-exit');
+    setTimeout(function(){window.location.href=a.href},180);
+  });
+})();
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('service-worker.js').catch(function(){});
+  });
+}
+</script>
+
+<script id="wh-v664-safe-center-scan-nav-js">
+(function(){
+  var buttons = document.querySelectorAll('[data-wh-scan-v664]');
+  var sheet = document.getElementById('whScanSheetV664');
+  if(!buttons.length || !sheet) return;
+  function toggle(e){
+    e.preventDefault();
+    sheet.classList.toggle('open');
+  }
+  buttons.forEach(function(btn){ btn.addEventListener('click', toggle); });
+  document.addEventListener('click', function(e){
+    if(!sheet.classList.contains('open')) return;
+    var isButton = e.target.closest('[data-wh-scan-v664]');
+    var isSheet = e.target.closest('#whScanSheetV664');
+    if(!isButton && !isSheet) sheet.classList.remove('open');
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') sheet.classList.remove('open');
+  });
+})();
+</script>
+
+</body></html>

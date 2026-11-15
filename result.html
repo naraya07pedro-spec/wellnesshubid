@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>BioScan Result | WellnessHubID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#050605">
+<script src="./analytics.js" defer></script>
+<style>
+:root{--bg:#050605;--panel:#0a0f0c;--card:#101713;--soft:#121a14;--line:rgba(255,255,255,.10);--line2:rgba(74,255,128,.22);--green:#35e875;--green2:#70ffa2;--text:#f4f8f5;--muted:#97a59c;--muted2:#c8d5ce;--shadow:0 28px 85px rgba(0,0,0,.52);--radius:32px;--font:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{min-height:100vh;background:radial-gradient(circle at 16% 0%,rgba(53,232,117,.12),transparent 27%),radial-gradient(circle at 94% 16%,rgba(53,232,117,.10),transparent 28%),linear-gradient(180deg,#020403 0%,#060907 45%,#030504 100%);color:var(--text);font-family:var(--font);overflow-x:hidden;padding-bottom:34px}body::before{content:'';position:fixed;inset:0;background:linear-gradient(90deg,rgba(53,232,117,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(53,232,117,.025) 1px,transparent 1px);background-size:76px 76px;mask-image:radial-gradient(circle at 50% 0%,black,transparent 78%);pointer-events:none;z-index:-2}body::after{content:'';position:fixed;inset:0;background:radial-gradient(circle at 50% 26%,rgba(53,232,117,.08),transparent 36%);pointer-events:none;z-index:-1}.page{width:min(100% - 32px,980px);margin:0 auto;padding:28px 0 42px}.topbar{display:flex;justify-content:space-between;align-items:center;margin:0 0 16px}.icon-btn{width:54px;height:54px;border-radius:20px;display:grid;place-items:center;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);color:#e9f4ee;text-decoration:none;box-shadow:0 16px 48px rgba(0,0,0,.25);backdrop-filter:blur(14px);transition:.18s ease}.icon-btn:hover{transform:translateY(-2px);border-color:rgba(53,232,117,.35)}.result-badge{margin:0 auto 14px;width:max-content;display:flex;align-items:center;gap:10px;padding:10px 18px;border:1px solid rgba(53,232,117,.26);background:rgba(53,232,117,.08);color:#72ff9f;border-radius:999px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;box-shadow:0 0 34px rgba(53,232,117,.08)}.badge-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 18px var(--green)}.hero-title{text-align:center;font-size:clamp(2.45rem,7vw,4.55rem);line-height:1.02;letter-spacing:-.07em;font-weight:950;margin-bottom:10px;text-shadow:0 18px 48px rgba(0,0,0,.48)}.hero-title .green{color:var(--green);text-shadow:0 0 26px rgba(53,232,117,.25)}.hero-sub{text-align:center;margin:0 auto 24px;color:var(--muted2);font-size:clamp(.95rem,2.4vw,1.18rem);line-height:1.65;max-width:590px}.builder{min-height:36px;margin:-6px auto 14px;display:grid;place-items:center;color:#aefcc4;font-weight:850;font-size:.9rem;opacity:1;transition:.35s ease}.builder i{color:var(--green);margin-right:8px}.ready .builder{opacity:0;transform:translateY(-8px);height:0;min-height:0;margin:0;overflow:hidden}.hero-card{position:relative;display:grid;grid-template-columns:.86fr 1.14fr;gap:30px;align-items:center;padding:28px;border-radius:36px;background:linear-gradient(135deg,rgba(53,232,117,.14),rgba(255,255,255,.035) 42%,rgba(255,255,255,.02));border:1px solid rgba(53,232,117,.34);box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.06);overflow:hidden}.hero-card::before{content:'';position:absolute;inset:-35%;background:radial-gradient(circle at 18% 20%,rgba(112,255,162,.18),transparent 27%),radial-gradient(circle at 96% 10%,rgba(112,255,162,.10),transparent 26%);pointer-events:none;z-index:1}.hero-card>*{position:relative;z-index:2}.hero-video-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;border-radius:inherit}.hero-video-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 34% 42%,rgba(53,232,117,.05),transparent 24%),linear-gradient(180deg,rgba(4,8,6,.08),rgba(4,8,6,.14) 45%,rgba(4,8,6,.26));mix-blend-mode:normal}.hero-video-bg video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;opacity:.46;filter:blur(.35px) saturate(1.08) contrast(1.02) brightness(.86);transform:scale(1.02);will-change:transform;}.hero-card.video-paused .hero-video-bg video,.hero-card.video-off .hero-video-bg video{display:none}.hero-card.video-paused .hero-video-bg,.hero-card.video-off .hero-video-bg{background:radial-gradient(circle at 55% 40%,rgba(53,232,117,.12),transparent 24%),linear-gradient(135deg,rgba(53,232,117,.12),rgba(255,255,255,.03) 42%,rgba(255,255,255,.02))}.ring-box{display:grid;place-items:center;position:relative;z-index:2}.ring-wrap{width:min(260px,70vw);aspect-ratio:1;position:relative;display:grid;place-items:center;filter:drop-shadow(0 0 32px rgba(53,232,117,.15))}.ring-wrap::before{content:'';position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle,rgba(53,232,117,.10),rgba(53,232,117,.025) 50%,transparent 70%);animation:breath 1.9s ease-in-out infinite}.ring-svg{width:100%;height:100%;transform:rotate(-90deg)}.ring-track{fill:none;stroke:rgba(255,255,255,.075);stroke-width:16}.ring-progress{fill:none;stroke:url(#ringGradient);stroke-width:17;stroke-linecap:round;stroke-dasharray:565;stroke-dashoffset:565;transition:stroke-dashoffset 1.85s cubic-bezier(.11,.83,.17,1.03);filter:drop-shadow(0 0 12px rgba(53,232,117,.62))}.ring-needle{position:absolute;width:3px;height:43%;left:50%;top:50%;background:linear-gradient(180deg,var(--green2),transparent);border-radius:999px;transform-origin:50% 0;transform:rotate(-132deg);opacity:.0;transition:transform 1.85s cubic-bezier(.11,.83,.17,1.03),opacity .3s ease;box-shadow:0 0 16px rgba(53,232,117,.5)}.ring-core{position:absolute;inset:20%;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.12),rgba(255,255,255,.03) 45%,rgba(0,0,0,.18));border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 0 40px rgba(53,232,117,.05)}.ring-number{font-size:clamp(2.7rem,8vw,4.15rem);font-weight:950;letter-spacing:-.07em}.ring-label{display:block;color:#d4dfd8;font-weight:700;margin-top:-5px}.ecg{width:72px;height:20px;margin-top:8px}.ecg path{stroke:var(--green);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:96;stroke-dashoffset:96;filter:drop-shadow(0 0 8px rgba(53,232,117,.5));animation:ecgDraw 1.2s ease-in-out .8s forwards}.goal-copy{padding-right:8px}.goal-pill{display:inline-flex;margin-bottom:12px;padding:8px 14px;border-radius:999px;border:1px solid rgba(53,232,117,.24);background:rgba(53,232,117,.07);color:#72ff9f;font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.06em}.goal-title{font-size:clamp(2rem,5.4vw,3.2rem);line-height:1.02;letter-spacing:-.07em;color:var(--green);font-weight:950;margin-bottom:10px;text-shadow:0 0 22px rgba(53,232,117,.22)}.goal-desc{color:#cbd9d0;line-height:1.65;font-size:1rem;margin-bottom:18px}.micro-row{display:flex;gap:12px;flex-wrap:wrap}.micro{min-width:150px;flex:1;display:flex;align-items:center;gap:10px;background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.09);border-radius:18px;padding:13px 14px;color:#dce7e0}.micro i{color:#cdebd5;font-size:1.1rem}.micro small{display:block;color:#a4b0aa;font-size:.76rem;font-weight:750}.micro b{display:block;color:#79ffa5;font-size:1rem}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.metric-card{display:flex;align-items:center;gap:18px;padding:18px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.052),rgba(255,255,255,.024));border:1px solid rgba(255,255,255,.09);box-shadow:0 18px 52px rgba(0,0,0,.22);min-height:110px}.metric-icon{width:66px;height:66px;flex:0 0 66px;border-radius:50%;display:grid;place-items:center;background:rgba(53,232,117,.10);border:1px solid rgba(53,232,117,.28);box-shadow:inset 0 0 24px rgba(53,232,117,.07)}.metric-icon i{font-size:1.65rem;color:var(--green)}.metric-text small{display:block;color:#bcc9c1;font-weight:800;margin-bottom:5px}.metric-text b{font-size:clamp(1.9rem,5vw,2.45rem);line-height:1;color:var(--green);letter-spacing:-.06em}.metric-text span{color:#b8c4bd;font-weight:650;margin-left:3px}.meta-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;margin-top:12px;border:1px solid rgba(255,255,255,.09);border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));overflow:hidden}.meta{display:flex;align-items:center;gap:12px;padding:18px 18px;border-right:1px solid rgba(255,255,255,.08)}.meta:last-child{border-right:0}.meta i{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgba(53,232,117,.10);border:1px solid rgba(53,232,117,.20);color:var(--green)}.meta small{display:block;color:#a9b6ae;font-weight:700}.meta b{display:block;color:#5dff8e;font-size:1.14rem;letter-spacing:-.03em}.section{margin-top:24px}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.section-head h2{font-size:clamp(1.25rem,4vw,1.6rem);letter-spacing:-.04em}.see-all{display:inline-flex;align-items:center;gap:8px;color:#d8e8de;text-decoration:none;font-weight:800;font-size:.9rem;opacity:.86}.see-all i{font-size:.78rem}.cards-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.food-card,.workout-card{position:relative;min-height:154px;border-radius:22px;overflow:hidden;background:#111814;border:1px solid rgba(255,255,255,.10);box-shadow:0 16px 46px rgba(0,0,0,.25);color:var(--text);text-decoration:none}.workout-card{aspect-ratio:3/4;min-height:auto}.food-card img,.workout-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center center;filter:saturate(1.05) contrast(1.05) brightness(.92);image-rendering:auto}.workout-card img{object-position:center center}.food-card::after,.workout-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,rgba(0,0,0,.10) 42%,rgba(0,0,0,.86) 100%)}.check{position:absolute;right:12px;top:12px;z-index:2;width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#8dffad,#35e875);color:#06200d;font-size:.88rem;box-shadow:0 8px 22px rgba(53,232,117,.28)}.card-copy{position:absolute;left:16px;right:16px;bottom:14px;z-index:2}.card-copy b{display:block;font-size:1.15rem;letter-spacing:-.045em;color:#fff;text-shadow:0 2px 14px rgba(0,0,0,.75)}.card-copy span{display:block;color:#e0ebe4;font-size:.83rem;margin-top:4px;text-shadow:0 2px 12px rgba(0,0,0,.72)}.card-icon{position:absolute;left:12px;top:12px;z-index:2;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(53,232,117,.16);border:1px solid rgba(53,232,117,.26);color:#8dffad}.mission-box{border:1px solid rgba(255,255,255,.10);border-radius:24px;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));box-shadow:0 16px 48px rgba(0,0,0,.24)}.mission{display:grid;grid-template-columns:54px 1fr 34px;gap:10px;align-items:center;min-height:70px;padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.08)}.mission:last-child{border-bottom:0}.mission i{width:40px;height:40px;border-radius:16px;display:grid;place-items:center;background:rgba(53,232,117,.10);color:var(--green);font-size:1.2rem}.mission b{display:block;font-size:1rem;letter-spacing:-.025em}.mission span{display:block;color:#bbc8c0;line-height:1.45;font-size:.87rem}.circle-check{width:26px;height:26px;border-radius:50%;border:1.5px solid rgba(255,255,255,.48);display:grid;place-items:center;color:var(--green);font-size:.75rem}.cta-bar{margin-top:24px;display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:14px;width:100%;border:0;border-radius:999px;padding:16px 28px;background:linear-gradient(180deg,#6bff99,#35e875);color:#061108;text-decoration:none;box-shadow:0 20px 50px rgba(53,232,117,.25),0 0 38px rgba(53,232,117,.16);font-weight:950}.cta-circle{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#092513;color:#90ffb1;font-size:1.35rem}.cta-main{display:block;font-size:1.35rem;letter-spacing:-.05em}.cta-sub{display:block;font-size:.9rem;opacity:.78;margin-top:2px}.cta-bar>i{font-size:1.25rem}.bottom-nav{position:fixed;left:50%;bottom:18px;transform:translate(-50%,24px);width:min(620px,calc(100% - 28px));height:70px;border-radius:999px;background:rgba(8,13,10,.86);border:1px solid rgba(255,255,255,.10);box-shadow:0 22px 70px rgba(0,0,0,.58);backdrop-filter:blur(18px);z-index:20;display:grid;grid-template-columns:repeat(5,1fr);gap:4px;padding:7px;opacity:0;visibility:hidden;pointer-events:none;transition:.45s cubic-bezier(.16,1,.3,1)}.ready .bottom-nav{transform:translate(-50%,0);opacity:1;visibility:visible;pointer-events:auto}.bottom-nav a{border-radius:999px;display:grid;place-items:center;text-align:center;color:#a5b2aa;text-decoration:none;font-size:.72rem;font-weight:850;gap:3px}.bottom-nav a i{font-size:1rem}.bottom-nav a.active{background:rgba(53,232,117,.16);color:#eaffef}.bottom-nav a.active i{color:var(--green)}[data-reveal]{opacity:0;transform:translateY(18px);filter:blur(4px);transition:opacity .55s cubic-bezier(.16,1,.3,1),transform .55s cubic-bezier(.16,1,.3,1),filter .55s ease}.ready [data-reveal]{opacity:1;transform:translateY(0);filter:blur(0)}.ready [data-reveal="1"]{transition-delay:.05s}.ready [data-reveal="2"]{transition-delay:.12s}.ready [data-reveal="3"]{transition-delay:.20s}.ready [data-reveal="4"]{transition-delay:.28s}.ready [data-reveal="5"]{transition-delay:.36s}.ready [data-reveal="6"]{transition-delay:.44s}.speeding .ring-needle{opacity:.72}.speeding .ring-wrap::before{animation-duration:.8s}.ready .ring-wrap::before{animation-duration:2.4s}@keyframes breath{0%,100%{transform:scale(.94);opacity:.55}50%{transform:scale(1.05);opacity:.95}}@keyframes ecgDraw{to{stroke-dashoffset:0}}@keyframes pageIn{from{opacity:0;transform:translateY(10px) scale(.997);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}body{animation:pageIn .45s cubic-bezier(.16,1,.3,1) both}body.wh-page-exit{opacity:0!important;transform:translateY(8px) scale(.997)!important;filter:blur(3px);transition:opacity .2s ease,transform .2s ease,filter .2s ease}@media(max-width:760px){body{padding-bottom:104px}.hero-video-bg video{opacity:.40;filter:blur(.45px) saturate(1.06) contrast(1.02) brightness(.82)}.page{width:min(100% - 22px,980px);padding-top:20px}.icon-btn{width:46px;height:46px;border-radius:16px}.hero-card{grid-template-columns:1fr;padding:22px;border-radius:30px;gap:12px}.ring-wrap{width:min(230px,76vw)}.goal-copy{text-align:center;padding:0}.goal-desc{font-size:.94rem}.micro-row{justify-content:center}.metric-grid{grid-template-columns:1fr 1fr}.metric-card{padding:14px;gap:12px;min-height:94px}.metric-icon{width:52px;height:52px;flex-basis:52px}.metric-icon i{font-size:1.3rem}.metric-text b{font-size:1.7rem}.metric-text span{display:block;margin-left:0;margin-top:3px}.meta-strip{grid-template-columns:1fr;border-radius:22px}.meta{border-right:0;border-bottom:1px solid rgba(255,255,255,.08);padding:14px}.meta:last-child{border-bottom:0}.cards-3{grid-template-columns:1fr}.food-card{min-height:176px}.workout-card{min-height:auto;aspect-ratio:3/4}.mission{grid-template-columns:46px 1fr 30px;padding:11px 14px}.cta-bar{grid-template-columns:54px 1fr;border-radius:30px;padding:14px 16px}.cta-circle{width:48px;height:48px}.cta-main{font-size:1.08rem}.cta-bar>i{display:none}.bottom-nav{height:66px;bottom:12px}.bottom-nav a{font-size:.66rem}}@media(max-width:420px){.hero-title{font-size:2.5rem}.metric-grid{grid-template-columns:1fr}.micro{min-width:100%}.section{margin-top:20px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.hero-video-bg{display:none!important}.bottom-nav,[data-reveal]{opacity:1!important;visibility:visible!important;transform:none!important;filter:none!important;pointer-events:auto!important}.ring-progress{stroke-dashoffset:124!important}}
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+/* V6.43 page grid overlay removed, content untouched */
+body::before,body:before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+
+<style id="wh-v685-result-no-bottom-nav">
+/* V6.85 — result page: remove bottom navbar and add clear continuation CTA */
+body{padding-bottom:34px!important;}
+.bottom-nav{display:none!important;visibility:hidden!important;pointer-events:none!important;}
+.cta-bodyfit-next{
+  margin-top:14px!important;
+  background:linear-gradient(180deg,rgba(11,20,14,.98),rgba(5,10,7,.98))!important;
+  color:#f3fff6!important;
+  border:1px solid rgba(88,245,143,.28)!important;
+  box-shadow:0 18px 48px rgba(0,0,0,.34),0 0 32px rgba(53,232,117,.10)!important;
+}
+.cta-bodyfit-next .cta-circle{
+  background:linear-gradient(180deg,#6bff99,#35e875)!important;
+  color:#061108!important;
+}
+.cta-bodyfit-next .cta-sub{
+  color:rgba(255,255,255,.68)!important;
+}
+@media(max-width:520px){
+  body{padding-bottom:24px!important;}
+  .cta-bodyfit-next{margin-top:12px!important;}
+}
+</style>
+
+</head>
+<body>
+<main class="page">
+  <div class="topbar">
+    <a class="icon-btn" href="bioscan.html" aria-label="Kembali ke BioScan"><i class="fa-solid fa-chevron-left"></i></a>
+    <a class="icon-btn" href="bodyfit.html" aria-label="Buka BodyFit Hub"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+
+  <div class="result-badge"><i class="fa-solid fa-wave-square"></i> BIOSCAN RESULT <span class="badge-dot"></span></div>
+  <h1 class="hero-title">Body Plan <span class="green">Lo Siap</span></h1>
+  <p class="hero-sub">Rencana cerdas untuk lo berkembang lebih kuat, sehat, dan konsisten setiap hari.</p>
+  <div class="builder" id="builderText"><span><i class="fa-solid fa-spinner fa-spin"></i>Membaca data tubuh...</span></div>
+
+  <section class="hero-card" id="heroResultCard" aria-label="Ringkasan utama BioScan">
+    <div class="hero-video-bg" aria-hidden="true">
+      <video id="heroCardVideo" autoplay muted loop playsinline preload="metadata" poster="assets/exercise-guides/high-knees.webp">
+        <source src="assets/result-hero-bg.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="ring-box">
+      <div class="ring-wrap" aria-label="Body readiness">
+        <svg class="ring-svg" viewBox="0 0 220 220" role="img" aria-hidden="true">
+          <defs>
+            <linearGradient id="ringGradient" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#95ffb4"/>
+              <stop offset="45%" stop-color="#35e875"/>
+              <stop offset="100%" stop-color="#16c95b"/>
+            </linearGradient>
+          </defs>
+          <circle class="ring-track" cx="110" cy="110" r="90"></circle>
+          <circle class="ring-progress" id="ringProgress" cx="110" cy="110" r="90"></circle>
+        </svg>
+        <div class="ring-needle" id="ringNeedle"></div>
+        <div class="ring-core">
+          <div>
+            <strong class="ring-number"><span id="readinessNumber">0</span>%</strong>
+            <span class="ring-label">Readiness</span>
+            <svg class="ecg" viewBox="0 0 120 32" aria-hidden="true"><path d="M2 17h23l8-10 8 22 8-12h13l7-8 8 17 8-9h33"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="goal-copy" data-reveal="1">
+      <span class="goal-pill">Goal utama</span>
+      <h2 class="goal-title" id="goalTitle">Badan Berisi</h2>
+      <p class="goal-desc" id="goalDesc">Tambah massa otot & berat badan secara sehat dan terukur.</p>
+      <div class="micro-row">
+        <div class="micro"><i class="fa-solid fa-arrow-trend-up"></i><div><small>Progress awal</small><b id="progressText">78%</b></div></div>
+        <div class="micro"><i class="fa-regular fa-clock"></i><div><small>Estimasi waktu</small><b id="timeText">16–20 minggu</b></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="metric-grid" data-reveal="2" aria-label="Metrik utama">
+    <article class="metric-card"><div class="metric-icon"><i class="fa-solid fa-fire-flame-curved"></i></div><div class="metric-text"><small>Target kalori</small><b id="kcalValue">0</b><span>kcal / hari</span></div></article>
+    <article class="metric-card"><div class="metric-icon"><i class="fa-solid fa-dumbbell"></i></div><div class="metric-text"><small>Protein harian</small><b id="proteinValue">0</b><span>g / hari</span></div></article>
+    <article class="metric-card"><div class="metric-icon"><i class="fa-solid fa-droplet"></i></div><div class="metric-text"><small>Air minum</small><b id="waterValue">0</b><span>L / hari</span></div></article>
+    <article class="metric-card"><div class="metric-icon"><i class="fa-solid fa-weight-scale"></i></div><div class="metric-text"><small>BMI</small><b id="bmiValue">0</b><span id="bmiLabel">Normal</span></div></article>
+  </section>
+
+  <section class="meta-strip" data-reveal="3" aria-label="Detail cepat">
+    <div class="meta"><i class="fa-solid fa-dumbbell"></i><div><small>Arah goal</small><b id="metaGoal">Massa Otot</b></div></div>
+    <div class="meta"><i class="fa-solid fa-sliders"></i><div><small>Frekuensi latihan</small><b id="metaTraining">4x / minggu</b></div></div>
+    <div class="meta"><i class="fa-solid fa-user"></i><div><small>Mode data</small><b id="metaMode">user mode</b></div></div>
+  </section>
+
+  <section class="section" data-reveal="4">
+    <div class="section-head"><h2>Rekomendasi awal untuk lo</h2><a class="see-all" href="meal.html">Lihat semua <i class="fa-solid fa-chevron-right"></i></a></div>
+    <div class="cards-3">
+      <a class="food-card" href="meal.html"><img src="assets/result_cards/meal_nasi_telur.webp" loading="lazy" alt="Menu nasi telur"><span class="check"><i class="fa-solid fa-check"></i></span><div class="card-copy"><b>Nasi Telur</b><span id="mealOne">532 kcal • 22g protein</span></div></a>
+      <a class="food-card" href="meal.html"><img src="assets/result_cards/meal_ayam_tempe.webp" loading="lazy" alt="Menu ayam tempe"><span class="check"><i class="fa-solid fa-check"></i></span><div class="card-copy"><b>Ayam Tempe</b><span id="mealTwo">612 kcal • 34g protein</span></div></a>
+      <a class="food-card" href="meal.html"><img src="assets/result_cards/meal_oatmeal_pisang.webp" loading="lazy" alt="Menu oatmeal pisang"><span class="check"><i class="fa-solid fa-check"></i></span><div class="card-copy"><b>Oatmeal Pisang</b><span id="mealThree">456 kcal • 16g protein</span></div></a>
+    </div>
+  </section>
+
+  <section class="section" data-reveal="5">
+    <div class="section-head"><h2>Latihan awal</h2><a class="see-all" href="training-guide.html">Lihat semua <i class="fa-solid fa-chevron-right"></i></a></div>
+    <div class="cards-3" id="workoutCards">
+      <a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/push-up.webp" loading="lazy" alt="Push day"><span class="card-icon"><i class="fa-solid fa-person-running"></i></span><div class="card-copy"><b>Push Day</b><span>Dada • Bahu • Trisep<br><i class="fa-regular fa-clock"></i> ± 45 menit</span></div></a>
+      <a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/bodyweight-squat.webp" loading="lazy" alt="Lower body"><span class="card-icon"><i class="fa-solid fa-dumbbell"></i></span><div class="card-copy"><b>Lower Body</b><span>Kaki • Glute • Core<br><i class="fa-regular fa-clock"></i> ± 50 menit</span></div></a>
+      <a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/high-knees.webp" loading="lazy" alt="Jalan cepat"><span class="card-icon"><i class="fa-solid fa-person-walking"></i></span><div class="card-copy"><b>Jalan Cepat</b><span>Cardio Ringan<br><i class="fa-regular fa-clock"></i> ± 30 menit</span></div></a>
+    </div>
+  </section>
+
+  <section class="section" data-reveal="6">
+    <div class="section-head"><h2>Misi Discipline Hub hari ini</h2><a class="see-all" href="app.html">Buka hub <i class="fa-solid fa-chevron-right"></i></a></div>
+    <div class="mission-box">
+      <div class="mission"><i class="fa-solid fa-glass-water"></i><div><b>Minum 4 gelas sebelum siang</b><span>Biar hidrasi terjaga dan fokus on point.</span></div><span class="circle-check"></span></div>
+      <div class="mission"><i class="fa-solid fa-person-walking"></i><div><b>Jalan 10 menit</b><span>Gerak ringan, mood naik, metabolisme aktif.</span></div><span class="circle-check"></span></div>
+      <div class="mission"><i class="fa-solid fa-bowl-food"></i><div><b>Jangan skip sarapan</b><span>Bahan bakar awal buat energi seharian.</span></div><span class="circle-check"></span></div>
+    </div>
+  </section>
+
+  <a class="cta-bar" href="evolution.html" data-reveal="6">
+    <span class="cta-circle"><i class="fa-solid fa-arrow-right"></i></span>
+    <span><span class="cta-main">Lihat Body Evolution</span><span class="cta-sub">Avatar berubah seiring latihan</span></span>
+    <i class="fa-solid fa-arrow-right"></i>
+  </a>
+
+  <a class="cta-bar cta-bodyfit-next" href="bodyfit.html" data-reveal="6" aria-label="Lanjut ke BodyFit Hub">
+    <span class="cta-circle"><i class="fa-solid fa-house"></i></span>
+    <span><span class="cta-main">Lanjut ke BodyFit Hub</span><span class="cta-sub">Masuk ke dashboard utama BodyFit</span></span>
+    <i class="fa-solid fa-arrow-right"></i>
+  </a>
+</main>
+
+<script>
+(function(){
+  const qs=new URLSearchParams(location.search);
+  function localProfile(){try{return JSON.parse(localStorage.getItem('wh_calorie_profile')||localStorage.getItem('wh_bioscan_profile')||'{}')}catch(e){return {}}}
+  const saved=localProfile();
+  const umur=Number(qs.get('umur')||qs.get('age')||saved.umur||saved.age||19);
+  const berat=Number(qs.get('berat')||qs.get('weight')||saved.berat||saved.weight||88);
+  const tinggi=Number(qs.get('tinggi')||qs.get('height')||saved.tinggi||saved.height||180);
+  const gender=(qs.get('gender')||saved.gender||'pria').toLowerCase();
+  const aktivitas=Number(qs.get('aktivitas')||saved.aktivitas||saved.activity||1.725);
+  const goal=(qs.get('goal')||saved.goal||'bulking').toLowerCase();
+  const mode=(saved.estimated||qs.get('estimated')==='1')?'estimasi':'user mode';
+  function calc(){
+    const bmr=gender==='wanita'?10*berat+6.25*tinggi-5*umur-161:10*berat+6.25*tinggi-5*umur+5;
+    const maintenance=Math.round(bmr*aktivitas);
+    let target=maintenance;
+    if(goal==='cutting') target-=300;
+    if(goal==='bulking') target+=300;
+    target=Math.max(1200,Math.round(target));
+    const protein=Math.round(berat*(goal==='bulking'?1.8:1.6));
+    const water=Math.max(1.8,Math.min(4.2,berat*0.032));
+    const bmi=tinggi?berat/Math.pow(tinggi/100,2):0;
+    let readiness=78;
+    if(mode==='estimasi') readiness=69;
+    else if(bmi && (bmi<18.5||bmi>=30)) readiness=72;
+    return {target,protein,water,bmi,readiness};
+  }
+  const data=calc();
+  function bmiLabel(v){if(!v)return '-'; if(v<18.5)return 'Rendah'; if(v<25)return 'Normal'; if(v<30)return 'Overweight'; return 'Tinggi'}
+  const goalMap={
+    bulking:{title:'Badan Berisi',desc:'Tambah massa otot & berat badan secara sehat dan terukur.',meta:'Massa Otot',train:'4x / minggu',time:'16–20 minggu'},
+    cutting:{title:'Turun Lemak',desc:'Turunkan lemak pelan-pelan tanpa merusak energi harian.',meta:'Fat Loss',train:'3–4x / minggu',time:'12–16 minggu'},
+    maintenance:{title:'Fit & Stabil',desc:'Jaga bentuk tubuh, stamina, dan rutinitas sehat yang konsisten.',meta:'Fit Body',train:'3x / minggu',time:'8–12 minggu'}
+  };
+  const g=goalMap[goal]||goalMap.maintenance;
+  const $=id=>document.getElementById(id);
+  $('goalTitle').textContent=g.title; $('goalDesc').textContent=g.desc; $('timeText').textContent=g.time; $('metaGoal').textContent=g.meta; $('metaTraining').textContent=g.train; $('metaMode').textContent=mode;
+  $('progressText').textContent=data.readiness+'%'; $('bmiLabel').textContent=bmiLabel(data.bmi);
+  if(goal==='cutting'){
+    document.querySelector('#workoutCards').innerHTML=`<a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/bodyweight-squat.webp" loading="lazy" alt="Full body"><span class="card-icon"><i class="fa-solid fa-dumbbell"></i></span><div class="card-copy"><b>Full Body</b><span>Strength basic<br><i class="fa-regular fa-clock"></i> ± 40 menit</span></div></a><a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/high-knees.webp" loading="lazy" alt="Cardio"><span class="card-icon"><i class="fa-solid fa-heart-pulse"></i></span><div class="card-copy"><b>Cardio Ringan</b><span>Zone 2 / jalan cepat<br><i class="fa-regular fa-clock"></i> ± 30 menit</span></div></a><a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/plank.webp" loading="lazy" alt="Core"><span class="card-icon"><i class="fa-solid fa-person"></i></span><div class="card-copy"><b>Core Day</b><span>Plank • Stability<br><i class="fa-regular fa-clock"></i> ± 20 menit</span></div></a>`;
+  }
+  if(goal==='maintenance'){
+    document.querySelector('#workoutCards').innerHTML=`<a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/push-up.webp" loading="lazy" alt="Strength"><span class="card-icon"><i class="fa-solid fa-dumbbell"></i></span><div class="card-copy"><b>Strength Basic</b><span>Push • Pull • Squat<br><i class="fa-regular fa-clock"></i> ± 35 menit</span></div></a><a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/plank-to-downward-dog.webp" loading="lazy" alt="Mobility"><span class="card-icon"><i class="fa-solid fa-leaf"></i></span><div class="card-copy"><b>Mobility</b><span>Stretch ringan<br><i class="fa-regular fa-clock"></i> ± 15 menit</span></div></a><a class="workout-card" href="training-guide.html"><img src="assets/exercise-guides/high-knees.webp" loading="lazy" alt="Cardio"><span class="card-icon"><i class="fa-solid fa-person-walking"></i></span><div class="card-copy"><b>Jalan Cepat</b><span>Cardio ringan<br><i class="fa-regular fa-clock"></i> ± 25 menit</span></div></a>`;
+  }
+  function easeOutExpo(x){return x===1?1:1-Math.pow(2,-10*x)}
+  function count(el,from,to,duration,decimals=0,suffix=''){
+    const start=performance.now();
+    function frame(now){const p=Math.min(1,(now-start)/duration);const v=from+(to-from)*easeOutExpo(p);el.textContent=(decimals?Number(v).toFixed(decimals):Math.round(v))+suffix;if(p<1)requestAnimationFrame(frame)}
+    requestAnimationFrame(frame);
+  }
+  const ring=$('ringProgress'),needle=$('ringNeedle');
+  const C=565;
+  const heroCard=$('heroResultCard');
+  const heroVideo=$('heroCardVideo');
+  function setupHeroCardVideo(){
+    if(!heroCard||!heroVideo) return;
+    const prefersReduced=window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const saveData=navigator.connection && navigator.connection.saveData;
+    const lowMemory=navigator.deviceMemory && navigator.deviceMemory <= 2;
+    if(prefersReduced || saveData || lowMemory){
+      heroCard.classList.add('video-off');
+      return;
+    }
+    const playPromise=heroVideo.play();
+    if(playPromise && typeof playPromise.catch==='function'){
+      playPromise.catch(()=>heroCard.classList.add('video-paused'));
+    }
+  }
+  function startSpeedometer(){
+    document.body.classList.add('speeding');
+    setTimeout(()=>{$('builderText').innerHTML='<span><i class="fa-solid fa-chart-simple"></i>Menghitung target kalori...</span>'},420);
+    setTimeout(()=>{$('builderText').innerHTML='<span><i class="fa-solid fa-dumbbell"></i>Menyusun body plan...</span>'},920);
+    setTimeout(()=>{$('builderText').innerHTML='<span><i class="fa-solid fa-check-circle"></i>Body plan siap.</span>'},1520);
+    requestAnimationFrame(()=>{
+      ring.style.strokeDashoffset=String(C*(1-data.readiness/100));
+      const deg=-132 + (264*(data.readiness/100));
+      needle.style.transform=`rotate(${deg}deg)`;
+    });
+    count($('readinessNumber'),0,data.readiness,1850,0);
+    count($('kcalValue'),0,data.target,1850,0);
+    count($('proteinValue'),0,data.protein,1700,0);
+    count($('waterValue'),0,data.water,1650,1);
+    count($('bmiValue'),0,data.bmi||0,1650,1);
+    setTimeout(()=>{document.body.classList.add('ready');document.body.classList.remove('speeding')},2050);
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',()=>{setupHeroCardVideo();startSpeedometer();},{once:true});
+  }else{
+    setupHeroCardVideo();
+    startSpeedometer();
+  }
+  try{localStorage.setItem('wh_last_body_plan',JSON.stringify({umur,berat,tinggi,gender,aktivitas,goal,targetKalori:data.target,protein:data.protein,water:data.water,bmi:data.bmi,readiness:data.readiness,updatedAt:new Date().toISOString()}));}catch(e){}
+  window.addEventListener('pageshow',()=>document.body.classList.remove('wh-page-exit'));
+  document.addEventListener('click',function(e){
+    const a=e.target.closest('a'); if(!a) return;
+    const href=a.getAttribute('href')||''; if(!href||href.startsWith('#')||href.startsWith('javascript:')) return;
+    if(a.target==='_blank'||a.hasAttribute('download')) return;
+    let url; try{url=new URL(a.href, location.href)}catch(err){return}
+    if(url.origin!==location.origin) return;
+    e.preventDefault(); document.body.classList.add('wh-page-exit'); setTimeout(()=>{location.href=a.href},170);
+  });
+  if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js').catch(()=>{}));}
+})();
+</script>
+</body>
+</html>

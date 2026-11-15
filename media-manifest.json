@@ -1,0 +1,3101 @@
+{
+  "version": "7.41",
+  "archive": "wellnesshubid_v741_future_map_editable_notebook_FULL.zip",
+  "files": [
+    {
+      "path": "apple-touch-icon.png",
+      "size": 244868,
+      "sha256": "febec001e9ce3cdf2316d45fbe794d5ec69530451540398a00b649ca749d78fd"
+    },
+    {
+      "path": "assets/achievement/achievement-bahu.mp4",
+      "size": 3401604,
+      "sha256": "66bbde27dbde3b3661b023a332f3f3d3e5eae43e18eba25dcc4ede8a610d20c1"
+    },
+    {
+      "path": "assets/achievement/achievement-betis.mp4",
+      "size": 4875861,
+      "sha256": "9652d2b7abb2969ba0a59c9177389fe354cb46df339c8ed9dc9dbd3f77763a2e"
+    },
+    {
+      "path": "assets/achievement/achievement-bicep.mp4",
+      "size": 4184544,
+      "sha256": "322eb4eac73f968307727fc4cd011d42f4dd9752d0ade03c2cbc3aca7107ecd9"
+    },
+    {
+      "path": "assets/achievement/achievement-bulking.mp4",
+      "size": 4868124,
+      "sha256": "1649175a5e5f6315cc79cde799e1d43894dc11385ddbf5e8d6e7456b255cd225"
+    },
+    {
+      "path": "assets/achievement/achievement-core.mp4",
+      "size": 3331016,
+      "sha256": "c4b48f81a3f6eb729fda9cfa2e8fe950022aec5fe6d2f59bae4eeb24b229831e"
+    },
+    {
+      "path": "assets/achievement/achievement-dada.mp4",
+      "size": 4667271,
+      "sha256": "0a3d48102f89267cf52b71324bcee75e82bf6663341a1a750a4cd19939e2a9d5"
+    },
+    {
+      "path": "assets/achievement/achievement-fatloss-alt.mp4",
+      "size": 3394560,
+      "sha256": "d18bf52e28c6df74d808b04bfb304ded1eb9595012b017ce40bb42a3e4770503"
+    },
+    {
+      "path": "assets/achievement/achievement-fatloss.mp4",
+      "size": 4897902,
+      "sha256": "5dd9c2b088ca39df9213b3221f76829d2f085343ab95ab645ad2403393b71e1a"
+    },
+    {
+      "path": "assets/achievement/achievement-full-body.mp4",
+      "size": 4523377,
+      "sha256": "eabe0014995490af36cbf6cf4216c3197559abef5be61ce1c3258636f8c69518"
+    },
+    {
+      "path": "assets/achievement/achievement-glute.mp4",
+      "size": 3463564,
+      "sha256": "6184fb0ff0fb6daf69ff8ab4356609db87c288444d1bf630be7be16237acd778"
+    },
+    {
+      "path": "assets/achievement/achievement-kaki.mp4",
+      "size": 4517386,
+      "sha256": "3fc1e04b980d4f6ea5600f399b7469afd4767468bce56620c7aecee4c15ac149"
+    },
+    {
+      "path": "assets/achievement/achievement-mobility.mp4",
+      "size": 4587602,
+      "sha256": "29a34ddd27bd898a5339af357d06636f3509340a6647abf7cf229db5b0f9954b"
+    },
+    {
+      "path": "assets/achievement/achievement-pemula.mp4",
+      "size": 4795484,
+      "sha256": "4323f305d4ad4ff143a56f4d9a2632ae9efe7ec27ad2635b07286c4c6cab22dd"
+    },
+    {
+      "path": "assets/achievement/achievement-perut.mp4",
+      "size": 4006318,
+      "sha256": "17d182b6200abcdb120c12fb2b46c7ea18cbb94a10c3cff97aa432a54508eeae"
+    },
+    {
+      "path": "assets/achievement/achievement-punggung.mp4",
+      "size": 3712878,
+      "sha256": "3288cd41717530b76c69e657cf28a5a7ca914f614a61675f8e0156827d9ecd4b"
+    },
+    {
+      "path": "assets/achievement/achievement-tricep.mp4",
+      "size": 3200889,
+      "sha256": "ad6776e0145dfb46da2057900fbdbfc7792bc3e2d7bfea1cd5669b06869a097b"
+    },
+    {
+      "path": "assets/achievement/achievement-upper-body.mp4",
+      "size": 4443610,
+      "sha256": "0b3468cd7902fee8c46c2bad9f1912b048829958c43854b5a3a1d4750cbb637d"
+    },
+    {
+      "path": "assets/body-scan-hero.jpg",
+      "size": 66127,
+      "sha256": "0eb9b0c1d92ea8fb1a916c4c3140ad34dd06f31ae20bb8422f4c8cc4c896e8c8"
+    },
+    {
+      "path": "assets/bodyfit-hub-icon.png",
+      "size": 174013,
+      "sha256": "2bab7e788802ca36ea7944f2bc117cc425c44c608f8b922527d944052c73a6a9"
+    },
+    {
+      "path": "assets/coach-audio/coach-breath.mp3",
+      "size": 68797,
+      "sha256": "b201c19153367135b4ce28578c8f08fb6079e76aedbf4259207da84d9add38cd"
+    },
+    {
+      "path": "assets/coach-audio/coach-finish.mp3",
+      "size": 57512,
+      "sha256": "6961ca682ba01369ddb9dcb4d90787a9ae92f2b5ca6d9ec51ee24399f80ee2bf"
+    },
+    {
+      "path": "assets/coach-audio/coach-form-control.mp3",
+      "size": 76947,
+      "sha256": "6a771d597c9e78a14685dafc5c72d2f2c65e66e9b12174596358b1a793c886ee"
+    },
+    {
+      "path": "assets/coach-audio/coach-next-set.mp3",
+      "size": 57930,
+      "sha256": "93a3e4f9628d68f82941f990ec75fe17b00d871c9bbddf74b9898b35c04931d3"
+    },
+    {
+      "path": "assets/coach-audio/coach-opening.mp3",
+      "size": 179347,
+      "sha256": "6bb5c44ad6964b4b865cdda746c1cf516981fce340ed16d315f027fb6d641a54"
+    },
+    {
+      "path": "assets/coach-audio/coach-recovery.mp3",
+      "size": 93038,
+      "sha256": "a1ce051c9154b6c5e4b4df696dbc2c4ec88a9729527e0d0fc9ffe98525025d21"
+    },
+    {
+      "path": "assets/coach-audio/coach-reset-form.mp3",
+      "size": 73812,
+      "sha256": "c200897adeba559be94e57e16ac75996b839f49424d0f61374e183a574ed1611"
+    },
+    {
+      "path": "assets/coach-audio/coach-rest.mp3",
+      "size": 65453,
+      "sha256": "735597e6cea3293aba8e7fc3fa6a4c9f622ee597e41b73b74df9dca6c9bd1438"
+    },
+    {
+      "path": "assets/coach-audio/coach-safe-intensity.mp3",
+      "size": 68379,
+      "sha256": "1d2026e2a8d3fbcd6881126a1151bbe4a48cbf93f5910064386af8fc0186babd"
+    },
+    {
+      "path": "assets/coach-audio/coach-slow-down.mp3",
+      "size": 64199,
+      "sha256": "9151ef500c18ebd13c6a6ce0197ee72ee9f7eb52fc3d0da909150d5995f80dce"
+    },
+    {
+      "path": "assets/coach-audio/coach-start-set.mp3",
+      "size": 91158,
+      "sha256": "f97b98f2ed90410840f189b939d7e64330117d9ce608d10dbd0c54e6281891d6"
+    },
+    {
+      "path": "assets/coach-audio/coach-warning.mp3",
+      "size": 67752,
+      "sha256": "2e02a251c0844f1feeab78309c586f4493315e3bd6b3dce6fd54efdfd5f47b15"
+    },
+    {
+      "path": "assets/coach-audio/cue-food-log.mp3",
+      "size": 59184,
+      "sha256": "12ab38a23d7b2c7000a316d754671dadb42fed38b4e600c7f082c8291790c04a"
+    },
+    {
+      "path": "assets/coach-audio/cue-glute-bridge.mp3",
+      "size": 66498,
+      "sha256": "d53de5838788dad21645ed4009829b45c14d34545420093cba429bffdd1b7a86"
+    },
+    {
+      "path": "assets/coach-audio/cue-mission-done.mp3",
+      "size": 53750,
+      "sha256": "3ec157778842b1fc43cda791c7c2b808468c235cf2490d1415acf34c71274f1c"
+    },
+    {
+      "path": "assets/coach-audio/cue-mountain-climber.mp3",
+      "size": 45391,
+      "sha256": "3c3deb0fde55dc336f6ea293a89e198d84e32e955cdbc3f84be5f930b0371123"
+    },
+    {
+      "path": "assets/coach-audio/cue-plank.mp3",
+      "size": 69424,
+      "sha256": "2858ff9579580c1026ec831c70ef806b6f603373759c620a14a96135262ed8f0"
+    },
+    {
+      "path": "assets/coach-audio/cue-push-up.mp3",
+      "size": 49780,
+      "sha256": "dc5bc614ddcc7fa6dfbad8d455802aafbef0f371705a62575bf7e8d418f5364f"
+    },
+    {
+      "path": "assets/coach-audio/cue-squat.mp3",
+      "size": 69006,
+      "sha256": "9624c98c5a03bfb04471bbb06cc444fe33aa173394be2fc048354c88fa227bae"
+    },
+    {
+      "path": "assets/coach-audio/cue-water.mp3",
+      "size": 46018,
+      "sha256": "f647dfed014040656301443c0759730167e4e919f7a101e636a1907227093b54"
+    },
+    {
+      "path": "assets/coach-audio/mood-biasa.mp3",
+      "size": 34524,
+      "sha256": "de7c9e9a169f045f23a836d71a1caab25dabfc130e2a5a3d0cb61f771ed42902"
+    },
+    {
+      "path": "assets/coach-audio/mood-capek.mp3",
+      "size": 70887,
+      "sha256": "10c2fac72dc2aee40bc1dea1b2d0faa73a4a6880c882fba57effd649142234a0"
+    },
+    {
+      "path": "assets/coach-audio/mood-kacau.mp3",
+      "size": 69006,
+      "sha256": "5da61c3afc1e253c2ffd27ce3bb59595d090ec725128b28319ae46073b2e642b"
+    },
+    {
+      "path": "assets/coach-audio/mood-semangat.mp3",
+      "size": 63572,
+      "sha256": "ca535228f7bbd4d53adc419f030f0d4807aa1d4723303431298f782a676afe4c"
+    },
+    {
+      "path": "assets/coach-audio/motivation-focus.mp3",
+      "size": 72976,
+      "sha256": "c318a3a4178cba9db4837546190dee09aa84629c91c6632791405f567e6ba57a"
+    },
+    {
+      "path": "assets/coach-audio/motivation-heavy-day.mp3",
+      "size": 52078,
+      "sha256": "758d650c321b34032b42856a2fe02be4dcc624d00dfe1e1184786dda38377b6b"
+    },
+    {
+      "path": "assets/coach-audio/motivation-one-rep.mp3",
+      "size": 72558,
+      "sha256": "140140da0782f795bfa4ec25370764f6e86719b66cd22e4a26500acb4bdacaf4"
+    },
+    {
+      "path": "assets/coach-audio/motivation-small-step.mp3",
+      "size": 59393,
+      "sha256": "26ffdfa63b35be8fd42890d442814c08fe87df2733887bd7177c58f91f89be55"
+    },
+    {
+      "path": "assets/conditions/hero.png",
+      "size": 110445,
+      "sha256": "44984353367ad1f62ef367579dbe977e4d999ac81e4b2653473c5331b05491a6"
+    },
+    {
+      "path": "assets/conditions/high-stable.jpg",
+      "size": 18654,
+      "sha256": "4fe38b16bfc7d89de2c764a70719fbff290f822a5073df0ac988ad04def730a2"
+    },
+    {
+      "path": "assets/conditions/high.png",
+      "size": 68786,
+      "sha256": "d09e6bab7d562b5f7e0d87c705ddb4cc89257b73e48204f8ddfcf67d205853d4"
+    },
+    {
+      "path": "assets/conditions/low-stable.jpg",
+      "size": 17268,
+      "sha256": "2d1515dfe77313ecd20eca155f72e02534d2ade92c321e95ae87e86ec10e220d"
+    },
+    {
+      "path": "assets/conditions/low.png",
+      "size": 65506,
+      "sha256": "07b65e68c65a7cfb1bba174f693399dddfd53ab221c4ed09a0328282df8bbe65"
+    },
+    {
+      "path": "assets/conditions/normal-stable.jpg",
+      "size": 13923,
+      "sha256": "8b01cec9d5d9b1c39b296cf6a173821dfa8c2785eefff99939304e912deb40ad"
+    },
+    {
+      "path": "assets/conditions/normal.png",
+      "size": 58527,
+      "sha256": "bf9dd5f840a421fa0474b10dba20c37aaa093e5d8ef22189bb0ec8e1dcd37989"
+    },
+    {
+      "path": "assets/conditions/rescue-stable.jpg",
+      "size": 16136,
+      "sha256": "69d7a616c6176f3b2f7781d1289121e689639951ff503160638234f6e346475d"
+    },
+    {
+      "path": "assets/conditions/rescue.png",
+      "size": 65918,
+      "sha256": "d69f4eddba314042a4108303dfc01c9024c02379ee8e36c7358f0fa958d4a8c1"
+    },
+    {
+      "path": "assets/daily-carousel/001-cristiano_ronaldo_bakat_dan_disiplin.webp",
+      "size": 143162,
+      "sha256": "9cf68b0eef682b77f541a2698d1809e750e8d4d49de9a56320bdc09a8814da61"
+    },
+    {
+      "path": "assets/daily-carousel/002-jangan_tanya_hasil_latihanmu.webp",
+      "size": 100950,
+      "sha256": "a7024eafd02c1d6c47b3361a2b3ad1985cfc5b9a1488eb7ebab838ebe24e2ed3"
+    },
+    {
+      "path": "assets/daily-carousel/003-mentalitas_juara_michael_jordan.webp",
+      "size": 113538,
+      "sha256": "0cb766e17e7cbd08a65538c891610c17651f7bac79ad133b052c485a691c3c60"
+    },
+    {
+      "path": "assets/daily-carousel/004-disiplin_dan_kemenangan_muhammad_ali.webp",
+      "size": 78638,
+      "sha256": "cd49ef395c583a4184bd185df5681202f8063e0574ba797f0b607d3e2033d1e4"
+    },
+    {
+      "path": "assets/daily-carousel/005-orang_cuma_lihat_10_detik.webp",
+      "size": 110652,
+      "sha256": "c20c6ed66823f25ec6979e980b67bf50d6006cbe40f44e450d273179b63096ec"
+    },
+    {
+      "path": "assets/daily-carousel/006-tekanan_tempat_mental_juara_terbentuk.webp",
+      "size": 81498,
+      "sha256": "7a5654eb5e866f53d9785cca0ad6009004dbf3e57b971ee6dd54ce53328f32e5"
+    },
+    {
+      "path": "assets/daily-carousel/007-tenang_adalah_kontrol_diri.webp",
+      "size": 100298,
+      "sha256": "3e37a78b9041328ace85792f8f97c6e5849f5cdf47fa6ab0b3ab05eb138a752e"
+    },
+    {
+      "path": "assets/daily-carousel/008-karier_panjang_konsistensi_bertahun_tahun.webp",
+      "size": 141924,
+      "sha256": "f107bebd2b62cd3cb5dde7b75f1a432c1e04ad0be5cf412eea41fba904f9423f"
+    },
+    {
+      "path": "assets/daily-carousel/009-tidak_ada_medali_tanpa_alasan.webp",
+      "size": 136118,
+      "sha256": "173e9f842cbe1a2fb58b3128299f03c0fd99d23877524db337494d30034c5571"
+    },
+    {
+      "path": "assets/daily-carousel/010-langkah_stabil_semangat_luar_biasa.webp",
+      "size": 121168,
+      "sha256": "287dc7d725bba88f8f2fb49d094d99a166926d25e665f3ef5941b26f6ffdc132"
+    },
+    {
+      "path": "assets/daily-carousel/011-menggunakan_kelebihanmu_untuk_dominasi.webp",
+      "size": 167374,
+      "sha256": "ff323e4e7c80ac6636acb34618f9a40dd0a5df6048ab75289fb103aec62f7d40"
+    },
+    {
+      "path": "assets/daily-carousel/012-fisik_berubah_hidupmu_ikut_berubah.webp",
+      "size": 137064,
+      "sha256": "edad9e980425fab921272a3a992aca2960b2244066b18dfc4c2ce8dbe8c6f694"
+    },
+    {
+      "path": "assets/daily-carousel/013-fokus_dan_kemampuan_dalam_satu_pukulan.webp",
+      "size": 127516,
+      "sha256": "855cb1560f3bb743f4694ee7fa3ce041c71296ec545d3f1478a8bb45a70e2d3d"
+    },
+    {
+      "path": "assets/daily-carousel/014-tenang_tapi_terarah.webp",
+      "size": 160102,
+      "sha256": "cbeb9132bbf14885f3772d63b325750ae273777189ea8c399469d7084ac5d3be"
+    },
+    {
+      "path": "assets/daily-carousel/015-detail_kecil_yang_dikenang_selamanya.webp",
+      "size": 187616,
+      "sha256": "8d805c007a22217cc64e140d783c08b726e02d3539321a1c9fb52d3c4431704e"
+    },
+    {
+      "path": "assets/daily-carousel/016-rasa_takut_bukan_masalah.webp",
+      "size": 120750,
+      "sha256": "4f8787a89adef78dc79d1215dd150806b2fe7adbcd0f78459258702b242ec3c0"
+    },
+    {
+      "path": "assets/daily-carousel/017-bruce_lee_adaptasi_dan_kekuatan.webp",
+      "size": 116912,
+      "sha256": "d6a56c54b9464351d26ac058489e07a03e2ebd99720a63b45282a340e94fcb0f"
+    },
+    {
+      "path": "assets/daily-carousel/018-kontrol_diri_sebelum_menang_di_luar.webp",
+      "size": 100478,
+      "sha256": "fe81ee306442e05f13610b104ab94e39ad58187d03d788653dfd2e7483014fe1"
+    },
+    {
+      "path": "assets/daily-carousel/019-jadilah_tajam_dengan_caramu_sendiri.webp",
+      "size": 116774,
+      "sha256": "dfe274deae7a89bef3b3acb1a9efb8bfe17c66a557cccef594c72eaf58b6824a"
+    },
+    {
+      "path": "assets/daily-carousel/020-masa_lalu_fondasi_pukulan_kuat.webp",
+      "size": 108132,
+      "sha256": "d604e111e3d8a9af7224bc8755f899976457a55020af5e211889f2492a2fb0cd"
+    },
+    {
+      "path": "assets/daily-carousel/021-tetap_maju_setelah_berdarah.webp",
+      "size": 119120,
+      "sha256": "833285b38f68a6440d0533fc86156785c6411a450b4b4a05693574f11d3ac42b"
+    },
+    {
+      "path": "assets/daily-carousel/022-profesional_tetap_kerja_keras.webp",
+      "size": 105452,
+      "sha256": "88586733b3b27d0d0cb01b56dad7a38c33d7fabeca853718cb492a589db4f095"
+    },
+    {
+      "path": "assets/daily-carousel/023-kecepatan_dan_strategi_dalam_ring.webp",
+      "size": 108960,
+      "sha256": "7c72faa891a14a026ab77dd912e7ee9d4fea9778ae408bc6b9f3954d26781ef8"
+    },
+    {
+      "path": "assets/daily-carousel/024-target_besar_kerja_benar.webp",
+      "size": 112906,
+      "sha256": "2c681d16fc24a012e7e30cf3aca7a315e27abe4f9a5f9066f1abeaad34fad886"
+    },
+    {
+      "path": "assets/daily-carousel/025-fokus_dan_berani_menolak_banyak_hal.webp",
+      "size": 71788,
+      "sha256": "c2f3ade7b5953796eb83fb6293b6297818d317778c492cd956877f8a862541e3"
+    },
+    {
+      "path": "assets/daily-carousel/026-belajar_hari_ini_investasi_masa_depan.webp",
+      "size": 83964,
+      "sha256": "2a54d7a348d268997addcfa62a0573f24af82c4476d9a29daeee0a114187b65e"
+    },
+    {
+      "path": "assets/daily-carousel/027-sabar_membawa_kemenangan_dalam_hidup.webp",
+      "size": 77950,
+      "sha256": "c9a4822b21faa577a6a4f0a1986bf2f36186337f8c536b2aedb10f6dedca7155"
+    },
+    {
+      "path": "assets/daily-carousel/028-bangun_untuk_jangka_panjang_bukan_tepuk_tangan.webp",
+      "size": 66870,
+      "sha256": "3d862ba38b5aab6f8c3b610cc9caa7f68cf3d603b507365d8439bbe00b456d00"
+    },
+    {
+      "path": "assets/daily-carousel/029-eksekusi_cepat_mengalahkan_ide_bagus.webp",
+      "size": 103042,
+      "sha256": "971971dc99157b477abe9894137f4c42310a2c0767b51f2c5d205a0496d50140"
+    },
+    {
+      "path": "assets/daily-carousel/030-ditolak_bukan_akhir_cuma_latihan.webp",
+      "size": 76596,
+      "sha256": "f15c5c348ceaa56ddf5dc017faa10df18590664f35e18817db9470062023ba2a"
+    },
+    {
+      "path": "assets/daily-carousel/031-berani_mulai_dulu_baru_bergerak.webp",
+      "size": 78608,
+      "sha256": "a370e6f3aacc03d0893516287a81741e6f2fc750936026d97b85947840299e39"
+    },
+    {
+      "path": "assets/daily-carousel/032-kekuatan_merek_lahir_dari_pengalaman.webp",
+      "size": 69956,
+      "sha256": "0129bf521ba6185619447de14b98e26be16e6fc49bd23df74abc6eae6db1740b"
+    },
+    {
+      "path": "assets/daily-carousel/033-jalan_panjang_terasa_mustahil.webp",
+      "size": 98192,
+      "sha256": "eca57827e31503b2dc553af1a64c3cc5eb45ad08f2f7ebeb06f65ec483b31ed0"
+    },
+    {
+      "path": "assets/daily-carousel/034-gagal_bukan_aib_level_baru.webp",
+      "size": 96340,
+      "sha256": "97afdb6d84c6f2db0d3008e2f899c127e428fe8e1bc09c20954de2aebf81d46c"
+    },
+    {
+      "path": "assets/daily-carousel/035-kebebasan_lahir_dari_keputusan.webp",
+      "size": 89308,
+      "sha256": "da593bd3c9645d2428aba8e4f4f4a1929ff3d6f0a383da0640707f850c319a06"
+    },
+    {
+      "path": "assets/daily-carousel/036-hidup_membaik_dengan_kejujuran.webp",
+      "size": 99110,
+      "sha256": "32f799be75c4daef012284b7bb8a21d412878e39927753fbaaee473ecc4c6909"
+    },
+    {
+      "path": "assets/daily-carousel/037-mel_robbins_mulai_sebelum_pikiranmu_mencari_alas.webp",
+      "size": 60194,
+      "sha256": "1513763ec023161780acbccf54da0130e9a3bcbf5b68eae32acd08c39b6ec258"
+    },
+    {
+      "path": "assets/daily-carousel/038-motivasi_dari_simon_sinek.webp",
+      "size": 76320,
+      "sha256": "772a1eae5ade708b276376536dcc43f3ad412b8441af8ed06d97a3beddf343b0"
+    },
+    {
+      "path": "assets/daily-carousel/039-eric_thomas_motivasi_untuk_bertahan.webp",
+      "size": 88506,
+      "sha256": "ed5a87181f718b7505e54551f79e6784bf99c90439fa0eaaeb63138e8d77a2d9"
+    },
+    {
+      "path": "assets/daily-carousel/040-disiplin_adalah_kebebasan_diri.webp",
+      "size": 69456,
+      "sha256": "190304e732377d793f4bb72675bc873b1ed8d2196d36e4696918bb64506422ef"
+    },
+    {
+      "path": "assets/daily-carousel/041-refleksi_socrates_dalam_keheningan.webp",
+      "size": 85672,
+      "sha256": "e0033c2ae9247bfc63a04bdd9c35f69d97b9ce00b8aa36451d22bf33a93cdf18"
+    },
+    {
+      "path": "assets/daily-carousel/042-maka_latih_kebiasaanmu.webp",
+      "size": 84536,
+      "sha256": "1584fab582f9744cf6e3d42a27884444781521a988a1f22ad9ad9db1cb8b8aa3"
+    },
+    {
+      "path": "assets/daily-carousel/043-langkah_lambat_tapi_tidak_berhenti.webp",
+      "size": 87496,
+      "sha256": "23a6973bf02f175cd5577f3bca0a006ae7ae29ebe7d3607ecdcd392ed35c0d83"
+    },
+    {
+      "path": "assets/daily-carousel/044-keanggunan_pemikiran_nietzsche.webp",
+      "size": 48826,
+      "sha256": "f1590a3a14680cdb129cfd6fbcd91c61ff494109c0ae908fc827aa7f2e439208"
+    },
+    {
+      "path": "assets/daily-carousel/045-viktor_frankl_dan_makna_hidup.webp",
+      "size": 80230,
+      "sha256": "9037bf55c99cd197c5f6e1fd6a115d3298a9331ac086656cd49724b749ae9d17"
+    },
+    {
+      "path": "assets/daily-carousel/046-penerapan_prinsip_archimedes_yang_klasik.webp",
+      "size": 90548,
+      "sha256": "57ef154b4b187f1988a8b311dc034e7900c10c2e8469b6c1737210d25d0192be"
+    },
+    {
+      "path": "assets/daily-carousel/047-al_khawarizmi_penerus_ilmu_dan_hikmah.webp",
+      "size": 209496,
+      "sha256": "b41c083d83578ff3fed94524093d3fd71b81dad0fdf8e7cf70d9aaae472a61a7"
+    },
+    {
+      "path": "assets/daily-carousel/048-bakat_dan_disiplin_menuju_puncak.webp",
+      "size": 200816,
+      "sha256": "724d0b97193f336adeee8ff929118ecfa6f9e746f8e4b3a9e7bd45dc5300369f"
+    },
+    {
+      "path": "assets/daily-carousel/049-bakat_melihatan_disiplin_menuju_puncak.webp",
+      "size": 196474,
+      "sha256": "daaebd5b7dd77db247bed9c55ae75c7ba08f3771681fca5ea29b7609617489cb"
+    },
+    {
+      "path": "assets/daily-carousel/050-bakat_membuka_pintu_bertahan_atau_hancur.webp",
+      "size": 114652,
+      "sha256": "c3794a241140036c3f7b117d1a3ed1d0d843307e991002691d8772e1248b8539"
+    },
+    {
+      "path": "assets/daily-carousel/051-bangkit_dan_tulis_babak_baru.webp",
+      "size": 120116,
+      "sha256": "06bf4a1eb7e43b0d15b51661263b846a4357bebe14cb13f369bb63406552c195"
+    },
+    {
+      "path": "assets/daily-carousel/052-berani_mencoba_kamu_belum_kalah.webp",
+      "size": 78660,
+      "sha256": "e70eea1661006e4762657cd560ac86a33b3aea7592d97e47fb46ce3b55550690"
+    },
+    {
+      "path": "assets/daily-carousel/053-dari_nol_bahan_bakar_perjuangan.webp",
+      "size": 83960,
+      "sha256": "2d9a28d80f00a02dfefc9583778014144b7f568b3fd11389acaf3df71704c5e5"
+    },
+    {
+      "path": "assets/daily-carousel/054-disiplin_dan_mentalitas_ronaldo_dalam_olahraga.webp",
+      "size": 142268,
+      "sha256": "b066627336eb79b53d2a052e9164dcec52c05f4452234d2bc90bfa612d49802a"
+    },
+    {
+      "path": "assets/daily-carousel/055-disiplin_kecil_penyesalan_panjang.webp",
+      "size": 76932,
+      "sha256": "ba19f98f8566c2c384a844fa70f86cde3e2e18de7ae1457eeb8b3aeca0ee76b4"
+    },
+    {
+      "path": "assets/daily-carousel/056-disiplin_membawa_kemenangan_besar.webp",
+      "size": 108624,
+      "sha256": "fc6f3eb77c413b5127c2cdbba24078352deaa0a0d7bc77092f1f6cbbc745e4cd"
+    },
+    {
+      "path": "assets/daily-carousel/057-disiplin_menentukan_kemenangan_sejati.webp",
+      "size": 177610,
+      "sha256": "4645c15e9ffecef3dddbc32ea8ba9986ca1e5f8c1a8d61c7c0ef0377c29892b8"
+    },
+    {
+      "path": "assets/daily-carousel/058-disiplin_untuk_kemenangan_besok.webp",
+      "size": 149030,
+      "sha256": "df2d3f822c340d0ed48fdd13537d0e00c0dd8e0ed24f5db4f6069e2f3e25c1ba"
+    },
+    {
+      "path": "assets/daily-carousel/059-disiplin_untuk_kemenangan_esok_hari.webp",
+      "size": 150482,
+      "sha256": "d5e3d678181c03bdc7d75f9bf30901aaf9c2674d8dfedb65b932c3a204f01329"
+    },
+    {
+      "path": "assets/daily-carousel/060-fokus_pada_hasil_bukan_kata_kata.webp",
+      "size": 114382,
+      "sha256": "ce299dcca9314b783e7dc02a1b7965385bd50b4534c49295a9c5b072ad52eb0e"
+    },
+    {
+      "path": "assets/daily-carousel/061-fokus_pada_yang_bisa_kamu_kendalikan.webp",
+      "size": 111068,
+      "sha256": "57e5270a4d75822c08cdd775ba097587f85ad964f1af3831bce38f21d01d1d46"
+    },
+    {
+      "path": "assets/daily-carousel/062-ibnu_khaldun_pemikiran_abad_ke_14.webp",
+      "size": 200346,
+      "sha256": "81824f732aeacab758fd560f8079823d593b5dfa1add9a4a1da4bcf509f882dd"
+    },
+    {
+      "path": "assets/daily-carousel/063-ibnu_sina_tokoh_islam_yang_bijak.webp",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/daily-carousel/064-imam_ahmad_bin_hanbal_dalam_cahaya.webp",
+      "size": 121196,
+      "sha256": "18ec0f0f0eb2b9e46db0b78a3607e674aaa6a6c9cd72ee3ab4463a66c832a46f"
+    },
+    {
+      "path": "assets/daily-carousel/065-imam_al_ghazali_dalam_kedalaman_pemikiran.webp",
+      "size": 136164,
+      "sha256": "6d2182b32225710d64dde06ba87254d7a22954daae6a716dae2c9a7f728e8396"
+    },
+    {
+      "path": "assets/daily-carousel/066-imam_bukhari_tokoh_islam_yang_bijaksana.webp",
+      "size": 168446,
+      "sha256": "27af67531abf48e066e86bcf4e71a2ba1ee1cb933031df478dc5dff7704d0236"
+    },
+    {
+      "path": "assets/daily-carousel/067-imam_syafi_i_ilmu_dan_kebijaksanaan.webp",
+      "size": 141586,
+      "sha256": "a6041596e9576875db1d58b9504443effaf14ad3f9f99b4684c5d1bd1a833e6e"
+    },
+    {
+      "path": "assets/daily-carousel/068-jangan_menunggu_nyaman_untuk_berubah.webp",
+      "size": 131140,
+      "sha256": "31ff830c4cb2eeaf4fa1703060d72e4631812b880f2bf8572b874d9d4e20b58f"
+    },
+    {
+      "path": "assets/daily-carousel/069-kekuatan_dalam_kebangkitan_simone_biles.webp",
+      "size": 169860,
+      "sha256": "46ef09204fbb27793f6c9dd019b247e48c65151b67c470b754a9e7bea37959db"
+    },
+    {
+      "path": "assets/daily-carousel/070-kekuatan_dari_kejujuran_diri.webp",
+      "size": 81858,
+      "sha256": "c63d374cc63c1d2f79cc96c3d940ad69b4544afe68790f950e8825afcef3c79d"
+    },
+    {
+      "path": "assets/daily-carousel/071-kekuatan_jiwa_melalui_ilmu_dan_kesabaran.webp",
+      "size": 83236,
+      "sha256": "6a96506a68a474b7c6b97701c2addd36056e07d96ff0ee39d37e6fd4c079f0b2"
+    },
+    {
+      "path": "assets/daily-carousel/072-kekuatan_melalui_ilmu_dan_adab.webp",
+      "size": 79274,
+      "sha256": "fcf5161cf88499d5ef24584dad45e744d86a97e60d466a8d57b8c1350a65be68"
+    },
+    {
+      "path": "assets/daily-carousel/073-kekuatan_yang_lembut_dan_mengalir.webp",
+      "size": 78314,
+      "sha256": "229448a6e176f1597c208a74c60ace5d2fc38c8881b92553575b1c35ec2a47c0"
+    },
+    {
+      "path": "assets/daily-carousel/074-kemenangan_dimulai_dari_perjuangan.webp",
+      "size": 106882,
+      "sha256": "da203d8bd66657426c4377f645def76596e6603c461a754ad3dc08a33b42ea64"
+    },
+    {
+      "path": "assets/daily-carousel/075-kepemimpinan_salahuddin_al_ayyubi.webp",
+      "size": 175616,
+      "sha256": "21df64f3d80770aa8246ef42b0ad9670a4bc22129a5e1f4447e6a6dcc12ef4e0"
+    },
+    {
+      "path": "assets/daily-carousel/076-keputusan_serius_ubah_hidupmu.webp",
+      "size": 66106,
+      "sha256": "d20908fba2f888cea55cdccf765eed4ad02ce6c6fe754a83f3d9d4c71f38614a"
+    },
+    {
+      "path": "assets/daily-carousel/077-kerja_besar_dan_budaya_sukses.webp",
+      "size": 115310,
+      "sha256": "a14677f7f5b56390b9dae58e152fb06bd322496f319d88c05e5a7bf4353de00e"
+    },
+    {
+      "path": "assets/daily-carousel/078-kerja_kecil_efek_besar.webp",
+      "size": 175278,
+      "sha256": "20fdb5262087a46505774c097865a1460d61a5c83f8073c5be5f0f13b8f56219"
+    },
+    {
+      "path": "assets/daily-carousel/079-keteguhan_hati_bilal_bin_rabah.webp",
+      "size": 91208,
+      "sha256": "df87af9e62ff7d137cb5a1313c8e0be0560cd55b8f9f46d0b72cc49c00872fc3"
+    },
+    {
+      "path": "assets/daily-carousel/080-kreativitas_melalui_latihan_tak_terhentikan.webp",
+      "size": 89040,
+      "sha256": "abbd62c83bb91f1a691830de1079919a065277dbcc42cb6db09ebdcc363f62cf"
+    },
+    {
+      "path": "assets/daily-carousel/081-kutipan_inspiratif_ustadz_adi_hidayat.webp",
+      "size": 41478,
+      "sha256": "5486a8f89b786dcdd6ed77a47689d94dfdbedd0522bfa69b459a80f7a6db757b"
+    },
+    {
+      "path": "assets/daily-carousel/082-langkah_kecil_dengan_sikap_yang_benar.webp",
+      "size": 71196,
+      "sha256": "7d938176d1827b6406e97c0c7b74e9de2944a93d8b3088c3eb905a886eb573dd"
+    },
+    {
+      "path": "assets/daily-carousel/083-latihan_cerdas_mengalahkan_ego.webp",
+      "size": 178998,
+      "sha256": "19194383ea5f52cdb43eeebbf2ec9dffb097ced43574665c091e42c6a3667f64"
+    },
+    {
+      "path": "assets/daily-carousel/084-lihat_dulu_dirimu_menang.webp",
+      "size": 83444,
+      "sha256": "acac3f436ff7a17825143b224bed65c991f76b94f897cbbc0bb00daff7fc8041"
+    },
+    {
+      "path": "assets/daily-carousel/085-pahlawan_di_medan_pertempuran.webp",
+      "size": 83004,
+      "sha256": "58371cfc3cfbca565e501740e2c0c23fa9beddb9f56c6b11c544d117e7ec1f9d"
+    },
+    {
+      "path": "assets/daily-carousel/086-patung_marmar_dengan_kuda_elegan.webp",
+      "size": 77108,
+      "sha256": "eabdbbeaa99fd667a2b7fbfccab79ebb6920145bb91d61014345eb97cdd523c2"
+    },
+    {
+      "path": "assets/daily-carousel/087-patung_marmer_seneca_yang_agung.webp",
+      "size": 79518,
+      "sha256": "75083612db540c5e47400a352dc10364675f686b6a4534e87939cb02087c4e5d"
+    },
+    {
+      "path": "assets/daily-carousel/088-pendidikan_adalah_amal_panjang_generasi.webp",
+      "size": 77142,
+      "sha256": "e7b95e800780cea80399582416eb7c33105165ca052f530c760a3775d5e1a3c5"
+    },
+    {
+      "path": "assets/daily-carousel/089-pertahanan_terbaik_adalah_hidup_yang_tidak_sembara.webp",
+      "size": 148382,
+      "sha256": "9138c0e9fd4c151ca437a744717a2b440092244a810c25cc90bfa7b7199c8857"
+    },
+    {
+      "path": "assets/daily-carousel/090-perubahan_besar_dimulai_dari_diri.webp",
+      "size": 67074,
+      "sha256": "5872d40c75a3ab6ca9de68c1f85769f5e6e5a97ddd9404cc65025a896c3f06d6"
+    },
+    {
+      "path": "assets/daily-carousel/091-pikiran_yang_dilatih_jauhkan_pandangan.webp",
+      "size": 76572,
+      "sha256": "3ef2088f7456cc8600f2c2c832a80f14a1f9007beb4cf173418f6675f59b0afb"
+    },
+    {
+      "path": "assets/daily-carousel/092-tekanan_yang_membuatmu_lebih_kuat.webp",
+      "size": 94642,
+      "sha256": "fcae3cb255b7d7d8418cce2f7066000b4e4ca9ddff42368f2d348819b907af91"
+    },
+    {
+      "path": "assets/daily-carousel/093-tenang_bukan_berarti_diam.webp",
+      "size": 47296,
+      "sha256": "3eb8b5ea7ca74382a49f4f3669f91fc19695994ebc5930caa9f50692a1741afd"
+    },
+    {
+      "path": "assets/daily-carousel/094-tenang_dulu_serangan_terbaik_lahir.webp",
+      "size": 92140,
+      "sha256": "cbce4faa670dd996e17d1debf4ed3f300e09b98a6d8778bc0a8063717391da99"
+    },
+    {
+      "path": "assets/daily-carousel/095-volume_kecil_batas_besar_hancur.webp",
+      "size": 130402,
+      "sha256": "36bd00a78ddbe71e7bf56d170efa74db25abe0ea212a021d4cf9b1eef5e44052"
+    },
+    {
+      "path": "assets/daily-command-hero.jpg",
+      "size": 60523,
+      "sha256": "ab79120f506e918c25fa6070a4d4a3825e0dbc7060f18232234b7f9a9443319a"
+    },
+    {
+      "path": "assets/daily-pulse/archimedes.webp",
+      "size": 85024,
+      "sha256": "bad27e7ad1985e8e051362177ba6a9c7731d7cc17791915099cce022423977cd"
+    },
+    {
+      "path": "assets/daily-pulse/aristotle.webp",
+      "size": 130688,
+      "sha256": "cb447a4846c8b9414f75934ec6208351670bdd46c1cc24dd7c198e37a5d8755c"
+    },
+    {
+      "path": "assets/daily-pulse/buya-hamka.webp",
+      "size": 370636,
+      "sha256": "4a89527619caad85941e06eab892a3686460b2115ab927d73e039931029b0e22"
+    },
+    {
+      "path": "assets/daily-pulse/confucius.webp",
+      "size": 83286,
+      "sha256": "384dd00f698ad7dd4af27e95eff98bc3c3cc824acab32b2020431b65fd6c663a"
+    },
+    {
+      "path": "assets/daily-pulse/cristiano-ronaldo.webp",
+      "size": 245876,
+      "sha256": "2ae47f877ff647f44c70ed0ab29736bd5bdb2433102521e31ce502fc020e12f3"
+    },
+    {
+      "path": "assets/daily-pulse/david-goggins.webp",
+      "size": 349670,
+      "sha256": "38c6aaa238daa8c069877faba0fb770a919fb67eaf747f48e0811f5224325cb9"
+    },
+    {
+      "path": "assets/daily-pulse/default-athlete.webp",
+      "size": 241304,
+      "sha256": "a936e9bb000e31b7644dea9a27adfa4a5da309c88ef123b7a6e0f4e5a71b4b7b"
+    },
+    {
+      "path": "assets/daily-pulse/default-builder.webp",
+      "size": 138420,
+      "sha256": "8c357537c7a57da46a9e7d1b11c531669797019bb71f8f9234f531454cad0db2"
+    },
+    {
+      "path": "assets/daily-pulse/default-thinker.webp",
+      "size": 173640,
+      "sha256": "6dbe4a2a71968a50f587c2a8dd82f37226274a8187d90d7a20164e9a3f615587"
+    },
+    {
+      "path": "assets/daily-pulse/epictetus.webp",
+      "size": 197104,
+      "sha256": "1ddd22fdb36e6190d188af6977a7beda1666bb6a708be85af6b14950e8dd1f35"
+    },
+    {
+      "path": "assets/daily-pulse/eric-thomas.webp",
+      "size": 39218,
+      "sha256": "5023ca11c54d6b3906d0da5f85b4d880b8a60f4a1baa0b6a90eeb573696a362d"
+    },
+    {
+      "path": "assets/daily-pulse/friedrich-nietzsche.webp",
+      "size": 57838,
+      "sha256": "daa1dc41eeee7bf78718237ae9c460e11b0884cfe208631b24ae61bbc67a9d51"
+    },
+    {
+      "path": "assets/daily-pulse/hasan-al-banna.webp",
+      "size": 379654,
+      "sha256": "29386a2e00e58bfc5f6ff426e070c27dd6b48f2b92106dd1ac8f5167b85ddb13"
+    },
+    {
+      "path": "assets/daily-pulse/jay-shetty.webp",
+      "size": 36554,
+      "sha256": "bfcb80557386d0fc6b630134c14fc0a3474af0527a9e99c3416e1d45e785ca46"
+    },
+    {
+      "path": "assets/daily-pulse/jim-rohn.webp",
+      "size": 362916,
+      "sha256": "69ce4c3170434ed35434a3aa820053aa166a24b128909141d57132343f67a2fc"
+    },
+    {
+      "path": "assets/daily-pulse/jocko-willink.webp",
+      "size": 27154,
+      "sha256": "39ee3b95c0437f561d366cbcca43f6450f585adcd509ab68b1d17de983b7a7bb"
+    },
+    {
+      "path": "assets/daily-pulse/kh-ahmad-dahlan.webp",
+      "size": 391528,
+      "sha256": "46dd863ce103aa0ce02d42caf1174b6b86b59a0ce67d61b505c9eb900089fab5"
+    },
+    {
+      "path": "assets/daily-pulse/kh-hasyim-asyari.webp",
+      "size": 378850,
+      "sha256": "01fe3595f3a3ad992f0916d8641def26a0debae6deba0b22d7353a2519db6d3d"
+    },
+    {
+      "path": "assets/daily-pulse/kobe-bryant.webp",
+      "size": 67180,
+      "sha256": "a6f695143f4d13353c285a4e6c186d2598908e2b75e6c7718dacdf6eee2de2a0"
+    },
+    {
+      "path": "assets/daily-pulse/lao-tzu.webp",
+      "size": 106522,
+      "sha256": "a18fa43ca2a2222d2703e472b144215b90a2f59dd9ce97086df550101806da3c"
+    },
+    {
+      "path": "assets/daily-pulse/lebron-james.webp",
+      "size": 223592,
+      "sha256": "7205996d5ae0b0f8b3e4abf8d5cd28e2ecbadd9ecf1f4000e435cc7411b787c1"
+    },
+    {
+      "path": "assets/daily-pulse/les-brown.webp",
+      "size": 377672,
+      "sha256": "53eb3cd649227c73cf33fd6ea060ed4ad8839b5bf22d1abadc659740d643a954"
+    },
+    {
+      "path": "assets/daily-pulse/lionel-messi.webp",
+      "size": 181570,
+      "sha256": "9b962a3295a74b2b110f592c67de2f1f2b2682e8700e2f3ede3319097e5fb6d2"
+    },
+    {
+      "path": "assets/daily-pulse/marcus-aurelius.webp",
+      "size": 78890,
+      "sha256": "7b92c4f9a20b572ca8748b7d623d902710f7d104f43802f83be2d11647ba910c"
+    },
+    {
+      "path": "assets/daily-pulse/mel-robbins.webp",
+      "size": 62110,
+      "sha256": "4d30cce22f3ffb3d967631e186384aeb222b11f31f9778947f8e80db65de3aac"
+    },
+    {
+      "path": "assets/daily-pulse/michael-jordan.webp",
+      "size": 138778,
+      "sha256": "26eaf3f64fdb36e571b44bce3bf0b324e519543c9a34580b238b4e2a4be97439"
+    },
+    {
+      "path": "assets/daily-pulse/muhammad-ali.webp",
+      "size": 134976,
+      "sha256": "4e8d34867b50c9809310edd14345dcd742a88a77d6f7904830bab58c65a037d6"
+    },
+    {
+      "path": "assets/daily-pulse/plato.webp",
+      "size": 103718,
+      "sha256": "054c328c0c699339309bb1093fc6a0fae9989185fbd3a61bc1465242d0c40898"
+    },
+    {
+      "path": "assets/daily-pulse/seneca.webp",
+      "size": 161892,
+      "sha256": "697d38c8e9b0133b8d609280d38a72305eff705252bda0f9d7df26d83c052116"
+    },
+    {
+      "path": "assets/daily-pulse/simon-sinek.webp",
+      "size": 140810,
+      "sha256": "f59eafff7d8c4c6255036927a2c2c681967a810241e02179aaa966a35679089b"
+    },
+    {
+      "path": "assets/daily-pulse/socrates.webp",
+      "size": 96442,
+      "sha256": "805623b0bcdcdf84792b1f1a1e93044b802c26fecf37782f61d1fb7a81fe25f1"
+    },
+    {
+      "path": "assets/daily-pulse/tony-robbins.webp",
+      "size": 377670,
+      "sha256": "20d6b60057b1586e70fbc9b7dbe8cfe986296cae5930b1244bde00f70f0c64de"
+    },
+    {
+      "path": "assets/daily-pulse/ustadz-adi-hidayat.webp",
+      "size": 374098,
+      "sha256": "4dbd591519163b848da15e50615dd70bff5c7ddd7936a1615e82fd64d1d1508f"
+    },
+    {
+      "path": "assets/daily-pulse/viktor-frankl.webp",
+      "size": 44632,
+      "sha256": "28792394ecc19e63245d832d534fa5d54ca7ac92aca8add1ed32fccb3084aacf"
+    },
+    {
+      "path": "assets/daily-pulse/zig-ziglar.webp",
+      "size": 380038,
+      "sha256": "9a9b59846c35c82ca7be46775ff4bfdfc12e25a4e97188bcd2a9149083a667be"
+    },
+    {
+      "path": "assets/discipline-banner-ai-v689.png",
+      "size": 948716,
+      "sha256": "f6a3187ff1831a37090e444e141add89c1bb3bc45225123bfb83a31db167911b"
+    },
+    {
+      "path": "assets/discipline-hub-icon.png",
+      "size": 207927,
+      "sha256": "e83b9ca1800117668ca87a778391699c165de3f87aa589538a728d6cc6573f40"
+    },
+    {
+      "path": "assets/discipline-hub-logo.png",
+      "size": 207927,
+      "sha256": "e83b9ca1800117668ca87a778391699c165de3f87aa589538a728d6cc6573f40"
+    },
+    {
+      "path": "assets/discipline-icon-1024.png",
+      "size": 478014,
+      "sha256": "cc15528ebda5a53c0deb2fa30c7b7b1233fd754aaedd0284e30ca5d04e276bfd"
+    },
+    {
+      "path": "assets/discipline-icon-192.png",
+      "size": 36829,
+      "sha256": "239b61e2338ad363808994251dca0ec38fcd0a040fef0e05cc38b9ab3695dde5"
+    },
+    {
+      "path": "assets/discipline-icon-32.png",
+      "size": 2709,
+      "sha256": "7990e1860ff819df3f85407f340160a2d80b52bcff83e55e20e3fc0a7a7992bf"
+    },
+    {
+      "path": "assets/discipline-icon-512.png",
+      "size": 167085,
+      "sha256": "f60e434d92d03ed99d3b41fbc6b0bb12a481b12771dd29adaa256b0050505472"
+    },
+    {
+      "path": "assets/evolution/current-body.png",
+      "size": 60671,
+      "sha256": "68b091ccf1bc90949a82be9e455d254822625e5938a4fc70cedf28ab70d3e4c2"
+    },
+    {
+      "path": "assets/evolution/cutout-current-body.png",
+      "size": 57994,
+      "sha256": "d5daf6a0e7a8323976edd16df44d266f344e5e183b347e5110b2a60f98c40c2e"
+    },
+    {
+      "path": "assets/evolution/cutout-stage-0.png",
+      "size": 19764,
+      "sha256": "eff3a6516d59676e9ff5bb1248771ee2245e908d5d61cafbf2d27101c7dfe42e"
+    },
+    {
+      "path": "assets/evolution/cutout-stage-1.png",
+      "size": 18049,
+      "sha256": "d3a573570b2335f262e258fc4423867032c089f01b1cd2d9b35fa6f50f14fa3f"
+    },
+    {
+      "path": "assets/evolution/cutout-stage-2.png",
+      "size": 19730,
+      "sha256": "9391631be8f84a099a64af01fbf926e6eebde859eaf15fcbc3712d4cf3817299"
+    },
+    {
+      "path": "assets/evolution/cutout-stage-3.png",
+      "size": 18414,
+      "sha256": "e0931f8c93bb409c3db24f9144f2e90ced0ce126af0bb968f9da83b394c1ddf4"
+    },
+    {
+      "path": "assets/evolution/cutout-stage-4.png",
+      "size": 17890,
+      "sha256": "49402a757b299881ca6bbf6eaf04df5c1899ce1e548875f03b88d6ed7cae5aa7"
+    },
+    {
+      "path": "assets/evolution/cutout-stage-5.png",
+      "size": 15253,
+      "sha256": "00a02fdcacc3c1661711205aa2ae27056937f2851cf08ffac366d2862ed12e03"
+    },
+    {
+      "path": "assets/evolution/cutout-stage-main.png",
+      "size": 57096,
+      "sha256": "d7f73592864165a6f06a9e48ea15a90aec00bd712e40c4e44bd55556faba6173"
+    },
+    {
+      "path": "assets/evolution/stage-0.png",
+      "size": 22577,
+      "sha256": "c806be4253c531f962029b562f3846736cb02a4cafe66b35f89b662d14c80a87"
+    },
+    {
+      "path": "assets/evolution/stage-1.png",
+      "size": 21380,
+      "sha256": "e2e3f27cc851f9522812fc8133a0c715dc088062e6af5a98c41700f48f68fe46"
+    },
+    {
+      "path": "assets/evolution/stage-2.png",
+      "size": 23058,
+      "sha256": "4fd827127b4fd1f7c6c29db4f3a732e71a46593eca03d60bbfb0960f83114e23"
+    },
+    {
+      "path": "assets/evolution/stage-3.png",
+      "size": 21213,
+      "sha256": "b5482c59780f552c749c7fac36122ffd5091b1df3340918f9d0297a15a26e139"
+    },
+    {
+      "path": "assets/evolution/stage-4.png",
+      "size": 21364,
+      "sha256": "cf80ec27e5cfe471fad18d4ec9b54dace3172c2ddbd7ed44100e6c9bcf56f78c"
+    },
+    {
+      "path": "assets/evolution/stage-5.png",
+      "size": 20895,
+      "sha256": "c01bd2bea4845633c3d23c74e1c47a5ffa55e8594271e88eb174e41c21d12c25"
+    },
+    {
+      "path": "assets/evolution/stage-main.png",
+      "size": 56152,
+      "sha256": "a83cb779e154b001ec2ca28c9fc384d5e5337d2e244db6ef4db2b1f777030928"
+    },
+    {
+      "path": "assets/evolution_hd/avatar-athletic.png",
+      "size": 1553299,
+      "sha256": "09f8d1962e24c87d23f254376ab2d5e4918917cbea5a6a1eddda31b5101adcec"
+    },
+    {
+      "path": "assets/evolution_hd/avatar-berisi.png",
+      "size": 1444713,
+      "sha256": "e4a12570bf89a9ad7a73cbd4542ce7e6680fc1b112a8e3d3f7dd355dda2fb836"
+    },
+    {
+      "path": "assets/evolution_hd/avatar-fit.png",
+      "size": 1676242,
+      "sha256": "74999bc55aabe859cb22481ae075d801ddec61c1033c9986410732a8c0f558fc"
+    },
+    {
+      "path": "assets/evolution_hd/avatar-gendut.png",
+      "size": 1632618,
+      "sha256": "60b1b5d7c7c57e3c1e5f21a01e96f6d7f079d0a1026408c243d1c54b24079a32"
+    },
+    {
+      "path": "assets/evolution_hd/avatar-normal.png",
+      "size": 1679523,
+      "sha256": "f8ac2b52ad8e186a93ada87035900e5a6b5d3ceea09a47e240d5eba4b2521cc1"
+    },
+    {
+      "path": "assets/evolution_hd/avatar-slim.png",
+      "size": 1581770,
+      "sha256": "b2243326ee4053b45bf9f3f3994a3f02e0ff2cc807fd20796d2560e2251cfb6f"
+    },
+    {
+      "path": "assets/exercise-guides/archer-push-up.webp",
+      "size": 60152,
+      "sha256": "92a3f55723500ff11204422cd02258de6b93024d3c3f2e0b6a3867ad295c5673"
+    },
+    {
+      "path": "assets/exercise-guides/bear-crawl.webp",
+      "size": 51882,
+      "sha256": "746625b4d03e5a4711ec36339ec175cffac7da9eea14375b28adc90d26c1acac"
+    },
+    {
+      "path": "assets/exercise-guides/bicycle-crunch.webp",
+      "size": 57026,
+      "sha256": "532d2a88b437b8f39c5652d08c502dbbc4f039c18ac36dde4d4e917563d0f5ab"
+    },
+    {
+      "path": "assets/exercise-guides/bird-dog.webp",
+      "size": 53124,
+      "sha256": "af233a8f69f188ac869a0484eaa78eeb97b3d2135aeb3a009c0630686d42aa6d"
+    },
+    {
+      "path": "assets/exercise-guides/boat-hold.webp",
+      "size": 60058,
+      "sha256": "20a6dc19b7adf79f79922c11431766401712dc50fdf1f671f4a9ecde4f3d67f3"
+    },
+    {
+      "path": "assets/exercise-guides/bodyweight-squat.webp",
+      "size": 36462,
+      "sha256": "cf6bdac2f7bc546713c603f6890b640ad944340687c77312a8ce5570522d7ff7"
+    },
+    {
+      "path": "assets/exercise-guides/broad-jump.webp",
+      "size": 51126,
+      "sha256": "83233adfc793226b760706299b3dddc0195d45ffeb1f379ebd5bf9dc4bb66d18"
+    },
+    {
+      "path": "assets/exercise-guides/burpee.webp",
+      "size": 53432,
+      "sha256": "cc1cabb2728c14b32eda3794150a2ac483b360f76449a7b5143341fb783515c6"
+    },
+    {
+      "path": "assets/exercise-guides/butt-kick.webp",
+      "size": 43970,
+      "sha256": "2c82ca25e37f829daa652899acb79042fbfb4352cf87bf7e00b7f62341ffe778"
+    },
+    {
+      "path": "assets/exercise-guides/calf-raise.webp",
+      "size": 39278,
+      "sha256": "e0dc57d33e70f2c2082d3e0b70ba304912fa3e2c3a38a56c184f5f30dfdcbe1a"
+    },
+    {
+      "path": "assets/exercise-guides/clamshell.webp",
+      "size": 60572,
+      "sha256": "260a0d6ff9ce1a75b132150cde38fda6ad3828b38b0907748ebb44cbc1264cd0"
+    },
+    {
+      "path": "assets/exercise-guides/commando-plank.webp",
+      "size": 61838,
+      "sha256": "18dbf0f63f42beda608f320d5cab4f7e93144e94d571137c7e4f441d0c377019"
+    },
+    {
+      "path": "assets/exercise-guides/cossack-squat.webp",
+      "size": 56256,
+      "sha256": "9dd12c7109ce90e90d4b89107625dcd499904b3cc9dae00b5f93062410979f7c"
+    },
+    {
+      "path": "assets/exercise-guides/crab-walk.webp",
+      "size": 42828,
+      "sha256": "63a94ebab8f1e88db7657a0b8a4fd270c8d5bf579db45b2bcead938a550a34e5"
+    },
+    {
+      "path": "assets/exercise-guides/curtsy-lunge.webp",
+      "size": 48588,
+      "sha256": "e4beef1a8a949a836047ab67ddf4c9abc718d8dad88e87aa47e7c84ef1a6963f"
+    },
+    {
+      "path": "assets/exercise-guides/dead-bug.webp",
+      "size": 54568,
+      "sha256": "293b1699274dce900a669f871112ec11f36eaff219c85454ea44160b71883d25"
+    },
+    {
+      "path": "assets/exercise-guides/diamond-push-up.webp",
+      "size": 57578,
+      "sha256": "c63c00f8ea8412ee405385fd330269e6d6d8e33e1e9ca476ede15fda429aa9b9"
+    },
+    {
+      "path": "assets/exercise-guides/dive-bomber-push-up.webp",
+      "size": 61550,
+      "sha256": "8f2a965ae1c99a31e174529ff760e1fddf54278c9faa2afdb56055eb6aca659c"
+    },
+    {
+      "path": "assets/exercise-guides/donkey-kick.webp",
+      "size": 51452,
+      "sha256": "1882a9d5a4d1476926ab76d67a0e08220edf520bcd49eec5f2a1f838b5217277"
+    },
+    {
+      "path": "assets/exercise-guides/fire-hydrant.webp",
+      "size": 58076,
+      "sha256": "c263d05a09ead0d52f65f063665510fcdb7ddaf66bd753920e0c3dc173b38580"
+    },
+    {
+      "path": "assets/exercise-guides/flutter-kick.webp",
+      "size": 55720,
+      "sha256": "0bfe70bdaadf63190593f875c5b8943529ea2b0b8bf1d8cb405fca09a9206a14"
+    },
+    {
+      "path": "assets/exercise-guides/frog-pump.webp",
+      "size": 59056,
+      "sha256": "aaf78afa111b53f73aab3130b8fb8f53669ffa10c1f3922a0d6f237862fd7749"
+    },
+    {
+      "path": "assets/exercise-guides/glute-bridge-march.webp",
+      "size": 61958,
+      "sha256": "8438ce4684a2a1f36aad57ad653bff6013c6214997b0ad1ef61137d8d37d6a36"
+    },
+    {
+      "path": "assets/exercise-guides/glute-bridge.webp",
+      "size": 50752,
+      "sha256": "30539dd1aa769c3c5812d1b423601049013a5e00fb092762ba20aa4e40d1afe2"
+    },
+    {
+      "path": "assets/exercise-guides/good-morning.webp",
+      "size": 55734,
+      "sha256": "589facae39ae0f2f222043a1747c921c8d369670f77a181766dc05b72a04d11e"
+    },
+    {
+      "path": "assets/exercise-guides/hamstring-walkout.webp",
+      "size": 71164,
+      "sha256": "c722cdce683d80e569404ac515928a643335fd2c6b7b90c0fce3cb8eb4ad5bec"
+    },
+    {
+      "path": "assets/exercise-guides/hand-release-push-up.webp",
+      "size": 58486,
+      "sha256": "7f804fa32b457552640100e195ec4f6d8112e127d6d7a39c97da4e45ede69937"
+    },
+    {
+      "path": "assets/exercise-guides/heel-touch-crunch.webp",
+      "size": 65058,
+      "sha256": "029b6214796423c166cd31ad3d828681275f213a42933cd21e6224d269834661"
+    },
+    {
+      "path": "assets/exercise-guides/high-knees.webp",
+      "size": 41964,
+      "sha256": "8de10195363a8fef6e3315e6f6667a388e4d64cd1b48c04847e35223eb38d8eb"
+    },
+    {
+      "path": "assets/exercise-guides/hip-thrust.webp",
+      "size": 56810,
+      "sha256": "8ac2795a797cd1b715f7113980681e67e7e5ca6aa8ee1ebc671d3073f5de89a2"
+    },
+    {
+      "path": "assets/exercise-guides/hollow-hold.webp",
+      "size": 37402,
+      "sha256": "20fd14704cc4243f0f4afa7731282c1a8123f45f733a3b8ead6bc706906116ca"
+    },
+    {
+      "path": "assets/exercise-guides/inchworm.webp",
+      "size": 57996,
+      "sha256": "856d42e530c361dfd62324a6996a8bfb7ed321cb0d58ead5d52fa762763cff5f"
+    },
+    {
+      "path": "assets/exercise-guides/incline-push-up.webp",
+      "size": 59118,
+      "sha256": "eb59c14e699d58a2c182e59f4647622dad93ad2150bc834ba00808c230ca8944"
+    },
+    {
+      "path": "assets/exercise-guides/jackknife-sit-up.webp",
+      "size": 65396,
+      "sha256": "e7c425fb73b49c458b3db8fb86d3fc181831d5ab603892fc9e0299c2b732963f"
+    },
+    {
+      "path": "assets/exercise-guides/jump-squat.webp",
+      "size": 47040,
+      "sha256": "c017196afdd75ff7ca1a6c0ee3f77c42ed4053b2800179335e5734a6e9085ea4"
+    },
+    {
+      "path": "assets/exercise-guides/jumping-jack.webp",
+      "size": 42674,
+      "sha256": "16ed546d4308228a441fb2282a0d311b668632dc31a5962135d9e7636eebd362"
+    },
+    {
+      "path": "assets/exercise-guides/knee-push-up.webp",
+      "size": 63936,
+      "sha256": "8b41d3e006c8de354041be9d694c3744d6748383d9356a605e398d28bc4023f0"
+    },
+    {
+      "path": "assets/exercise-guides/leg-raise.webp",
+      "size": 37736,
+      "sha256": "d884984d2ee8772d1b30647f1e7e2f00c61cf645b382a49698e5835a00ef2102"
+    },
+    {
+      "path": "assets/exercise-guides/lunge.webp",
+      "size": 41040,
+      "sha256": "c190bfae604555634eef5cc571d0b877c7428e7bf16b3df12e72ac073bd543c1"
+    },
+    {
+      "path": "assets/exercise-guides/mountain-climber.webp",
+      "size": 44488,
+      "sha256": "3656150328375c09210e5cbb06aeb90226f5503dc97826e772566867b5372d5e"
+    },
+    {
+      "path": "assets/exercise-guides/pike-push-up.webp",
+      "size": 56066,
+      "sha256": "503b6b1c2a9647a5b0cb59b4893e0dc7c3aeb49b4cd114243188782ab2eac78a"
+    },
+    {
+      "path": "assets/exercise-guides/plank-jack.webp",
+      "size": 56558,
+      "sha256": "54dbd7e323a1422b2866d306112985042dd6640a8a8ba85cd00b82b22f654fc7"
+    },
+    {
+      "path": "assets/exercise-guides/plank-shoulder-tap.webp",
+      "size": 63378,
+      "sha256": "77897daca0f9ffff116f56e799674f98ed19a2046819a665bc6f07a1eb36b16d"
+    },
+    {
+      "path": "assets/exercise-guides/plank-to-downward-dog.webp",
+      "size": 60430,
+      "sha256": "4cad89b5550b3447e9bb1cf5a77cd22858963e11d18ffb28ad6e362d529e93bd"
+    },
+    {
+      "path": "assets/exercise-guides/plank.webp",
+      "size": 52198,
+      "sha256": "c4bd29ac38c373c9ae22cb3885e355820caecb06ae95665cc474efd84233bdf0"
+    },
+    {
+      "path": "assets/exercise-guides/prone-cobra.webp",
+      "size": 57950,
+      "sha256": "a9470786cca0fad7a87011d97516ba15aadc3f20b22bff3ea682b46bd7237d56"
+    },
+    {
+      "path": "assets/exercise-guides/push-up.webp",
+      "size": 39368,
+      "sha256": "cdf05a362db61125fb6485afbffe8d03b667a373980fea1a6a4aa850755bd4a7"
+    },
+    {
+      "path": "assets/exercise-guides/reverse-crunch.webp",
+      "size": 53476,
+      "sha256": "940a69ca705c3398cc548cb53bf75f5985fdb45eead974dad6af7ea7898f2d00"
+    },
+    {
+      "path": "assets/exercise-guides/reverse-lunge.webp",
+      "size": 50238,
+      "sha256": "8f2d197761e4857631a3d4088c47a2cab9a34eb5ef67f912951b146516be6e3a"
+    },
+    {
+      "path": "assets/exercise-guides/reverse-plank.webp",
+      "size": 39452,
+      "sha256": "d1fa0587d5676669c9fe13f4af83dad3eba93c42222ffcc82ebdc297bc044ead"
+    },
+    {
+      "path": "assets/exercise-guides/reverse-snow-angel.webp",
+      "size": 58428,
+      "sha256": "71c4fae6c6c6178adc46f6a654fb30df923f345c7877a4f785286873e13fd304"
+    },
+    {
+      "path": "assets/exercise-guides/reverse-tabletop.webp",
+      "size": 56624,
+      "sha256": "93339a5cfb096bec2c9b24409b2c4a13f7422d58784493439dda55c39458f09f"
+    },
+    {
+      "path": "assets/exercise-guides/russian-twist.webp",
+      "size": 50290,
+      "sha256": "81db4f10d6e9ecbb0c42127ba08d9accf93ed5e64d08e33bd7b978140d274cc0"
+    },
+    {
+      "path": "assets/exercise-guides/scissor-kick.webp",
+      "size": 57320,
+      "sha256": "b40563af1e096ee1c7673ab21618147f456835f77a41a568ca812a65ca87e3b1"
+    },
+    {
+      "path": "assets/exercise-guides/seal-jack.webp",
+      "size": 48636,
+      "sha256": "e77fbef46965075228d3133562d0e534c27429b91873c7921b4201025829d8dd"
+    },
+    {
+      "path": "assets/exercise-guides/seated-knee-tuck.webp",
+      "size": 44488,
+      "sha256": "fc836dd7b972fcbc33f1ddfb7c56a071e4595131ffaa64e43ec4071118102296"
+    },
+    {
+      "path": "assets/exercise-guides/side-lunge.webp",
+      "size": 52262,
+      "sha256": "a333276e05b63305223f9f3bd44788096071266accb3daa9ba61f05a2df3908c"
+    },
+    {
+      "path": "assets/exercise-guides/side-lying-leg-raise.webp",
+      "size": 69744,
+      "sha256": "becf0db2b34363bda57cb1a3946e4e9f24c9047aa7cda3b824304e3fcccb5a65"
+    },
+    {
+      "path": "assets/exercise-guides/side-plank-hip-dip.webp",
+      "size": 55020,
+      "sha256": "20564b1fa7d2562e564b3d322e4842b99fefed20042313052ba75b9395643b27"
+    },
+    {
+      "path": "assets/exercise-guides/side-plank-reach-through.webp",
+      "size": 55054,
+      "sha256": "38df6df554d5b553b449dc761cd1cc24aa8539ceebfdcb0ccc97061d66783095"
+    },
+    {
+      "path": "assets/exercise-guides/side-plank.webp",
+      "size": 55832,
+      "sha256": "b2637c924520d464d9072dd1671df0dd806e39a99d700667655988c68f223737"
+    },
+    {
+      "path": "assets/exercise-guides/single-leg-glute-bridge.webp",
+      "size": 59860,
+      "sha256": "a048d73dad919c81ceee1b14575251e36ae78a68955c47eba002caf9a5a3951b"
+    },
+    {
+      "path": "assets/exercise-guides/single-leg-rdl.webp",
+      "size": 55294,
+      "sha256": "3175a329338ba2e5ea9fe01f812b0e0d428c356e65fbf83424e41688dbc77c91"
+    },
+    {
+      "path": "assets/exercise-guides/skater-jump.webp",
+      "size": 51764,
+      "sha256": "dafcd436fae580b2327c0fb4e9243126af4a7ea5a69244af6188e5877c682dad"
+    },
+    {
+      "path": "assets/exercise-guides/split-squat.webp",
+      "size": 53880,
+      "sha256": "84d337f3223fa62c0c0b962969894f936a8d093d3d34a280c08b8e51b7f003c1"
+    },
+    {
+      "path": "assets/exercise-guides/squat-pulse.webp",
+      "size": 54538,
+      "sha256": "67c6559c3055553a7c7fa1401ea55d7f620a1063e8278f7a8ad802d4167c1cc9"
+    },
+    {
+      "path": "assets/exercise-guides/standing-glute-kickback.webp",
+      "size": 53518,
+      "sha256": "5d13ed9d9cb2b0e0973d4154ead97899bea6e7f516885ecc3650ee360a0babdc"
+    },
+    {
+      "path": "assets/exercise-guides/standing-knee-to-elbow.webp",
+      "size": 50896,
+      "sha256": "46fc9bb4513b5c4d4350dce8331b74a1fcb5307c21b682739a0d8f95a658fa58"
+    },
+    {
+      "path": "assets/exercise-guides/step-up.webp",
+      "size": 43316,
+      "sha256": "19b1f35dbea4de0c4c0c64fe5d978348af9458a22d7435364a30a19410f931c6"
+    },
+    {
+      "path": "assets/exercise-guides/sumo-squat.webp",
+      "size": 50082,
+      "sha256": "d93960f59b4a58e8ec36b7081024947936a2581ed1e47b4fa5dac232612c2b06"
+    },
+    {
+      "path": "assets/exercise-guides/superman.webp",
+      "size": 46702,
+      "sha256": "ccfcd72d4edf1a70cdbecc6165320112ae36e9793f575da1de4d50c811335a07"
+    },
+    {
+      "path": "assets/exercise-guides/triceps-dip.webp",
+      "size": 49602,
+      "sha256": "8e92a387712b07a2d233f1921d5f4fb90d1afa1fbd6b6366694c7ddc3ad1ac4f"
+    },
+    {
+      "path": "assets/exercise-guides/tuck-jump.webp",
+      "size": 44954,
+      "sha256": "f47839f83fe26471c7fbaad2d15cee9edcc471f4062c45876723ad6ee2f2c6d3"
+    },
+    {
+      "path": "assets/exercise-guides/v-up.webp",
+      "size": 52904,
+      "sha256": "964badbac5ac7a46ca56f1dfef49256088bf29bed1068c352cca3709a2afc0cd"
+    },
+    {
+      "path": "assets/exercise-guides/wall-push-up.webp",
+      "size": 43180,
+      "sha256": "99d551bc7b07788e2fafee9cdfcfcd85083e7ac1e6d815a3a10fee0f724d4b6c"
+    },
+    {
+      "path": "assets/exercise-guides/windshield-wiper.webp",
+      "size": 58938,
+      "sha256": "31de8d8bb5c8a9dcecf5f15ae85f11ae303d96d316fc0f0f53eb079fb429068b"
+    },
+    {
+      "path": "assets/exercise-videos/archer-push-up.mp4",
+      "size": 394573,
+      "sha256": "b3cc770b709ffbe5ef2d09d14440b0e752e5789658d77ab4295b20045e16e8b2"
+    },
+    {
+      "path": "assets/exercise-videos/archer-push-up.webp",
+      "size": 85126,
+      "sha256": "1300b2160e43fbde8d9f9dd1fdd4c3572798359c617e5181d9579b74d3abfa6b"
+    },
+    {
+      "path": "assets/exercise-videos/bear-crawl.mp4",
+      "size": 616114,
+      "sha256": "9fa26a3393bbd6ff093bc23f8d82a69e2f3bcbb62823c6b5dedddd585b067f55"
+    },
+    {
+      "path": "assets/exercise-videos/bear-crawl.webp",
+      "size": 84562,
+      "sha256": "74f58d0f8ea11978de799fe93c334e370f21a95ab5cea2294fa807a376144d87"
+    },
+    {
+      "path": "assets/exercise-videos/bicycle-crunch.mp4",
+      "size": 549753,
+      "sha256": "8b86387f249e3649c9e17f2007a6be1a4ef3ba153a79266438745e70baf96c2e"
+    },
+    {
+      "path": "assets/exercise-videos/bicycle-crunch.webp",
+      "size": 83344,
+      "sha256": "590b15fafc180b1935737efa2ab4b261d8a043f47ec7adf2a6313227c21d5eef"
+    },
+    {
+      "path": "assets/exercise-videos/bird-dog.mp4",
+      "size": 395487,
+      "sha256": "af62f6bbae02b53457aa5707c43c19371d1eab9247d0a35b1c37d2bd6901344c"
+    },
+    {
+      "path": "assets/exercise-videos/bird-dog.webp",
+      "size": 88606,
+      "sha256": "9e8baaaee37290e2f05368fc5af3df54931612311fd84ae09eb7195f2fc4d2de"
+    },
+    {
+      "path": "assets/exercise-videos/boat-hold.mp4",
+      "size": 450727,
+      "sha256": "57b0eea942dc8f4d7fd8390212bc001795bee46af121be00716131c6ef7fcc21"
+    },
+    {
+      "path": "assets/exercise-videos/boat-hold.webp",
+      "size": 88858,
+      "sha256": "cfb90d7cd4b3060c321eb5fa703b419bd9ace9f1d663f310a422175c35167a37"
+    },
+    {
+      "path": "assets/exercise-videos/bodyweight-squat-batch4.mp4",
+      "size": 1195454,
+      "sha256": "7289c2f8a5a5e0cb7d9b04b2277beadf72c0813ede230dbddc8082a35e3bc3e9"
+    },
+    {
+      "path": "assets/exercise-videos/bodyweight-squat-batch4.webp",
+      "size": 89666,
+      "sha256": "cd05252e8d97bc0edcefe559cf5d18d3605d48ced8eda269262a8ec20b449aa5"
+    },
+    {
+      "path": "assets/exercise-videos/bodyweight-squat.mp4",
+      "size": 453623,
+      "sha256": "67674d722032732622e849a7c54738083c623d9e7d61fa35a8e3e4590040342c"
+    },
+    {
+      "path": "assets/exercise-videos/bodyweight-squat.webp",
+      "size": 56082,
+      "sha256": "7200ef79107cca202078e05608675b0cccdecf54b848a0e6b8cd41e03d695aaf"
+    },
+    {
+      "path": "assets/exercise-videos/broad-jump.mp4",
+      "size": 807936,
+      "sha256": "cfea8400ee022edad545dac56d6a7ec0277ee5bb1ff09ac50d721dbfdb4f84ff"
+    },
+    {
+      "path": "assets/exercise-videos/broad-jump.webp",
+      "size": 105524,
+      "sha256": "08e8a206d7cadde8ad375838eec07caf3b032c542b0a78cc5ccb152a5d29fa76"
+    },
+    {
+      "path": "assets/exercise-videos/bulgarian-split-squat.mp4",
+      "size": 859121,
+      "sha256": "9d09b6101f2d3016336565d66ad98cffe21fb056e5a8509f9af42106a43f36e6"
+    },
+    {
+      "path": "assets/exercise-videos/bulgarian-split-squat.webp",
+      "size": 90146,
+      "sha256": "76e5ffcb96bcd5a34cbdaee86900c5964dfb4fbd2e95eb8359318d734e425b44"
+    },
+    {
+      "path": "assets/exercise-videos/burpee.mp4",
+      "size": 832273,
+      "sha256": "9afc1526427fca41eb5d00bc26a550175af9e6ba5e017b68f8b994c785b0a6db"
+    },
+    {
+      "path": "assets/exercise-videos/burpee.webp",
+      "size": 68642,
+      "sha256": "ec73e1b200d217f13224d1c47a2d2ebc815d03c255a9ddfe50fa5eaa7107b47f"
+    },
+    {
+      "path": "assets/exercise-videos/butt-kick.mp4",
+      "size": 968314,
+      "sha256": "1b1ea825295b383af2e30ebf22afca43555d5aa2e8f1f6102c4aa1f58d474da1"
+    },
+    {
+      "path": "assets/exercise-videos/butt-kick.webp",
+      "size": 96178,
+      "sha256": "405570938cd7496c513cff840d651cd4041d412e39b43563320283dc65aa7477"
+    },
+    {
+      "path": "assets/exercise-videos/calf-raise-batch2.mp4",
+      "size": 455367,
+      "sha256": "5d3ad34c449922721183294fa5a03bf7009cdc802d08af147635bdfb6d565a3b"
+    },
+    {
+      "path": "assets/exercise-videos/calf-raise-batch2.webp",
+      "size": 65782,
+      "sha256": "1b24d9192aad69cd2390c4a3c657ff401a90dcb5b16f676bd5be0801d0fe27ce"
+    },
+    {
+      "path": "assets/exercise-videos/calf-raise.mp4",
+      "size": 309009,
+      "sha256": "d3d5fa43ac118c5c3dd93fda686ac730d6edf4acb5d7fb89f1cdee601fa0b714"
+    },
+    {
+      "path": "assets/exercise-videos/calf-raise.webp",
+      "size": 56618,
+      "sha256": "dcc26dac678c1e1d3d3a7402edea4272b124dd3f900228909d64c86ace074bd9"
+    },
+    {
+      "path": "assets/exercise-videos/cat-cow.mp4",
+      "size": 721401,
+      "sha256": "4a7ac9feba923241668a726be9a1c954a783ada02b70f72521c22fa1d6bcc5a5"
+    },
+    {
+      "path": "assets/exercise-videos/cat-cow.webp",
+      "size": 95674,
+      "sha256": "f1d55d24ec070c84b248cec515ddb2859606c1b7ef317b4c00f0812cff9fd0b8"
+    },
+    {
+      "path": "assets/exercise-videos/chair-squat.mp4",
+      "size": 555218,
+      "sha256": "3953cd859ac5c65f2ddd0f89537bf60ef014c03f212afa7f19eb63923c6ad89e"
+    },
+    {
+      "path": "assets/exercise-videos/chair-squat.webp",
+      "size": 78754,
+      "sha256": "a65fbcb24a4baebf7b44e422971d3b51312102a63d0e6f9499f6d2bd74798a6c"
+    },
+    {
+      "path": "assets/exercise-videos/clamshell.mp4",
+      "size": 369574,
+      "sha256": "95ae63a649b2755c9b7973a35c78962a02a1cb93df46e527517d6d5000fee18a"
+    },
+    {
+      "path": "assets/exercise-videos/clamshell.webp",
+      "size": 69884,
+      "sha256": "0214b8a281dd9191cdda414b15ac247264932325787114a904f72429ecbb15c1"
+    },
+    {
+      "path": "assets/exercise-videos/cobra-stretch.mp4",
+      "size": 692748,
+      "sha256": "7645479e3ef5ba234c3d731ce940efea003ac9be4409c5d308dcf6e271a3c4d2"
+    },
+    {
+      "path": "assets/exercise-videos/cobra-stretch.webp",
+      "size": 75658,
+      "sha256": "b0208989d0b793b809d07e9119873dbbad0bf86390d8f14c2a4e41af557db402"
+    },
+    {
+      "path": "assets/exercise-videos/commando-plank.mp4",
+      "size": 410459,
+      "sha256": "9aab24840fd84e64981f8e3f633b31bd313c0ba58f3d7930bfae48685849065e"
+    },
+    {
+      "path": "assets/exercise-videos/commando-plank.webp",
+      "size": 49474,
+      "sha256": "e4b811ae9aa2d45fd56f40f1fe12b5c1b13f24fd47e9ec7f1d7cf0a4c4ccde4d"
+    },
+    {
+      "path": "assets/exercise-videos/cossack-squat.mp4",
+      "size": 582684,
+      "sha256": "405082d72529aa206bfe057bee90aeba665d2e5df83275564c41bdf12e12dd45"
+    },
+    {
+      "path": "assets/exercise-videos/cossack-squat.webp",
+      "size": 72344,
+      "sha256": "fa8d6db8eae52ea63d526b2c1d04622921f537cdc5e3f3dc46b95e7c56338094"
+    },
+    {
+      "path": "assets/exercise-videos/crab-walk.mp4",
+      "size": 345866,
+      "sha256": "4d94c9a01c3c029c17a0ba467bed7b490c6c105b59b133432554a19ab1e7c323"
+    },
+    {
+      "path": "assets/exercise-videos/crab-walk.webp",
+      "size": 82692,
+      "sha256": "69ccefa5ddf6b587bf0c4b11f688911bf00d625bd33e3190d20901000139a6b9"
+    },
+    {
+      "path": "assets/exercise-videos/curtsy-lunge.mp4",
+      "size": 644119,
+      "sha256": "52e9aaf1eba49b79f85ebb29c5ab694bdc2b16ad1264540bd5d06949a47b2fb3"
+    },
+    {
+      "path": "assets/exercise-videos/curtsy-lunge.webp",
+      "size": 77084,
+      "sha256": "eb5d7d3c63bc30913cb46b7952774cf8ddf35c9d4ae47e59aeabd633ef630b00"
+    },
+    {
+      "path": "assets/exercise-videos/dead-bug.mp4",
+      "size": 454741,
+      "sha256": "e928e4f9ed364b89efaf632b4d8c90ceed8c32b0977bb77af77615039dfa395d"
+    },
+    {
+      "path": "assets/exercise-videos/dead-bug.webp",
+      "size": 69772,
+      "sha256": "80133aeed4d046cf10314753a5ea04be74144afa9512d60c7c9358dbb6c4f756"
+    },
+    {
+      "path": "assets/exercise-videos/diamond-push-up.mp4",
+      "size": 502959,
+      "sha256": "e0ec3123a0ff53f581fa9a12bc9366685751fe1eb32e80575fd138fb10a4948d"
+    },
+    {
+      "path": "assets/exercise-videos/diamond-push-up.webp",
+      "size": 80064,
+      "sha256": "6c2bd47b3cd2dcef3d66f7cd2efa74735d6c1c743a2777798993af8414411f4c"
+    },
+    {
+      "path": "assets/exercise-videos/dive-bomber-push-up.mp4",
+      "size": 998018,
+      "sha256": "d408adabe3006ec7572a10d03f29b947f0faef4c34a4e49192d8bf32e711a009"
+    },
+    {
+      "path": "assets/exercise-videos/dive-bomber-push-up.webp",
+      "size": 94438,
+      "sha256": "94969d83bc866e7e1023cfea9d541dbae48762309b0242469f47c138ab24e9cd"
+    },
+    {
+      "path": "assets/exercise-videos/donkey-kick.mp4",
+      "size": 538749,
+      "sha256": "f655422fc2ef039620d4052abec1a1a4b0bcdd25b89d125c40876cfc8eb98059"
+    },
+    {
+      "path": "assets/exercise-videos/donkey-kick.webp",
+      "size": 75640,
+      "sha256": "8502cc5968fe3b366b6854f481febbd78b8dd4d6ce6781492cd503c9e3c72242"
+    },
+    {
+      "path": "assets/exercise-videos/downward-dog.mp4",
+      "size": 967542,
+      "sha256": "5b5437f0a9c904acb13b42909bc8523410dcffa63add50118b738cc99d8649a1"
+    },
+    {
+      "path": "assets/exercise-videos/downward-dog.webp",
+      "size": 116588,
+      "sha256": "837ce4cd38426ab7b9d146dab07293128996b9890ee1e979e0c0431aadfa6b52"
+    },
+    {
+      "path": "assets/exercise-videos/fire-hydrant.mp4",
+      "size": 607107,
+      "sha256": "23cb33baa8c5f075af26c623befa736704a0bb4ebc55dab58e592f26fa20dabc"
+    },
+    {
+      "path": "assets/exercise-videos/fire-hydrant.webp",
+      "size": 77164,
+      "sha256": "7cef3596c4d47f66012301520aeade631381fcdbe575f0f5d960e6da0fadff8d"
+    },
+    {
+      "path": "assets/exercise-videos/flutter-kick.mp4",
+      "size": 463274,
+      "sha256": "15a9bab497595d90dc4fcae69b99e09b3a30ede5041b8325d06ec0166aade0ec"
+    },
+    {
+      "path": "assets/exercise-videos/flutter-kick.webp",
+      "size": 98744,
+      "sha256": "675d5422cce1ec2ef29bb4ac3858c1edd988fcb997fb0287ae89e67473655365"
+    },
+    {
+      "path": "assets/exercise-videos/frog-pump.mp4",
+      "size": 466854,
+      "sha256": "8d4957463be3a3135b6a702a651669a29c6ffb82dbc4e57426cd08aaccd02fa8"
+    },
+    {
+      "path": "assets/exercise-videos/frog-pump.webp",
+      "size": 67176,
+      "sha256": "3621a5c08035f8fe405b0d4f051b3ac1fe89f46f6e1fa7836d14ef0faef9890a"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-duplicate.mp4",
+      "size": 795196,
+      "sha256": "34a436b3dca7f536caea893c002c534cec035b496c3957edb45a130f1f3d8274"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-duplicate.webp",
+      "size": 86846,
+      "sha256": "02c18a1178b0d20a8198c232797e42ff047e4bfe92622bdd6459899818eef782"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-march-alt.mp4",
+      "size": 563785,
+      "sha256": "3e030544ce25f14f6b8f4aa5321e51d273b904379a01b4b507108a52d7f64995"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-march-alt.webp",
+      "size": 71820,
+      "sha256": "4b3fe7b637674ef47aa2ea2cb6ab91629defbf1b62e6ccba9af9ed7fd1794bd1"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-march-duplicate.mp4",
+      "size": 939072,
+      "sha256": "7521bb368227f5d6edb65c82bba4b0c1802b3e7f50287ddddf5294635956773c"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-march-duplicate.webp",
+      "size": 108152,
+      "sha256": "33c607db83a6bf86e30fb8fedec1c32374e405c6cee20a1a2e77e28ecdb46ed7"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-march.mp4",
+      "size": 639395,
+      "sha256": "ead81beff0b01c68106d1c0335167bd958a578f45320512ef8a2d2f9f33d8493"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-march.webp",
+      "size": 105394,
+      "sha256": "2d8e063f8c72a889df92997ce9f900cdfab93616b66c277357b048f7bfc7fe25"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-new.mp4",
+      "size": 520204,
+      "sha256": "f5774e2fc887cf981926de01a26c7eea328fcd5d5a7371e4381f9768d5f72b30"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge-new.webp",
+      "size": 83668,
+      "sha256": "e615d47346b2d125e2a9479553fd28423be0f55ae2e16486ecdfa117b0b4a459"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge.mp4",
+      "size": 402766,
+      "sha256": "ffef44f29282ee2128f7f5376bf7701625db3728df6fe5541cdffebfcfd74eb3"
+    },
+    {
+      "path": "assets/exercise-videos/glute-bridge.webp",
+      "size": 57552,
+      "sha256": "3fc275491e19ce11111c8fc2ef2c1051691bdffefb9788c265eeeb3ce9f22b47"
+    },
+    {
+      "path": "assets/exercise-videos/good-morning.mp4",
+      "size": 585855,
+      "sha256": "28af7c86b871b3fcd31385e5eb68e1926c7c34b305f88fa2cdcbdca97ec07bad"
+    },
+    {
+      "path": "assets/exercise-videos/good-morning.webp",
+      "size": 75146,
+      "sha256": "2df06688b9082353f026771528f890ec0a7a66c2529f1a8ee4be96358207e202"
+    },
+    {
+      "path": "assets/exercise-videos/hamstring-walkout.mp4",
+      "size": 557503,
+      "sha256": "61b65cd98b816a669a65240ad3b12c93a149a45743fc5309ff8ac49b2a14330d"
+    },
+    {
+      "path": "assets/exercise-videos/hamstring-walkout.webp",
+      "size": 74204,
+      "sha256": "81fd173641e39db43ca8587dc38e3991cc952167cd7566709b78deb451da26bb"
+    },
+    {
+      "path": "assets/exercise-videos/hand-release-push-up.mp4",
+      "size": 476448,
+      "sha256": "46f8b2977d8d45be17a77473d95be659d057f50a6f7f2165dc32bd99bdbe5807"
+    },
+    {
+      "path": "assets/exercise-videos/hand-release-push-up.webp",
+      "size": 84894,
+      "sha256": "38ec79d8c6605e6c4c2765af5281fd350c69578bf6ec7a887054fbf0f0cee0e1"
+    },
+    {
+      "path": "assets/exercise-videos/heel-touch-crunch.mp4",
+      "size": 1070485,
+      "sha256": "df29e857f348c776699db3d2876ea7cbe60e8430e1f6f5904c5c5ea56012b3b4"
+    },
+    {
+      "path": "assets/exercise-videos/heel-touch-crunch.webp",
+      "size": 109260,
+      "sha256": "0f305d3e3584f21e93ccee15da2b00ebd1599adbb44846cd094a8a7a34fcda80"
+    },
+    {
+      "path": "assets/exercise-videos/high-knees.mp4",
+      "size": 1370087,
+      "sha256": "9adaeb844055b3ca7d6c587f563419c5f6dd6659f7777bf58406610f73571777"
+    },
+    {
+      "path": "assets/exercise-videos/high-knees.webp",
+      "size": 107660,
+      "sha256": "799f7c4499dfadcf8ee835dbc7ea5af5728e3ea3a6e660d71defe7fc4629de8f"
+    },
+    {
+      "path": "assets/exercise-videos/hip-thrust-alt.mp4",
+      "size": 595976,
+      "sha256": "bf700ac4db0e2220c661252c401048c4ceca8e1aef278732507f41b5bc93ee97"
+    },
+    {
+      "path": "assets/exercise-videos/hip-thrust-alt.webp",
+      "size": 71992,
+      "sha256": "ea3c0db44a881b6b1e9d1eaa5b51f0c27e32cab709edf1f3b04c65e48170af7c"
+    },
+    {
+      "path": "assets/exercise-videos/hip-thrust.mp4",
+      "size": 657359,
+      "sha256": "cf39690ad7971c706850b876dd8c0830a60069100cd7932709b40672f3c9e6bd"
+    },
+    {
+      "path": "assets/exercise-videos/hip-thrust.webp",
+      "size": 81682,
+      "sha256": "ed8bfc287fb9d7c93793a3e04b4a050c5f8cecde3eb0cc24f1ff8b244c8a6a0d"
+    },
+    {
+      "path": "assets/exercise-videos/hollow-hold.mp4",
+      "size": 373970,
+      "sha256": "17915cd78edb75c0740fb24fab9f7d30cebf76cbd6e1a23be2dab6b41dcf65e8"
+    },
+    {
+      "path": "assets/exercise-videos/hollow-hold.webp",
+      "size": 75438,
+      "sha256": "a9a512e8190ef7fed01d9b6a1b6b2e3cad24031493ebda6a19e07df8a1befe28"
+    },
+    {
+      "path": "assets/exercise-videos/inchworm.mp4",
+      "size": 862947,
+      "sha256": "e3f5913a10cf73ba68a50761e6da4b719e33a0d9c08658d9b0fa42c4128a5759"
+    },
+    {
+      "path": "assets/exercise-videos/inchworm.webp",
+      "size": 73786,
+      "sha256": "272376277f5fcfc0f60e77812280caa26ad3c1826ab62ec1f0c82ac889c3b38b"
+    },
+    {
+      "path": "assets/exercise-videos/incline-push-up.mp4",
+      "size": 455390,
+      "sha256": "b66462670f88c886f9cadba1befe9ae3260464cb9cfd2b8b9beabf3499de4871"
+    },
+    {
+      "path": "assets/exercise-videos/incline-push-up.webp",
+      "size": 52296,
+      "sha256": "62ae7229317c87f2a52d7eb293877266d831d61dd6d5b2d63f97971cc1bea7bf"
+    },
+    {
+      "path": "assets/exercise-videos/jackknife-sit-up.mp4",
+      "size": 801791,
+      "sha256": "eadbe2eeb91ba48835bf92c47a7f98b9f7e7fc500d254d3f8c49ff01ac81de39"
+    },
+    {
+      "path": "assets/exercise-videos/jackknife-sit-up.webp",
+      "size": 89418,
+      "sha256": "660056b48c942d071f91e5219da8376d9d1a10a17c223e32d3132cbdc5088926"
+    },
+    {
+      "path": "assets/exercise-videos/jump-squat-batch2.mp4",
+      "size": 576432,
+      "sha256": "8f4106b07d81a39d58191ac8a948e9daaf9ff177b35996a4acec4ee988566ac9"
+    },
+    {
+      "path": "assets/exercise-videos/jump-squat-batch2.webp",
+      "size": 67166,
+      "sha256": "9d4c56b8ffdf2e942409ab42a7e68314a3d495c0899f7d4790a4051a2e1eb024"
+    },
+    {
+      "path": "assets/exercise-videos/jump-squat.mp4",
+      "size": 557498,
+      "sha256": "612165afbf756d08799321a4b88af754176aa194c87f4a5bf9e3a804da10dc0e"
+    },
+    {
+      "path": "assets/exercise-videos/jump-squat.webp",
+      "size": 67588,
+      "sha256": "e43f9c2dbe470abd335bec1c9f258df22866e2dd64c70e7c861c0c095a577043"
+    },
+    {
+      "path": "assets/exercise-videos/jumping-jack.mp4",
+      "size": 769834,
+      "sha256": "4ca0b5830ff2cc910b2b48b85d4c163e516a4e4ba8b14f028221854f60b92497"
+    },
+    {
+      "path": "assets/exercise-videos/jumping-jack.webp",
+      "size": 83004,
+      "sha256": "38b95c3bc313f9d705a2ffe947989ef957445350b0023b4b2f4f1c68ac90d0cc"
+    },
+    {
+      "path": "assets/exercise-videos/knee-push-up.mp4",
+      "size": 632029,
+      "sha256": "db406a48d605fce845b050e1a76ff698782496c74f0ac857d720054d6b82ad32"
+    },
+    {
+      "path": "assets/exercise-videos/knee-push-up.webp",
+      "size": 77684,
+      "sha256": "52ff3eba310ef417a00c6d52c4740e1328ea3770f0d48414a1406c7c1a7e347b"
+    },
+    {
+      "path": "assets/exercise-videos/leg-raise.mp4",
+      "size": 652453,
+      "sha256": "61a4c0e849a672a0054fdc44be3452ceb39265c114ce5bb3c380be96accc4624"
+    },
+    {
+      "path": "assets/exercise-videos/leg-raise.webp",
+      "size": 71478,
+      "sha256": "66acbdeb4e735f4b189f6226d2a9487cf0c78b459edcb080cc403089d605b992"
+    },
+    {
+      "path": "assets/exercise-videos/lunge.mp4",
+      "size": 394614,
+      "sha256": "db0fd6cfa632e171b06b9fba65f4d032754205c59f9598ec3b999ab2636da4d6"
+    },
+    {
+      "path": "assets/exercise-videos/lunge.webp",
+      "size": 65468,
+      "sha256": "ea22330077c7b65b4b68985f910d9bb2f0ac996abb8a301e2a505b80217b3f55"
+    },
+    {
+      "path": "assets/exercise-videos/mountain-climber.mp4",
+      "size": 743618,
+      "sha256": "7a268386b7d3c895fd0e980c0a1c0b9caf18160d02afe6700c1a9f266eae9776"
+    },
+    {
+      "path": "assets/exercise-videos/mountain-climber.webp",
+      "size": 86788,
+      "sha256": "c8b15b0bb2f8b2bc55ddad7d3f7cdb19ca383eb357e034c230a4978781d77954"
+    },
+    {
+      "path": "assets/exercise-videos/pike-push-up.mp4",
+      "size": 519219,
+      "sha256": "c043cbd113aa37581d6289767d356768be5fab3fb828d3842927c53ef00b0313"
+    },
+    {
+      "path": "assets/exercise-videos/pike-push-up.webp",
+      "size": 52916,
+      "sha256": "d5460cc3967d6f7e62efe40007ed321c3d12704db26468e7d1287201d0813704"
+    },
+    {
+      "path": "assets/exercise-videos/plank-jack.mp4",
+      "size": 553319,
+      "sha256": "ab3edc0f372706ffed21995710b64f4434426334af76c3505872fb454965cc23"
+    },
+    {
+      "path": "assets/exercise-videos/plank-jack.webp",
+      "size": 78962,
+      "sha256": "fe769c2175e097e0476e862f224d1bbf54ec77febc3ca8b3260ffc06a6a6a122"
+    },
+    {
+      "path": "assets/exercise-videos/plank-shoulder-tap.mp4",
+      "size": 427667,
+      "sha256": "26236ac42d9160bcde696259e58bd0c3caa7b7fe49028fdec00d9b264a7e1fa0"
+    },
+    {
+      "path": "assets/exercise-videos/plank-shoulder-tap.webp",
+      "size": 79438,
+      "sha256": "ab60515edd6377a7d461aa8461f3452914a0998a54e04aa911dbce197f9b3a4b"
+    },
+    {
+      "path": "assets/exercise-videos/plank-to-downward-dog.mp4",
+      "size": 834726,
+      "sha256": "282fc5796c17e6713dd3db00c7d84617e155231a5ba630fcf2deebb47a77f5fc"
+    },
+    {
+      "path": "assets/exercise-videos/plank-to-downward-dog.webp",
+      "size": 85444,
+      "sha256": "25dbef82332a0362f7f08c0d0f7ed63b481d256ed88fcd6b6017b89d4162ab43"
+    },
+    {
+      "path": "assets/exercise-videos/plank.mp4",
+      "size": 317726,
+      "sha256": "c6269214a4512e74ea7a6a111b2e007699e2ea7125a04497beb9937e8329f9e7"
+    },
+    {
+      "path": "assets/exercise-videos/plank.webp",
+      "size": 73162,
+      "sha256": "f95df9dbe843a78358d2d4aa2331bf49ccf2940b58e5e312b935090079d06255"
+    },
+    {
+      "path": "assets/exercise-videos/prone-cobra.mp4",
+      "size": 713231,
+      "sha256": "12297838553ebcbd2d588f5fb7fec196c7065afee167bba304fe2e58870b8f6e"
+    },
+    {
+      "path": "assets/exercise-videos/prone-cobra.webp",
+      "size": 85580,
+      "sha256": "5420c3268d18a5a94fbbcbc0d6495b75e1600cedda383d41d3fc3c7433058c13"
+    },
+    {
+      "path": "assets/exercise-videos/push-up.mp4",
+      "size": 349135,
+      "sha256": "9840149fc2d6ada78e10121000be714063d5123d30abc944d928ea02d79e4814"
+    },
+    {
+      "path": "assets/exercise-videos/push-up.webp",
+      "size": 48792,
+      "sha256": "49dd08ab4bc1af9ca57f79bd70690ca956930f447853be81f165b4cd5e4ff7cb"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-crunch.mp4",
+      "size": 541494,
+      "sha256": "841263c7a56124819c3a45786930f519891610633f0a118bbf02e6d9b1519c71"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-crunch.webp",
+      "size": 78754,
+      "sha256": "5d5e7ebcfe4e0171e0e62b2c9f32bce3b1b898fc8da02fc95e575fde1009c844"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-lunge.mp4",
+      "size": 459324,
+      "sha256": "a5e599c2a4284c6189691aee79d0e1026b5d82059b3333684516cb9fdeac903f"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-lunge.webp",
+      "size": 71242,
+      "sha256": "c8b3a9c63c9b95f423a2aaa0ffcb94b225cac263665888ef4a612a8f6b7450c3"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-plank.mp4",
+      "size": 379333,
+      "sha256": "a98d572b95f165fb0151f47c320004997d62ba52f6406e50cb0ecf8d37419981"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-plank.webp",
+      "size": 74664,
+      "sha256": "e61e9b4df256a2dc82a730364f34c3c87d421373da3f12afcfd7193d1590b003"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-snow-angel-batch3.mp4",
+      "size": 613895,
+      "sha256": "b50c9a4a265156f05a205201928239d5599735a9f52950accbf455cd5cbabb0a"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-snow-angel-batch3.webp",
+      "size": 84540,
+      "sha256": "20179267329a75eaee51cb5fc0e6080b73b88da81aa85bde5ee9c44f9ec05d8d"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-snow-angel.mp4",
+      "size": 529458,
+      "sha256": "2dc375a275abed5c2c31c2b8011311234da642c07acfbd81f2f54fee945f5025"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-snow-angel.webp",
+      "size": 77118,
+      "sha256": "5847fd441522a3ab19c835f4dbf3c11ea1d3a9169de8b667f0371f3712c9cb61"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-tabletop.mp4",
+      "size": 788027,
+      "sha256": "aa211ece525a5c8c8d31a0708fb7cb2ccdf3da2d35f46c0223c62843565ea014"
+    },
+    {
+      "path": "assets/exercise-videos/reverse-tabletop.webp",
+      "size": 86526,
+      "sha256": "ef36c6411e783a0d2cd526fffff5dd58f4d8b27b5b4ceeb0f39fbd8cea3a1836"
+    },
+    {
+      "path": "assets/exercise-videos/russian-twist.mp4",
+      "size": 734619,
+      "sha256": "e8b8d54e2e43827ddfb9ff06bb63f9604fb426d24827a8be777650f05718fe66"
+    },
+    {
+      "path": "assets/exercise-videos/russian-twist.webp",
+      "size": 109840,
+      "sha256": "0e854364066847b7031819609d069c54f0cf8defb3799ea02263e1c7fc0211c7"
+    },
+    {
+      "path": "assets/exercise-videos/scissor-kick.mp4",
+      "size": 548720,
+      "sha256": "9ff652dbed0b2518815b8014ae1b97fc0f0e28a0ae7813dfee6c047c4b196fea"
+    },
+    {
+      "path": "assets/exercise-videos/scissor-kick.webp",
+      "size": 84968,
+      "sha256": "e62142e223dc16a14e8c7a05a92cb302e93af9a9cb11f8aaa0351754ff548593"
+    },
+    {
+      "path": "assets/exercise-videos/seal-jack.mp4",
+      "size": 613061,
+      "sha256": "9214bca75e71fa46bf2ab3229383a1588c1af81aa275fb1d3f645a82ac246447"
+    },
+    {
+      "path": "assets/exercise-videos/seal-jack.webp",
+      "size": 79236,
+      "sha256": "9a805b6e77dd5ca947ea2952a45a80e282d53cdbefa4d3b0e0e31fbf45ecc96d"
+    },
+    {
+      "path": "assets/exercise-videos/seated-knee-tuck.mp4",
+      "size": 1681177,
+      "sha256": "d16ad6eef1985dd676c55bab51431040c6f4f1cc8100783856c40e62508b10d0"
+    },
+    {
+      "path": "assets/exercise-videos/seated-knee-tuck.webp",
+      "size": 49356,
+      "sha256": "51a45f955fb05daa163a0cec18df4c21e11573afa4f08852d4b1fa6c342be43e"
+    },
+    {
+      "path": "assets/exercise-videos/side-lunge.mp4",
+      "size": 753069,
+      "sha256": "e3dcee7eec6373b05c7e42ce521b733c89c5ea2f7d381f8e78b5a7d067f3a04b"
+    },
+    {
+      "path": "assets/exercise-videos/side-lunge.webp",
+      "size": 72338,
+      "sha256": "bce35f9a04b18c14161a3353cb31935bac5ada936b1c26d79087a4f4b1d49a7f"
+    },
+    {
+      "path": "assets/exercise-videos/side-lying-leg-raise.mp4",
+      "size": 348777,
+      "sha256": "960f9871f989828a68b9a722d94877f2803e79ae9c2f63fa0d34ab2705e183a2"
+    },
+    {
+      "path": "assets/exercise-videos/side-lying-leg-raise.webp",
+      "size": 72502,
+      "sha256": "fa4b2012398dcde91aa6436b369edc544e5a61a76bcdae55926b156a22c8873c"
+    },
+    {
+      "path": "assets/exercise-videos/side-plank-hip-dip.mp4",
+      "size": 344266,
+      "sha256": "3d9f51667f8468c90c5e8d24441ca1aa917c87088b4c0d24b9f6dd99ea54abc8"
+    },
+    {
+      "path": "assets/exercise-videos/side-plank-hip-dip.webp",
+      "size": 51512,
+      "sha256": "32a37316c653d2215a05a745a1d04e88530e8ff900a89c6cda9c41733c1af59a"
+    },
+    {
+      "path": "assets/exercise-videos/side-plank-reach-through.mp4",
+      "size": 411603,
+      "sha256": "140e2773336a971fb6f9dadfcb7153cc22d964ab84dfc34d2413d471b8b09b43"
+    },
+    {
+      "path": "assets/exercise-videos/side-plank-reach-through.webp",
+      "size": 75396,
+      "sha256": "b6220fa64dcf053163afe85e600daba54bb49000abd5e88d5bd6f4bff6582b84"
+    },
+    {
+      "path": "assets/exercise-videos/side-plank.mp4",
+      "size": 363734,
+      "sha256": "3e54d868519e5acf72a71c6efd848eca752c000352a037b279c1cbf86284eaac"
+    },
+    {
+      "path": "assets/exercise-videos/side-plank.webp",
+      "size": 51432,
+      "sha256": "e84cd23fb04bb2373b1954f086f23d4b673c4cfe8dc1758b9fc102859516bd2b"
+    },
+    {
+      "path": "assets/exercise-videos/single-leg-glute-bridge.mp4",
+      "size": 544625,
+      "sha256": "e6f27ae31af09b8ee1b92e23993b98c3b80544d3b06a720fe4b6e78121a7b1d7"
+    },
+    {
+      "path": "assets/exercise-videos/single-leg-glute-bridge.webp",
+      "size": 82766,
+      "sha256": "7bf92a93049677c08fcf91f3178118adb0580aa8bce3f726af467ac9cd9c47dd"
+    },
+    {
+      "path": "assets/exercise-videos/single-leg-rdl-batch2.mp4",
+      "size": 754794,
+      "sha256": "4e0b8d669febf725267b491e59ac2fec7e34ad4cc4667ccaf14541a7c300fa3d"
+    },
+    {
+      "path": "assets/exercise-videos/single-leg-rdl-batch2.webp",
+      "size": 79562,
+      "sha256": "d544d4043f735ec9f0c14350492ad7a58a3df5ce7a359d6dca9bcbc985cfeac7"
+    },
+    {
+      "path": "assets/exercise-videos/single-leg-rdl.mp4",
+      "size": 493905,
+      "sha256": "661494ba641c8d9177ace5ed1982ef6d8ff4cd38c19d074e53aceb249c051b49"
+    },
+    {
+      "path": "assets/exercise-videos/single-leg-rdl.webp",
+      "size": 65830,
+      "sha256": "ca0fd748ffa7d7a909d42ff269d4f6031234801fca31da86091bd75f6ec97e06"
+    },
+    {
+      "path": "assets/exercise-videos/skater-jump-duplicate.mp4",
+      "size": 957435,
+      "sha256": "405693c469d0626b2a86a7b6ce8e9d8887b09fc1d47085798c1d1235e8b56c1a"
+    },
+    {
+      "path": "assets/exercise-videos/skater-jump-duplicate.webp",
+      "size": 81502,
+      "sha256": "66822a4d5a5fa22ca22b35142eca79d9f86a65289573299880aa2b60f6d6b0d8"
+    },
+    {
+      "path": "assets/exercise-videos/skater-jump.mp4",
+      "size": 655644,
+      "sha256": "51ce390bdb16bcfad5167e42ca954ac1aec510e6f9e704c730392c8be1128e6c"
+    },
+    {
+      "path": "assets/exercise-videos/skater-jump.webp",
+      "size": 78546,
+      "sha256": "cc0d39aa19197aa936f9ade6748514b84dead256a95be263d86f1ecf52d66186"
+    },
+    {
+      "path": "assets/exercise-videos/split-squat-batch2.mp4",
+      "size": 526845,
+      "sha256": "9e2fda883dd752f9f6a323638bc0401f368f8147d9a5de90151f1a77d30016fe"
+    },
+    {
+      "path": "assets/exercise-videos/split-squat-batch2.webp",
+      "size": 74216,
+      "sha256": "b4244d2240dea8e6832873531ff01467ba781eb0966d01a8528c44e9ee5d6f90"
+    },
+    {
+      "path": "assets/exercise-videos/split-squat-batch4.mp4",
+      "size": 507663,
+      "sha256": "2c754cbe160fd21e8aea1c1e73dc33965685d008a3c309eb47faf9d9a9252d6e"
+    },
+    {
+      "path": "assets/exercise-videos/split-squat-batch4.webp",
+      "size": 75306,
+      "sha256": "e2f8e83b49122560c61b8d4eb37898ed3a1e38b912cd5db08f67765e1724e953"
+    },
+    {
+      "path": "assets/exercise-videos/split-squat.mp4",
+      "size": 496805,
+      "sha256": "62d4cac1b78ac9121d45627251810ea3e3dabb1484ffd50530b0f10469a9ce1a"
+    },
+    {
+      "path": "assets/exercise-videos/split-squat.webp",
+      "size": 74344,
+      "sha256": "75119cf22cf59a994340b1266108da51075a5e82b46f40c645692bf570bc41bc"
+    },
+    {
+      "path": "assets/exercise-videos/squat-pulse.mp4",
+      "size": 475670,
+      "sha256": "bd0b16b3783400d8d63d3043ead9c84a6e81d30f0969435ca94bd1107c545688"
+    },
+    {
+      "path": "assets/exercise-videos/squat-pulse.webp",
+      "size": 74234,
+      "sha256": "241dff09a32d009ca325043cc2c0d5eb48f5eb1c2d48f68d86bb227abef11e2a"
+    },
+    {
+      "path": "assets/exercise-videos/standing-glute-kickback.mp4",
+      "size": 440081,
+      "sha256": "49f56d16f151dd9460d90ff4fcd5dfcf9cc03a314f276ccf0d917e5855f3f8c8"
+    },
+    {
+      "path": "assets/exercise-videos/standing-glute-kickback.webp",
+      "size": 85802,
+      "sha256": "b148f0244bcaa180411e8d7303eaa1c9ca6912becded59c78423c6f7b4f9e961"
+    },
+    {
+      "path": "assets/exercise-videos/standing-knee-to-elbow.mp4",
+      "size": 1032515,
+      "sha256": "fe742b02d783508662c0edc85ac76ed2030b8581c307631207c45a020b6bcb26"
+    },
+    {
+      "path": "assets/exercise-videos/standing-knee-to-elbow.webp",
+      "size": 79354,
+      "sha256": "7e33d496925aa5814dba688a1efd34c0c6201f04511cf3cbd76de9206adb6c21"
+    },
+    {
+      "path": "assets/exercise-videos/step-up-batch2.mp4",
+      "size": 694791,
+      "sha256": "82cda00623d57a40a9ac1f94276faed7a24531e60dd7071a2fe1e00f52dbdf77"
+    },
+    {
+      "path": "assets/exercise-videos/step-up-batch2.webp",
+      "size": 69918,
+      "sha256": "230ffbd05a979e25fc9d4d910c64ee755addf3e7aca6230675e29f646e6d28af"
+    },
+    {
+      "path": "assets/exercise-videos/step-up.mp4",
+      "size": 638937,
+      "sha256": "9e06bbbb57e85a211ed6847a5447a93d6a691d25d61e6ae46b7e4c205a3e67f5"
+    },
+    {
+      "path": "assets/exercise-videos/step-up.webp",
+      "size": 70144,
+      "sha256": "20eaf9646ec12c55398c2a07b336fb14f4c72151c6be63d2207e24040bb1b70d"
+    },
+    {
+      "path": "assets/exercise-videos/sumo-squat.mp4",
+      "size": 811977,
+      "sha256": "e0f18566d93bac10902b846be6088dc1161a5165c21aa2f683e75d61dad929d2"
+    },
+    {
+      "path": "assets/exercise-videos/sumo-squat.webp",
+      "size": 60264,
+      "sha256": "7f61b17fd059d59515ab4ca089aa77c1baf6d8be07e169f47c0aaebf3a0b61f9"
+    },
+    {
+      "path": "assets/exercise-videos/superman.mp4",
+      "size": 779088,
+      "sha256": "0ee4cf75bb61cdea88af5e4e68dec8ccc840570112d8556e5674f33b88daa59f"
+    },
+    {
+      "path": "assets/exercise-videos/superman.webp",
+      "size": 96814,
+      "sha256": "6444aff93e1f899fd29e001bb5457316594e48f34ff383ded779201d015b129b"
+    },
+    {
+      "path": "assets/exercise-videos/triceps-dip-batch3.mp4",
+      "size": 736857,
+      "sha256": "dd2d10d2eb7b39d254e182a38dc9d89d7631804252dbdda99ec01a17b1bc4664"
+    },
+    {
+      "path": "assets/exercise-videos/triceps-dip-batch3.webp",
+      "size": 77284,
+      "sha256": "8684bc10b415d38a556dbe0574f7c0fd124e59556d2cc5f7fd553f276a31894a"
+    },
+    {
+      "path": "assets/exercise-videos/triceps-dip.mp4",
+      "size": 449294,
+      "sha256": "effb9d09e16edd5eda11ce3c1d24395fd80ead34d56087682e91088619f8e1f2"
+    },
+    {
+      "path": "assets/exercise-videos/triceps-dip.webp",
+      "size": 70254,
+      "sha256": "f5f82c45f2fe06cae1cef370a55eabf7911460fd190f5dd86460da4790cf49ba"
+    },
+    {
+      "path": "assets/exercise-videos/tuck-jump.mp4",
+      "size": 646012,
+      "sha256": "68a798037daed876f6f83191e39b67fe7e9e5f19bd78b0bfdaa65f974f0601bc"
+    },
+    {
+      "path": "assets/exercise-videos/tuck-jump.webp",
+      "size": 73438,
+      "sha256": "6d0a2098c10283744736f048dfbfb0c66fe51593f4e6fb3348c5b6f82beb9d84"
+    },
+    {
+      "path": "assets/exercise-videos/v-up.mp4",
+      "size": 699846,
+      "sha256": "136872899e1bfda46b1cbe602a331e398e985a47efaa2743aa685341c6030c91"
+    },
+    {
+      "path": "assets/exercise-videos/v-up.webp",
+      "size": 67080,
+      "sha256": "d57673f8b89375a2403e7b737ec524907c79a2924dc9032a0f2793032b3196a5"
+    },
+    {
+      "path": "assets/exercise-videos/wall-angel.mp4",
+      "size": 497620,
+      "sha256": "d8ce283faf98b0f4758a06abc09b9f1064e322a4158cc833343ee895b640a13e"
+    },
+    {
+      "path": "assets/exercise-videos/wall-angel.webp",
+      "size": 75130,
+      "sha256": "507c286430faa04c5a09beecae47e66afd5d57979fdd9c52d053d60c5db381ab"
+    },
+    {
+      "path": "assets/exercise-videos/wall-push-up.mp4",
+      "size": 541360,
+      "sha256": "5fe19dfdb8bac50b7a7cf7ae35bbaffd18c67740d7b24ebb8d75a242ca200332"
+    },
+    {
+      "path": "assets/exercise-videos/wall-push-up.webp",
+      "size": 64844,
+      "sha256": "7afc9dacdb71c7eadeb66d439e5aeead5a4a1713c810bfb8076af6007f8d3464"
+    },
+    {
+      "path": "assets/exercise-videos/wall-sit.mp4",
+      "size": 375950,
+      "sha256": "166b412de420211598d4a3de874493b8927a0698860d05e5407ed600f053d270"
+    },
+    {
+      "path": "assets/exercise-videos/wall-sit.webp",
+      "size": 77102,
+      "sha256": "f4badb2966d9c767b795755e93c91960d301eecf0d2a6513d06c89a2a2b55a15"
+    },
+    {
+      "path": "assets/exercise-videos/wide-push-up.mp4",
+      "size": 651296,
+      "sha256": "0117c4563b95652614aa69a4248b28b7c0e9bd58330a9c93365fdca3f7cdb2c0"
+    },
+    {
+      "path": "assets/exercise-videos/wide-push-up.webp",
+      "size": 85326,
+      "sha256": "8e4a0b770842ccebf0a008dea8845fb76ac53b520f50440a5184ed21c1a9a050"
+    },
+    {
+      "path": "assets/exercise-videos/windshield-wiper.mp4",
+      "size": 372561,
+      "sha256": "faff1703d6e5b4ae02308b34721997f799c8c160ae7cd226d02013aefa2baa61"
+    },
+    {
+      "path": "assets/exercise-videos/windshield-wiper.webp",
+      "size": 83990,
+      "sha256": "a5cf559db745c83c7e502f204e2f974d5bbfa12d66f5b258ddbea4f06e5c9df1"
+    },
+    {
+      "path": "assets/favicon.png",
+      "size": 244868,
+      "sha256": "febec001e9ce3cdf2316d45fbe794d5ec69530451540398a00b649ca749d78fd"
+    },
+    {
+      "path": "assets/future-map-vision-v741.webp",
+      "size": 35812,
+      "sha256": "1e5db60a395c3a20f4a743738cf66db2cbab601cd9117012a9c40a4725bf76a2"
+    },
+    {
+      "path": "assets/generated_conditions/hero.png",
+      "size": 110445,
+      "sha256": "44984353367ad1f62ef367579dbe977e4d999ac81e4b2653473c5331b05491a6"
+    },
+    {
+      "path": "assets/generated_conditions/high.png",
+      "size": 68786,
+      "sha256": "d09e6bab7d562b5f7e0d87c705ddb4cc89257b73e48204f8ddfcf67d205853d4"
+    },
+    {
+      "path": "assets/generated_conditions/low.png",
+      "size": 65506,
+      "sha256": "07b65e68c65a7cfb1bba174f693399dddfd53ab221c4ed09a0328282df8bbe65"
+    },
+    {
+      "path": "assets/generated_conditions/normal.png",
+      "size": 58527,
+      "sha256": "bf9dd5f840a421fa0474b10dba20c37aaa093e5d8ef22189bb0ec8e1dcd37989"
+    },
+    {
+      "path": "assets/generated_conditions/rescue.png",
+      "size": 65918,
+      "sha256": "d69f4eddba314042a4108303dfc01c9024c02379ee8e36c7358f0fa958d4a8c1"
+    },
+    {
+      "path": "assets/gym-hero.mp4",
+      "size": 1311862,
+      "sha256": "000faa44699b482d2edb9c3e1560fe704b12a93c2988a7eedbb9dfea0d019704"
+    },
+    {
+      "path": "assets/hub-bodyfit-bg.mp4",
+      "size": 11608661,
+      "sha256": "331111ea2e4267ca6ffc99a4676121b4a85511732b6454d6edd3b22b5803a172"
+    },
+    {
+      "path": "assets/hub-bodyfit-reveal-icon.png",
+      "size": 175570,
+      "sha256": "927939c6ebb9d7e7864150da9532c03257d33334e1b719364f25463b58ea25fc"
+    },
+    {
+      "path": "assets/hub-discipline-bg.mp4",
+      "size": 2375311,
+      "sha256": "5f1418872a23d1edef26713202b10433b24eacc7edc096db72a4be30146cf28f"
+    },
+    {
+      "path": "assets/hub-discipline-reveal-icon.png",
+      "size": 212683,
+      "sha256": "94cee21991c53df5e4171824de817ec8eeba9d4bfe450bc627e7ea3470d7a451"
+    },
+    {
+      "path": "assets/life_avatars/biasa.webp",
+      "size": 9556,
+      "sha256": "2236aeefcc269c85fdd6973be81af5216d92ad4f221e99b764479f4c3cd0bc82"
+    },
+    {
+      "path": "assets/life_avatars/capek.webp",
+      "size": 13812,
+      "sha256": "c089c464ad892fa54a021dda47ccbd1f1b817ab3d5bff9c622f5cc4f23a219a4"
+    },
+    {
+      "path": "assets/life_avatars/gagal.webp",
+      "size": 9182,
+      "sha256": "e80bdc02bc443eeb9e0b0b45e432322b5fe4328834ba1081dd991104cbd843ff"
+    },
+    {
+      "path": "assets/life_avatars/kacau.webp",
+      "size": 12316,
+      "sha256": "fc2e330b06e831a36018ded28c578d642c0fc3e5eecccc09f6c2d92fc95c6480"
+    },
+    {
+      "path": "assets/life_avatars/overthinking.webp",
+      "size": 11664,
+      "sha256": "7e49a527adfb85ee58eedeea07ae64ee2013c37832ef984b39f287f0afd8aae3"
+    },
+    {
+      "path": "assets/life_avatars/semangat.webp",
+      "size": 15832,
+      "sha256": "109abe0a838c4563623f213556f2bdbce99ba6739809e881edaa3f2c0657e1eb"
+    },
+    {
+      "path": "assets/life_avatars_cutout/biasa.png",
+      "size": 164940,
+      "sha256": "66398f45eb037c8d4a0ea0ce0572fbc27d810a86badbab46e561744f83c3cf82"
+    },
+    {
+      "path": "assets/life_avatars_cutout/capek.png",
+      "size": 224710,
+      "sha256": "1e1df8628d4bc3f0c370f37a09df498a6682d91710b10755a7e3d4da1311fc27"
+    },
+    {
+      "path": "assets/life_avatars_cutout/gagal.png",
+      "size": 185825,
+      "sha256": "05b8c927601bcd2ca184bd3b8ec15ce6191db5e86700a1345fc4229aa970c967"
+    },
+    {
+      "path": "assets/life_avatars_cutout/kacau.png",
+      "size": 197275,
+      "sha256": "a3e2fac029e066cb0fd8e0f64bc7529d1f3725c8e604033a87ebeb18568e49d6"
+    },
+    {
+      "path": "assets/life_avatars_cutout/overthinking.png",
+      "size": 194725,
+      "sha256": "f488f219390b4dc47bbbc5f2dfc4ad237f6c45ebd80422d5f0cfa8038dd56263"
+    },
+    {
+      "path": "assets/life_avatars_cutout/semangat.png",
+      "size": 224749,
+      "sha256": "47a0054270146954409a4febf43cba2b6c8cb9231bf372cc4b133e9238a7b810"
+    },
+    {
+      "path": "assets/life_bg/urban-step-2.webp",
+      "size": 14820,
+      "sha256": "9bdcba662110291b58e02a7068d4e1d7cbd8463a44c04bc84adae41ec9549982"
+    },
+    {
+      "path": "assets/life_bg/urban-step-3.webp",
+      "size": 14046,
+      "sha256": "74e2cd0925d87b7f9f0d86de4cb14ec3fe2172f36cda99c1cb5419e8cdf7e78b"
+    },
+    {
+      "path": "assets/life_bg/urban-step-4.webp",
+      "size": 15662,
+      "sha256": "bc02ef2ccee6449872c9d9fd0d34bb003d6ee811eaa282c96ade12839f921ad6"
+    },
+    {
+      "path": "assets/life_bg/urban-step-5.webp",
+      "size": 15236,
+      "sha256": "a780625dc4a111de9b77a140848d51634b2aff13b563a76ed0695d2952270aae"
+    },
+    {
+      "path": "assets/life_bg/urban-step-6.webp",
+      "size": 14966,
+      "sha256": "521c5ea42b7df0298e7e75a366aa31fd22a60a57dd82e2d7b2da1e2fda77e4bc"
+    },
+    {
+      "path": "assets/life_bg/urban-step-7.webp",
+      "size": 15426,
+      "sha256": "dc2fe7f9c8ccfc9a1985d44358d507d43721c2e5c8582d2faa95515e00e34d9f"
+    },
+    {
+      "path": "assets/life_bg/urban-step-8.webp",
+      "size": 15596,
+      "sha256": "28d8650a17f58f0788df570afff1876baf74fc4c0cbeb81fd13b1c75971188a5"
+    },
+    {
+      "path": "assets/meal-ui/ayam_tempe-wide.webp",
+      "size": 22996,
+      "sha256": "cef3faa8ea3cb42044816c21873c0153fada57d566f7a5fba2a6c87c02c173fc"
+    },
+    {
+      "path": "assets/meal-ui/buah-roti-susu.webp",
+      "size": 29782,
+      "sha256": "219ba046974bba843307973a5d6ffd12e309d8fb52adddff3ef752d2b12687d0"
+    },
+    {
+      "path": "assets/meal-ui/nasi-ayam-tempe-sayur.webp",
+      "size": 48672,
+      "sha256": "912244795dcfea50e06a1b10ed909e124f0dba002f124962e83f254a3068890b"
+    },
+    {
+      "path": "assets/meal-ui/nasi-telur-sayur.webp",
+      "size": 45158,
+      "sha256": "0c297ffec10c04aeab55cdf2a82cbb8f362049eea1db642e94e0b16d5a54c973"
+    },
+    {
+      "path": "assets/meal-ui/nasi_telur-wide.webp",
+      "size": 20432,
+      "sha256": "90e2ca0cc4a86d9e2c6aa98dbe70b5dc14219ff6ff02a83fce87730e235ab667"
+    },
+    {
+      "path": "assets/meal-ui/oatpisang-wide.webp",
+      "size": 20326,
+      "sha256": "dadb90665cfc4458f0b9353fd1e195db3b7bff5b829e7a773f10cff3b5b8638d"
+    },
+    {
+      "path": "assets/meal-ui/telur-pisang.webp",
+      "size": 37022,
+      "sha256": "bda32672d429150e1e5739e7ff8461ad4e7ebc88e230f53d50c2778757ab58b0"
+    },
+    {
+      "path": "assets/models/body-profile-3d.glb",
+      "size": 7482160,
+      "sha256": "a8b563fd9e613fc06f7f6d6a8236634784fc02e620785d7ac5a5ac3db81d2eed"
+    },
+    {
+      "path": "assets/progress-v710/badge-next.png",
+      "size": 83459,
+      "sha256": "e78dbba3d618a9bb318d19a6ccc59069a7ebef2fbdcf06e5a592c2af4622bfc7"
+    },
+    {
+      "path": "assets/progress-v710/calories-7day.png",
+      "size": 111482,
+      "sha256": "e263f13b2222c09f1796312a251b9f4a4cd873411e3e25b1b3145a7a2d5ee874"
+    },
+    {
+      "path": "assets/progress-v710/discipline-chart.png",
+      "size": 34217,
+      "sha256": "ea4518d3b967b87bc77363a1b66a19ed4e93f8f3c959104e47bb5456cd23f7ca"
+    },
+    {
+      "path": "assets/progress-v710/insight-ai.png",
+      "size": 120085,
+      "sha256": "84e02f763680a91d306d152c06324c4af144a02ce5ac15d344a4fc82b29fdcb3"
+    },
+    {
+      "path": "assets/progress-v710/journey-banner.png",
+      "size": 1609677,
+      "sha256": "39dedbf07f6a9d46ae6ed6e016934ba07b491448923621cbb44ee0b3231845bb"
+    },
+    {
+      "path": "assets/progress-v710/mission-daily.png",
+      "size": 128812,
+      "sha256": "15ce9d1ea878d2a50ab3b8d07bee7e10e4fba6e9fc7d5b38082ec11dfb010c61"
+    },
+    {
+      "path": "assets/progress-v710/protein.png",
+      "size": 120353,
+      "sha256": "f487b2e18b5865431cd7cfb0ab765e414223cbb0d54640e4cdff24a70ceac3d4"
+    },
+    {
+      "path": "assets/progress-v710/streak.png",
+      "size": 120570,
+      "sha256": "9afeacbcfa6874f7c53bb866321b4a7ef6d1b00ac648dc80eaccfc416cdcae84"
+    },
+    {
+      "path": "assets/progress-v710/sweet-drink.png",
+      "size": 57353,
+      "sha256": "139f647f4129f6b7c1d766bcc3523c2313c7ebe12df979a88a580d42434fe7e3"
+    },
+    {
+      "path": "assets/progress-v710/target-days.png",
+      "size": 56089,
+      "sha256": "07a97db667b40786ca3f20bd843f693a5a7cf23903cf9812edaf7ee977133fd4"
+    },
+    {
+      "path": "assets/progress-v710/walk.png",
+      "size": 78685,
+      "sha256": "5e6034ca36b53694147470b2ff8188c15b749e3f1a86b286c05bd83a72b57712"
+    },
+    {
+      "path": "assets/progress-v710/water.png",
+      "size": 122680,
+      "sha256": "af64add703826f4bbf53b579157e2a003cb20db83766c9b4e0bf1949770cb196"
+    },
+    {
+      "path": "assets/progress-v710/weight.png",
+      "size": 73869,
+      "sha256": "927d0923d98278e79e0d2e2c735b7de08b4138aa00eba839d4eceb19a3c7ad44"
+    },
+    {
+      "path": "assets/result-hero-bg.mp4",
+      "size": 1989042,
+      "sha256": "4e358e8803eaac2cde4a4431a62eaa0940d71b26b6f5cacc85e2cf45870fe90c"
+    },
+    {
+      "path": "assets/result-muscle-hero-cutout.png",
+      "size": 229371,
+      "sha256": "8c2b419a190f1bf1966e76d3fdd79d3e21fec59ea29182c8658d7221dd2e392a"
+    },
+    {
+      "path": "assets/result-muscle-hero.webp",
+      "size": 19942,
+      "sha256": "70cfbe511a75ff2337bb50f721c1eeaccddd6a65b3cd7c6debfa56f3e866b86b"
+    },
+    {
+      "path": "assets/result_cards/meal_ayam_tempe.webp",
+      "size": 8550,
+      "sha256": "d4ac9d10ecaec8815058d8a564d1907012e91765a76d26863d2f7269dcc1ec5e"
+    },
+    {
+      "path": "assets/result_cards/meal_nasi_telur.webp",
+      "size": 7910,
+      "sha256": "87b8392a65e0ee55759f110bf5a6a43b9d136efd16d0905795fde84ce07049df"
+    },
+    {
+      "path": "assets/result_cards/meal_oatmeal_pisang.webp",
+      "size": 7724,
+      "sha256": "4675894d828d22b1e1cd7b52f6cc5eec9d14bbb6c9b51a83fb4fe3dbc8d6a193"
+    },
+    {
+      "path": "assets/result_cards/workout_jalan_cepat.webp",
+      "size": 2798,
+      "sha256": "dcd0a8a5a77d9a5556e8c26b55dcde7822b0b402d4f09c51f97ec785726aa66a"
+    },
+    {
+      "path": "assets/result_cards/workout_lower_body.webp",
+      "size": 3984,
+      "sha256": "ec1d1b976a6357927acb0ad073dd5c53369a602cece45a9e57720264a99f1a3f"
+    },
+    {
+      "path": "assets/result_cards/workout_push_day.webp",
+      "size": 4800,
+      "sha256": "1cd01133be3eb0770e50ab845754bfcf1569340ddc865b5b2803887ae8fe9983"
+    },
+    {
+      "path": "assets/training-focus/bulking.png",
+      "size": 1595968,
+      "sha256": "7b04b5e77b2172ba801f6b48c9b5f9985bc098a49fd4ac4e101fa11e17971407"
+    },
+    {
+      "path": "assets/training-focus/fat-loss.png",
+      "size": 1520140,
+      "sha256": "6697e67bb223854b51be75766eeb088154fcec4c5c469a8a178f42fc97c4ade7"
+    },
+    {
+      "path": "assets/training-focus/focus-bahu-card.png",
+      "size": 1612985,
+      "sha256": "d410a67ae6947618894f9e257468d49726802bcc3e90e58adc6cec898534c22e"
+    },
+    {
+      "path": "assets/training-focus/focus-betis-card.png",
+      "size": 1458519,
+      "sha256": "9fd5cdd44d3f73d76d55fea2810bb64bb2ad5aae0fc763b04bd560447c62f3a0"
+    },
+    {
+      "path": "assets/training-focus/focus-bicep-card.png",
+      "size": 1447051,
+      "sha256": "0d97747b3d2e7106c58121ce436a60ae766419bb41e4b0b15dda41e8fab9bfd0"
+    },
+    {
+      "path": "assets/training-focus/focus-core-card.png",
+      "size": 1437678,
+      "sha256": "0535913152db5db349051a217e940f5c56b0fe1e96e5fd3c9e7964744a9c9b7b"
+    },
+    {
+      "path": "assets/training-focus/focus-dada-card.png",
+      "size": 1533914,
+      "sha256": "4387e183151a45d96e3e54290dcfe2d4d14748f7f46d96b785b53e9d2ffacb90"
+    },
+    {
+      "path": "assets/training-focus/focus-glute-card.png",
+      "size": 1394652,
+      "sha256": "421bba8e7ded482da0f15f4dcc1234a133fe3369d31af163cb9ad6abae83b051"
+    },
+    {
+      "path": "assets/training-focus/focus-kaki-card.png",
+      "size": 1476467,
+      "sha256": "01bdf163b73a749cbf23f7e2163115d6bc16b4019ed96d4636142e2571e7a86f"
+    },
+    {
+      "path": "assets/training-focus/focus-perut-card.png",
+      "size": 1585450,
+      "sha256": "c85b38bb225ac0cad47e265a4205b1f59425311039faa93d5f5da8eeddb937b2"
+    },
+    {
+      "path": "assets/training-focus/focus-punggung-card.png",
+      "size": 1471435,
+      "sha256": "61ec9d48a28efbe36d739245e3f9b193fcc9472e6bb6d677331bfe1d38eeba05"
+    },
+    {
+      "path": "assets/training-focus/focus-tricep-card.png",
+      "size": 1582539,
+      "sha256": "e1f25b2d44e0bda4823ed3c4057dab0c4f38446bf6d304192d9598429f179858"
+    },
+    {
+      "path": "assets/training-focus/mobility.png",
+      "size": 1492093,
+      "sha256": "fe0f7a0ea5270dad0c1c303f8f80d80045aa845e9bcdb770b8f1e6a80b3cd1a5"
+    },
+    {
+      "path": "assets/training-focus/pemula.png",
+      "size": 1439481,
+      "sha256": "80a1320592aecf4ec4e3ccec647c10576816bce3da941652fd69c435b8c3c374"
+    },
+    {
+      "path": "assets/training-focus/upper-body.png",
+      "size": 1545732,
+      "sha256": "dc2cfca7b7c516c2fc30c17e46be29c9588c57c92e95b6952f5fa08f782fc78e"
+    },
+    {
+      "path": "assets/training-setup-banner-v706.png",
+      "size": 1288935,
+      "sha256": "d64c5c384ac3db0a0cf4bb4e9b4ad7f6922be9991c49cbc9796dc885502a3001"
+    },
+    {
+      "path": "assets/videos/tutorial.mp4",
+      "size": 1952078,
+      "sha256": "dd3394fa3eaa102717c2b600076a43d877112e3060705a77ba8edd1b0ab20566"
+    },
+    {
+      "path": "assets/workouts/bodyweight-squat.webp",
+      "size": 42740,
+      "sha256": "1638622b0e8332af1aab0ce4b1e63617779572716d3b05f70533c2ba2be0b1fc"
+    },
+    {
+      "path": "assets/workouts/bulgarian-split-squat.webp",
+      "size": 63020,
+      "sha256": "81d10a5040ea9b0d8d521fac17e8183468698db1c3a9c35ca68a3397ed49e27d"
+    },
+    {
+      "path": "assets/workouts/burpees.webp",
+      "size": 62986,
+      "sha256": "afbfff6814cd7623e448b1a0438e9d61ab5bfebe6f76d0cfcf3868e2d472b068"
+    },
+    {
+      "path": "assets/workouts/cat-cow.webp",
+      "size": 62368,
+      "sha256": "0008de42381e0c01cd38f56c51c726e7c91304dd77e0b2dd71300fb572fa2080"
+    },
+    {
+      "path": "assets/workouts/chair-squat.webp",
+      "size": 42740,
+      "sha256": "1638622b0e8332af1aab0ce4b1e63617779572716d3b05f70533c2ba2be0b1fc"
+    },
+    {
+      "path": "assets/workouts/child-pose.webp",
+      "size": 66000,
+      "sha256": "1f47ae41fb95faab1dacb57908ac69167fd2db6e3bdbb9eb35a64084937dc308"
+    },
+    {
+      "path": "assets/workouts/chin-tuck.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "assets/workouts/cobra-stretch.webp",
+      "size": 67642,
+      "sha256": "4609e905a1799408c09c99a5ce1a3f0b9cc18520c76427595d856df9cddc1c6a"
+    },
+    {
+      "path": "assets/workouts/desk-push-up.webp",
+      "size": 69452,
+      "sha256": "a9286f0de0dbce34b1e3359f74b6825b1c23a7579cb5ae65e40437d754789d9b"
+    },
+    {
+      "path": "assets/workouts/diamond-push-up.webp",
+      "size": 67504,
+      "sha256": "f568fc1d2f20e11cfd6f9235f9734abd52ac1d02b8d06df5ca73b641edce694d"
+    },
+    {
+      "path": "assets/workouts/downward-dog.webp",
+      "size": 71002,
+      "sha256": "8ec33abe7114b31841195afd1b1a19fd59648ba9560c49281c05beab1ae6fc8b"
+    },
+    {
+      "path": "assets/workouts/eye-relax.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "assets/workouts/fast-mountain-climber.webp",
+      "size": 52598,
+      "sha256": "422bd56fcc243efa204d9b00d6a53fe21a829f8612532408ab195c78ade319c3"
+    },
+    {
+      "path": "assets/workouts/glute-bridge.webp",
+      "size": 59374,
+      "sha256": "7c2153943fe6bad73a78f58587f3677e657e9332e8c572c5902736c21235ca57"
+    },
+    {
+      "path": "assets/workouts/high-knees.webp",
+      "size": 49198,
+      "sha256": "c0cd49dab78471fe64464c239103c9dddd8dde4c9709242b1e806b207fbf84a2"
+    },
+    {
+      "path": "assets/workouts/hip-flexor-stretch.webp",
+      "size": 47804,
+      "sha256": "6cce2c551e60ba92e219962aed6b08ddecf8db52d9eb51f43ec5a177759164f7"
+    },
+    {
+      "path": "assets/workouts/incline-push-up.webp",
+      "size": 69452,
+      "sha256": "a9286f0de0dbce34b1e3359f74b6825b1c23a7579cb5ae65e40437d754789d9b"
+    },
+    {
+      "path": "assets/workouts/jump-squat.webp",
+      "size": 54970,
+      "sha256": "e848118fa6c0e822b13cf1abad6342250f201ac78761750f9056566ea3a02912"
+    },
+    {
+      "path": "assets/workouts/jumping-jack.webp",
+      "size": 49846,
+      "sha256": "6ea92de7abd59bde9fce3d3eddbea4e6028a8582411e064b682244d5b6bc2141"
+    },
+    {
+      "path": "assets/workouts/jumping-lunges.webp",
+      "size": 47804,
+      "sha256": "6cce2c551e60ba92e219962aed6b08ddecf8db52d9eb51f43ec5a177759164f7"
+    },
+    {
+      "path": "assets/workouts/knee-push-up.webp",
+      "size": 74712,
+      "sha256": "31730a7f4ed80f1bf17b0cd26c2a5152159228f219caf0732138512738a95841"
+    },
+    {
+      "path": "assets/workouts/meal-budget.webp",
+      "size": 125450,
+      "sha256": "e6436084a1730dab89ef1ae912d4dd872ae33cee949a8d6eab5c331dc6c6c14d"
+    },
+    {
+      "path": "assets/workouts/meal-local.webp",
+      "size": 120324,
+      "sha256": "71894fdc3a236315843d1c51ab9c5ba42b3d591472647027fa644c135c9365bb"
+    },
+    {
+      "path": "assets/workouts/meal-protein.webp",
+      "size": 83630,
+      "sha256": "2572c1d21fa617efb3263770faa018a56718b4d401695ff8f58683e61ed6b9a4"
+    },
+    {
+      "path": "assets/workouts/mountain-climber.webp",
+      "size": 52598,
+      "sha256": "422bd56fcc243efa204d9b00d6a53fe21a829f8612532408ab195c78ade319c3"
+    },
+    {
+      "path": "assets/workouts/neck-roll.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "assets/workouts/neck-stretch.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "assets/workouts/pike-push-up.webp",
+      "size": 65960,
+      "sha256": "7dd0c39baf2898873499d447bd8d8ef006cc0533e57d9373f088894a0951a997"
+    },
+    {
+      "path": "assets/workouts/plank-jack.webp",
+      "size": 66476,
+      "sha256": "9812fdba3c8265164d3ec6238d7506880ac4a7b78ba28f40cefc1439a9429607"
+    },
+    {
+      "path": "assets/workouts/plank.webp",
+      "size": 61356,
+      "sha256": "124d629148aab8fa59e26a0558b10bdaf7665c0efa508273645f9f722081f13f"
+    },
+    {
+      "path": "assets/workouts/push-up.webp",
+      "size": 46356,
+      "sha256": "64f99a20974da9fa8d5bfef8c6b4a1d789498d8cad0e6bc9c8d7a89f1f12f316"
+    },
+    {
+      "path": "assets/workouts/reverse-snow-angel.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "assets/workouts/seated-twist.webp",
+      "size": 58792,
+      "sha256": "dee45dd38ccde594499afefb86bcc5d9cb9e79071f4322c6de956f232c1e49c5"
+    },
+    {
+      "path": "assets/workouts/shoulder-mobility.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "assets/workouts/shoulder-tap.webp",
+      "size": 73582,
+      "sha256": "b0c67edfd8d8b907a96c0ca740504c9cd34cb87e397118d590f96feb4ea791f8"
+    },
+    {
+      "path": "assets/workouts/skater-jump.webp",
+      "size": 60356,
+      "sha256": "cdaddae7b4550b12605bd48d61ff928d3061611d20c6da353f31cde56d0c92f3"
+    },
+    {
+      "path": "assets/workouts/superman-hold.webp",
+      "size": 54880,
+      "sha256": "a400ece02f6fe5c43ee601014cb9217e7b8a050d6c99938a8d856d842911b497"
+    },
+    {
+      "path": "assets/workouts/thoracic-rotation.webp",
+      "size": 62368,
+      "sha256": "0008de42381e0c01cd38f56c51c726e7c91304dd77e0b2dd71300fb572fa2080"
+    },
+    {
+      "path": "assets/workouts/wall-angel.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "assets/workouts/wall-sit.webp",
+      "size": 42740,
+      "sha256": "1638622b0e8332af1aab0ce4b1e63617779572716d3b05f70533c2ba2be0b1fc"
+    },
+    {
+      "path": "assets/workouts/wide-push-up.webp",
+      "size": 70062,
+      "sha256": "9066029c7cee2dc763c10d7fe60597c857cc616a2b5e63e43a2c269f0847e5d7"
+    },
+    {
+      "path": "assets/workouts/wrist-stretch.webp",
+      "size": 68502,
+      "sha256": "aae90ebe0d891b0c104238ef5d8d5a78e5340f1af76b3aeba74221292c6bd304"
+    },
+    {
+      "path": "discipline-icon-1024.png",
+      "size": 478014,
+      "sha256": "cc15528ebda5a53c0deb2fa30c7b7b1233fd754aaedd0284e30ca5d04e276bfd"
+    },
+    {
+      "path": "discipline-icon-192.png",
+      "size": 36829,
+      "sha256": "239b61e2338ad363808994251dca0ec38fcd0a040fef0e05cc38b9ab3695dde5"
+    },
+    {
+      "path": "discipline-icon-32.png",
+      "size": 2709,
+      "sha256": "7990e1860ff819df3f85407f340160a2d80b52bcff83e55e20e3fc0a7a7992bf"
+    },
+    {
+      "path": "discipline-icon-512.png",
+      "size": 167085,
+      "sha256": "f60e434d92d03ed99d3b41fbc6b0bb12a481b12771dd29adaa256b0050505472"
+    },
+    {
+      "path": "favicon-192.png",
+      "size": 47840,
+      "sha256": "25ff9f8b6aa34a479111c40a2c3cdf3f90cb71ae7747b2d4b160463653d0d4c3"
+    },
+    {
+      "path": "favicon-32.png",
+      "size": 2363,
+      "sha256": "04a916274ff7147234fbb192da735b4755754878f637c01eb6cd3c3207676588"
+    },
+    {
+      "path": "favicon.ico",
+      "size": 849,
+      "sha256": "d5c721f10c988ad675ad16d6e3554e03c5dbd8bd502f83405edd1b1d92fb7aca"
+    },
+    {
+      "path": "favicon.png",
+      "size": 244868,
+      "sha256": "febec001e9ce3cdf2316d45fbe794d5ec69530451540398a00b649ca749d78fd"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+[
+  {
+    "file": "incline-push-up",
+    "source": "Create_a_second_vertical_fi.mp4",
+    "start": 0.0,
+    "duration": 3.25,
+    "mapped": true
+  },
+  {
+    "file": "push-up",
+    "source": "Create_a_second_vertical_fi.mp4",
+    "start": 3.72,
+    "duration": 2.6,
+    "mapped": true
+  },
+  {
+    "file": "pike-push-up",
+    "source": "Create_a_second_vertical_fi.mp4",
+    "start": 6.55,
+    "duration": 3.25,
+    "mapped": true
+  },
+  {
+    "file": "skater-jump",
+    "source": "Gunakan_gambar_referensi_kar (1).mp4",
+    "start": 0.0,
+    "duration": 3.25,
+    "mapped": true
+  },
+  {
+    "file": "glute-bridge-new",
+    "source": "Gunakan_gambar_referensi_kar (1).mp4",
+    "start": 3.9,
+    "duration": 2.75,
+    "mapped": false,
+    "reason": "glute-bridge already mapped from V6.90"
+  },
+  {
+    "file": "glute-bridge-march",
+    "source": "Gunakan_gambar_referensi_kar (1).mp4",
+    "start": 7.02,
+    "duration": 2.8,
+    "mapped": true
+  },
+  {
+    "file": "single-leg-glute-bridge",
+    "source": "Gunakan_gambar_referensi_kar (2).mp4",
+    "start": 0.0,
+    "duration": 3.25,
+    "mapped": true
+  },
+  {
+    "file": "glute-bridge-march-alt",
+    "source": "Gunakan_gambar_referensi_kar (2).mp4",
+    "start": 3.82,
+    "duration": 2.8,
+    "mapped": false,
+    "reason": "alt duplicate for glute-bridge-march"
+  },
+  {
+    "file": "hamstring-walkout",
+    "source": "Gunakan_gambar_referensi_kar (2).mp4",
+    "start": 7.03,
+    "duration": 2.8,
+    "mapped": true
+  },
+  {
+    "file": "step-up-batch2",
+    "source": "Gunakan_gambar_referensi_kar (3).mp4",
+    "start": 0.0,
+    "duration": 3.25,
+    "mapped": false,
+    "reason": "step-up already mapped from V6.90"
+  },
+  {
+    "file": "split-squat-batch2",
+    "source": "Gunakan_gambar_referensi_kar (3).mp4",
+    "start": 3.82,
+    "duration": 2.75,
+    "mapped": false,
+    "reason": "split-squat already mapped from V6.90"
+  },
+  {
+    "file": "jump-squat-batch2",
+    "source": "Gunakan_gambar_referensi_kar (3).mp4",
+    "start": 7.0,
+    "duration": 2.85,
+    "mapped": false,
+    "reason": "jump-squat already mapped from V6.90"
+  },
+  {
+    "file": "triceps-dip",
+    "source": "Gunakan_gambar_referensi_kar (4).mp4",
+    "start": 0.0,
+    "duration": 3.25,
+    "mapped": true
+  },
+  {
+    "file": "reverse-snow-angel",
+    "source": "Gunakan_gambar_referensi_kar (4).mp4",
+    "start": 3.88,
+    "duration": 2.82,
+    "mapped": true
+  },
+  {
+    "file": "plank-shoulder-tap",
+    "source": "Gunakan_gambar_referensi_kar (4).mp4",
+    "start": 7.0,
+    "duration": 2.85,
+    "mapped": true
+  },
+  {
+    "file": "calf-raise-batch2",
+    "source": "Gunakan_gambar_referensi_kar (5).mp4",
+    "start": 0.0,
+    "duration": 3.25,
+    "mapped": false,
+    "reason": "calf-raise already mapped from V6.90"
+  },
+  {
+    "file": "single-leg-rdl-batch2",
+    "source": "Gunakan_gambar_referensi_kar (5).mp4",
+    "start": 3.82,
+    "duration": 2.85,
+    "mapped": false,
+    "reason": "single-leg-rdl already mapped from V6.90"
+  },
+  {
+    "file": "good-morning",
+    "source": "Gunakan_gambar_referensi_kar (5).mp4",
+    "start": 7.0,
+    "duration": 2.85,
+    "mapped": true
+  },
+  {
+    "file": "skater-jump-duplicate",
+    "source": "Gunakan_gambar_referensi_kar (6).mp4",
+    "start": 0.0,
+    "duration": 3.25,
+    "mapped": false,
+    "reason": "duplicate of ref1"
+  },
+  {
+    "file": "glute-bridge-duplicate",
+    "source": "Gunakan_gambar_referensi_kar (6).mp4",
+    "start": 3.9,
+    "duration": 2.75,
+    "mapped": false,
+    "reason": "duplicate of ref1"
+  },
+  {
+    "file": "glute-bridge-march-duplicate",
+    "source": "Gunakan_gambar_referensi_kar (6).mp4",
+    "start": 7.02,
+    "duration": 2.8,
+    "mapped": false,
+    "reason": "duplicate of ref1"
+  }
+]

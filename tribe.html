@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tribe-Commit Protocol — WellnessHubID</title>
+<meta name="description" content="Tribe-Commit Protocol: sistem disiplin berbasis komitmen, squad lokal, bukti harian, dan reward. MVP gratis tanpa transaksi nyata.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#050605">
+  <link rel="manifest" href="manifest.json">
+<style>
+:root{--bg:#050605;--card:#0c110e;--card2:#101612;--line:rgba(255,255,255,.08);--line2:rgba(51,212,111,.22);--green:#33d46f;--green2:#77ff9f;--text:#f4f7f5;--muted:#a6b1aa;--muted2:#78857e;--max:1220px;--font:'Plus Jakarta Sans',system-ui,sans-serif;--radius:30px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 12% 8%,rgba(51,212,111,.16),transparent 28%),radial-gradient(circle at 88% 10%,rgba(51,212,111,.10),transparent 26%),linear-gradient(180deg,#050605,#050605);color:var(--text);font-family:var(--font);min-height:100vh;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(5,6,5,.76);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.top-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:900;letter-spacing:-.04em;text-transform:uppercase}.brand span{display:block;color:var(--green);font-size:.72rem;letter-spacing:.28em}.nav{display:flex;gap:10px;flex-wrap:wrap}.nav a{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--muted);font-weight:800}.nav a:hover{border-color:var(--line2);color:#eaffef}.hero{padding:62px 0 28px;display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:stretch}.hero-copy,.hero-visual,.panel,.protocol-card,.sim-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));box-shadow:0 30px 80px rgba(0,0,0,.42)}.hero-copy{padding:36px;display:flex;flex-direction:column;justify-content:center}.badge{display:inline-flex;align-items:center;gap:10px;width:fit-content;padding:10px 16px;border-radius:999px;background:rgba(51,212,111,.10);border:1px solid var(--line2);color:#caffd8;font-weight:900;text-transform:uppercase;font-size:.78rem;letter-spacing:.06em;margin-bottom:22px}.badge i{color:var(--green)}h1{font-size:clamp(3rem,7vw,5.9rem);line-height:.92;letter-spacing:-.075em;text-transform:uppercase;margin:0 0 18px}h1 span,.green{color:var(--green)}.sub{color:var(--muted);line-height:1.75;font-size:1.05rem;margin:0;max-width:70ch}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 22px;border-radius:999px;border:1px solid rgba(51,212,111,.28);background:rgba(6,10,8,.42);backdrop-filter:blur(10px);color:#effff3;font-weight:900;cursor:pointer;font:inherit;transition:.22s}.btn:hover{background:rgba(51,212,111,.14);border-color:rgba(51,212,111,.48);transform:translateY(-1px)}.btn.solid{background:linear-gradient(180deg,var(--green2),var(--green));color:#06110a;border-color:transparent;box-shadow:0 14px 34px rgba(51,212,111,.24)}.hero-visual{padding:28px;min-height:480px;position:relative;overflow:hidden;display:flex;align-items:flex-end}.hero-visual::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,5,.12),rgba(5,6,5,.88)),url('assets/daily-command-hero.jpg') center/cover no-repeat;filter:saturate(1.05) contrast(1.1) brightness(.84);transform:scale(1.02)}.protocol-map{position:relative;z-index:1;width:100%;display:grid;gap:12px}.phase{display:grid;grid-template-columns:48px 1fr;gap:14px;align-items:center;padding:16px;border-radius:22px;background:rgba(5,8,6,.62);border:1px solid rgba(51,212,111,.20);backdrop-filter:blur(10px)}.phase strong{display:grid;place-items:center;width:48px;height:48px;border-radius:16px;background:rgba(51,212,111,.12);color:var(--green);font-size:1.1rem}.phase h3{margin:0 0 4px;font-size:1rem}.phase p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5}.warning{margin:0 0 34px;padding:18px 20px;border-radius:24px;background:rgba(255,191,93,.08);border:1px solid rgba(255,191,93,.20);color:#ffe2b8;line-height:1.7}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:18px 0 22px}.section-head h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.06em;line-height:1.03;margin:0;text-transform:uppercase}.section-head p{color:var(--muted);line-height:1.7;margin:0;max-width:58ch}.protocol-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:34px}.protocol-card{padding:24px}.protocol-card i{width:56px;height:56px;border-radius:18px;background:rgba(51,212,111,.10);border:1px solid var(--line2);display:grid;place-items:center;color:var(--green);font-size:1.45rem;margin-bottom:16px}.protocol-card h3{margin:0 0 10px;font-size:1.25rem}.protocol-card p{margin:0;color:var(--muted);line-height:1.7;font-size:.95rem}.sim{display:grid;grid-template-columns:.88fr 1.12fr;gap:22px;margin:20px 0 44px}.sim-card{padding:28px}.form-grid{display:grid;gap:15px}.field label{display:block;margin-bottom:9px;font-weight:900}.input,.select,.textarea{width:100%;border-radius:18px;border:1px solid var(--line);background:#101612;color:#fff;padding:0 16px;font:inherit;font-weight:800;outline:none}.input,.select{height:60px}.textarea{padding:16px;min-height:94px;resize:vertical}.input:focus,.select:focus,.textarea:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(51,212,111,.12)}.dash-title{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;flex-wrap:wrap;margin-bottom:18px}.dash-title h2{margin:0;font-size:2rem;letter-spacing:-.05em}.status-pill{padding:10px 14px;border-radius:999px;background:rgba(51,212,111,.10);border:1px solid var(--line2);color:#caffd8;font-weight:900}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}.stat{background:#101612;border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:18px}.stat strong{display:block;color:var(--green);font-size:1.8rem}.stat span{color:var(--muted);font-weight:800;font-size:.85rem}.squad{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:20px 0}.member{padding:14px;border-radius:20px;background:rgba(255,255,255,.03);border:1px solid var(--line);text-align:center}.member .avatar{width:44px;height:44px;margin:0 auto 8px;border-radius:50%;background:rgba(51,212,111,.12);border:1px solid var(--line2);display:grid;place-items:center;color:var(--green);font-weight:900}.member strong{display:block;font-size:.9rem}.member span{color:var(--muted);font-size:.78rem}.proof-box{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}.upload{border:1px dashed rgba(51,212,111,.32);border-radius:22px;min-height:190px;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px;background:rgba(51,212,111,.04);cursor:pointer;overflow:hidden}.upload img{max-width:100%;width:100%;height:190px;object-fit:cover;border-radius:16px}.validator{padding:18px;border-radius:22px;background:#101612;border:1px solid var(--line)}.validator h3{margin:0 0 8px}.validator p{margin:0;color:var(--muted);line-height:1.65}.days{display:grid;grid-template-columns:repeat(7,1fr);gap:10px;margin-top:16px}.day{height:62px;border-radius:18px;background:#101612;border:1px solid var(--line);display:grid;place-items:center;color:var(--muted);font-weight:900}.day.done{color:#06110a;background:linear-gradient(180deg,var(--green2),var(--green));border-color:transparent}.leaderboard{display:grid;gap:10px;margin-top:14px}.leader{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;border-radius:18px;background:#101612;border:1px solid var(--line);color:#d8e6dd}.leader span{color:var(--muted)}.note{padding:18px;border-radius:22px;border:1px solid rgba(51,212,111,.18);background:rgba(51,212,111,.06);color:#dcffe6;line-height:1.65;margin-top:18px}@media(max-width:1050px){.hero,.sim{grid-template-columns:1fr}.protocol-grid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.squad{grid-template-columns:repeat(3,1fr)}.proof-box{grid-template-columns:1fr}}@media(max-width:680px){.nav{display:none}.hero-copy,.sim-card{padding:22px}.hero-visual{min-height:390px}.protocol-grid,.stats,.squad,.days{grid-template-columns:1fr}h1{letter-spacing:-.045em}.btn{width:100%}}
+
+/* Smooth page transition */
+@keyframes whPageEnter{from{opacity:0;transform:translateY(10px) scale(.997);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+body{animation:whPageEnter .48s cubic-bezier(.16,1,.3,1) both;}
+body.wh-page-exit{opacity:0!important;transform:translateY(8px) scale(.997)!important;filter:blur(3px);transition:opacity .22s ease,transform .22s ease,filter .22s ease;}
+@media (prefers-reduced-motion:reduce){body{animation:none!important}.wh-page-exit{transition:none!important}}
+
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+  <script src="./analytics.js" defer></script>
+</head>
+<body>
+<header class="top"><div class="wrap top-inner"><a class="brand" href="index.html">Wellness<span>Hub Indonesia</span></a><nav class="nav"><a href="index.html">Beranda</a><a href="challenge.html">Challenge</a><a href="meal.html">Meal</a><a href="daily.html">Daily</a></nav></div></header>
+<main class="wrap">
+<section class="hero">
+  <div class="hero-copy">
+    <div class="badge"><i class="fa-solid fa-people-group"></i> Tribe-Commit Protocol</div>
+    <h1>Disiplin lo <span>jangan sendirian.</span></h1>
+    <p class="sub">Konsep ini menggabungkan komitmen, squad lokal, bukti harian, dan reward. Versi ini masih MVP gratis: belum ada transaksi uang asli, belum ada GPS asli, dan validasi bukti masih simulasi/manual.</p>
+    <div class="hero-actions"><a class="btn solid" href="#simulator">Coba Simulasi <i class="fa-solid fa-arrow-right"></i></a><a class="btn" href="challenge.html">Challenge Biasa</a></div>
+  </div>
+  <div class="hero-visual">
+    <div class="protocol-map">
+      <div class="phase"><strong>01</strong><div><h3>Commit</h3><p>Pilih target dan set deposit disiplin simulasi.</p></div></div>
+      <div class="phase"><strong>02</strong><div><h3>Tribe</h3><p>Masuk squad 5 orang berdasarkan area dan goal.</p></div></div>
+      <div class="phase"><strong>03</strong><div><h3>Proof</h3><p>Upload bukti harian untuk validasi ringan.</p></div></div>
+      <div class="phase"><strong>04</strong><div><h3>Reward</h3><p>Streak, poin, dan simulasi refund komitmen.</p></div></div>
+    </div>
+  </div>
+</section>
+<p class="warning"><strong>Catatan keras:</strong> sistem deposit uang asli jangan dijalankan sembarangan. Untuk MVP ini gue bikin sebagai simulasi komitmen dulu. Kalau nanti pakai uang real, lo perlu aturan refund tertulis, izin peserta, sistem pembayaran aman, dan pencatatan transparan supaya nggak jadi sumber komplain.</p>
+<section>
+  <div class="section-head"><div><div class="badge"><i class="fa-solid fa-layer-group"></i> Kenapa fitur ini hidup?</div><h2>Empat lapis anti-malas.</h2></div><p>Kalori kasih arah. Challenge kasih aksi. Tribe-Commit kasih konsekuensi sosial dan progres yang terasa lebih nyata.</p></div>
+  <div class="protocol-grid">
+    <article class="protocol-card"><i class="fa-solid fa-wallet"></i><h3>Skin in the game</h3><p>User tidak cuma niat. Mereka memilih target dan nilai komitmen sebagai pengingat.</p></article>
+    <article class="protocol-card"><i class="fa-solid fa-location-dot"></i><h3>Squad lokal</h3><p>User tidak jalan sendirian. Sistem membentuk squad kecil berdasarkan area dan goal.</p></article>
+    <article class="protocol-card"><i class="fa-solid fa-camera"></i><h3>Proof harian</h3><p>User upload bukti olahraga, makanan, atau langkah. Di MVP ini validasi masih ringan.</p></article>
+    <article class="protocol-card"><i class="fa-solid fa-trophy"></i><h3>Reward loop</h3><p>Streak dan poin bikin progres terasa seperti game, bukan cuma kewajiban.</p></article>
+  </div>
+</section>
+<section class="sim" id="simulator">
+  <div class="sim-card">
+    <div class="badge"><i class="fa-solid fa-pen-to-square"></i> Setup Protocol</div>
+    <div class="form-grid">
+      <div class="field"><label>Nama panggilan</label><input class="input" id="name" value="Bro" placeholder="Misal: Evan"></div>
+      <div class="field"><label>Target</label><select class="select" id="target"><option value="gym">Gym 4x seminggu</option><option value="walk">8.000 langkah / hari</option><option value="meal">Meal plan 7 hari</option><option value="sugar">No minuman manis</option></select></div>
+      <div class="field"><label>Area</label><select class="select" id="area"><option>Salaman</option><option>Magelang</option><option>Muntilan</option><option>Borobudur</option><option>Online dulu</option></select></div>
+      <div class="field"><label>Deposit disiplin simulasi</label><select class="select" id="deposit"><option value="20000">Rp20.000</option><option value="50000">Rp50.000</option><option value="100000" selected>Rp100.000</option></select></div>
+      <div class="field"><label>Alasan ikut</label><textarea class="textarea" id="why" placeholder="Contoh: gue pengen konsisten olahraga 7 hari dulu.">Gue pengen buktiin kalau gue bisa konsisten minimal 7 hari.</textarea></div>
+      <button class="btn solid" onclick="startProtocol()">Mulai Simulasi Protocol <i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
+  <div class="sim-card">
+    <div class="dash-title"><div><div class="badge"><i class="fa-solid fa-chart-line"></i> Dashboard Squad</div><h2 id="dashTitle">Belum mulai</h2></div><div class="status-pill" id="statusPill">MVP Mode</div></div>
+    <div class="stats"><div class="stat"><strong id="streak">0</strong><span>Streak</span></div><div class="stat"><strong id="points">0</strong><span>Poin</span></div><div class="stat"><strong id="safeDeposit">Rp0</strong><span>Deposit aman</span></div><div class="stat"><strong id="squadScore">0%</strong><span>Skor squad</span></div></div>
+    <div class="squad" id="squad"></div>
+    <div class="days" id="days"></div>
+    <div class="proof-box">
+      <label class="upload" for="proofInput" id="proofPreview"><div><i class="fa-solid fa-cloud-arrow-up" style="font-size:2rem;color:var(--green);margin-bottom:10px"></i><br>Upload bukti harian<br><small>foto gym / makanan / langkah</small></div></label>
+      <input id="proofInput" type="file" accept="image/*" hidden>
+      <div class="validator"><h3 id="validTitle">AI Validator Lite</h3><p id="validText">Belum ada bukti. Upload foto lalu klik check-in. Validasi ini masih simulasi, bukan AI vision asli.</p><button class="btn" style="width:100%;margin-top:14px" onclick="checkIn()">Check-in Hari Ini</button></div>
+    </div>
+    <div class="leaderboard" id="leaderboard"></div>
+    <div class="note">MVP cepat: pakai web ini untuk simulasi, lalu arahkan peserta asli ke grup WhatsApp/Telegram. Kamu sebagai founder bisa validasi manual dulu sebelum bikin sistem uang dan GPS sungguhan.</div>
+  </div>
+</section>
+</main>
+<script>
+const names=['Raka','Dimas','Ari','Fajar','Bayu','Ilham','Rizky','Yoga','Naufal','Reno'];
+let state=JSON.parse(localStorage.getItem('wh_tribe_state')||'null')||{started:false,streak:0,points:0,deposit:0,target:'',area:'',name:'',why:'',proof:false};
+function rupiah(n){return new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n||0)}
+function targetLabel(v){return {gym:'Gym 4x seminggu',walk:'8.000 langkah / hari',meal:'Meal plan 7 hari',sugar:'No minuman manis'}[v]||v}
+function buildSquad(area,name){const pool=[name||'Lo',...names].slice(0,5);return pool.map((n,i)=>`<div class="member"><div class="avatar">${i===0?'LO':n[0]}</div><strong>${n}</strong><span>${area}</span></div>`).join('')}
+function renderDays(){const el=document.getElementById('days');el.innerHTML='';for(let i=1;i<=7;i++){const d=document.createElement('div');d.className='day'+(i<=state.streak?' done':'');d.innerText=i<=state.streak?'✓':'H'+i;el.appendChild(d)}}
+function render(){document.getElementById('dashTitle').innerText=state.started?`${targetLabel(state.target)} · ${state.area}`:'Belum mulai';document.getElementById('statusPill').innerText=state.started?'Protocol aktif':'MVP Mode';document.getElementById('streak').innerText=state.streak;document.getElementById('points').innerText=state.points;const safe=state.started?Math.round(state.deposit*(state.streak/7)):0;document.getElementById('safeDeposit').innerText=rupiah(safe);document.getElementById('squadScore').innerText=state.started?Math.min(100,Math.round((state.streak/7)*100+18))+'%':'0%';document.getElementById('squad').innerHTML=state.started?buildSquad(state.area,state.name):buildSquad('Area','Lo');renderDays();document.getElementById('leaderboard').innerHTML=state.started?`<div class="leader"><strong>Squad ${state.area}</strong><span>${Math.min(100,Math.round((state.streak/7)*100+18))}% aktif</span></div><div class="leader"><strong>Target</strong><span>${targetLabel(state.target)}</span></div><div class="leader"><strong>Komitmen</strong><span>${rupiah(state.deposit)} simulasi</span></div>`:''}
+function startProtocol(){state={started:true,streak:0,points:0,deposit:Number(document.getElementById('deposit').value),target:document.getElementById('target').value,area:document.getElementById('area').value,name:document.getElementById('name').value||'Bro',why:document.getElementById('why').value,proof:false};localStorage.setItem('wh_tribe_state',JSON.stringify(state));render();document.getElementById('validTitle').innerText='Protocol aktif';document.getElementById('validText').innerText='Sekarang upload bukti harian. Kalau valid, streak dan poin akan naik.'}
+function checkIn(){if(!state.started){alert('Mulai simulasi protocol dulu.');return}if(!state.proof){alert('Upload bukti dulu biar check-in terasa real.');return}if(state.streak>=7){document.getElementById('validTitle').innerText='Challenge selesai';document.getElementById('validText').innerText='Simulasi selesai. Deposit dianggap aman dan poin terkumpul.';return}state.streak+=1;state.points+=15;state.proof=false;localStorage.setItem('wh_tribe_state',JSON.stringify(state));document.getElementById('validTitle').innerText='Bukti diterima';document.getElementById('validText').innerText=`Hari ${state.streak} valid. Ini simulasi AI Validator Lite: file terbaca, check-in dicatat, dan skor squad naik.`;document.getElementById('proofPreview').innerHTML='<div><i class="fa-solid fa-cloud-arrow-up" style="font-size:2rem;color:var(--green);margin-bottom:10px"></i><br>Upload bukti berikutnya</div>';render()}
+document.getElementById('proofInput').addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const r=new FileReader();r.onload=()=>{document.getElementById('proofPreview').innerHTML=`<img src="${r.result}" alt="Preview bukti">`;state.proof=true;document.getElementById('validTitle').innerText='Bukti masuk';document.getElementById('validText').innerText='Foto sudah masuk. Untuk MVP, ini dianggap siap divalidasi setelah kamu klik check-in.'};r.readAsDataURL(file)});render();
+</script>
+
+<script>
+(function(){
+  window.addEventListener('pageshow',function(){document.body.classList.remove('wh-page-exit')});
+  document.addEventListener('click',function(e){
+    const a=e.target.closest('a');
+    if(!a) return;
+    const href=a.getAttribute('href')||'';
+    if(!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+    if(a.target==='_blank' || a.hasAttribute('download')) return;
+    let url;
+    try{url=new URL(a.href, window.location.href)}catch(err){return;}
+    if(url.origin!==window.location.origin) return;
+    e.preventDefault();
+    document.body.classList.add('wh-page-exit');
+    setTimeout(function(){window.location.href=a.href},180);
+  });
+})();
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('service-worker.js').catch(function(){});
+  });
+}
+</script>
+</body>
+</html>

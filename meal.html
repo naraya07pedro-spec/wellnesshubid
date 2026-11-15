@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Meal Planner — WellnessHubID</title>
+<meta name="description" content="Meal planner murah berbasis goal tubuh, budget, dan kondisi makan harian.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#031007">
+<link rel="manifest" href="manifest.json">
+<style>
+:root{
+  --bg:#030705;
+  --panel:#07120c;
+  --panel2:#0a1710;
+  --line:rgba(119,255,159,.16);
+  --line2:rgba(255,255,255,.075);
+  --green:#39e978;
+  --green2:#74ffa3;
+  --green3:#c9ffd7;
+  --text:#f4fff7;
+  --muted:#a5b4aa;
+  --soft:#6f7d74;
+  --danger:#ffb25f;
+  --font:'Plus Jakarta Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:var(--font);
+  color:var(--text);
+  background:
+    radial-gradient(circle at 22% -8%,rgba(57,233,120,.18),transparent 32%),
+    radial-gradient(circle at 85% 7%,rgba(57,233,120,.13),transparent 24%),
+    linear-gradient(180deg,#031007 0%,#020504 100%);
+  overflow-x:hidden;
+  padding-bottom:calc(118px + env(safe-area-inset-bottom));
+}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+button{cursor:pointer}
+.app-shell{
+  width:min(100%,941px);
+  margin:0 auto;
+  padding:22px 26px 0;
+}
+.wh-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  margin-bottom:18px;
+}
+.logo-stack{min-width:0}
+.logo-word{
+  font-size:clamp(1.7rem,5vw,2.35rem);
+  line-height:1;
+  font-weight:950;
+  letter-spacing:-.065em;
+  color:#fff;
+}
+.logo-word span{color:var(--green)}
+.logo-sub{
+  margin-top:8px;
+  color:var(--muted);
+  font-weight:700;
+  font-size:clamp(.82rem,2.4vw,1.08rem);
+  letter-spacing:-.02em;
+}
+.icon-btn{
+  width:54px;height:54px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.13);
+  background:rgba(255,255,255,.035);
+  color:#fff;
+  display:grid;place-items:center;
+  position:relative;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07);
+}
+.icon-btn i{font-size:1.3rem}
+.icon-btn::after{
+  content:'';position:absolute;right:8px;top:8px;width:8px;height:8px;border-radius:99px;background:var(--green);box-shadow:0 0 12px rgba(57,233,120,.7)
+}
+.filter-row{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin:10px 0 14px;
+}
+.smart-filter{
+  min-height:66px;
+  padding:12px 14px;
+  border-radius:20px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(119,255,159,.19);
+  background:linear-gradient(180deg,rgba(42,120,67,.21),rgba(255,255,255,.025));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+.smart-filter .ico{
+  width:34px;height:34px;border-radius:12px;
+  display:grid;place-items:center;
+  color:#05110a;background:linear-gradient(180deg,var(--green2),var(--green));
+  box-shadow:0 0 22px rgba(57,233,120,.18);
+}
+.smart-filter small{display:block;color:#fff;font-weight:900;font-size:.79rem;line-height:1}
+.smart-filter b{display:block;margin-top:5px;color:#becac1;font-size:.78rem;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.smart-filter .fa-chevron-down{color:var(--green);font-size:.76rem}
+.smart-filter{position:relative;text-align:left;transition:transform .16s ease,border-color .16s ease,background .16s ease}
+.smart-filter:hover,.smart-filter.open{border-color:rgba(57,233,120,.45);background:linear-gradient(180deg,rgba(57,233,120,.18),rgba(255,255,255,.035));transform:translateY(-1px)}
+.smart-filter.open .fa-chevron-down{transform:rotate(180deg)}
+.meal-filter-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.44);z-index:1000;opacity:0;visibility:hidden;pointer-events:none;transition:.18s ease;backdrop-filter:blur(5px)}
+.meal-filter-backdrop.open{opacity:1;visibility:visible;pointer-events:auto}
+.meal-filter-sheet{position:fixed;left:50%;bottom:calc(104px + env(safe-area-inset-bottom));width:min(540px,calc(100% - 24px));max-height:min(72vh,560px);overflow:auto;transform:translate(-50%,18px) scale(.98);z-index:1001;opacity:0;visibility:hidden;pointer-events:none;transition:.2s cubic-bezier(.2,.8,.2,1);border-radius:26px;background:linear-gradient(180deg,rgba(9,23,14,.98),rgba(3,8,5,.985));border:1px solid rgba(119,255,159,.22);box-shadow:0 28px 90px rgba(0,0,0,.68),0 0 35px rgba(57,233,120,.12);padding:16px}
+.meal-filter-sheet.open{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0) scale(1)}
+.filter-sheet-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:14px}
+.filter-sheet-head h3{margin:0;font-size:1.06rem;letter-spacing:-.04em}.filter-sheet-head p{margin:4px 0 0;color:var(--muted);font-weight:750;font-size:.82rem;line-height:1.35}.filter-close{width:38px;height:38px;border-radius:13px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);color:#fff;display:grid;place-items:center;flex:none}
+.filter-options{display:grid;gap:9px}.filter-option{width:100%;min-height:58px;border:1px solid rgba(255,255,255,.09);background:rgba(255,255,255,.045);border-radius:17px;color:#edf8f0;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:11px;text-align:left}.filter-option:hover{border-color:rgba(57,233,120,.35);background:rgba(57,233,120,.08)}.filter-option.active{border-color:rgba(57,233,120,.55);background:linear-gradient(180deg,rgba(57,233,120,.18),rgba(57,233,120,.075));box-shadow:inset 0 0 0 1px rgba(57,233,120,.08)}.filter-option i:first-child{width:35px;height:35px;border-radius:12px;display:grid;place-items:center;background:rgba(57,233,120,.13);color:var(--green)}.filter-option b{display:block;font-size:.92rem}.filter-option small{display:block;color:var(--muted);font-weight:750;margin-top:2px;line-height:1.3}.filter-option .check{color:var(--green);opacity:0}.filter-option.active .check{opacity:1}.filter-toast{position:fixed;left:50%;bottom:calc(210px + env(safe-area-inset-bottom));transform:translate(-50%,12px);z-index:1003;opacity:0;pointer-events:none;transition:.18s ease;border:1px solid rgba(119,255,159,.26);background:rgba(5,15,9,.96);color:#eaffef;border-radius:999px;padding:10px 14px;font-weight:900;box-shadow:0 18px 45px rgba(0,0,0,.45)}.filter-toast.show{opacity:1;transform:translate(-50%,0)}
+.hero-dashboard{
+  border-radius:26px;
+  padding:18px;
+  background:linear-gradient(180deg,rgba(22,54,33,.55),rgba(5,12,8,.74));
+  border:1px solid rgba(119,255,159,.20);
+  box-shadow:0 22px 70px rgba(0,0,0,.40), inset 0 1px 0 rgba(255,255,255,.055);
+  display:grid;
+  grid-template-columns:1.15fr .72fr .62fr;
+  gap:18px;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero-dashboard::before{
+  content:'';position:absolute;inset:-40%;background:radial-gradient(circle at 45% 45%,rgba(57,233,120,.12),transparent 26%);pointer-events:none;
+}
+.hero-dashboard>*{position:relative;z-index:1}
+.dash-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.dash-title small{color:#e9fff0;font-weight:900}
+.status-pill{font-size:.72rem;font-weight:950;color:#a8ffc0;background:rgba(57,233,120,.12);border:1px solid rgba(57,233,120,.22);padding:8px 10px;border-radius:999px;white-space:nowrap}
+.big-money{font-size:1.7rem;line-height:1;letter-spacing:-.06em;font-weight:950;color:var(--green)}
+.big-money span{font-size:1rem;color:var(--muted);font-weight:750;letter-spacing:-.03em}
+.progress-track{height:11px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;margin:14px 0 16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03)}
+.progress-fill{height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),var(--green2));box-shadow:0 0 18px rgba(57,233,120,.55)}
+.dual-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini-stat{padding:10px 0;border-top:1px solid rgba(255,255,255,.08)}
+.mini-stat i{color:#baffca;margin-right:6px}
+.mini-stat small{display:block;color:var(--muted);font-weight:800;margin-bottom:5px}
+.mini-stat b{font-size:1rem;letter-spacing:-.03em}.mini-stat em{font-style:normal;color:var(--green);float:right;font-size:.82rem;font-weight:900}.mini-stat .mini-bar{height:6px;border-radius:99px;background:rgba(255,255,255,.13);margin-top:8px;overflow:hidden}.mini-stat .mini-bar span{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--green),var(--green2))}
+.ring-wrap{display:grid;place-items:center}
+.ring{
+  --p:36;
+  width:152px;height:152px;border-radius:50%;
+  display:grid;place-items:center;
+  background:conic-gradient(var(--green) calc(var(--p)*1%),rgba(255,255,255,.12) 0);
+  filter:drop-shadow(0 0 26px rgba(57,233,120,.18));
+  position:relative;
+}
+.ring::before{content:'';position:absolute;inset:16px;border-radius:inherit;background:#07120c;box-shadow:inset 0 0 22px rgba(0,0,0,.42)}
+.ring-inner{position:relative;text-align:center;line-height:1.08;max-width:102px;padding:0 4px;margin:0 auto}.ring-inner b{display:block;font-size:1.9rem;letter-spacing:-.06em}.ring-inner span{display:block;color:#c6d4ca;font-weight:800;font-size:.82rem;line-height:1.16}.ring-inner small{display:block;margin-top:8px;color:var(--green);font-weight:950;font-size:.76rem;line-height:1.08}
+.macro-list{display:grid;gap:12px}
+.macro-line{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,.075);padding-bottom:11px}.macro-line:last-child{border-bottom:0;padding-bottom:0}.macro-line i{color:#baffca;font-size:1.15rem}.macro-line small{display:block;color:var(--muted);font-weight:850}.macro-line b{display:block;font-size:1rem}.macro-line span{color:var(--green);font-weight:950}
+.ai-card,.section-card,.summary-strip,.planner-grid>article,.local-card{
+  background:linear-gradient(180deg,rgba(13,34,20,.78),rgba(6,12,8,.88));
+  border:1px solid rgba(119,255,159,.16);
+  border-radius:24px;
+  box-shadow:0 18px 55px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.045);
+}
+.ai-card{margin-top:14px;padding:18px}.card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.card-title{display:flex;align-items:center;gap:10px;font-weight:950;letter-spacing:-.03em}.card-title i{color:var(--green);filter:drop-shadow(0 0 13px rgba(57,233,120,.35))}.ghost-link{color:var(--green);font-weight:900;font-size:.85rem;white-space:nowrap}.ai-row{display:grid;grid-template-columns:1fr auto;gap:12px}.ai-input{height:52px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:16px;color:#fff;padding:0 16px;font-weight:800;outline:0}.ai-input:focus{border-color:rgba(57,233,120,.45);box-shadow:0 0 0 4px rgba(57,233,120,.07)}.ai-btn{border:1px solid rgba(57,233,120,.38);border-radius:16px;padding:0 18px;color:#caffd8;background:rgba(57,233,120,.10);font-weight:950;white-space:nowrap}.ai-btn:hover{background:rgba(57,233,120,.17)}.chips{display:flex;gap:9px;overflow:auto;padding-top:12px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chip{border:1px solid rgba(255,255,255,.095);background:rgba(255,255,255,.05);color:#e7f1ea;border-radius:999px;padding:10px 12px;font-weight:900;white-space:nowrap;font-size:.79rem}.chip i{color:var(--green);margin-right:6px}.chip.active{background:rgba(57,233,120,.16);border-color:rgba(57,233,120,.33);color:#caffd8}
+.section-card{margin-top:14px;padding:16px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.section-title h2{margin:0;font-size:1.12rem;letter-spacing:-.04em}.meal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.meal-card{overflow:hidden;border-radius:19px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);position:relative;display:flex;flex-direction:column;min-height:100%}.meal-photo{height:125px;background-size:cover;background-position:center;position:relative}.meal-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.35))}.meal-tag{position:absolute;left:9px;top:9px;z-index:2;border-radius:999px;background:rgba(5,11,7,.72);border:1px solid rgba(255,255,255,.12);padding:6px 8px;color:#fff;font-weight:950;font-size:.68rem}.heart{position:absolute;right:9px;top:9px;z-index:2;color:#fff;font-size:1.05rem}.meal-body{padding:12px;display:flex;flex-direction:column;gap:10px;flex:1}.meal-body h3{font-size:.92rem;line-height:1.18;margin:0;letter-spacing:-.035em;min-height:2.15em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.meal-price{font-size:1.08rem;font-weight:950;color:var(--green);line-height:1}.meal-stats{display:flex;flex-wrap:wrap;gap:6px}.meal-chip{display:inline-flex;align-items:center;gap:5px;padding:6px 9px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);font-size:.7rem;font-weight:900;color:#fff;white-space:nowrap}.meal-chip i{font-size:.78rem;color:var(--danger)}.meal-chip.protein i{color:#f5c96b}.pick-btn{height:34px;margin-top:auto;width:100%;border:0;border-radius:11px;background:linear-gradient(180deg,rgba(116,255,163,.9),rgba(57,233,120,.7));color:#041008;font-weight:950}.pick-btn.selected{background:rgba(57,233,120,.14);color:#caffd8;border:1px solid rgba(57,233,120,.34)}
+.summary-strip{margin-top:12px;padding:15px;display:grid;grid-template-columns:1fr 1fr 1fr .9fr;gap:14px;align-items:center}.summary-item{border-right:1px solid rgba(255,255,255,.08);padding-right:10px}.summary-item:last-child{border-right:0;padding-right:0}.summary-item small{display:flex;align-items:center;gap:6px;color:var(--muted);font-weight:900}.summary-item small i{color:var(--green)}.summary-item b{display:block;font-size:1.05rem;margin-top:5px}.summary-item .tiny-progress{height:5px;border-radius:99px;background:rgba(255,255,255,.13);margin-top:8px;overflow:hidden}.summary-item .tiny-progress span{display:block;height:100%;background:linear-gradient(90deg,var(--green),var(--green2))}.detail-btn{height:42px;border:1px solid rgba(119,255,159,.28);border-radius:14px;background:rgba(255,255,255,.03);color:#eaffef;font-weight:950;width:100%}
+.planner-grid{display:grid;grid-template-columns:1fr 1.35fr;gap:12px;margin-top:12px}.planner-grid>article{padding:16px}.auto-plan{display:grid;grid-template-columns:1fr 94px;gap:12px;align-items:center}.meal-box-img{width:94px;height:84px;border-radius:18px;background:url('assets/meal-ui/nasi-ayam-tempe-sayur.webp') center/cover no-repeat;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.auto-plan h3,.shopping h3{margin:0 0 7px;font-size:1rem;letter-spacing:-.03em}.auto-plan p{margin:0 0 12px;color:var(--muted);line-height:1.45;font-size:.82rem}.cta-small{height:38px;border-radius:12px;border:1px solid rgba(119,255,159,.25);background:rgba(255,255,255,.03);color:#eaffef;font-weight:950;padding:0 12px}.shopping .shop-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:11px}.shop-count{color:var(--green);font-weight:950;font-size:.78rem}.grocery-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}.grocery-item{min-height:82px;border-radius:14px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);padding:8px;position:relative;text-align:center}.grocery-item input{position:absolute;left:7px;top:7px;accent-color:var(--green)}.grocery-emoji{display:block;font-size:1.2rem;margin:10px 0 3px}.grocery-item b{font-size:.72rem}.grocery-item small{display:block;color:var(--muted);font-size:.62rem;font-weight:800;margin-top:2px}.local-card{margin-top:12px;padding:15px}.ingredient-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:10px}.ingredient{display:flex;align-items:center;gap:8px;min-width:0;border-radius:999px;padding:9px 11px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.085)}.ingredient span{font-size:1.1rem}.ingredient b{display:block;font-size:.76rem}.ingredient small{display:block;color:var(--green);font-weight:950;font-size:.67rem}
+.wh-scan-sheet-v664{position:fixed!important;left:50%!important;bottom:calc(104px + env(safe-area-inset-bottom))!important;transform:translate(-50%,14px)!important;width:min(540px,calc(100% - 18px))!important;background:linear-gradient(180deg,rgba(8,16,11,.98),rgba(4,8,5,.98))!important;border:1px solid rgba(255,255,255,.10)!important;border-radius:24px!important;box-shadow:0 22px 70px rgba(0,0,0,.55)!important;padding:14px!important;z-index:998!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:.18s ease!important}.wh-scan-sheet-v664.open{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translate(-50%,0)!important}.wh-scan-sheet-v664 h3{margin:0 0 4px!important;font-size:1rem!important}.wh-scan-sheet-v664 p{margin:0 0 10px!important;color:rgba(255,255,255,.68)!important;font-size:.82rem!important}.wh-scan-sheet-grid-v664{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important}.wh-scan-choice-v664{display:flex!important;flex-direction:column!important;gap:4px!important;padding:12px!important;border-radius:16px!important;background:rgba(255,255,255,.045)!important;border:1px solid rgba(255,255,255,.08)!important;color:#fff!important;text-decoration:none!important}.wh-scan-choice-v664 i{color:#58f58f!important}.wh-scan-choice-v664 span{font-size:.74rem!important;color:rgba(255,255,255,.64)!important}
+.bf-bottom-nav{position:fixed!important;left:50%!important;right:auto!important;bottom:calc(6px + env(safe-area-inset-bottom))!important;transform:translateX(-50%)!important;width:min(620px,calc(100% - 8px))!important;height:112px!important;min-height:112px!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;align-items:end!important;gap:0!important;padding:0 10px 10px!important;border:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important;z-index:999!important}.bf-nav-shape-svg-v683{position:absolute!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:112px!important;overflow:visible!important;pointer-events:none!important;z-index:0!important;filter:drop-shadow(0 22px 54px rgba(0,0,0,.62))!important}.bf-nav-shape-svg-v683 .nav-main-v683{fill:url(#whNavFillV683)!important;stroke:rgba(255,255,255,.16)!important;stroke-width:1.25!important}.bf-nav-shape-svg-v683 .nav-line-v683{fill:none!important;stroke:rgba(88,245,143,.45)!important;stroke-width:1.25!important;filter:url(#whNavSoftGlowV683)!important}.bf-nav-glow-v683{position:absolute!important;left:50%!important;top:4px!important;transform:translateX(-50%)!important;width:150px!important;height:92px!important;border-radius:999px!important;background:radial-gradient(circle,rgba(88,245,143,.30),rgba(88,245,143,.11) 42%,transparent 74%)!important;filter:blur(13px)!important;pointer-events:none!important;z-index:1!important}.bf-bottom-nav a,.bf-bottom-nav button{font-family:inherit!important;text-decoration:none!important;-webkit-tap-highlight-color:transparent!important}.bf-bottom-nav .bf-nav-item:nth-of-type(1){grid-column:1!important}.bf-bottom-nav .bf-nav-item:nth-of-type(2){grid-column:2!important}.bf-bottom-nav .bf-nav-scan{grid-column:3!important}.bf-bottom-nav .bf-nav-item:nth-of-type(3){grid-column:4!important}.bf-bottom-nav .bf-nav-item:nth-of-type(4){grid-column:5!important}.bf-bottom-nav .bf-nav-item{position:relative!important;z-index:3!important;border:0!important;outline:0!important;background:transparent!important;box-shadow:none!important;color:#d7ddd8!important;border-radius:0!important;height:64px!important;min-height:64px!important;padding:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:6px!important;font-size:.74rem!important;line-height:1!important;font-weight:950!important;letter-spacing:-.015em!important}.bf-bottom-nav .bf-nav-item i{font-size:1.34rem!important;line-height:1!important;color:#d9dfdb!important;filter:drop-shadow(0 2px 6px rgba(0,0,0,.36))!important}.bf-bottom-nav .bf-nav-item span{display:block!important;white-space:nowrap!important}.bf-bottom-nav .bf-nav-item.active{background:transparent!important;border:0!important;box-shadow:none!important;color:#58f58f!important}.bf-bottom-nav .bf-nav-item.active i{color:#58f58f!important;filter:drop-shadow(0 0 12px rgba(57,233,120,.34))!important}.bf-bottom-nav .bf-nav-scan{position:relative!important;z-index:4!important;border:0!important;outline:0!important;background:transparent!important;color:#effff4!important;cursor:pointer!important;width:auto!important;min-width:0!important;height:92px!important;min-height:92px!important;padding:0!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important;gap:6px!important;transform:translateY(-9px)!important}.bf-bottom-nav .bf-scan-circle{width:58px!important;height:58px!important;border-radius:999px!important;display:grid!important;place-items:center!important;background:radial-gradient(circle at 42% 26%,rgba(255,255,255,.30),transparent 31%),linear-gradient(180deg,#78ffa8,#35d96e)!important;color:#041008!important;border:3px solid rgba(154,255,188,.62)!important;box-shadow:0 14px 32px rgba(57,233,120,.34),0 0 0 8px rgba(57,233,120,.065),inset 0 1px 0 rgba(255,255,255,.44)!important}.bf-bottom-nav .bf-scan-circle i{font-size:1.22rem!important;line-height:1!important;color:#041008!important}.bf-bottom-nav .bf-scan-label{font-size:.76rem!important;line-height:1!important;font-weight:950!important;color:#f1fff5!important;text-shadow:0 2px 10px rgba(0,0,0,.55)!important;position:relative!important;z-index:2!important}
+@media(max-width:760px){.app-shell{padding:18px 14px 0}.filter-row{display:flex;overflow:auto;gap:10px;padding-bottom:2px;scrollbar-width:none}.filter-row::-webkit-scrollbar{display:none}.smart-filter{min-width:176px}.hero-dashboard{grid-template-columns:1fr;grid-template-areas:"main" "ring" "macro";gap:16px;align-items:start}.dash-main{grid-area:main;padding-right:0}.ring-wrap{grid-area:ring;position:static;justify-self:center;align-self:center;opacity:1;margin:2px auto 0}.ring{width:132px;height:132px}.macro-list{grid-area:macro;grid-template-columns:1fr 1fr 1fr}.macro-line{border-bottom:0;border-right:1px solid rgba(255,255,255,.075);padding-right:10px;padding-bottom:0}.macro-line:last-child{border-right:0}.ai-row{grid-template-columns:1fr}.meal-grid{display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;scroll-snap-type:x mandatory;padding-bottom:2px}.meal-grid::-webkit-scrollbar{display:none}.meal-card{flex:0 0 170px;min-width:170px;scroll-snap-align:start}.summary-strip{grid-template-columns:1fr 1fr}.summary-item:nth-child(2){border-right:0}.planner-grid{grid-template-columns:1fr}.ingredient-list{display:flex;overflow:auto;scrollbar-width:none}.ingredient-list::-webkit-scrollbar{display:none}.ingredient{min-width:132px}.grocery-row{grid-template-columns:repeat(5,minmax(80px,1fr));overflow:auto;scrollbar-width:none}.grocery-row::-webkit-scrollbar{display:none}}
+@media(max-width:520px){body{padding-bottom:calc(104px + env(safe-area-inset-bottom))}.logo-word{font-size:1.72rem}.logo-sub{font-size:.83rem}.icon-btn{width:48px;height:48px;border-radius:16px}.app-shell{width:100%;padding:18px 12px 0}.smart-filter{min-width:166px}.hero-dashboard{border-radius:22px;padding:15px}.ring-wrap{margin-top:4px}.ring{width:128px;height:128px}.ring::before{inset:14px}.ring-inner{max-width:88px}.ring-inner b{font-size:1.48rem}.ring-inner span{font-size:.72rem;line-height:1.14}.ring-inner small{font-size:.68rem;margin-top:6px}.dash-main{padding-right:0}.big-money{font-size:1.48rem}.dual-stats{grid-template-columns:1fr}.macro-list{grid-template-columns:1fr 1fr 1fr}.macro-line{gap:7px}.macro-line i{font-size:1rem}.macro-line b{font-size:.87rem}.macro-line small,.macro-line span{font-size:.68rem}.ai-card,.section-card,.summary-strip,.planner-grid>article,.local-card{border-radius:20px}.meal-grid{gap:10px}.meal-card{min-width:158px;flex-basis:158px}.meal-photo{height:100px}.meal-body{padding:10px;gap:8px}.meal-body h3{font-size:.8rem;min-height:2.05em}.meal-price{font-size:1rem}.meal-stats{gap:5px}.meal-chip{padding:5px 8px;font-size:.67rem}.meal-chip i{font-size:.72rem}.pick-btn{height:30px;font-size:.76rem}.summary-strip{gap:10px}.summary-item b{font-size:.91rem}.summary-item small{font-size:.69rem}.auto-plan{grid-template-columns:1fr 72px}.meal-box-img{width:72px;height:70px}.wh-scan-sheet-grid-v664{grid-template-columns:1fr!important}.bf-bottom-nav{width:calc(100% - 4px)!important;height:96px!important;min-height:96px!important;max-height:96px!important;bottom:calc(6px + env(safe-area-inset-bottom))!important;padding:0 7px 8px!important}.bf-nav-shape-svg-v683{height:96px!important}.bf-nav-glow-v683{top:4px!important;width:122px!important;height:72px!important;filter:blur(10px)!important}.bf-bottom-nav .bf-nav-item{height:52px!important;min-height:52px!important;gap:5px!important;font-size:.59rem!important}.bf-bottom-nav .bf-nav-item i{font-size:1rem!important}.bf-bottom-nav .bf-nav-scan{height:76px!important;min-height:76px!important;transform:translateY(-7px)!important}.bf-bottom-nav .bf-scan-circle{width:50px!important;height:50px!important}.bf-bottom-nav .bf-scan-circle i{font-size:1.04rem!important}}
+</style>
+<script src="./analytics.js" defer></script>
+</head>
+<body>
+<nav class="bf-bottom-nav" aria-label="BodyFit Hub menu"><svg class="bf-nav-shape-svg-v683" viewBox="0 0 1000 132" preserveAspectRatio="none" aria-hidden="true">
+  <defs><linearGradient id="whNavFillV683" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="rgba(11,23,16,.985)"/><stop offset="100%" stop-color="rgba(3,8,5,.985)"/></linearGradient><filter id="whNavSoftGlowV683" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="5" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <path class="nav-main-v683" d="M58 52 H386 C424 52 436 19 466 12 C478 9 491 8 500 8 C509 8 522 9 534 12 C564 19 576 52 614 52 H942 C978 52 996 72 996 94 C996 119 976 128 942 128 H58 C24 128 4 119 4 94 C4 72 22 52 58 52 Z" />
+  <path class="nav-line-v683" d="M58 52 H386 C424 52 436 19 466 12 C478 9 491 8 500 8 C509 8 522 9 534 12 C564 19 576 52 614 52 H942" />
+</svg><div class="bf-nav-glow-v683" aria-hidden="true"></div><a class="bf-nav-item" href="bodyfit.html"><i class="fa-solid fa-house"></i><span>Home</span></a><a class="bf-nav-item active" href="meal.html"><i class="fa-solid fa-utensils"></i><span>Meal</span></a><button class="bf-nav-scan" type="button" data-wh-scan-v664 aria-label="Buka pilihan scan"><span class="bf-scan-circle"><i class="fa-solid fa-expand"></i></span><span class="bf-scan-label">Scan</span></button><a class="bf-nav-item" href="training-guide.html"><i class="fa-solid fa-dumbbell"></i><span>Latihan</span></a><a class="bf-nav-item" href="progress.html"><i class="fa-solid fa-chart-line"></i><span>Progress</span></a></nav>
+<div class="wh-scan-sheet-v664" id="whScanSheetV664" aria-label="Pilihan Scan"><h3>Pilih scan</h3><p>Akses scan dipusatkan di tombol tengah.</p><div class="wh-scan-sheet-grid-v664"><a class="wh-scan-choice-v664" href="bioscan.html"><i class="fa-solid fa-fingerprint"></i><strong>Scan Tubuh</strong><span>Cek kebutuhan badan & kalori.</span></a><a class="wh-scan-choice-v664" href="food-scanner.html"><i class="fa-solid fa-camera"></i><strong>Scan Makanan</strong><span>Estimasi kalori dari foto makanan.</span></a></div></div>
+
+<main class="app-shell">
+  <header class="wh-top">
+    <div class="logo-stack"><div class="logo-word">WellnessHub<span>ID</span></div><div class="logo-sub">Makan sehat, sesuai goal & budget lo.</div></div>
+    <button class="icon-btn" aria-label="Notifikasi"><i class="fa-regular fa-bell"></i></button>
+  </header>
+
+  <section class="filter-row" aria-label="Filter meal planner">
+    <button class="smart-filter" data-filter="budget"><span class="ico"><i class="fa-solid fa-wallet"></i></span><span><small>Budget</small><b>≤ Rp25.000</b></span><i class="fa-solid fa-chevron-down"></i></button>
+    <button class="smart-filter" data-filter="goal"><span class="ico"><i class="fa-solid fa-bullseye"></i></span><span><small>Goal</small><b>Lean Gain</b></span><i class="fa-solid fa-chevron-down"></i></button>
+    <button class="smart-filter" data-filter="meal"><span class="ico"><i class="fa-solid fa-utensils"></i></span><span><small>Meal</small><b>Semua</b></span><i class="fa-solid fa-chevron-down"></i></button>
+    <button class="smart-filter" data-filter="condition"><span class="ico"><i class="fa-solid fa-user"></i></span><span><small>Kondisi</small><b>Aktif</b></span><i class="fa-solid fa-chevron-down"></i></button>
+  </section>
+
+  <div class="meal-filter-backdrop" id="mealFilterBackdrop" aria-hidden="true"></div>
+  <section class="meal-filter-sheet" id="mealFilterSheet" aria-hidden="true" aria-label="Pilihan filter meal">
+    <div class="filter-sheet-head">
+      <div><h3 id="filterSheetTitle">Pilih filter</h3><p id="filterSheetDesc">Pilih salah satu supaya rekomendasi menu ikut menyesuaikan.</p></div>
+      <button class="filter-close" id="filterSheetClose" type="button" aria-label="Tutup pilihan"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="filter-options" id="filterOptions"></div>
+  </section>
+  <div class="filter-toast" id="filterToast">Filter diterapkan</div>
+
+  <section class="hero-dashboard" aria-label="Dashboard meal harian">
+    <div class="dash-main">
+      <div class="dash-title"><small>Budget Harian</small><span class="status-pill" id="budgetStatus">90% terpakai</span></div>
+      <div class="big-money"><span id="budgetUsed">Rp18.000</span> <span id="budgetLimit">/ Rp20.000</span></div>
+      <div class="progress-track"><div class="progress-fill" id="budgetBar" style="width:90%"></div></div>
+      <div class="dual-stats">
+        <div class="mini-stat"><small><i class="fa-solid fa-fire"></i>Kalori</small><b><span id="calNow">1.414</span><span id="calTargetLabel"> / 2.000 kkal</span></b><em>71%</em><div class="mini-bar"><span id="calBar" style="width:71%"></span></div></div>
+        <div class="mini-stat"><small><i class="fa-solid fa-dumbbell"></i>Protein</small><b><span id="proteinNow">56</span><span id="proteinTargetLabel"> / 80 g</span></b><em>70%</em><div class="mini-bar"><span id="proteinBar" style="width:70%"></span></div></div>
+      </div>
+    </div>
+    <div class="ring-wrap"><div class="ring" id="calRing" style="--p:36"><div class="ring-inner"><b id="ringKcal">720</b><span>/ 2.000 kkal</span><small id="ringPercent">36% tercapai</small></div></div></div>
+    <div class="macro-list">
+      <div class="macro-line"><i class="fa-solid fa-wheat-awn"></i><div><small>Karbo</small><b>188 g</b></div><span>47%</span></div>
+      <div class="macro-line"><i class="fa-solid fa-droplet"></i><div><small>Lemak</small><b>56 g</b></div><span>62%</span></div>
+      <div class="macro-line"><i class="fa-solid fa-dumbbell"></i><div><small>Protein</small><b>56 g</b></div><span>70%</span></div>
+    </div>
+  </section>
+
+  <section class="ai-card" aria-label="AI menu builder">
+    <div class="card-head"><div class="card-title"><i class="fa-solid fa-wand-magic-sparkles"></i> AI MENU BUILDER</div></div>
+    <div class="ai-row"><input class="ai-input" id="aiNeed" type="text" placeholder="Tulis kebutuhan lo atau tujuan..." autocomplete="off"><button class="ai-btn" id="buildAi"><i class="fa-solid fa-sparkles"></i> Buat Menu AI</button></div>
+    <div class="chips" id="quickChips">
+      <button class="chip active" data-chip="budget20"><i class="fa-solid fa-wallet"></i>Budget 20k</button>
+      <button class="chip" data-chip="bulk"><i class="fa-solid fa-arrow-trend-up"></i>Naik BB</button>
+      <button class="chip" data-chip="cut"><i class="fa-solid fa-fire"></i>Turun Lemak</button>
+      <button class="chip" data-chip="kos"><i class="fa-solid fa-graduation-cap"></i>Anak Kos</button>
+      <button class="chip" data-chip="protein"><i class="fa-solid fa-dumbbell"></i>High Protein</button>
+    </div>
+  </section>
+
+  <section class="section-card">
+    <div class="section-title"><h2>Rekomendasi Menu Hari Ini</h2><a class="ghost-link" href="#localFood">Lihat semua <i class="fa-solid fa-chevron-right"></i></a></div>
+    <div class="meal-grid" id="mealGrid"></div>
+  </section>
+
+  <section class="summary-strip" aria-label="Ringkasan hari ini">
+    <div class="summary-item"><small><i class="fa-solid fa-fire"></i>Kalori Hari Ini</small><b><span id="sumCal">1.414</span><span id="sumCalTarget"> / 2.000</span></b><div class="tiny-progress"><span style="width:71%"></span></div></div>
+    <div class="summary-item"><small><i class="fa-solid fa-wallet"></i>Budget Terpakai</small><b><span id="sumBudget">Rp18.000</span><span id="sumBudgetTarget"> / 20.000</span></b><div class="tiny-progress"><span id="sumBudgetBar" style="width:90%"></span></div></div>
+    <div class="summary-item"><small><i class="fa-solid fa-dumbbell"></i>Protein</small><b><span id="sumProtein">56</span><span id="sumProteinTarget"> / 80 g</span></b><div class="tiny-progress"><span style="width:70%"></span></div></div>
+    <div class="summary-item"><small><i class="fa-solid fa-chart-simple"></i>Ringkasan</small><button class="detail-btn" id="detailBtn">Detail <i class="fa-solid fa-chevron-right"></i></button></div>
+  </section>
+
+  <section class="planner-grid">
+    <article class="auto-plan"><div><h3><i class="fa-solid fa-calendar-days" style="color:var(--green)"></i> Auto Plan 7 Hari</h3><p>AI bikin menu variatif sesuai tujuan & budget lo.</p><button class="cta-small" id="autoPlanBtn">Buat Plan Sekarang <i class="fa-solid fa-chevron-right"></i></button></div><div class="meal-box-img" aria-hidden="true"></div></article>
+    <article class="shopping"><div class="shop-top"><h3><i class="fa-solid fa-cart-shopping" style="color:var(--green)"></i> Daftar Belanja</h3><span class="shop-count" id="shopCount">4/5 dipilih</span></div><div class="grocery-row" id="groceryRow"></div><a class="ghost-link" href="#localFood" style="display:block;text-align:center;margin-top:9px">Lihat semua <i class="fa-solid fa-chevron-right"></i></a></article>
+  </section>
+
+  <section class="local-card" id="localFood">
+    <div class="section-title"><h2><i class="fa-solid fa-leaf" style="color:var(--green)"></i> Bahan Lokal Murah</h2><a class="ghost-link" href="food-scanner.html">Scan bahan <i class="fa-solid fa-chevron-right"></i></a></div>
+    <div class="ingredient-list">
+      <div class="ingredient"><span>🧱</span><div><b>Tempe</b><small>Rp 2.000</small></div></div>
+      <div class="ingredient"><span>◻️</span><div><b>Tahu</b><small>Rp 1.500</small></div></div>
+      <div class="ingredient"><span>🥚</span><div><b>Telur</b><small>Rp 2.000</small></div></div>
+      <div class="ingredient"><span>🥬</span><div><b>Bayam</b><small>Rp 1.000</small></div></div>
+      <div class="ingredient"><span>🥜</span><div><b>Kacang Tanah</b><small>Rp 1.500</small></div></div>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  const baseMeals = [
+    {id:'telurPisang', tag:'PAGI ☀', type:'pagi', goal:['lean','bulk','maintain'], condition:['aktif','kos','rumah'], name:'Telur + Pisang', image:'assets/meal-ui/telur-pisang.webp', price:7500, kcal:412, protein:18, selected:true},
+    {id:'ayamTempe', tag:'SIANG ☀', type:'siang', goal:['lean','bulk','maintain'], condition:['aktif','rumah','warung'], name:'Nasi Ayam Tempe Sayur', image:'assets/meal-ui/nasi-ayam-tempe-sayur.webp', price:10500, kcal:612, protein:34, selected:true},
+    {id:'nasiTelurSayur', tag:'MALAM ☾', type:'malam', goal:['cut','maintain'], condition:['aktif','kos','rumah'], name:'Nasi Telur Sayur', image:'assets/meal-ui/nasi-telur-sayur.webp', price:8000, kcal:390, protein:19, selected:false},
+    {id:'nasiTelur', tag:'PAGI ☀', type:'pagi', goal:['cut','maintain'], condition:['aktif','kos','warung'], name:'Nasi Telur Rebus', image:'assets/meal-ui/nasi_telur-wide.webp', price:9000, kcal:432, protein:22, selected:true},
+    {id:'oatPisang', tag:'SNACK', type:'snack', goal:['cut','lean','maintain'], condition:['aktif','kos'], name:'Oat Pisang Kacang', image:'assets/meal-ui/oatpisang-wide.webp', price:8500, kcal:470, protein:18, selected:false},
+    {id:'ayamTempe2', tag:'SIANG ☀', type:'siang', goal:['bulk','lean'], condition:['aktif','rumah','warung'], name:'Ayam Tempe + Sayur', image:'assets/meal-ui/ayam_tempe-wide.webp', price:12000, kcal:540, protein:32, selected:true},
+    {id:'buahRoti', tag:'SNACK', type:'snack', goal:['cut','maintain'], condition:['aktif','kos'], name:'Roti Susu + Buah', image:'assets/meal-ui/buah-roti-susu.webp', price:6500, kcal:310, protein:10, selected:false}
+  ];
+  const grocery = [
+    {name:'Beras', qty:'2 kg', emoji:'🍚', checked:true},
+    {name:'Telur', qty:'10 butir', emoji:'🥚', checked:true},
+    {name:'Tempe', qty:'1 papan', emoji:'🧱', checked:true},
+    {name:'Tahu', qty:'10 potong', emoji:'◻️', checked:false},
+    {name:'Bayam', qty:'1 ikat', emoji:'🥬', checked:true}
+  ];
+  const filterOptions={
+    budget:{title:'Pilih Budget',desc:'Batas biaya harian buat rekomendasi menu.',label:'Budget',options:[
+      {value:10000,label:'≤ Rp10.000',hint:'Paling hemat, menu super sederhana',icon:'fa-wallet'},
+      {value:20000,label:'≤ Rp20.000',hint:'Anak kos realistis',icon:'fa-wallet'},
+      {value:25000,label:'≤ Rp25.000',hint:'Lebih fleksibel tapi tetap murah',icon:'fa-wallet'},
+      {value:50000,label:'≤ Rp50.000',hint:'Lebih bebas pilih protein',icon:'fa-wallet'}
+    ]},
+    goal:{title:'Pilih Goal',desc:'Sistem akan menyesuaikan arah kalori dan protein.',label:'Goal',options:[
+      {value:'lean',label:'Lean Gain',hint:'Naik massa otot tanpa terlalu kotor',icon:'fa-bullseye'},
+      {value:'bulk',label:'Bulking',hint:'Tambah porsi dan protein',icon:'fa-arrow-trend-up'},
+      {value:'cut',label:'Turun Lemak',hint:'Lebih ringan dan tinggi protein',icon:'fa-fire'},
+      {value:'maintain',label:'Maintenance',hint:'Seimbang buat jaga badan',icon:'fa-scale-balanced'}
+    ]},
+    meal:{title:'Pilih Meal Type',desc:'Fokus rekomendasi berdasarkan waktu makan.',label:'Meal Type',options:[
+      {value:'all',label:'Semua',hint:'Tampilkan semua waktu makan',icon:'fa-utensils'},
+      {value:'pagi',label:'Pagi',hint:'Sarapan simpel dan ngenyangin',icon:'fa-sun'},
+      {value:'siang',label:'Siang',hint:'Menu utama buat energi',icon:'fa-bowl-rice'},
+      {value:'malam',label:'Malam',hint:'Lebih ringan dan tetap bergizi',icon:'fa-moon'},
+      {value:'snack',label:'Snack',hint:'Camilan murah biar nggak kalap',icon:'fa-cookie-bite'}
+    ]},
+    condition:{title:'Pilih Kondisi',desc:'Biar menu makin nyambung sama situasi harian lo.',label:'Kondisi',options:[
+      {value:'aktif',label:'Aktif',hint:'Banyak gerak / rutin latihan',icon:'fa-person-running'},
+      {value:'kos',label:'Anak Kos',hint:'Murah, praktis, alat minim',icon:'fa-graduation-cap'},
+      {value:'rumah',label:'Rumahan',hint:'Bisa masak sederhana',icon:'fa-house'},
+      {value:'warung',label:'Warung',hint:'Mudah dibeli di sekitar',icon:'fa-store'},
+      {value:'strict',label:'Strict',hint:'Lebih rapi dan terukur',icon:'fa-lock'}
+    ]}
+  };
+  const state={budget:25000,goal:'lean',meal:'all',condition:'aktif'};
+  let currentMeals=[];
+  const rupiah=n=>'Rp'+Number(n||0).toLocaleString('id-ID');
+  const grid=document.getElementById('mealGrid');
+  const shop=document.getElementById('groceryRow');
+  const sheet=document.getElementById('mealFilterSheet');
+  const backdrop=document.getElementById('mealFilterBackdrop');
+  const sheetTitle=document.getElementById('filterSheetTitle');
+  const sheetDesc=document.getElementById('filterSheetDesc');
+  const optionsWrap=document.getElementById('filterOptions');
+  const toast=document.getElementById('filterToast');
+  let activeFilter=null;
+
+  function selectedLabel(type){
+    const cfg=filterOptions[type];
+    const opt=cfg.options.find(o=>String(o.value)===String(state[type]));
+    return opt?opt.label:'';
+  }
+  function updateFilterButtons(){
+    document.querySelectorAll('.smart-filter').forEach(btn=>{
+      const type=btn.dataset.filter;
+      const value=selectedLabel(type);
+      const labelEl=btn.querySelector('b');
+      if(labelEl) labelEl.textContent=value;
+      btn.classList.toggle('open',type===activeFilter);
+      btn.setAttribute('aria-expanded',String(type===activeFilter));
+    });
+  }
+  function openFilter(type){
+    const cfg=filterOptions[type]; if(!cfg) return;
+    activeFilter=type;
+    sheetTitle.textContent=cfg.title;
+    sheetDesc.textContent=cfg.desc;
+    optionsWrap.innerHTML=cfg.options.map(o=>{
+      const active=String(o.value)===String(state[type]);
+      return `<button type="button" class="filter-option ${active?'active':''}" data-option="${o.value}"><i class="fa-solid ${o.icon}"></i><span><b>${o.label}</b><small>${o.hint}</small></span><i class="fa-solid fa-check check"></i></button>`;
+    }).join('');
+    sheet.classList.add('open');backdrop.classList.add('open');
+    sheet.setAttribute('aria-hidden','false');backdrop.setAttribute('aria-hidden','false');
+    updateFilterButtons();
+  }
+  function closeFilter(){
+    activeFilter=null;sheet.classList.remove('open');backdrop.classList.remove('open');
+    sheet.setAttribute('aria-hidden','true');backdrop.setAttribute('aria-hidden','true');
+    updateFilterButtons();
+  }
+  function showToast(text){
+    if(!toast)return;
+    toast.textContent=text;
+    toast.classList.add('show');
+    clearTimeout(showToast.t);
+    showToast.t=setTimeout(()=>toast.classList.remove('show'),1200);
+  }
+  function makeMealList(){
+    const budget=Number(state.budget)||25000;
+    let list=baseMeals.filter(m=>m.price<=budget);
+    if(state.meal!=='all') list=list.filter(m=>m.type===state.meal);
+    if(state.goal) list=list.filter(m=>m.goal.includes(state.goal) || state.goal==='maintain');
+    if(state.condition!=='strict') list=list.filter(m=>m.condition.includes(state.condition) || m.condition.includes('aktif'));
+    if(!list.length) list=baseMeals.filter(m=>m.price<=budget).slice(0,3);
+    if(!list.length) list=baseMeals.slice(0,3);
+    const targetCount=state.meal==='all'?3:Math.min(3,list.length);
+    return list.slice(0,targetCount).map((m,i)=>({...m,selected:i<2}));
+  }
+  function renderMeals(){
+    currentMeals=makeMealList();
+    grid.innerHTML=currentMeals.map((m,i)=>`<article class="meal-card" data-id="${m.id}"><div class="meal-photo" style="background-image:url('${m.image}')"><span class="meal-tag">${m.tag}</span><i class="fa-regular fa-heart heart"></i></div><div class="meal-body"><h3>${m.name}</h3><div class="meal-price">${rupiah(m.price)}</div><div class="meal-stats"><span class="meal-chip"><i class="fa-solid fa-fire"></i>${m.kcal} kkal</span><span class="meal-chip protein"><i class="fa-solid fa-dumbbell"></i>${m.protein} g protein</span></div><button class="pick-btn ${m.selected?'selected':''}" data-pick="${i}">${m.selected?'Terpilih':'Pilih'}</button></div></article>`).join('');
+    updateSummary();
+  }
+  function renderGrocery(){
+    shop.innerHTML=grocery.map((g,i)=>`<label class="grocery-item"><input type="checkbox" data-grocery="${i}" ${g.checked?'checked':''}><span class="grocery-emoji">${g.emoji}</span><b>${g.name}</b><small>${g.qty}</small></label>`).join('');
+    updateGrocery();
+  }
+  function updateSummary(){
+    const selected=currentMeals.filter(m=>m.selected);
+    const budget=selected.reduce((s,m)=>s+m.price,0);
+    const cal=selected.reduce((s,m)=>s+m.kcal,0)+602;
+    const protein=selected.reduce((s,m)=>s+m.protein,0)+4;
+    const budgetLimit=Number(state.budget)||20000;
+    const calTarget=state.goal==='bulk'?2400:(state.goal==='cut'?1800:2000);
+    const proteinTarget=state.goal==='bulk'?120:(state.goal==='lean'?100:80);
+    const budgetPct=Math.min(100,Math.round(budget/budgetLimit*100));
+    const calPct=Math.min(100,Math.round(cal/calTarget*100));
+    const proteinPct=Math.min(100,Math.round(protein/proteinTarget*100));
+    document.getElementById('budgetUsed').textContent=rupiah(budget);
+    document.getElementById('budgetLimit').textContent=' / '+rupiah(budgetLimit);
+    document.getElementById('budgetStatus').textContent=budgetPct+'% terpakai';
+    document.getElementById('budgetBar').style.width=budgetPct+'%';
+    document.getElementById('calNow').textContent=cal.toLocaleString('id-ID');
+    document.getElementById('calTargetLabel').textContent=' / '+calTarget.toLocaleString('id-ID')+' kkal';
+    document.getElementById('proteinNow').textContent=protein;
+    document.getElementById('proteinTargetLabel').textContent=' / '+proteinTarget+' g';
+    document.getElementById('sumCal').textContent=cal.toLocaleString('id-ID');
+    document.getElementById('sumCalTarget').textContent=' / '+calTarget.toLocaleString('id-ID');
+    document.getElementById('sumBudget').textContent=rupiah(budget);
+    document.getElementById('sumBudgetTarget').textContent=' / '+Number(budgetLimit).toLocaleString('id-ID');
+    document.getElementById('sumBudgetBar').style.width=budgetPct+'%';
+    document.getElementById('sumProtein').textContent=protein;
+    document.getElementById('sumProteinTarget').textContent=' / '+proteinTarget+' g';
+    document.getElementById('calBar').style.width=calPct+'%';
+    document.getElementById('proteinBar').style.width=proteinPct+'%';
+    document.getElementById('ringKcal').textContent=Math.max(0,calTarget-cal).toLocaleString('id-ID');
+    document.getElementById('ringPercent').textContent=Math.max(0,100-calPct)+'% tersisa';
+    document.getElementById('calRing').style.setProperty('--p',calPct);
+  }
+  function updateGrocery(){
+    const checked=grocery.filter(g=>g.checked).length;
+    document.getElementById('shopCount').textContent=checked+'/'+grocery.length+' dipilih';
+  }
+  document.addEventListener('click',function(e){
+    const smart=e.target.closest('.smart-filter');
+    if(smart){openFilter(smart.dataset.filter);return;}
+    const option=e.target.closest('[data-option]');
+    if(option && activeFilter){
+      const cfg=filterOptions[activeFilter];
+      const raw=option.dataset.option;
+      state[activeFilter]=activeFilter==='budget'?Number(raw):raw;
+      updateFilterButtons();
+      closeFilter();
+      renderMeals();
+      showToast(cfg.label+' diganti: '+selectedLabel(activeFilter));
+      return;
+    }
+    if(e.target.closest('#filterSheetClose')||e.target.closest('#mealFilterBackdrop')){closeFilter();return;}
+    const pick=e.target.closest('[data-pick]');
+    if(pick){const i=Number(pick.dataset.pick); currentMeals[i].selected=!currentMeals[i].selected; updateSummary(); pick.classList.toggle('selected',currentMeals[i].selected); pick.textContent=currentMeals[i].selected?'Terpilih':'Pilih'; return;}
+    const chip=e.target.closest('.chip');
+    if(chip){document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active');
+      if(chip.dataset.chip==='bulk') state.goal='bulk';
+      if(chip.dataset.chip==='cut') state.goal='cut';
+      if(chip.dataset.chip==='kos') state.condition='kos';
+      if(chip.dataset.chip==='protein') state.goal='lean';
+      if(chip.dataset.chip==='budget20') state.budget=20000;
+      updateFilterButtons(); renderMeals(); showToast('Rekomendasi disesuaikan'); return;}
+    if(e.target.closest('#buildAi')){renderMeals();showToast('Menu AI disusun ulang');return;}
+    if(e.target.closest('#autoPlanBtn')){alert('Auto Plan 7 Hari siap: menu akan disusun dari bahan lokal murah + target kalori/protein lo.'); return;}
+    if(e.target.closest('#detailBtn')){alert('Ringkasan: kalori, budget, protein, dan daftar belanja sudah tersinkron dari menu yang lo pilih.');}
+  });
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeFilter();});
+  document.addEventListener('change',function(e){
+    const c=e.target.closest('[data-grocery]');
+    if(c){grocery[Number(c.dataset.grocery)].checked=c.checked; updateGrocery();}
+  });
+  updateFilterButtons(); renderMeals(); renderGrocery();
+})();
+</script>
+<script>
+(function(){
+  var buttons=document.querySelectorAll('[data-wh-scan-v664]');
+  var sheet=document.getElementById('whScanSheetV664');
+  if(!buttons.length||!sheet)return;
+  function toggle(e){e.preventDefault();sheet.classList.toggle('open')}
+  buttons.forEach(function(btn){btn.addEventListener('click',toggle)});
+  document.addEventListener('click',function(e){if(!sheet.classList.contains('open'))return;var isButton=e.target.closest('[data-wh-scan-v664]');var isSheet=e.target.closest('#whScanSheetV664');if(!isButton&&!isSheet)sheet.classList.remove('open')});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')sheet.classList.remove('open')});
+})();
+</script>
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('service-worker.js').catch(function(){});});}
+</script>
+</body>
+</html>

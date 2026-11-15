@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Discipline Vault — WellnessHubID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--dv-bg:#050705;--dv-card:#0b110e;--dv-card2:#101913;--dv-line:rgba(255,255,255,.10);--dv-green:#39e978;--dv-green2:#8affad;--dv-text:#f6faf7;--dv-muted:#9cab9f;--dv-gold:#ffd76d}
+*{box-sizing:border-box}
+html,body{margin:0;background:#020302;color:var(--dv-text);font-family:'Plus Jakarta Sans',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+button,input{font-family:inherit}
+a{text-decoration:none;color:inherit}
+.dv-page{width:min(100%,430px);min-height:100svh;margin:0 auto;padding:18px 16px 98px;background:
+radial-gradient(circle at 12% -8%,rgba(57,233,120,.18),transparent 32%),
+radial-gradient(circle at 90% 10%,rgba(138,255,173,.08),transparent 30%),
+linear-gradient(rgba(138,255,173,.025) 1px,transparent 1px),
+linear-gradient(90deg,rgba(138,255,173,.022) 1px,transparent 1px),
+#050705;background-size:auto,auto,34px 34px,34px 34px,auto}
+.dv-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}
+.dv-brand{display:flex;align-items:center;gap:10px;min-width:0}
+.dv-logo{width:44px;height:44px;border-radius:16px;overflow:hidden;display:grid;place-items:center;background:rgba(255,255,255,.045);border:1px solid rgba(138,255,173,.18);box-shadow:0 0 24px rgba(57,233,120,.12)}
+.dv-logo img{width:100%;height:100%;object-fit:contain;display:block}
+.dv-brand strong{display:block;font-size:.98rem;line-height:1.08;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dv-brand span{display:block;color:var(--dv-muted);font-size:.76rem;font-weight:800;margin-top:2px}
+.dv-mini-btn{border:1px solid rgba(138,255,173,.18);background:rgba(255,255,255,.045);color:#dcffe5;border-radius:999px;min-height:38px;padding:0 13px;font-weight:900}
+.dv-chip{display:inline-flex;align-items:center;border:1px solid rgba(57,233,120,.30);background:rgba(57,233,120,.10);color:#caffd5;border-radius:999px;padding:7px 10px;font-size:.7rem;font-weight:950;text-transform:uppercase;letter-spacing:.04em}
+.dv-title{font-size:clamp(2rem,8vw,2.95rem);line-height:1.04;letter-spacing:-.04em;margin:16px 0 12px;font-weight:720;text-wrap:balance}
+.dv-sub{color:var(--dv-muted);font-weight:740;line-height:1.52;margin:0 0 18px;font-size:.96rem}
+.dv-card{border:1px solid rgba(255,255,255,.10);background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.018));border-radius:28px;padding:18px;margin-top:16px;box-shadow:0 22px 58px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.04)}
+.dv-vault-card{min-height:266px;background:radial-gradient(circle at 50% 43%,rgba(57,233,120,.14),transparent 38%),linear-gradient(180deg,rgba(10,18,13,.98),rgba(4,8,5,.98))}
+.dv-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
+.dv-small{display:block;color:var(--dv-muted);font-weight:850;font-size:.76rem}
+.dv-money{font-size:1.9rem;font-weight:900;letter-spacing:-.045em}
+.dv-lock-stage{height:138px;display:grid;place-items:center;position:relative}
+.dv-lock-glow{position:absolute;width:132px;height:132px;border-radius:34px;transform:rotate(45deg);background:radial-gradient(circle,rgba(57,233,120,.18),rgba(57,233,120,.04),transparent 70%);border:1px solid rgba(138,255,173,.12)}
+.dv-lock{position:relative;width:82px;height:88px;display:grid;place-items:end center}
+.dv-lock:before{content:"";position:absolute;top:0;width:42px;height:48px;border:9px solid rgba(221,255,229,.92);border-bottom:0;border-radius:26px 26px 8px 8px}
+.dv-lock-body{width:76px;height:58px;border-radius:22px;background:linear-gradient(145deg,#d7ffdc,#66f789 45%,#12ad4e);border:1px solid rgba(255,255,255,.42);box-shadow:inset 0 2px 0 rgba(255,255,255,.55),inset 0 -12px 24px rgba(0,57,21,.22),0 0 34px rgba(57,233,120,.24);position:relative}
+.dv-lock-body:before{content:"";position:absolute;left:11px;right:11px;top:8px;height:12px;border-radius:999px;background:linear-gradient(90deg,rgba(255,255,255,.7),rgba(255,255,255,.12))}
+.dv-keyhole{position:absolute;left:50%;top:50%;transform:translate(-50%,-25%);width:12px;height:20px;border-radius:999px;background:#062211}
+.dv-keyhole:before{content:"";position:absolute;left:50%;top:-8px;transform:translateX(-50%);width:18px;height:18px;border-radius:50%;background:#062211}
+.dv-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.dv-meta div{padding:13px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+.dv-meta strong{display:block;margin-top:5px}
+.dv-green{color:var(--dv-green)}
+.dv-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.dv-head h2{margin:0;font-size:1.28rem;letter-spacing:-.03em;font-weight:820}
+.dv-head span{color:var(--dv-green);font-size:.82rem;font-weight:900}
+.dv-amount-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.dv-amount{min-height:46px;border-radius:17px;border:1px solid rgba(255,255,255,.11);background:rgba(255,255,255,.04);color:#eaffef;font-weight:900}
+.dv-amount.active{border-color:rgba(57,233,120,.65);background:linear-gradient(180deg,rgba(57,233,120,.26),rgba(57,233,120,.09))}
+.dv-agree{display:grid;grid-template-columns:34px 1fr;gap:13px;align-items:start;padding:15px;border-radius:22px;background:rgba(57,233,120,.06);border:1px solid rgba(57,233,120,.18)}
+.dv-agree input{display:none}
+.dv-check{width:30px;height:30px;border-radius:10px;border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.05);display:grid;place-items:center}
+.dv-check:after{content:"";width:14px;height:8px;border-left:3px solid #041008;border-bottom:3px solid #041008;transform:rotate(-45deg);opacity:0}
+.dv-agree input:checked+.dv-check{background:linear-gradient(180deg,#9cffad,#3fea72);border-color:#8dffa4;box-shadow:0 0 24px rgba(57,233,120,.22)}
+.dv-agree input:checked+.dv-check:after{opacity:1}
+.dv-agree strong{display:block}
+.dv-agree p{font-size:.83rem;margin:5px 0 0;color:var(--dv-muted)}
+.dv-rules{display:grid;gap:8px;margin-top:12px}
+.dv-rule{display:flex;justify-content:space-between;gap:10px;padding:12px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07)}
+.dv-rule b{font-size:.78rem}
+.dv-rule span{color:var(--dv-muted);text-align:right;font-size:.76rem;font-weight:800}
+.dv-level-top{display:flex;justify-content:space-between;gap:14px;align-items:center}
+.dv-level-top h2{font-size:1.42rem;margin:10px 0 5px}
+.dv-badge{width:74px;height:74px;border-radius:25px;display:grid;place-items:center;font-size:2rem;font-weight:950;background:radial-gradient(circle,var(--dv-green),#093b18);color:#031006;box-shadow:0 0 34px rgba(57,233,120,.30)}
+.dv-bar{height:12px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden;margin:16px 0}
+.dv-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--dv-green),#caff75)}
+.dv-withdraw{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.dv-withdraw div{padding:13px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.08)}
+.dv-withdraw small{display:block;color:var(--dv-muted);font-weight:850}
+.dv-withdraw strong{display:block;font-size:1.12rem;margin:4px 0}
+.dv-withdraw span{display:block;color:var(--dv-muted);font-size:.67rem;font-weight:800}
+.dv-claim{position:relative;overflow:hidden;display:grid;grid-template-columns:58px 1fr 78px;gap:12px;align-items:center;padding:13px;border-radius:22px;background:linear-gradient(90deg,rgba(57,233,120,.06),rgba(255,255,255,.03));border:1px solid rgba(57,233,120,.22);margin-bottom:10px;box-shadow:0 0 30px rgba(57,233,120,.08)}
+.dv-claim:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent,rgba(185,255,199,.20),transparent);transform:translateX(-120%);animation:dvSweep 4s ease-in-out infinite}
+.dv-claim-icon{width:54px;height:54px;border-radius:20px;display:grid;place-items:center;font-size:1.45rem;background:rgba(57,233,120,.12);border:1px solid rgba(57,233,120,.28);animation:dvFloat 4.2s ease-in-out infinite}
+.dv-claim strong,.dv-menu strong{display:block}
+.dv-claim span,.dv-menu span{display:block;color:var(--dv-muted);font-size:.77rem;font-weight:750;margin-top:3px}
+.dv-claim button{border:0;border-radius:17px;background:linear-gradient(180deg,#9dffae,#3deb70);color:#031006;font-weight:950;min-height:42px;box-shadow:0 12px 26px rgba(57,233,120,.18)}
+.dv-menu{display:grid;grid-template-columns:56px 1fr 76px;gap:12px;align-items:center}
+.dv-menu-icon{width:54px;height:54px;border-radius:20px;display:grid;place-items:center;font-size:1.45rem;background:rgba(57,233,120,.12);border:1px solid rgba(57,233,120,.28)}
+.dv-menu button{min-height:42px;border:1px solid rgba(57,233,120,.28);border-radius:16px;background:rgba(57,233,120,.12);color:#caffd5;font-weight:900}
+.dv-payment{display:none}
+.dv-payment.show{display:block}
+.dv-main-btn{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(390px,calc(100% - 32px));min-height:58px;border:0;border-radius:17px;background:linear-gradient(180deg,#9dffae,#3deb70);color:#031006;font-weight:950;box-shadow:0 18px 50px rgba(57,233,120,.22);z-index:10}
+.dv-main-btn.off{background:rgba(255,255,255,.12);color:#9da9a1;box-shadow:none}
+@keyframes dvSweep{0%,56%,100%{transform:translateX(-120%)}75%{transform:translateX(120%)}}
+@keyframes dvFloat{50%{transform:translateY(-3px)}}
+@media(max-width:380px){.dv-amount-grid{grid-template-columns:repeat(2,1fr)}.dv-withdraw{grid-template-columns:1fr}.dv-claim{grid-template-columns:52px 1fr}.dv-claim button{grid-column:1/-1}.dv-menu{grid-template-columns:52px 1fr}.dv-menu button{grid-column:1/-1}}
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+</head>
+<body>
+<main class="dv-page">
+  <div class="dv-top">
+    <a class="dv-mini-btn" href="index.html">← Home</a>
+    <div class="dv-brand"><div class="dv-logo"><img src="assets/discipline-hub-icon.png" alt="Discipline Hub"></div><div><strong>Discipline Vault</strong><span>WellnessHubID</span></div></div>
+    <a class="dv-mini-btn" href="app.html">Hub</a>
+  </div>
+
+  <span class="dv-chip">Commitment Vault</span>
+  <h1 class="dv-title">Kunci komitmen lo. Buktiin 7 hari.</h1>
+  <p class="dv-sub">Taruh nominal kecil sebagai komitmen. Kalau konsisten, level naik dan saldo bisa diambil lagi. Kalau gagal target mingguan, saldo berkurang sesuai aturan.</p>
+
+  <section class="dv-card dv-vault-card">
+    <div class="dv-row"><span class="dv-small">Saldo Komitmen</span><b class="dv-money" id="vaultAmount">Rp25.000</b></div>
+    <div class="dv-lock-stage"><div class="dv-lock-glow"></div><div class="dv-lock"><div class="dv-lock-body"><i class="dv-keyhole"></i></div></div></div>
+    <div class="dv-meta"><div><small class="dv-small">Level</small><strong>3 — Trusted</strong></div><div><small class="dv-small">Status</small><strong class="dv-green">Aman</strong></div></div>
+  </section>
+
+  <section class="dv-card">
+    <div class="dv-head"><h2>Pilih nominal</h2><span>Opsional</span></div>
+    <div class="dv-amount-grid">
+      <button class="dv-amount active" onclick="setAmount(25000,this)">Rp25K</button>
+      <button class="dv-amount" onclick="setAmount(10000,this)">Rp10K</button>
+      <button class="dv-amount" onclick="setAmount(50000,this)">Rp50K</button>
+      <button class="dv-amount" onclick="setAmount(100000,this)">Rp100K</button>
+    </div>
+  </section>
+
+  <section class="dv-card">
+    <div class="dv-head"><h2>Perjanjian komitmen</h2><span>Wajib</span></div>
+    <label class="dv-agree"><input id="agree" type="checkbox" onchange="toggleAgreement()"><span class="dv-check"></span><div><strong>Gue paham dan setuju</strong><p>Kalau target mingguan gagal, saldo komitmen akan berkurang sesuai aturan.</p></div></label>
+    <div class="dv-rules"><div class="dv-rule"><b>Target</b><span>5 check-in / 7 hari</span></div><div class="dv-rule"><b>Penalty</b><span>Gagal: -Rp1.000</span></div><div class="dv-rule"><b>Ambil saldo</b><span>Terbuka sesuai level</span></div></div>
+  </section>
+
+  <section class="dv-card">
+    <div class="dv-level-top"><div><span class="dv-chip">Level Journey</span><h2>Level 3 — Trusted</h2><p class="dv-sub" style="margin:0">680 / 1.000 XP menuju Level 4</p></div><div class="dv-badge">3</div></div>
+    <div class="dv-bar"><span style="width:68%"></span></div>
+    <div class="dv-withdraw"><div><small>Level 2</small><strong class="dv-green">25%</strong><span>bisa ambil</span></div><div><small>Level 3</small><strong>50%</strong><span>setelah 7 hari</span></div><div><small>Level 5</small><strong>100%</strong><span>full unlock</span></div></div>
+  </section>
+
+  <section class="dv-card">
+    <div class="dv-head"><h2>Bisa diklaim</h2><span>2 reward</span></div>
+    <div class="dv-claim"><div class="dv-claim-icon">🏆</div><div><strong>Level 2 Reward</strong><span>Ambil 25% dari saldo komitmen tersisa.</span></div><button onclick="claim(this)">Klaim</button></div>
+    <div class="dv-claim"><div class="dv-claim-icon">🔥</div><div><strong>5 Hari Konsisten</strong><span>+150 XP dan naik ranking leaderboard.</span></div><button onclick="claim(this)">Klaim</button></div>
+  </section>
+
+  <section class="dv-card dv-menu">
+    <div class="dv-menu-icon">💳</div><div><strong>Payment Gateway</strong><span>Simulasi pembayaran komitmen.</span></div><button onclick="showPayment()">Masuk</button>
+  </section>
+
+  <section id="paymentBox" class="dv-card dv-payment">
+    <div class="dv-head"><h2>Vault Payment</h2><span>Preview</span></div>
+    <div class="dv-rules"><div class="dv-rule"><b>Nominal</b><span id="payAmount">Rp25.000</span></div><div class="dv-rule"><b>Metode</b><span>QRIS / VA / Wallet</span></div><div class="dv-rule"><b>Status</b><span class="dv-green">Siap dibayar</span></div></div>
+    <button class="dv-main-btn" style="position:static;transform:none;width:100%;margin-top:14px" onclick="alert('Simulasi pembayaran berhasil. Vault aktif.')">Simulasi Bayar</button>
+  </section>
+
+  <button class="dv-main-btn off" id="startBtn" disabled onclick="showPayment()">Centang perjanjian dulu</button>
+</main>
+<script>
+let amount=25000;
+function rupiah(n){return 'Rp'+Number(n).toLocaleString('id-ID')}
+function setAmount(n,btn){amount=n;document.getElementById('vaultAmount').textContent=rupiah(n);document.getElementById('payAmount').textContent=rupiah(n);document.querySelectorAll('.dv-amount').forEach(x=>x.classList.remove('active'));btn.classList.add('active')}
+function toggleAgreement(){const a=document.getElementById('agree'),b=document.getElementById('startBtn');if(a.checked){b.disabled=false;b.classList.remove('off');b.textContent='Bayar & Kunci Komitmen'}else{b.disabled=true;b.classList.add('off');b.textContent='Centang perjanjian dulu'}}
+function claim(btn){btn.textContent='Diklaim';btn.disabled=true;btn.style.opacity=.65}
+function showPayment(){document.getElementById('paymentBox').classList.add('show');document.getElementById('paymentBox').scrollIntoView({behavior:'smooth',block:'start'})}
+</script>
+<a href="discipline-achievement.html" style="position:fixed;right:16px;bottom:92px;z-index:9999;background:#42ee83;color:#041008;padding:12px 16px;border-radius:999px;font-weight:900;text-decoration:none">Achievement Dashboard</a>
+</body>
+</html>

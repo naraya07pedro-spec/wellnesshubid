@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Grafik Disiplin — WellnessHubID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#050605">
+<style>
+:root{--bg:#050605;--card:#0c110e;--card2:#101612;--line:rgba(255,255,255,.09);--muted:#9aa39d;--text:#f4fff7;--green:#31e66e;--green2:#72ffae;--warn:#ffd36e;--bad:#ff7474;--safe-bottom:env(safe-area-inset-bottom,0px)}*{box-sizing:border-box}body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);padding-bottom:92px;min-height:100vh;overflow-x:hidden}body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 8% 0,rgba(49,230,110,.16),transparent 34%),radial-gradient(circle at 88% 18%,rgba(49,230,110,.08),transparent 30%),linear-gradient(180deg,#050605,#071009)}.app{width:min(100%,860px);margin:0 auto;padding:14px}.topbar{position:sticky;top:0;z-index:30;margin:-2px -14px 12px;padding:10px 14px;background:linear-gradient(180deg,rgba(5,6,5,.98),rgba(5,6,5,.78));backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em}.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(49,230,110,.24),0 0 22px rgba(49,230,110,.18)}a{text-decoration:none;color:inherit}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(49,230,110,.22);background:rgba(49,230,110,.09);color:var(--green2);font-weight:900;border-radius:999px;padding:8px 11px;font-size:12px}.hero,.card{background:linear-gradient(180deg,rgba(12,17,14,.96),rgba(10,14,12,.92));border:1px solid var(--line);border-radius:28px;box-shadow:0 22px 60px rgba(0,0,0,.34)}.hero{padding:18px;margin-bottom:12px}.hero h1{font-size:clamp(32px,9vw,56px);line-height:.98;letter-spacing:-.07em;margin:12px 0 8px}.hero h1 span{color:var(--green)}p{color:var(--muted);line-height:1.58;margin:0;font-size:14px}.grid{display:grid;gap:12px;margin-top:12px}.stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.stat{background:var(--card2);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:14px}.stat b{display:block;font-size:26px;color:var(--green);letter-spacing:-.06em}.stat small{color:#9aa39d;font-weight:800}.card{padding:16px}.card h2{font-size:21px;margin:0 0 6px;letter-spacing:-.04em}.chart-wrap{margin-top:14px;background:#080c09;border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:12px;overflow:hidden}.chart{width:100%;height:210px;display:block}.legend{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.legend span{font-size:12px;color:#b8c5bd}.dot{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:5px}.green{background:var(--green)}.yellow{background:var(--warn)}.bars{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;align-items:end;height:142px;margin-top:14px}.bar-item{display:flex;flex-direction:column;align-items:center;gap:7px;height:100%}.bar-col{width:100%;max-width:32px;border-radius:999px 999px 8px 8px;background:linear-gradient(180deg,var(--green2),var(--green));min-height:6px;box-shadow:0 0 18px rgba(49,230,110,.18)}.bar-item small{font-size:10px;color:#7d8a83}.input-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:12px}input{width:100%;min-height:50px;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#111713;color:white;padding:0 13px;font-weight:800;outline:none}.btn,.ghost{border:none;border-radius:18px;padding:14px;font-weight:900;min-height:50px;cursor:pointer}.btn{background:linear-gradient(180deg,#63ff9c,#31e66e);color:#031108;box-shadow:0 14px 36px rgba(49,230,110,.18)}.ghost{background:#111713;color:#eaffef;border:1px solid rgba(255,255,255,.08)}.mission-grid{display:grid;grid-template-columns:1fr;gap:8px;margin-top:12px}.mission{display:flex;gap:10px;align-items:center;padding:12px;border-radius:18px;background:#111713;border:1px solid rgba(255,255,255,.07);cursor:pointer}.mission.done{border-color:rgba(49,230,110,.38);background:rgba(49,230,110,.08)}.check{width:28px;height:28px;border-radius:50%;border:1px solid rgba(49,230,110,.36);display:grid;place-items:center;color:transparent}.done .check{background:var(--green);color:#031108}.coach{margin-top:12px;border-radius:18px;background:rgba(49,230,110,.07);border:1px solid rgba(49,230,110,.16);padding:12px;color:#d9ffe5;font-weight:800;line-height:1.45;font-size:13px}.log-list{display:grid;gap:8px;margin-top:12px}.log{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:10px 12px;border-radius:16px;background:#111713;border:1px solid rgba(255,255,255,.07)}.log b{font-size:13px}.log span{color:#9aa39d;font-size:12px}.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + var(--safe-bottom));background:linear-gradient(180deg,rgba(5,6,5,.35),rgba(5,6,5,.96));backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.08)}.bottom-inner{width:min(100%,860px);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}@media(min-width:740px){.grid.two{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:repeat(4,1fr)}}@media(max-width:420px){.hero,.card{padding:14px}.hero h1{font-size:32px}.brand span{display:none}.chart{height:190px}}
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+
+<link rel="stylesheet" href="bodyfit-mobile-safe-v577.css">
+
+<style id="wh-v683-exact-svg-wave-nav">
+/* V6.83 — exact SVG wave nav, based on approved navbar-only prototype */
+body{
+  padding-bottom:calc(118px + env(safe-area-inset-bottom))!important;
+}
+
+.bf-bottom-nav{
+  position:fixed!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:calc(6px + env(safe-area-inset-bottom))!important;
+  transform:translateX(-50%)!important;
+  width:min(620px,calc(100% - 8px))!important;
+  height:112px!important;
+  min-height:112px!important;
+  max-height:112px!important;
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:end!important;
+  gap:0!important;
+  padding:0 10px 10px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  overflow:visible!important;
+  z-index:999!important;
+}
+
+.bf-bottom-nav::before,
+.bf-bottom-nav::after{
+  content:none!important;
+  display:none!important;
+}
+
+.bf-nav-shape-svg-v683{
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  width:100%!important;
+  height:112px!important;
+  overflow:visible!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  filter:drop-shadow(0 22px 54px rgba(0,0,0,.62))!important;
+}
+
+.bf-nav-shape-svg-v683 .nav-main-v683{
+  fill:url(#whNavFillV683)!important;
+  stroke:rgba(255,255,255,.16)!important;
+  stroke-width:1.25!important;
+}
+
+.bf-nav-shape-svg-v683 .nav-line-v683{
+  fill:none!important;
+  stroke:rgba(88,245,143,.45)!important;
+  stroke-width:1.25!important;
+  filter:url(#whNavSoftGlowV683)!important;
+}
+
+.bf-nav-glow-v683{
+  position:absolute!important;
+  left:50%!important;
+  top:4px!important;
+  transform:translateX(-50%)!important;
+  width:150px!important;
+  height:92px!important;
+  border-radius:999px!important;
+  background:radial-gradient(circle,rgba(88,245,143,.30),rgba(88,245,143,.11) 42%,transparent 74%)!important;
+  filter:blur(13px)!important;
+  pointer-events:none!important;
+  z-index:1!important;
+}
+
+.bf-bottom-nav a,
+.bf-bottom-nav button{
+  font-family:inherit!important;
+  text-decoration:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+
+/* Grid lock: SVG tidak dihitung karena absolute, menu tetap 5 kolom */
+.bf-bottom-nav .bf-nav-item:nth-of-type(1){grid-column:1!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(2){grid-column:2!important;}
+.bf-bottom-nav .bf-nav-scan{grid-column:3!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(3){grid-column:4!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(4){grid-column:5!important;}
+
+.bf-bottom-nav .bf-nav-item{
+  position:relative!important;
+  z-index:3!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#d7ddd8!important;
+  border-radius:0!important;
+  height:64px!important;
+  min-height:64px!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  font-size:.74rem!important;
+  line-height:1!important;
+  font-weight:950!important;
+  letter-spacing:-.015em!important;
+}
+
+.bf-bottom-nav .bf-nav-item i{
+  font-size:1.34rem!important;
+  line-height:1!important;
+  color:#d9dfdb!important;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.36))!important;
+}
+
+.bf-bottom-nav .bf-nav-item span{
+  display:block!important;
+  white-space:nowrap!important;
+}
+
+.bf-bottom-nav .bf-nav-item.active{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#58f58f!important;
+}
+
+.bf-bottom-nav .bf-nav-item.active i{
+  color:#58f58f!important;
+  filter:drop-shadow(0 0 12px rgba(57,233,120,.34))!important;
+}
+
+/* Scan tetap di kolom tengah, bukan absolute, jadi tidak numpuk */
+.bf-bottom-nav .bf-nav-scan{
+  position:relative!important;
+  z-index:4!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  color:#effff4!important;
+  cursor:pointer!important;
+  width:auto!important;
+  min-width:0!important;
+  height:92px!important;
+  min-height:92px!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:6px!important;
+  transform:translateY(-9px)!important;
+}
+
+.bf-bottom-nav .bf-nav-scan::before{
+  content:none!important;
+  display:none!important;
+}
+
+.bf-bottom-nav .bf-scan-circle{
+  width:58px!important;
+  height:58px!important;
+  border-radius:999px!important;
+  display:grid!important;
+  place-items:center!important;
+  background:
+    radial-gradient(circle at 42% 26%,rgba(255,255,255,.30),transparent 31%),
+    linear-gradient(180deg,#78ffa8,#35d96e)!important;
+  color:#041008!important;
+  border:3px solid rgba(154,255,188,.62)!important;
+  box-shadow:
+    0 14px 32px rgba(57,233,120,.34),
+    0 0 0 8px rgba(57,233,120,.065),
+    inset 0 1px 0 rgba(255,255,255,.44)!important;
+}
+
+.bf-bottom-nav .bf-scan-circle i{
+  font-size:1.22rem!important;
+  line-height:1!important;
+  color:#041008!important;
+}
+
+.bf-bottom-nav .bf-scan-label{
+  font-size:.76rem!important;
+  line-height:1!important;
+  font-weight:950!important;
+  color:#f1fff5!important;
+  text-shadow:0 2px 10px rgba(0,0,0,.55)!important;
+  position:relative!important;
+  z-index:2!important;
+}
+
+/* Fix tulisan "Pilih scan" muncul di atas: sheet default harus hidden */
+.wh-scan-sheet-v664{
+  position:fixed!important;
+  left:50%!important;
+  bottom:calc(104px + env(safe-area-inset-bottom))!important;
+  transform:translate(-50%,14px)!important;
+  width:min(540px,calc(100% - 18px))!important;
+  background:linear-gradient(180deg,rgba(8,16,11,.98),rgba(4,8,5,.98))!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  border-radius:24px!important;
+  box-shadow:0 22px 70px rgba(0,0,0,.55)!important;
+  padding:14px!important;
+  z-index:998!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transition:.18s ease!important;
+}
+
+.wh-scan-sheet-v664.open{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translate(-50%,0)!important;
+}
+
+.wh-scan-sheet-v664 h3{
+  margin:0 0 4px!important;
+  font-size:1rem!important;
+}
+.wh-scan-sheet-v664 p{
+  margin:0 0 10px!important;
+  color:rgba(255,255,255,.68)!important;
+  font-size:.82rem!important;
+}
+.wh-scan-sheet-grid-v664{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:10px!important;
+}
+.wh-scan-choice-v664{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:4px!important;
+  padding:12px!important;
+  border-radius:16px!important;
+  background:rgba(255,255,255,.045)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  color:#fff!important;
+  text-decoration:none!important;
+}
+.wh-scan-choice-v664 i{color:#58f58f!important;}
+.wh-scan-choice-v664 span{font-size:.74rem!important;color:rgba(255,255,255,.64)!important;}
+
+@media(max-width:520px){
+  body{
+    padding-bottom:calc(104px + env(safe-area-inset-bottom))!important;
+  }
+  .bf-bottom-nav{
+    width:calc(100% - 4px)!important;
+    height:96px!important;
+    min-height:96px!important;
+    max-height:96px!important;
+    bottom:calc(6px + env(safe-area-inset-bottom))!important;
+    padding:0 7px 8px!important;
+  }
+  .bf-nav-shape-svg-v683{
+    height:96px!important;
+  }
+  .bf-nav-glow-v683{
+    top:4px!important;
+    width:122px!important;
+    height:72px!important;
+    filter:blur(10px)!important;
+  }
+  .bf-bottom-nav .bf-nav-item{
+    height:52px!important;
+    min-height:52px!important;
+    gap:5px!important;
+    font-size:.64rem!important;
+  }
+  .bf-bottom-nav .bf-nav-item i{
+    font-size:1.10rem!important;
+  }
+  .bf-bottom-nav .bf-nav-scan{
+    height:80px!important;
+    min-height:80px!important;
+    transform:translateY(-8px)!important;
+    gap:5px!important;
+  }
+  .bf-bottom-nav .bf-scan-circle{
+    width:52px!important;
+    height:52px!important;
+    box-shadow:
+      0 13px 28px rgba(57,233,120,.31),
+      0 0 0 6px rgba(57,233,120,.06),
+      inset 0 1px 0 rgba(255,255,255,.44)!important;
+  }
+  .bf-bottom-nav .bf-scan-circle i{
+    font-size:1.10rem!important;
+  }
+  .bf-bottom-nav .bf-scan-label{
+    font-size:.66rem!important;
+  }
+  .wh-scan-sheet-v664{
+    bottom:calc(96px + env(safe-area-inset-bottom))!important;
+  }
+}
+
+@media(max-width:380px){
+  .bf-bottom-nav{
+    height:92px!important;
+    min-height:92px!important;
+    max-height:92px!important;
+    padding-left:5px!important;
+    padding-right:5px!important;
+  }
+  .bf-nav-shape-svg-v683{
+    height:92px!important;
+  }
+  .bf-bottom-nav .bf-nav-item{
+    height:50px!important;
+    min-height:50px!important;
+    font-size:.59rem!important;
+    gap:4px!important;
+  }
+  .bf-bottom-nav .bf-nav-item i{
+    font-size:1rem!important;
+  }
+  .bf-bottom-nav .bf-nav-scan{
+    height:76px!important;
+    min-height:76px!important;
+    transform:translateY(-7px)!important;
+  }
+  .bf-bottom-nav .bf-scan-circle{
+    width:50px!important;
+    height:50px!important;
+  }
+  .bf-bottom-nav .bf-scan-circle i{
+    font-size:1.04rem!important;
+  }
+}
+</style>
+
+
+<style id="wh-v711-progress-icon-fit">
+/* V7.11 — Progress icon fit cleanup: no cropped PNG thumbnails */
+body{background:#050605!important;padding-bottom:calc(134px + env(safe-area-inset-bottom))!important;}
+body:before{background:radial-gradient(circle at 10% 0,rgba(187,255,42,.12),transparent 34%),radial-gradient(circle at 88% 16%,rgba(124,255,30,.08),transparent 30%),linear-gradient(180deg,#030403,#071009 58%,#030403)!important;}
+.app.progress-v710{width:min(100%,760px);padding:14px 12px 150px;margin:0 auto;}
+.progress-v710 .topbar{position:sticky;top:0;z-index:35;margin:-2px -12px 12px;padding:10px 12px;background:linear-gradient(180deg,rgba(3,4,3,.96),rgba(3,4,3,.72));backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.05)}
+.progress-v710 .brand{font-size:18px;letter-spacing:-.04em}.progress-v710 .brand span{display:inline!important;color:#9fff31;font-weight:900;margin-left:4px}.progress-v710 .brand img{width:38px;height:38px;border-radius:50%;box-shadow:0 0 0 1px rgba(174,255,43,.38),0 0 26px rgba(174,255,43,.18)}
+.progress-v710 .pill{border-color:rgba(174,255,43,.25);background:rgba(174,255,43,.09);color:#b9ff4b;font-weight:950;letter-spacing:-.02em}
+.journey-hero-v710{position:relative;overflow:hidden;border-radius:28px;margin:2px 0 14px;box-shadow:0 26px 80px rgba(0,0,0,.42),0 0 42px rgba(174,255,43,.08)}
+.journey-hero-v710 img{width:100%;display:block;border-radius:28px;border:1px solid rgba(189,255,41,.28);background:#060805;}
+.journey-hero-v710 button{position:absolute;left:6.5%;right:6.5%;bottom:6%;height:14%;border:0;background:transparent;border-radius:999px;cursor:pointer;color:transparent;-webkit-tap-highlight-color:transparent}.journey-hero-v710 button:focus-visible{outline:2px solid #d7ff4a;outline-offset:3px}
+.quest-card-v710,.streak-card-v710,.mini-card-v710,.mission-panel-v710{background:linear-gradient(180deg,rgba(14,18,15,.95),rgba(9,12,10,.94));border:1px solid rgba(255,255,255,.10);border-radius:24px;box-shadow:0 20px 58px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.04)}
+.section-head-v710{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 3px 10px}.section-head-v710 h2{margin:0;font-size:24px;line-height:1;letter-spacing:-.055em}.section-head-v710 .count-pill-v710{border:1px solid rgba(174,255,43,.22);background:rgba(174,255,43,.08);color:#baff4a;border-radius:999px;padding:7px 11px;font-weight:950;font-size:13px}
+.mission-panel-v710{padding:12px;display:grid;gap:8px}.mission-row-v710{display:grid;grid-template-columns:54px 1fr auto auto;align-items:center;gap:10px;min-height:70px;border-radius:18px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.025);padding:9px 10px;cursor:pointer;transition:transform .18s ease,border-color .18s ease,background .18s ease,box-shadow .18s ease}.mission-row-v710:hover{transform:translateY(-1px);border-color:rgba(174,255,43,.32)}.mission-row-v710.done{background:linear-gradient(90deg,rgba(174,255,43,.13),rgba(49,230,110,.05));border-color:rgba(174,255,43,.46);box-shadow:0 0 26px rgba(174,255,43,.10)}
+.mission-icon-v710{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;border:1px solid rgba(174,255,43,.24);background:radial-gradient(circle at 45% 30%,rgba(174,255,43,.22),rgba(20,31,22,.92));box-shadow:0 0 18px rgba(174,255,43,.13),inset 0 0 0 1px rgba(255,255,255,.035);font-size:20px;color:#baff4a;overflow:hidden}.mission-icon-v710.water{color:#67d7ff;border-color:rgba(103,215,255,.28);background:radial-gradient(circle at 45% 28%,rgba(55,185,255,.22),rgba(13,24,28,.94))}.mission-icon-v710.walk{color:#b9ff4b}.mission-icon-v710.protein{color:#ffad43;border-color:rgba(255,173,67,.32);background:radial-gradient(circle at 45% 28%,rgba(255,158,32,.22),rgba(31,18,10,.94))}.mission-icon-v710 i{filter:drop-shadow(0 0 8px currentColor)}.mission-row-v710 h3{margin:0;font-size:15.5px;letter-spacing:-.035em}.mission-row-v710 p{margin:3px 0 0;font-size:12px;line-height:1.35;color:#9da79f}.xp-v710{color:#b9ff4b;font-weight:950;font-size:14px;white-space:nowrap}.check-v710{width:32px;height:32px;border-radius:50%;border:2px solid rgba(255,255,255,.7);display:grid;place-items:center;color:transparent;background:rgba(0,0,0,.18)}.done .check-v710{background:#9fff31;border-color:#9fff31;color:#061006;box-shadow:0 0 20px rgba(174,255,43,.42)}
+.streak-card-v710{padding:14px;margin-top:14px}.streak-head-v710{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.streak-title-v710{display:flex;align-items:center;gap:8px;font-weight:950;font-size:18px;letter-spacing:-.04em}.icon-bubble-v711{width:42px;height:42px;border-radius:15px;display:grid;place-items:center;flex:0 0 auto;border:1px solid rgba(174,255,43,.24);background:radial-gradient(circle at 50% 28%,rgba(174,255,43,.22),rgba(11,17,12,.94));color:#baff4a;box-shadow:0 0 20px rgba(174,255,43,.12),inset 0 0 0 1px rgba(255,255,255,.035);font-size:18px}.icon-bubble-v711 i{filter:drop-shadow(0 0 8px currentColor)}.icon-bubble-v711.fire{color:#ff9c2f;border-color:rgba(255,156,47,.32);background:radial-gradient(circle at 50% 28%,rgba(255,155,39,.24),rgba(27,14,7,.94))}.icon-bubble-v711.ai{color:#baff4a}.icon-bubble-v711.badge{color:#d7ff4a}.icon-bubble-v711.trophy{color:#ffd35a;border-color:rgba(255,211,90,.32);background:radial-gradient(circle at 50% 28%,rgba(255,201,56,.23),rgba(30,22,6,.94))}.icon-bubble-v711.target{color:#baff4a}.streak-card-v710 a{font-size:13px;color:#b8ff4b;font-weight:900}.streak-path-v710{display:grid;grid-template-columns:repeat(7,1fr);gap:0;position:relative;padding:5px 0 3px}.streak-path-v710:before{content:"";position:absolute;left:7%;right:7%;top:33px;height:2px;background:linear-gradient(90deg,rgba(174,255,43,.95),rgba(174,255,43,.45),rgba(255,255,255,.12));z-index:0}.streak-day-v710{position:relative;z-index:1;text-align:center;color:#b8beb9;font-size:12px;font-weight:800}.streak-node-v710{width:38px;height:38px;border-radius:50%;margin:0 auto 5px;display:grid;place-items:center;border:2px solid rgba(255,255,255,.18);background:#151915;color:#7b847d;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}.streak-day-v710.done .streak-node-v710{border-color:#b8ff4b;background:radial-gradient(circle,#b9ff4b,#45e06e);color:#041006;box-shadow:0 0 20px rgba(174,255,43,.32)}.streak-day-v710.today .streak-node-v710{border-color:#ffb13a;background:radial-gradient(circle,#ffb13a,#ff7136);color:#160700;box-shadow:0 0 28px rgba(255,139,44,.5)}.streak-day-v710.locked .streak-node-v710{background:#151719;color:#777;border-style:dashed}.streak-day-v710 small{display:block;color:#9fff31;font-size:11px;min-height:14px}.streak-day-v710.today small{color:#ffb13a}
+.duo-v710{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.mini-card-v710{padding:14px;display:grid;grid-template-columns:58px 1fr;gap:12px;align-items:center;min-height:126px}.mini-card-v710>.icon-bubble-v711{width:58px;height:58px;border-radius:18px;font-size:24px}.mini-card-v710 b{display:block;font-size:18px;letter-spacing:-.04em;margin-bottom:4px}.mini-card-v710 p{font-size:13px;line-height:1.42;color:#aab3ac}.mini-card-v710 strong{color:#b9ff4b}.mini-card-v710.ai{border-color:rgba(174,255,43,.18)}
+.achievement-v710{margin-top:14px}.achievement-grid-v710{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.badge-tile-v710{border:1px solid rgba(255,255,255,.10);background:rgba(255,255,255,.025);border-radius:18px;padding:10px;text-align:center;min-height:120px}.badge-tile-v710 .icon-bubble-v711{width:58px;height:58px;border-radius:18px;margin:0 auto 7px;font-size:24px}.badge-tile-v710 b{display:block;font-size:12.5px;line-height:1.2}.badge-tile-v710 span{font-size:11px;color:#9fff31;font-weight:900}.badge-tile-v710.locked{filter:grayscale(.5);opacity:.7}.badge-tile-v710.locked span{color:#9da79f}
+.progress-bottom-cta-v710{margin-top:14px;border-radius:22px;background:linear-gradient(90deg,rgba(174,255,43,.16),rgba(49,230,110,.08));border:1px solid rgba(174,255,43,.25);padding:14px 16px;display:flex;align-items:center;gap:12px;color:#eaffd0;font-weight:950}.progress-bottom-cta-v710 .icon-bubble-v711{width:44px;height:44px;border-radius:14px}.progress-bottom-cta-v710 span{color:#baff4a}
+@media(max-width:520px){.app.progress-v710{padding:10px 8px 148px}.progress-v710 .topbar{margin-left:-8px;margin-right:-8px}.progress-v710 .brand{font-size:16px}.journey-hero-v710{border-radius:22px}.journey-hero-v710 img{border-radius:22px}.section-head-v710 h2{font-size:22px}.mission-row-v710{grid-template-columns:48px 1fr auto;min-height:66px}.mission-icon-v710{width:44px;height:44px}.mission-row-v710 h3{font-size:14px}.mission-row-v710 p{font-size:11.2px}.xp-v710{display:none}.check-v710{width:29px;height:29px}.streak-path-v710:before{top:30px}.streak-node-v710{width:34px;height:34px}.streak-day-v710{font-size:11px}.duo-v710{grid-template-columns:1fr}.achievement-grid-v710{grid-template-columns:1fr 1fr}.badge-tile-v710:nth-child(3){display:none}}
+</style>
+
+</head>
+<body>
+<nav class="bf-bottom-nav" aria-label="BodyFit Hub menu"><svg class="bf-nav-shape-svg-v683" viewBox="0 0 1000 132" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="whNavFillV683" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(11,23,16,.985)"/>
+      <stop offset="100%" stop-color="rgba(3,8,5,.985)"/>
+    </linearGradient>
+    <filter id="whNavSoftGlowV683" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path class="nav-main-v683"
+    d="M58 52
+       H386
+       C424 52 436 19 466 12
+       C478 9 491 8 500 8
+       C509 8 522 9 534 12
+       C564 19 576 52 614 52
+       H942
+       C978 52 996 72 996 94
+       C996 119 976 128 942 128
+       H58
+       C24 128 4 119 4 94
+       C4 72 22 52 58 52
+       Z" />
+  <path class="nav-line-v683"
+    d="M58 52
+       H386
+       C424 52 436 19 466 12
+       C478 9 491 8 500 8
+       C509 8 522 9 534 12
+       C564 19 576 52 614 52
+       H942" />
+</svg><div class="bf-nav-glow-v683" aria-hidden="true"></div><a class="bf-nav-item" href="bodyfit.html"><i class="fa-solid fa-house"></i><span>Home</span></a><a class="bf-nav-item" href="meal.html"><i class="fa-solid fa-utensils"></i><span>Meal</span></a><button class="bf-nav-scan" type="button" data-wh-scan-v664 aria-label="Buka pilihan scan"><span class="bf-scan-circle"><i class="fa-solid fa-expand"></i></span><span class="bf-scan-label">Scan</span></button><a class="bf-nav-item" href="training-guide.html"><i class="fa-solid fa-dumbbell"></i><span>Latihan</span></a><a class="bf-nav-item active" href="progress.html"><i class="fa-solid fa-chart-line"></i><span>Progress</span></a></nav><div class="wh-scan-sheet-v664" id="whScanSheetV664" aria-label="Pilihan Scan"><h3>Pilih scan</h3><p>Akses scan dipusatkan di tombol tengah.</p><div class="wh-scan-sheet-grid-v664"><a class="wh-scan-choice-v664" href="bioscan.html"><i class="fa-solid fa-fingerprint"></i><strong>Scan Tubuh</strong><span>Cek kebutuhan badan & kalori.</span></a><a class="wh-scan-choice-v664" href="food-scanner.html"><i class="fa-solid fa-camera"></i><strong>Scan Makanan</strong><span>Estimasi kalori dari foto makanan.</span></a></div></div>
+
+
+<div class="app progress-v710">
+  <header class="topbar"><div class="brand"><img src="assets/bodyfit-hub-icon.png" alt="BodyFit Hub"><div>BodyFit Hub <span>Progress</span></div></div><a class="pill" href="food-scanner.html"><i class="fa-solid fa-pen-to-square"></i> Catat</a></header>
+
+  <section class="journey-hero-v710" aria-label="Journey Status">
+    <img src="assets/progress-v710/journey-banner.png" alt="1 misi lagi, badge kebuka. Progress kecil tetap kelihatan. Menangin 1 misi hari ini buat naik level disiplin.">
+    <button type="button" onclick="scrollToMissionsV710()" aria-label="Lanjutkan misi"></button>
+  </section>
+
+  <div class="section-head-v710" id="missionStartV710">
+    <h2>Misi hari ini</h2>
+    <span class="count-pill-v710" id="missionCountV710">0/3</span>
+  </div>
+  <section class="mission-panel-v710" id="missionPanelV710"></section>
+
+  <section class="streak-card-v710">
+    <div class="streak-head-v710">
+      <div class="streak-title-v710"><span class="icon-bubble-v711 fire"><i class="fa-solid fa-fire"></i></span> Streak Path</div>
+      <a href="#" onclick="return false">Jangan putus! <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+    <div class="streak-path-v710" id="streakPathV710"></div>
+  </section>
+
+  <div class="duo-v710">
+    <section class="mini-card-v710">
+      <span class="icon-bubble-v711 badge"><i class="fa-solid fa-shield-halved"></i></span>
+      <div><b>Badge Berikutnya</b><p>Selesaikan <strong id="missionLeftV710">1 misi lagi</strong> buat buka badge <strong>7 Hari Konsisten.</strong></p></div>
+    </section>
+    <section class="mini-card-v710 ai">
+      <span class="icon-bubble-v711 ai"><i class="fa-solid fa-brain"></i></span>
+      <div><b>Insight AI <span style="color:#baff4a;font-size:12px">AI</span></b><p id="insightTextV710">Lo paling konsisten kalau targetnya kecil. Hari ini cukup menangin 1 misi dulu.</p></div>
+    </section>
+  </div>
+
+  <section class="quest-card-v710 achievement-v710" style="padding:14px">
+    <div class="section-head-v710" style="margin:0 0 10px"><h2>Achievement Vault</h2><span class="count-pill-v710">Lihat semua</span></div>
+    <div class="achievement-grid-v710">
+      <div class="badge-tile-v710"><span class="icon-bubble-v711 target"><i class="fa-solid fa-calendar-check"></i></span><b>7 Hari Konsisten</b><span id="badgeOneV710">Proses</span></div>
+      <div class="badge-tile-v710"><span class="icon-bubble-v711 fire"><i class="fa-solid fa-drumstick-bite"></i></span><b>Protein Starter</b><span>Mulai</span></div>
+      <div class="badge-tile-v710 locked"><span class="icon-bubble-v711 badge"><i class="fa-solid fa-lock"></i></span><b>Warrior 100</b><span>Terkunci</span></div>
+    </div>
+  </section>
+
+  <div class="progress-bottom-cta-v710"><span class="icon-bubble-v711 trophy"><i class="fa-solid fa-trophy"></i></span><div>Selesaikan <span>1 misi aja</span> udah menang hari ini.</div></div>
+</div>
+
+<script id="wh-v711-progress-icon-fit-js">
+const $=id=>document.getElementById(id); const today=new Date().toISOString().slice(0,10);
+function safeGet(key,f){try{return JSON.parse(localStorage.getItem(key)||'null')??f}catch(e){return f}} function save(k,v){localStorage.setItem(k,JSON.stringify(v))}
+function missions(){return safeGet('wh_missions',{})}
+function last7(){const arr=[];for(let i=6;i>=0;i--){const d=new Date();d.setDate(d.getDate()-i);arr.push(d.toISOString().slice(0,10))}return arr}
+function dayLabel(dateStr){const labels=['Min','Sen','Sel','Rab','Kam','Jum','Sab']; const d=new Date(dateStr+'T00:00:00'); return labels[d.getDay()]}
+const missionListV710=[
+  {key:'water',title:'Air putih sebelum kopi',desc:'Minum segelas air dulu.',xp:10,icon:'fa-droplet',kind:'water'},
+  {key:'walk',title:'Jalan 10 menit',desc:'Gerak ringan, dampak besar.',xp:15,icon:'fa-person-walking',kind:'walk'},
+  {key:'protein',title:'Protein murah 1 porsi',desc:'Tempe, telur, tahu, atau ikan.',xp:20,icon:'fa-drumstick-bite',kind:'protein'}
+];
+function scrollToMissionsV710(){const el=$('missionStartV710'); if(el) el.scrollIntoView({behavior:'smooth',block:'start'});}
+function toggleMissionV710(k){const m=missions(); m[today]=m[today]||{}; m[today][k]=!m[today][k]; save('wh_missions',m); renderV710();}
+function renderMissionsV710(){const m=missions()[today]||{}; const done=missionListV710.filter(x=>m[x.key]).length; $('missionCountV710').textContent=`${done}/3`; $('missionPanelV710').innerHTML=missionListV710.map(item=>`<div class="mission-row-v710 ${m[item.key]?'done':''}" onclick="toggleMissionV710('${item.key}')"><span class="mission-icon-v710 ${item.kind}"><i class="fa-solid ${item.icon}"></i></span><div><h3>${item.title}</h3><p>${item.desc}</p></div><div class="xp-v710">+${item.xp} XP</div><div class="check-v710"><i class="fa-solid fa-check"></i></div></div>`).join(''); const left=Math.max(0,1-done); $('missionLeftV710').textContent=left?`${left} misi lagi`:'badge kebuka'; $('badgeOneV710').textContent=done?'Berjalan':'Proses'; $('insightTextV710').textContent=done>=3?'Mantap. Hari ini udah menang. Besok tinggal ulangi versi kecilnya lagi.':done>=1?'Udah ada momentum. Kalau kuat, tambah satu misi lagi biar streak makin panas.':'Lo paling konsisten kalau targetnya kecil. Hari ini cukup menangin 1 misi dulu.';}
+function renderStreakV710(){const all=missions(); const days=last7(); $('streakPathV710').innerHTML=days.map(d=>{const dayDone=Object.values(all[d]||{}).some(Boolean); const isToday=d===today; const future=d>today; const cls=dayDone?'done':(isToday?'today':'locked'); const icon=dayDone?'fa-check':(isToday?'fa-fire':'fa-lock'); return `<div class="streak-day-v710 ${cls}"><div class="streak-node-v710"><i class="fa-solid ${icon}"></i></div><b>${dayLabel(d)}</b><small>${isToday?'Hari ini':''}</small></div>`}).join('')}
+function renderV710(){renderMissionsV710();renderStreakV710()} renderV710();
+</script>
+
+<script id="wh-v664-safe-center-scan-nav-js">
+(function(){
+  var buttons = document.querySelectorAll('[data-wh-scan-v664]');
+  var sheet = document.getElementById('whScanSheetV664');
+  if(!buttons.length || !sheet) return;
+  function toggle(e){
+    e.preventDefault();
+    sheet.classList.toggle('open');
+  }
+  buttons.forEach(function(btn){ btn.addEventListener('click', toggle); });
+  document.addEventListener('click', function(e){
+    if(!sheet.classList.contains('open')) return;
+    var isButton = e.target.closest('[data-wh-scan-v664]');
+    var isSheet = e.target.closest('#whScanSheetV664');
+    if(!isButton && !isSheet) sheet.classList.remove('open');
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') sheet.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+[
+  {
+    "id": "coach-opening",
+    "label": "Opening workout",
+    "src": "assets/coach-audio/coach-opening.mp3",
+    "text": "Oke, mulai pelan dulu. Fokus hari ini bukan sempurna, tapi selesai dengan form yang rapi.",
+    "duration": 22.4,
+    "sourceFile": "Generated Audio May 29, 2026 - 8_59PM.wav"
+  },
+  {
+    "id": "coach-start-set",
+    "label": "Mulai set",
+    "src": "assets/coach-audio/coach-start-set.mp3",
+    "text": "Kita mulai set pertama. Tarik napas, siapkan posisi, dan jangan buru-buru.",
+    "duration": 11.4,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_02PM.wav"
+  },
+  {
+    "id": "coach-form-control",
+    "label": "Form rapi",
+    "src": "assets/coach-audio/coach-form-control.mp3",
+    "text": "Pelankan sedikit. Gerakan yang rapi lebih penting daripada jumlah repetisi.",
+    "duration": 9.6,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_03PM.wav"
+  },
+  {
+    "id": "coach-slow-down",
+    "label": "Kontrol tempo",
+    "src": "assets/coach-audio/coach-slow-down.mp3",
+    "text": "Jangan kejar cepat. Kejar kontrol.",
+    "duration": 8.0,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_04PM.wav"
+  },
+  {
+    "id": "coach-warning",
+    "label": "Warning aman",
+    "src": "assets/coach-audio/coach-warning.mp3",
+    "text": "Kalau ada nyeri tajam, pusing, atau sesak yang tidak biasa, stop dulu. Jangan paksa gerakan.",
+    "duration": 8.4,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_06PM.wav"
+  },
+  {
+    "id": "coach-rest",
+    "label": "Rest antar set",
+    "src": "assets/coach-audio/coach-rest.mp3",
+    "text": "Istirahat sebentar. Tarik napas dalam, lemaskan bahu, dan siap untuk set berikutnya.",
+    "duration": 8.2,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_06PM (1).wav"
+  },
+  {
+    "id": "coach-next-set",
+    "label": "Lanjut set",
+    "src": "assets/coach-audio/coach-next-set.mp3",
+    "text": "Bagus. Satu set selesai. Minum sedikit air kalau perlu, lalu lanjut perlahan.",
+    "duration": 7.2,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_07PM.wav"
+  },
+  {
+    "id": "coach-finish",
+    "label": "Finish workout",
+    "src": "assets/coach-audio/coach-finish.mp3",
+    "text": "Selesai. Bagus. Catat progress lo hari ini, karena kebiasaan kecil kayak gini yang bikin perubahan.",
+    "duration": 7.2,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_07PM (1).wav"
+  },
+  {
+    "id": "mood-semangat",
+    "label": "Mode semangat",
+    "src": "assets/coach-audio/mood-semangat.mp3",
+    "text": "Energi lo lagi bagus. Pakai momentum ini, tapi tetap kontrol gerakan. Jangan keburu nafsu di awal.",
+    "duration": 7.9,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_08PM.wav"
+  },
+  {
+    "id": "mood-biasa",
+    "label": "Mode biasa aja",
+    "src": "assets/coach-audio/mood-biasa.mp3",
+    "text": "Nggak masalah kalau hari ini biasa aja. Mulai dari gerakan ringan dulu, yang penting tetap jalan.",
+    "duration": 4.3,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_08PM (1).wav"
+  },
+  {
+    "id": "mood-capek",
+    "label": "Mode capek",
+    "src": "assets/coach-audio/mood-capek.mp3",
+    "text": "Karena badan lo lagi capek, kita turunkan intensitas. Fokus ke gerakan ringan dan napas yang stabil.",
+    "duration": 8.8,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_10PM.wav"
+  },
+  {
+    "id": "mood-kacau",
+    "label": "Mode kacau",
+    "src": "assets/coach-audio/mood-kacau.mp3",
+    "text": "Hari ini nggak perlu latihan berat. Mulai dari satu misi kecil: napas pelan, jalan sebentar, atau catat makanan.",
+    "duration": 8.6,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_12PM.wav"
+  },
+  {
+    "id": "cue-push-up",
+    "label": "Cue Push Up",
+    "src": "assets/coach-audio/cue-push-up.mp3",
+    "text": "Posisikan tangan kuat. Badan lurus dari bahu sampai kaki. Turun pelan, lalu dorong naik dengan stabil.",
+    "duration": 6.2,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_15PM.wav"
+  },
+  {
+    "id": "cue-squat",
+    "label": "Cue Squat",
+    "src": "assets/coach-audio/cue-squat.mp3",
+    "text": "Buka kaki selebar bahu. Turunkan pinggul pelan, jaga dada tetap terbuka, lalu dorong naik dari tumit.",
+    "duration": 8.6,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_17PM.wav"
+  },
+  {
+    "id": "cue-plank",
+    "label": "Cue Plank",
+    "src": "assets/coach-audio/cue-plank.mp3",
+    "text": "Kunci perut. Jangan biarkan pinggang turun. Tahan posisi, napas tetap tenang.",
+    "duration": 8.6,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_18PM.wav"
+  },
+  {
+    "id": "cue-glute-bridge",
+    "label": "Cue Glute Bridge",
+    "src": "assets/coach-audio/cue-glute-bridge.mp3",
+    "text": "Tekan tumit ke lantai. Angkat pinggul sampai glute terasa aktif, lalu turun perlahan.",
+    "duration": 8.3,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_18PM (1).wav"
+  },
+  {
+    "id": "cue-mountain-climber",
+    "label": "Cue Mountain Climber",
+    "src": "assets/coach-audio/cue-mountain-climber.mp3",
+    "text": "Bawa lutut ke arah dada secara bergantian. Jaga bahu tetap stabil dan perut tetap aktif.",
+    "duration": 5.6,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_20PM.wav"
+  },
+  {
+    "id": "cue-food-log",
+    "label": "Catat makanan",
+    "src": "assets/coach-audio/cue-food-log.mp3",
+    "text": "Catat satu makanan dulu. Nggak perlu sempurna, yang penting kebaca polanya.",
+    "duration": 7.4,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_21PM.wav"
+  },
+  {
+    "id": "cue-water",
+    "label": "Minum air",
+    "src": "assets/coach-audio/cue-water.mp3",
+    "text": "Minum air dulu. Satu gelas kecil lebih baik daripada nunggu haus banget.",
+    "duration": 5.7,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_23PM.wav"
+  },
+  {
+    "id": "cue-mission-done",
+    "label": "Misi selesai",
+    "src": "assets/coach-audio/cue-mission-done.mp3",
+    "text": "Hari ini lo menang satu langkah. Besok tinggal ulang lagi.",
+    "duration": 6.7,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_24PM.wav"
+  },
+  {
+    "id": "motivation-one-rep",
+    "label": "Motivasi 1 rep",
+    "src": "assets/coach-audio/motivation-one-rep.mp3",
+    "text": "Fokus satu repetisi dulu. Jangan pikirin semuanya sekaligus.",
+    "duration": 9.0,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_25PM.wav"
+  },
+  {
+    "id": "motivation-small-step",
+    "label": "Motivasi langkah kecil",
+    "src": "assets/coach-audio/motivation-small-step.mp3",
+    "text": "Lo nggak harus sempurna hari ini. Cukup selesaikan satu langkah kecil.",
+    "duration": 7.4,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_26PM.wav"
+  },
+  {
+    "id": "motivation-focus",
+    "label": "Motivasi fokus",
+    "src": "assets/coach-audio/motivation-focus.mp3",
+    "text": "Sedikit lagi. Bukan soal kuat dari awal, tapi tetap jalan walau pelan.",
+    "duration": 9.1,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_28PM.wav"
+  },
+  {
+    "id": "motivation-heavy-day",
+    "label": "Hari berat",
+    "src": "assets/coach-audio/motivation-heavy-day.mp3",
+    "text": "Kalau hari ini berat, justru misi kecil seperti ini yang paling penting.",
+    "duration": 6.5,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_29PM.wav"
+  },
+  {
+    "id": "coach-breath",
+    "label": "Napas stabil",
+    "src": "assets/coach-audio/coach-breath.mp3",
+    "text": "Jangan tahan napas. Tarik napas saat turun, buang napas saat dorong naik.",
+    "duration": 8.6,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_30PM.wav"
+  },
+  {
+    "id": "coach-reset-form",
+    "label": "Reset form",
+    "src": "assets/coach-audio/coach-reset-form.mp3",
+    "text": "Kalau posisi mulai berantakan, berhenti sebentar. Rapikan form, lalu lanjut lagi.",
+    "duration": 9.2,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_31PM.wav"
+  },
+  {
+    "id": "coach-safe-intensity",
+    "label": "Turunkan intensitas",
+    "src": "assets/coach-audio/coach-safe-intensity.mp3",
+    "text": "Kalau badan terasa terlalu berat hari ini, turunkan intensitas. Konsisten tidak harus ekstrem.",
+    "duration": 8.5,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_32PM.wav"
+  },
+  {
+    "id": "coach-recovery",
+    "label": "Recovery",
+    "src": "assets/coach-audio/coach-recovery.mp3",
+    "text": "Mantap. Workout hari ini selesai. Jangan lupa makan cukup dan recovery.",
+    "duration": 11.6,
+    "sourceFile": "Generated Audio May 29, 2026 - 9_33PM.wav"
+  }
+]

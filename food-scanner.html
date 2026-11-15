@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Food Scanner Lite — WellnessHubID</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#050605">
+<style>
+:root{--bg:#050605;--card:#0c110e;--card2:#101612;--line:rgba(255,255,255,.09);--muted:#9aa39d;--text:#f4fff7;--green:#31e66e;--green2:#72ffae;--danger:#ff7474;--warn:#ffd36e;--radius:24px;--safe-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;padding-bottom:96px}body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 10% 0,rgba(49,230,110,.16),transparent 34%),radial-gradient(circle at 92% 20%,rgba(49,230,110,.09),transparent 32%),linear-gradient(180deg,#050605,#071009 50%,#050605)}a{color:inherit}.app{width:min(100%,780px);margin:0 auto;padding:14px 14px 24px}.topbar{position:sticky;top:0;z-index:30;margin:-2px -14px 12px;padding:10px 14px;background:linear-gradient(180deg,rgba(5,6,5,.98),rgba(5,6,5,.78));backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em}.brand img{width:34px;height:34px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 1px rgba(49,230,110,.24),0 0 22px rgba(49,230,110,.18)}.top-action{display:inline-flex;align-items:center;gap:8px;text-decoration:none;padding:10px 13px;border-radius:999px;background:rgba(49,230,110,.12);border:1px solid rgba(49,230,110,.24);font-weight:900;color:#dffff0;font-size:13px}.hero{padding:18px;border:1px solid var(--line);background:linear-gradient(180deg,rgba(12,17,14,.96),rgba(10,14,12,.92));border-radius:28px;box-shadow:0 22px 60px rgba(0,0,0,.38);overflow:hidden;position:relative}.hero:after{content:"";position:absolute;right:-54px;top:-54px;width:160px;height:160px;border-radius:50%;background:radial-gradient(circle,rgba(49,230,110,.22),transparent 68%);filter:blur(8px)}.badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(49,230,110,.22);background:rgba(49,230,110,.09);color:var(--green2);font-weight:900;border-radius:999px;padding:8px 11px;font-size:12px;margin-bottom:12px}.h1{font-size:clamp(30px,9vw,52px);line-height:.98;letter-spacing:-.07em;margin:0 0 10px;font-weight:900}.h1 span{color:var(--green)}.sub{color:#b7c3bc;line-height:1.58;font-size:15px;margin:0}.trust{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.trust span{font-size:12px;font-weight:800;color:#cfeadb;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);padding:7px 10px;border-radius:999px}.grid{display:grid;gap:12px;margin-top:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:0 16px 40px rgba(0,0,0,.22)}.card h2{font-size:21px;letter-spacing:-.04em;margin:0 0 6px}.card p{margin:0;color:var(--muted);line-height:1.55;font-size:14px}.target-card{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.target-card strong{font-size:30px;color:var(--green);letter-spacing:-.06em}.mini{font-size:12px;color:#7d8a83;margin-top:4px}.scanner{position:relative;min-height:250px;border-radius:26px;border:1px dashed rgba(49,230,110,.35);background:linear-gradient(180deg,rgba(49,230,110,.07),rgba(255,255,255,.025));display:grid;place-items:center;overflow:hidden}.scanner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62}.scanner .scanline{position:absolute;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--green2),transparent);box-shadow:0 0 20px rgba(49,230,110,.9);animation:scan 2.2s linear infinite;opacity:.95}.scanner .corner{position:absolute;width:38px;height:38px;border-color:var(--green);opacity:.75}.scanner .tl{left:16px;top:16px;border-left:2px solid;border-top:2px solid}.scanner .tr{right:16px;top:16px;border-right:2px solid;border-top:2px solid}.scanner .bl{left:16px;bottom:16px;border-left:2px solid;border-bottom:2px solid}.scanner .br{right:16px;bottom:16px;border-right:2px solid;border-bottom:2px solid}.scanner-content{position:relative;text-align:center;padding:18px;z-index:2}.scanner-content i{font-size:34px;color:var(--green);margin-bottom:10px}.scanner-content b{display:block;font-size:18px;margin-bottom:6px}.scanner-content small{color:#aebbb4;line-height:1.5}.scan-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.btn,.ghost{border:none;border-radius:18px;padding:14px 14px;font-weight:900;font-size:14px;cursor:pointer;min-height:50px}.btn{background:linear-gradient(180deg,#63ff9c,#31e66e);color:#031108;box-shadow:0 14px 36px rgba(49,230,110,.18)}.ghost{background:#111713;color:#eaffef;border:1px solid rgba(255,255,255,.08)}input,select{width:100%;background:#111713;color:white;border:1px solid rgba(255,255,255,.08);border-radius:16px;min-height:50px;padding:0 13px;font-weight:800;outline:none}input:focus,select:focus{border-color:rgba(49,230,110,.6);box-shadow:0 0 0 4px rgba(49,230,110,.10)}.search-row{display:grid;grid-template-columns:1fr;gap:10px}.foods{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}.food{padding:12px;border-radius:18px;background:#111713;border:1px solid rgba(255,255,255,.075);min-height:106px;display:flex;flex-direction:column;justify-content:space-between;gap:8px;cursor:pointer;transition:.18s}.food:active{transform:scale(.98)}.food b{font-size:14px;line-height:1.25}.food span{font-size:12px;color:#9aa39d}.food strong{display:inline-flex;align-self:flex-start;color:var(--green);font-size:12px;background:rgba(49,230,110,.1);border-radius:999px;padding:6px 8px}.manual{display:grid;grid-template-columns:1.1fr .75fr;gap:8px;margin-top:12px}.report-top{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.report-total{font-size:34px;font-weight:900;color:var(--green);letter-spacing:-.06em}.bar{height:13px;background:rgba(255,255,255,.07);border-radius:999px;overflow:hidden;margin:12px 0 8px;border:1px solid rgba(255,255,255,.06)}.bar span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--green),#a6ffbf);box-shadow:0 0 18px rgba(49,230,110,.36);border-radius:inherit;transition:width .3s}.coach{margin-top:12px;border-radius:18px;background:rgba(49,230,110,.07);border:1px solid rgba(49,230,110,.16);padding:12px;color:#d9ffe5;font-weight:800;line-height:1.45;font-size:13px}.log{display:grid;gap:8px;margin-top:12px}.log-item{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:10px 12px;border-radius:16px;background:#111713;border:1px solid rgba(255,255,255,.07)}.log-item b{font-size:13px}.log-item span{color:#9aa39d;font-size:12px}.delete{width:34px;height:34px;border-radius:12px;border:1px solid rgba(255,90,90,.22);background:rgba(255,90,90,.08);color:#ffb3b3;font-weight:900}.empty{color:#7d8a83;text-align:center;padding:16px;border:1px dashed rgba(255,255,255,.08);border-radius:18px;font-size:13px;line-height:1.5}.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 12px calc(10px + var(--safe-bottom));background:linear-gradient(180deg,rgba(5,6,5,.35),rgba(5,6,5,.96));backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.08)}.bottom-inner{width:min(100%,780px);margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);opacity:0;pointer-events:none;transition:.22s;background:#102015;border:1px solid rgba(49,230,110,.25);color:#dffff0;padding:12px 14px;border-radius:16px;z-index:50;width:min(92vw,460px);text-align:center;font-weight:900;font-size:13px}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}@keyframes scan{0%{top:0}100%{top:100%}}@media(min-width:680px){.app{padding-top:24px}.grid.two{grid-template-columns:1fr 1fr}.search-row{grid-template-columns:1fr auto}.foods{grid-template-columns:repeat(3,1fr)}}@media(max-width:420px){.foods{grid-template-columns:1fr 1fr}.hero,.card{padding:14px}.scanner{min-height:220px}.scan-actions{grid-template-columns:1fr}.manual{grid-template-columns:1fr}.h1{font-size:32px}.top-action{font-size:12px;padding:9px 11px}.brand span{display:none}}@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+
+<link rel="stylesheet" href="bodyfit-mobile-safe-v577.css">
+
+<style id="wh-v683-exact-svg-wave-nav">
+/* V6.83 — exact SVG wave nav, based on approved navbar-only prototype */
+body{
+  padding-bottom:calc(118px + env(safe-area-inset-bottom))!important;
+}
+
+.bf-bottom-nav{
+  position:fixed!important;
+  left:50%!important;
+  right:auto!important;
+  bottom:calc(6px + env(safe-area-inset-bottom))!important;
+  transform:translateX(-50%)!important;
+  width:min(620px,calc(100% - 8px))!important;
+  height:112px!important;
+  min-height:112px!important;
+  max-height:112px!important;
+  display:grid!important;
+  grid-template-columns:repeat(5,minmax(0,1fr))!important;
+  align-items:end!important;
+  gap:0!important;
+  padding:0 10px 10px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  overflow:visible!important;
+  z-index:999!important;
+}
+
+.bf-bottom-nav::before,
+.bf-bottom-nav::after{
+  content:none!important;
+  display:none!important;
+}
+
+.bf-nav-shape-svg-v683{
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  width:100%!important;
+  height:112px!important;
+  overflow:visible!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  filter:drop-shadow(0 22px 54px rgba(0,0,0,.62))!important;
+}
+
+.bf-nav-shape-svg-v683 .nav-main-v683{
+  fill:url(#whNavFillV683)!important;
+  stroke:rgba(255,255,255,.16)!important;
+  stroke-width:1.25!important;
+}
+
+.bf-nav-shape-svg-v683 .nav-line-v683{
+  fill:none!important;
+  stroke:rgba(88,245,143,.45)!important;
+  stroke-width:1.25!important;
+  filter:url(#whNavSoftGlowV683)!important;
+}
+
+.bf-nav-glow-v683{
+  position:absolute!important;
+  left:50%!important;
+  top:4px!important;
+  transform:translateX(-50%)!important;
+  width:150px!important;
+  height:92px!important;
+  border-radius:999px!important;
+  background:radial-gradient(circle,rgba(88,245,143,.30),rgba(88,245,143,.11) 42%,transparent 74%)!important;
+  filter:blur(13px)!important;
+  pointer-events:none!important;
+  z-index:1!important;
+}
+
+.bf-bottom-nav a,
+.bf-bottom-nav button{
+  font-family:inherit!important;
+  text-decoration:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+
+/* Grid lock: SVG tidak dihitung karena absolute, menu tetap 5 kolom */
+.bf-bottom-nav .bf-nav-item:nth-of-type(1){grid-column:1!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(2){grid-column:2!important;}
+.bf-bottom-nav .bf-nav-scan{grid-column:3!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(3){grid-column:4!important;}
+.bf-bottom-nav .bf-nav-item:nth-of-type(4){grid-column:5!important;}
+
+.bf-bottom-nav .bf-nav-item{
+  position:relative!important;
+  z-index:3!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#d7ddd8!important;
+  border-radius:0!important;
+  height:64px!important;
+  min-height:64px!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  font-size:.74rem!important;
+  line-height:1!important;
+  font-weight:950!important;
+  letter-spacing:-.015em!important;
+}
+
+.bf-bottom-nav .bf-nav-item i{
+  font-size:1.34rem!important;
+  line-height:1!important;
+  color:#d9dfdb!important;
+  filter:drop-shadow(0 2px 6px rgba(0,0,0,.36))!important;
+}
+
+.bf-bottom-nav .bf-nav-item span{
+  display:block!important;
+  white-space:nowrap!important;
+}
+
+.bf-bottom-nav .bf-nav-item.active{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  color:#58f58f!important;
+}
+
+.bf-bottom-nav .bf-nav-item.active i{
+  color:#58f58f!important;
+  filter:drop-shadow(0 0 12px rgba(57,233,120,.34))!important;
+}
+
+/* Scan tetap di kolom tengah, bukan absolute, jadi tidak numpuk */
+.bf-bottom-nav .bf-nav-scan{
+  position:relative!important;
+  z-index:4!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  color:#effff4!important;
+  cursor:pointer!important;
+  width:auto!important;
+  min-width:0!important;
+  height:92px!important;
+  min-height:92px!important;
+  padding:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:6px!important;
+  transform:translateY(-9px)!important;
+}
+
+.bf-bottom-nav .bf-nav-scan::before{
+  content:none!important;
+  display:none!important;
+}
+
+.bf-bottom-nav .bf-scan-circle{
+  width:58px!important;
+  height:58px!important;
+  border-radius:999px!important;
+  display:grid!important;
+  place-items:center!important;
+  background:
+    radial-gradient(circle at 42% 26%,rgba(255,255,255,.30),transparent 31%),
+    linear-gradient(180deg,#78ffa8,#35d96e)!important;
+  color:#041008!important;
+  border:3px solid rgba(154,255,188,.62)!important;
+  box-shadow:
+    0 14px 32px rgba(57,233,120,.34),
+    0 0 0 8px rgba(57,233,120,.065),
+    inset 0 1px 0 rgba(255,255,255,.44)!important;
+}
+
+.bf-bottom-nav .bf-scan-circle i{
+  font-size:1.22rem!important;
+  line-height:1!important;
+  color:#041008!important;
+}
+
+.bf-bottom-nav .bf-scan-label{
+  font-size:.76rem!important;
+  line-height:1!important;
+  font-weight:950!important;
+  color:#f1fff5!important;
+  text-shadow:0 2px 10px rgba(0,0,0,.55)!important;
+  position:relative!important;
+  z-index:2!important;
+}
+
+/* Fix tulisan "Pilih scan" muncul di atas: sheet default harus hidden */
+.wh-scan-sheet-v664{
+  position:fixed!important;
+  left:50%!important;
+  bottom:calc(104px + env(safe-area-inset-bottom))!important;
+  transform:translate(-50%,14px)!important;
+  width:min(540px,calc(100% - 18px))!important;
+  background:linear-gradient(180deg,rgba(8,16,11,.98),rgba(4,8,5,.98))!important;
+  border:1px solid rgba(255,255,255,.10)!important;
+  border-radius:24px!important;
+  box-shadow:0 22px 70px rgba(0,0,0,.55)!important;
+  padding:14px!important;
+  z-index:998!important;
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transition:.18s ease!important;
+}
+
+.wh-scan-sheet-v664.open{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:translate(-50%,0)!important;
+}
+
+.wh-scan-sheet-v664 h3{
+  margin:0 0 4px!important;
+  font-size:1rem!important;
+}
+.wh-scan-sheet-v664 p{
+  margin:0 0 10px!important;
+  color:rgba(255,255,255,.68)!important;
+  font-size:.82rem!important;
+}
+.wh-scan-sheet-grid-v664{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:10px!important;
+}
+.wh-scan-choice-v664{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:4px!important;
+  padding:12px!important;
+  border-radius:16px!important;
+  background:rgba(255,255,255,.045)!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  color:#fff!important;
+  text-decoration:none!important;
+}
+.wh-scan-choice-v664 i{color:#58f58f!important;}
+.wh-scan-choice-v664 span{font-size:.74rem!important;color:rgba(255,255,255,.64)!important;}
+
+@media(max-width:520px){
+  body{
+    padding-bottom:calc(104px + env(safe-area-inset-bottom))!important;
+  }
+  .bf-bottom-nav{
+    width:calc(100% - 4px)!important;
+    height:96px!important;
+    min-height:96px!important;
+    max-height:96px!important;
+    bottom:calc(6px + env(safe-area-inset-bottom))!important;
+    padding:0 7px 8px!important;
+  }
+  .bf-nav-shape-svg-v683{
+    height:96px!important;
+  }
+  .bf-nav-glow-v683{
+    top:4px!important;
+    width:122px!important;
+    height:72px!important;
+    filter:blur(10px)!important;
+  }
+  .bf-bottom-nav .bf-nav-item{
+    height:52px!important;
+    min-height:52px!important;
+    gap:5px!important;
+    font-size:.64rem!important;
+  }
+  .bf-bottom-nav .bf-nav-item i{
+    font-size:1.10rem!important;
+  }
+  .bf-bottom-nav .bf-nav-scan{
+    height:80px!important;
+    min-height:80px!important;
+    transform:translateY(-8px)!important;
+    gap:5px!important;
+  }
+  .bf-bottom-nav .bf-scan-circle{
+    width:52px!important;
+    height:52px!important;
+    box-shadow:
+      0 13px 28px rgba(57,233,120,.31),
+      0 0 0 6px rgba(57,233,120,.06),
+      inset 0 1px 0 rgba(255,255,255,.44)!important;
+  }
+  .bf-bottom-nav .bf-scan-circle i{
+    font-size:1.10rem!important;
+  }
+  .bf-bottom-nav .bf-scan-label{
+    font-size:.66rem!important;
+  }
+  .wh-scan-sheet-v664{
+    bottom:calc(96px + env(safe-area-inset-bottom))!important;
+  }
+}
+
+@media(max-width:380px){
+  .bf-bottom-nav{
+    height:92px!important;
+    min-height:92px!important;
+    max-height:92px!important;
+    padding-left:5px!important;
+    padding-right:5px!important;
+  }
+  .bf-nav-shape-svg-v683{
+    height:92px!important;
+  }
+  .bf-bottom-nav .bf-nav-item{
+    height:50px!important;
+    min-height:50px!important;
+    font-size:.59rem!important;
+    gap:4px!important;
+  }
+  .bf-bottom-nav .bf-nav-item i{
+    font-size:1rem!important;
+  }
+  .bf-bottom-nav .bf-nav-scan{
+    height:76px!important;
+    min-height:76px!important;
+    transform:translateY(-7px)!important;
+  }
+  .bf-bottom-nav .bf-scan-circle{
+    width:50px!important;
+    height:50px!important;
+  }
+  .bf-bottom-nav .bf-scan-circle i{
+    font-size:1.04rem!important;
+  }
+}
+</style>
+</head>
+<body>
+<nav class="bf-bottom-nav" aria-label="BodyFit Hub menu"><svg class="bf-nav-shape-svg-v683" viewBox="0 0 1000 132" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="whNavFillV683" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(11,23,16,.985)"/>
+      <stop offset="100%" stop-color="rgba(3,8,5,.985)"/>
+    </linearGradient>
+    <filter id="whNavSoftGlowV683" x="-30%" y="-80%" width="160%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <path class="nav-main-v683"
+    d="M58 52
+       H386
+       C424 52 436 19 466 12
+       C478 9 491 8 500 8
+       C509 8 522 9 534 12
+       C564 19 576 52 614 52
+       H942
+       C978 52 996 72 996 94
+       C996 119 976 128 942 128
+       H58
+       C24 128 4 119 4 94
+       C4 72 22 52 58 52
+       Z" />
+  <path class="nav-line-v683"
+    d="M58 52
+       H386
+       C424 52 436 19 466 12
+       C478 9 491 8 500 8
+       C509 8 522 9 534 12
+       C564 19 576 52 614 52
+       H942" />
+</svg><div class="bf-nav-glow-v683" aria-hidden="true"></div><a class="bf-nav-item" href="bodyfit.html"><i class="fa-solid fa-house"></i><span>Home</span></a><a class="bf-nav-item" href="meal.html"><i class="fa-solid fa-utensils"></i><span>Meal</span></a><button class="bf-nav-scan is-active" type="button" data-wh-scan-v664 aria-label="Buka pilihan scan"><span class="bf-scan-circle"><i class="fa-solid fa-expand"></i></span><span class="bf-scan-label">Scan</span></button><a class="bf-nav-item" href="training-guide.html"><i class="fa-solid fa-dumbbell"></i><span>Latihan</span></a><a class="bf-nav-item" href="progress.html"><i class="fa-solid fa-chart-line"></i><span>Progress</span></a></nav><div class="wh-scan-sheet-v664" id="whScanSheetV664" aria-label="Pilihan Scan"><h3>Pilih scan</h3><p>Akses scan dipusatkan di tombol tengah.</p><div class="wh-scan-sheet-grid-v664"><a class="wh-scan-choice-v664" href="bioscan.html"><i class="fa-solid fa-fingerprint"></i><strong>Scan Tubuh</strong><span>Cek kebutuhan badan & kalori.</span></a><a class="wh-scan-choice-v664" href="food-scanner.html"><i class="fa-solid fa-camera"></i><strong>Scan Makanan</strong><span>Estimasi kalori dari foto makanan.</span></a></div></div>
+
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><img src="favicon-192.png" alt="WH"><div>WellnessHubID <span>Food Lite</span></div></div>
+    <a class="top-action" href="progress.html"><i class="fa-solid fa-chart-line"></i> Grafik</a>
+  </header>
+
+  <section class="hero">
+    <div class="badge"><i class="fa-solid fa-wand-magic-sparkles"></i> FOOD SCANNER LITE</div>
+    <h1 class="h1">Catat makanan <span>tanpa ribet.</span></h1>
+    <p class="sub">Upload foto buat efek scanner, pilih menu cepat, atau tambah manual kalau makanannya belum ada. Semua masuk ke laporan kalori dan Grafik Disiplin.</p>
+    <div class="trust"><span>Estimasi, bukan diagnosis</span><span>Simpan di HP lo</span><span>Warteg & anak kos friendly</span></div>
+  </section>
+
+  <div class="grid two">
+    <section class="card target-card">
+      <div><h2>Target hari ini</h2><p>Dari hasil Cek Tubuh 60 Detik. Kalau belum ada, sistem pakai target default.</p></div>
+      <div><strong id="targetKcal">1800</strong><div class="mini">kkal/hari</div></div>
+    </section>
+    <section class="card">
+      <h2>Alur data</h2>
+      <p>Catatan makanan → laporan kalori → grafik 7 hari → misi kecil besok.</p>
+    </section>
+  </div>
+
+  <section class="card">
+    <h2>1. Scan / upload foto</h2>
+    <p>Versi MVP ini belum mengklaim AI akurat. Foto dipakai sebagai bantuan visual, lalu lo pilih komponen makanan biar estimasinya lebih aman.</p>
+    <div class="scanner" id="scannerBox">
+      <div class="scanline"></div><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+      <div class="scanner-content" id="scannerContent"><i class="fa-solid fa-camera"></i><b>Belum ada foto</b><small>Upload foto makanan, lalu pilih komponennya di bawah.</small></div>
+    </div>
+    <div class="scan-actions">
+      <button class="ghost" onclick="document.getElementById('foodPhoto').click()"><i class="fa-solid fa-image"></i> Upload foto</button>
+      <button class="btn" onclick="fakeScan()"><i class="fa-solid fa-radar"></i> Scan sekarang</button>
+    </div>
+    <input id="foodPhoto" type="file" accept="image/*" hidden>
+    <div class="coach" id="scanNote">Tips: kalau makanan campur seperti nasi rames, pilih komponennya satu-satu: nasi, lauk, sayur, minuman.</div>
+  </section>
+
+  <section class="card">
+    <h2>2. Pilih cepat</h2>
+    <p>Tap makanan yang paling mirip. Kalau nggak ada, cari atau tambah manual.</p>
+    <div class="search-row"><input id="search" placeholder="Cari: nasi, mie, boba, seblak, warteg..."></div>
+    <div class="foods" id="foodGrid"></div>
+  </section>
+
+  <section class="card">
+    <h2>3. Makanan nggak ada?</h2>
+    <p>Tambah manual, lalu simpan sebagai menu favorit lo.</p>
+    <div class="manual"><input id="manualName" placeholder="Nama makanan"><input id="manualKcal" type="number" placeholder="kkal"></div>
+    <div class="scan-actions"><button class="ghost" onclick="addManual(false)">Tambah aja</button><button class="btn" onclick="addManual(true)">Tambah + favorit</button></div>
+    <div class="coach" id="similarBox">Ketik makanan di kolom cari. Sistem akan tawarkan menu yang mirip kalau ada.</div>
+  </section>
+
+  <section class="card" id="reportCard">
+    <div class="report-top"><div><h2>Laporan kalori hari ini</h2><p>Ini estimasi kasar. Jangan dipakai buat diagnosis.</p></div><div class="report-total"><span id="todayTotal">0</span></div></div>
+    <div class="bar"><span id="calBar"></span></div>
+    <p id="remainingText" class="mini">Belum ada makanan dicatat.</p>
+    <div class="coach" id="coachText">Catat makanan pertama dulu. Nanti sistem kasih arahan kecil buat hari ini.</div>
+    <div class="log" id="logList"></div>
+  </section>
+</div>
+
+<div class="toast" id="toast">Makanan ditambahkan.</div>
+<script>
+const todayKey = new Date().toISOString().slice(0,10);
+const $ = id => document.getElementById(id);
+function safeGet(key, fallback){try{return JSON.parse(localStorage.getItem(key)||'null') ?? fallback}catch(e){return fallback}}
+function save(key,val){localStorage.setItem(key, JSON.stringify(val))}
+const profile = safeGet('wh_calorie_profile', {targetKalori:1800, protein:90, goal:'maintenance'});
+let target = Number(profile.targetKalori)||1800;
+$('targetKcal').textContent = target.toLocaleString('id-ID');
+const baseFoods = [
+ {n:'Nasi putih 1 porsi',k:260,c:'karbo'}, {n:'Nasi setengah',k:130,c:'karbo'}, {n:'Telur rebus',k:75,c:'protein'}, {n:'Telur dadar',k:130,c:'protein'},
+ {n:'Tempe 2 potong',k:160,c:'protein'}, {n:'Tahu 2 potong',k:120,c:'protein'}, {n:'Ayam goreng + nasi',k:650,c:'makan'}, {n:'Ayam bakar + nasi',k:560,c:'makan'},
+ {n:'Sayur bening',k:60,c:'sayur'}, {n:'Tumis kangkung',k:130,c:'sayur'}, {n:'Nasi warteg sederhana',k:650,c:'makan'}, {n:'Nasi padang sederhana',k:780,c:'makan'},
+ {n:'Mie instan',k:380,c:'makan'}, {n:'Mie instan + telur',k:480,c:'makan'}, {n:'Seblak 1 mangkuk',k:650,c:'makan'}, {n:'Bakso 1 porsi',k:450,c:'makan'},
+ {n:'Soto ayam + nasi',k:520,c:'makan'}, {n:'Ayam geprek + nasi',k:720,c:'makan'}, {n:'Gorengan 1 pcs',k:120,c:'snack'}, {n:'Pisang',k:100,c:'snack'},
+ {n:'Es teh manis',k:120,c:'minuman'}, {n:'Kopi susu gula aren',k:250,c:'minuman'}, {n:'Boba milk tea',k:380,c:'minuman'}, {n:'Soda kaleng',k:140,c:'minuman'},
+ {n:'Air putih',k:0,c:'minuman'}, {n:'Oat + susu + pisang',k:420,c:'makan'}, {n:'Roti gandum + telur',k:290,c:'makan'}, {n:'Pecel sayur',k:420,c:'makan'}
+];
+let custom = safeGet('wh_custom_foods', []);
+let logs = safeGet('wh_food_logs_'+todayKey, []);
+function foods(){return [...custom, ...baseFoods]}
+function showToast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1600)}
+function renderFoods(){
+ const q=$('search').value.toLowerCase().trim();
+ const data=foods().filter(f=>!q||f.n.toLowerCase().includes(q)||f.c.includes(q));
+ $('foodGrid').innerHTML = data.map((f,i)=>`<button class="food" onclick="addFood('${encodeURIComponent(f.n)}',${f.k},'${f.c}')"><b>${f.n}</b><span>${f.c}</span><strong>±${f.k} kkal</strong></button>`).join('') || '<div class="empty" style="grid-column:1/-1">Belum ada yang cocok. Tambah manual di bawah.</div>';
+ if(q){
+   const similar=foods().filter(f=>f.n.toLowerCase().split(' ').some(w=>q.includes(w)||w.includes(q))).slice(0,3);
+   $('similarBox').innerHTML = similar.length ? 'Mungkin mirip: '+similar.map(f=>`<b>${f.n}</b> ±${f.k}`).join(' · ') : 'Belum ketemu. Tambah manual, lalu simpan favorit biar besok tinggal tap.';
+ } else $('similarBox').textContent='Ketik makanan di kolom cari. Sistem akan tawarkan menu yang mirip kalau ada.';
+}
+function addFood(name,k,c){logs.push({id:Date.now()+Math.random(), name:decodeURIComponent(name), kcal:Number(k)||0, cat:c||'manual', time:new Date().toISOString()});save('wh_food_logs_'+todayKey,logs);renderReport();showToast('Masuk laporan hari ini.');}
+function addManual(fav){const n=$('manualName').value.trim();const k=Number($('manualKcal').value); if(!n||!k){showToast('Isi nama dan kalori dulu.');return} addFood(encodeURIComponent(n),k,'manual'); if(fav){custom.unshift({n,k,c:'favorit'}); custom=custom.slice(0,30); save('wh_custom_foods',custom); renderFoods();} $('manualName').value='';$('manualKcal').value='';}
+function removeLog(id){logs=logs.filter(x=>String(x.id)!==String(id));save('wh_food_logs_'+todayKey,logs);renderReport()}
+function coach(total){const pct=total/target; const sweet=logs.filter(x=>/teh|boba|soda|kopi susu|gula|milk/i.test(x.name)).length; if(!total)return 'Catat makanan pertama dulu. Nanti sistem kasih arahan kecil buat hari ini.'; if(pct<.65)return 'Masih jauh dari target. Kalau masih lapar, pilih protein murah seperti telur/tempe + sayur.'; if(pct<=1.05)return sweet?'Masih mendekati target. Tapi kalori cair sudah masuk. Besok coba less sugar 1x.':'Arah hari ini aman. Pertahankan, jangan harus sempurna.'; return 'Hari ini lewat target. Santai. Besok cukup menang 1 keputusan: kurangi minuman manis/gorengan, bukan menghukum diri.'}
+function renderReport(){const total=logs.reduce((s,x)=>s+x.kcal,0);$('todayTotal').textContent=total.toLocaleString('id-ID'); const pct=Math.min(130,Math.round(total/target*100));$('calBar').style.width=pct+'%'; $('calBar').style.background=pct>105?'linear-gradient(90deg,#ffd36e,#ff7474)':'linear-gradient(90deg,#31e66e,#a6ffbf)'; const diff=target-total; $('remainingText').textContent= total? (diff>=0?`Sisa sekitar ${diff.toLocaleString('id-ID')} kkal dari target ${target.toLocaleString('id-ID')}.`:`Lewat sekitar ${Math.abs(diff).toLocaleString('id-ID')} kkal dari target ${target.toLocaleString('id-ID')}.`) : 'Belum ada makanan dicatat.'; $('coachText').textContent=coach(total); $('logList').innerHTML=logs.length?logs.slice().reverse().map(x=>`<div class="log-item"><div><b>${x.name}</b><br><span>${x.cat}</span></div><span>±${x.kcal} kkal</span><button class="delete" onclick="removeLog('${x.id}')">×</button></div>`).join(''):'<div class="empty">Belum ada makanan. Tap menu cepat atau tambah manual.</div>';}
+$('search').addEventListener('input',renderFoods);
+$('foodPhoto').addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const url=URL.createObjectURL(file);$('scannerBox').querySelectorAll('img').forEach(x=>x.remove());const img=document.createElement('img');img.src=url;img.alt='Foto makanan';$('scannerBox').prepend(img);$('scannerContent').innerHTML='<i class="fa-solid fa-utensils"></i><b>Foto masuk</b><small>Tekan scan, lalu pilih komponen makanan di bawah.</small>';});
+function fakeScan(){ $('scanNote').innerHTML='Scanner selesai. Pilih komponen yang kelihatan: nasi, lauk, sayur, minuman. Untuk makanan campur, pakai estimasi range dan jangan terlalu kaku.'; showToast('Scan visual selesai. Pilih komponennya.'); }
+function saveReportAndGo(){const total=logs.reduce((s,x)=>s+x.kcal,0);const reports=safeGet('wh_daily_reports',{});reports[todayKey]={date:todayKey,total,target,items:logs.length,sweet:logs.filter(x=>/teh|boba|soda|kopi susu|gula|milk/i.test(x.name)).length,updatedAt:new Date().toISOString(),goal:profile.goal||'maintenance'};save('wh_daily_reports',reports);location.href='progress.html'}
+renderFoods();renderReport();
+</script>
+
+<script id="wh-v664-safe-center-scan-nav-js">
+(function(){
+  var buttons = document.querySelectorAll('[data-wh-scan-v664]');
+  var sheet = document.getElementById('whScanSheetV664');
+  if(!buttons.length || !sheet) return;
+  function toggle(e){
+    e.preventDefault();
+    sheet.classList.toggle('open');
+  }
+  buttons.forEach(function(btn){ btn.addEventListener('click', toggle); });
+  document.addEventListener('click', function(e){
+    if(!sheet.classList.contains('open')) return;
+    var isButton = e.target.closest('[data-wh-scan-v664]');
+    var isSheet = e.target.closest('#whScanSheetV664');
+    if(!isButton && !isSheet) sheet.classList.remove('open');
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') sheet.classList.remove('open');
+  });
+})();
+</script>
+
+</body>
+</html>

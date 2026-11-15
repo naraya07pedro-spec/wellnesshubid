@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Command — WellnessHubID</title>
+<meta name="description" content="Daily wellness command: input tidur, energi, mood, dan goal lalu dapat instruksi sederhana hari ini.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"><link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png"><link rel="shortcut icon" href="favicon.ico"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#050605">
+  <link rel="manifest" href="manifest.json">
+<style>
+:root{--bg:#050605;--card:#0c110e;--card2:#101612;--line:rgba(255,255,255,.08);--green:#33d46f;--green2:#77ff9f;--text:#f4f7f5;--muted:#a6b1aa;--max:1180px;--font:'Plus Jakarta Sans',system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 20% 0%,rgba(51,212,111,.14),transparent 30%),radial-gradient(circle at 90% 80%,rgba(51,212,111,.08),transparent 30%),#050605;color:var(--text);font-family:var(--font);min-height:100vh}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:10;background:rgba(5,6,5,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.top-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:-.04em;text-transform:uppercase}.brand span{display:block;color:var(--green);font-size:.72rem;letter-spacing:.28em}.nav{display:flex;gap:10px}.nav a{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--muted);font-weight:800}.hero{padding:60px 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:22px}.hero-card,.form-card,.result-card,.cmd{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:34px;box-shadow:0 30px 80px rgba(0,0,0,.42)}.hero-card{padding:36px}.badge{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(51,212,111,.10);border:1px solid rgba(51,212,111,.22);color:#caffd8;font-weight:900;text-transform:uppercase;font-size:.8rem;letter-spacing:.05em;margin-bottom:22px}h1{font-size:clamp(3rem,7vw,5.8rem);line-height:.92;letter-spacing:-.07em;text-transform:uppercase;margin:0 0 18px}h1 span,.green{color:var(--green)}.sub{color:var(--muted);line-height:1.75;font-size:1.05rem;margin:0}.dashboard{padding:28px;display:grid;align-content:end;min-height:420px;position:relative;overflow:hidden}.dashboard::before{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,6,5,.20),rgba(5,6,5,.82)),url('assets/daily-command-hero.jpg') center/cover no-repeat;opacity:.82}.dash-content{position:relative;z-index:1}.mini-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.mini-stat{padding:16px;border-radius:22px;background:rgba(5,8,6,.66);border:1px solid rgba(51,212,111,.18);backdrop-filter:blur(10px)}.mini-stat strong{display:block;color:var(--green);font-size:1.6rem}.mini-stat span{color:var(--muted);font-weight:800;font-size:.85rem}.grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:22px;margin-bottom:44px}.form-card,.result-card{padding:28px}.form-grid{display:grid;gap:16px}.field label{display:block;margin-bottom:10px;font-weight:900}.input,.select{width:100%;height:62px;border-radius:18px;border:1px solid var(--line);background:#101612;color:#fff;padding:0 16px;font:inherit;font-weight:800;outline:none}.input:focus,.select:focus{border-color:var(--green);box-shadow:0 0 0 4px rgba(51,212,111,.12)}.btn{border:1px solid rgba(51,212,111,.30);cursor:pointer;height:66px;border-radius:999px;background:rgba(6,10,8,.42);backdrop-filter:blur(10px);font-weight:900;font-size:1.05rem;color:#effff3;margin-top:6px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}.btn:hover{background:rgba(51,212,111,.14);border-color:rgba(51,212,111,.48)}.result-card h2{font-size:2.2rem;letter-spacing:-.05em;margin:0 0 8px}.commands{display:grid;gap:14px;margin-top:20px}.cmd{display:grid;grid-template-columns:54px 1fr;gap:14px;align-items:start;padding:18px;border-radius:24px;background:#101612}.cmd i{width:54px;height:54px;border-radius:18px;background:rgba(51,212,111,.10);border:1px solid rgba(51,212,111,.20);display:grid;place-items:center;color:var(--green);font-size:1.4rem}.cmd h3{margin:0 0 6px}.cmd p{margin:0;color:var(--muted);line-height:1.6}.note{padding:18px;border-radius:22px;border:1px solid rgba(51,212,111,.18);background:rgba(51,212,111,.06);color:#dcffe6;line-height:1.65;margin-top:18px}@media(max-width:900px){.hero,.grid{grid-template-columns:1fr}.nav{display:none}.mini-stats{grid-template-columns:1fr}h1{letter-spacing:-.04em}}
+.loading-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(5,7,6,.78);backdrop-filter:blur(16px);z-index:9999;opacity:0;pointer-events:none;transition:opacity .28s ease}.loading-overlay.show{opacity:1;pointer-events:auto}.loading-card{width:min(92vw,420px);background:linear-gradient(180deg,rgba(15,21,18,.96),rgba(9,14,11,.96));border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:26px 24px;box-shadow:0 30px 80px rgba(0,0,0,.45);text-align:center;position:relative;overflow:hidden}.loading-glow{position:absolute;inset:-30% auto auto 50%;width:240px;height:240px;transform:translateX(-50%);background:radial-gradient(circle,rgba(49,230,110,.18),transparent 60%);filter:blur(10px)}.loading-ring{width:78px;height:78px;margin:6px auto 18px;border-radius:50%;border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;position:relative;background:rgba(255,255,255,.02)}.loading-ring::before{content:'';position:absolute;inset:-6px;border-radius:50%;border:3px solid transparent;border-top-color:#66ff9d;border-right-color:rgba(102,255,157,.32);animation:spin 1s linear infinite}.loading-core{width:42px;height:42px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#7cffaa,#1cb85d);box-shadow:0 0 28px rgba(49,230,110,.35);animation:pulse 1.2s ease-in-out infinite}.loading-title{font-size:1.15rem;font-weight:900;letter-spacing:-.03em;margin-bottom:8px}.loading-text{color:#9aa39d;line-height:1.65;font-size:.95rem;min-height:48px}.loading-progress{height:10px;border-radius:999px;background:rgba(255,255,255,.07);overflow:hidden;margin-top:18px;border:1px solid rgba(255,255,255,.06)}.loading-progress span{display:block;height:100%;width:0%;border-radius:999px;background:linear-gradient(90deg,#2cda69,#73ffad);box-shadow:0 0 18px rgba(49,230,110,.32);transition:width .32s ease}.loading-note{margin-top:12px;color:#7f8a84;font-size:.82rem}.page-is-loading{overflow:hidden}@keyframes spin{to{transform:rotate(360deg)}}@keyframes pulse{0%,100%{transform:scale(.92);opacity:.85}50%{transform:scale(1);opacity:1}}
+
+/* Smooth page transition */
+@keyframes whPageEnter{from{opacity:0;transform:translateY(10px) scale(.997);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+body{animation:whPageEnter .48s cubic-bezier(.16,1,.3,1) both;}
+body.wh-page-exit{opacity:0!important;transform:translateY(8px) scale(.997)!important;filter:blur(3px);transition:opacity .22s ease,transform .22s ease,filter .22s ease;}
+@media (prefers-reduced-motion:reduce){body{animation:none!important}.wh-page-exit{transition:none!important}}
+
+
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+  <script src="./analytics.js" defer></script>
+</head>
+<body>
+<header class="top"><div class="wrap top-inner"><a class="brand" href="index.html">Wellness<span>Hub Indonesia</span></a><nav class="nav"><a href="index.html">Beranda</a><a href="meal.html">Meal</a><a href="offline.html">Offline</a><a href="challenge.html">Challenge</a><a href="tribe.html">Tribe</a><a href="music.html">Radio</a></nav></div></header>
+<main class="wrap">
+<section class="hero"><div class="hero-card"><div class="badge"><i class="fa-solid fa-bolt"></i> Daily Wellness Command</div><h1>Satu instruksi. <span>Hari ini.</span></h1><p class="sub">Versi gratis dari wellness AI: lo masukin kondisi hari ini, lalu sistem kasih arahan simpel. Bukan diagnosis medis — cuma kompas harian biar nggak overthinking.</p></div><div class="dashboard"><div class="dash-content"><div class="badge"><i class="fa-solid fa-chart-line"></i> Morning Check-in</div><div class="mini-stats"><div class="mini-stat"><strong id="dashSleep">7h</strong><span>Tidur</span></div><div class="mini-stat"><strong id="dashEnergy">6/10</strong><span>Energi</span></div><div class="mini-stat"><strong id="dashStress">Normal</strong><span>Mode</span></div></div></div></div></section>
+<section class="grid"><div class="form-card"><div class="badge"><i class="fa-solid fa-pen-to-square"></i> Input Cepat</div><div class="form-grid"><div class="field"><label>Tidur semalam</label><input class="input" id="sleep" type="number" min="0" max="14" value="6" placeholder="Misal: 6"></div><div class="field"><label>Energi hari ini</label><select class="select" id="energy"><option value="low">Rendah</option><option value="medium" selected>Sedang</option><option value="high">Tinggi</option></select></div><div class="field"><label>Mood</label><select class="select" id="mood"><option value="down">Drop / berat</option><option value="normal" selected>Normal</option><option value="good">Bagus</option></select></div><div class="field"><label>Badan pegal?</label><select class="select" id="sore"><option value="no" selected>Nggak</option><option value="yes">Iya</option></select></div><div class="field"><label>Goal tubuh</label><select class="select" id="goal"><option value="bulking">Bulking</option><option value="cutting">Fat Loss</option><option value="maintenance" selected>Maintenance</option></select></div><button class="btn" onclick="generateCommand()">Buat Instruksi Hari Ini <i class="fa-solid fa-arrow-right"></i></button></div></div><div class="result-card"><h2 id="headline">Instruksi lo hari ini</h2><p class="sub" id="summary">Isi data cepat dulu, lalu sistem kasih arahan sederhana.</p><div class="commands" id="commands"></div><div class="note">Catatan: ini bukan pengganti saran dokter/ahli gizi. Ini panduan habit awal biar lo punya arah harian yang simpel.</div></div></section>
+</main>
+<script>
+function startFancyLoading(onDone, steps=[{title:'Membaca kondisi hari ini...',text:'Tidur, energi, mood, dan goal lagi dipetakan.'},{title:'Menyusun daily command...',text:'Sistem lagi pilih instruksi kecil yang realistis buat hari ini.'},{title:'Merapikan hasil...',text:'Biar arahan harian lo enak dibaca dan langsung bisa dikerjain.'}], totalMs=680){
+  const loadingOverlay=document.getElementById('loadingOverlay');
+  const loadingTitle=document.getElementById('loadingTitle');
+  const loadingText=document.getElementById('loadingText');
+  const loadingBar=document.getElementById('loadingBar');
+  if(!loadingOverlay||!loadingTitle||!loadingText||!loadingBar){onDone();return;}
+  document.body.classList.add('page-is-loading');
+  loadingOverlay.classList.add('show');
+  loadingBar.style.width='10%';
+  const stepMs=Math.max(160, Math.floor(totalMs/steps.length));
+  steps.forEach((step,index)=>{
+    setTimeout(()=>{
+      loadingTitle.textContent=step.title;
+      loadingText.textContent=step.text;
+      loadingBar.style.width=`${Math.min(100, 20 + Math.round(((index+1)/steps.length)*80))}%`;
+    }, index*stepMs);
+  });
+  setTimeout(()=>{loadingBar.style.width='100%';}, Math.max(200,totalMs-150));
+  setTimeout(()=>{loadingOverlay.classList.remove('show');document.body.classList.remove('page-is-loading');onDone();}, totalMs);
+}
+
+function renderCommand(){
+  const sleep=Number(document.getElementById('sleep').value)||0;
+  const energy=document.getElementById('energy').value;
+  const mood=document.getElementById('mood').value;
+  const sore=document.getElementById('sore').value;
+  const goal=document.getElementById('goal').value;
+  let mode='Stabil';
+  let commands=[];
+
+  if(sleep<6||energy==='low'||sore==='yes'){
+    mode='Recovery';
+    commands.push(['fa-moon','Recovery dulu','Latihan ringan saja: jalan 15–20 menit atau stretching 5 menit. Jangan maksa ego.']);
+    commands.push(['fa-droplet','Air putih 2L','Energi rendah sering makin parah kalau dehidrasi. Mulai dari air.']);
+  }else if(energy==='high'){
+    mode='Push';
+    commands.push(['fa-dumbbell','Latihan utama','Badan siap dipakai. Lakukan latihan sesuai goal, tapi tetap pemanasan.']);
+    commands.push(['fa-chart-simple','Catat progress','Tulis beban/reps atau langkah hari ini biar besok nggak ngulang dari nol.']);
+  }else{
+    commands.push(['fa-person-walking','Gerak cukup','Target minimal 8.000 langkah atau latihan ringan 20 menit.']);
+    commands.push(['fa-bowl-food','Makan terarah','Jaga porsi. Tambahkan protein di tiap makan.']);
+  }
+
+  if(goal==='bulking') commands.push(['fa-fire-flame-curved','Prioritas bulking','Tambah 1 snack tinggi kalori: pisang + susu / roti + telur / nasi tambahan.']);
+  if(goal==='cutting') commands.push(['fa-scale-balanced','Prioritas fat loss','Kurangi minuman manis hari ini dan jaga defisit kecil. Jangan ekstrem.']);
+  if(goal==='maintenance') commands.push(['fa-heart-pulse','Prioritas fit','Jaga pola stabil: makan cukup, gerak cukup, tidur jangan berantakan.']);
+  if(mood==='down') commands.push(['fa-brain','Mood drop','Jangan cari sempurna. Selesaikan 1 aksi kecil dulu supaya momentum balik.']);
+
+  document.getElementById('headline').innerText=`Mode hari ini: ${mode}`;
+  document.getElementById('summary').innerText='Lakukan 2–4 instruksi kecil ini. Fokus eksekusi, bukan overthinking.';
+  document.getElementById('commands').innerHTML=commands.map(c=>`<div class="cmd"><i class="fa-solid ${c[0]}"></i><div><h3>${c[1]}</h3><p>${c[2]}</p></div></div>`).join('');
+  document.getElementById('dashSleep').innerText=sleep+'h';
+  document.getElementById('dashEnergy').innerText=energy==='low'?'3/10':energy==='high'?'8/10':'6/10';
+  document.getElementById('dashStress').innerText=mode;
+  localStorage.setItem('wh_daily_last',JSON.stringify({sleep,energy,mood,sore,goal,mode,date:new Date().toISOString()}));
+}
+
+function generateCommand(withAnimation=true){
+  if(withAnimation){
+    startFancyLoading(()=>renderCommand());
+  } else {
+    renderCommand();
+  }
+}
+
+window.addEventListener('load',()=>{
+  const last=localStorage.getItem('wh_daily_last');
+  if(last){
+    try{
+      const d=JSON.parse(last);
+      document.getElementById('sleep').value=d.sleep;
+      document.getElementById('energy').value=d.energy;
+      document.getElementById('mood').value=d.mood;
+      document.getElementById('sore').value=d.sore;
+      document.getElementById('goal').value=d.goal;
+    }catch(e){}
+  }
+  generateCommand(false);
+});
+</script>
+<div class="loading-overlay" id="loadingOverlay" aria-hidden="true"><div class="loading-card"><div class="loading-glow"></div><div class="loading-ring"><div class="loading-core"></div></div><div class="loading-title" id="loadingTitle">Memproses data lo...</div><div class="loading-text" id="loadingText">Sistem lagi nyusun hasil yang enak dilihat dan gampang dipakai.</div><div class="loading-progress"><span id="loadingBar"></span></div><div class="loading-note">Bentar aja ya, biar hasilnya berasa premium.</div></div></div>
+
+<script>
+(function(){
+  window.addEventListener('pageshow',function(){document.body.classList.remove('wh-page-exit')});
+  document.addEventListener('click',function(e){
+    const a=e.target.closest('a');
+    if(!a) return;
+    const href=a.getAttribute('href')||'';
+    if(!href || href.startsWith('#') || href.startsWith('javascript:')) return;
+    if(a.target==='_blank' || a.hasAttribute('download')) return;
+    let url;
+    try{url=new URL(a.href, window.location.href)}catch(err){return;}
+    if(url.origin!==window.location.origin) return;
+    e.preventDefault();
+    document.body.classList.add('wh-page-exit');
+    setTimeout(function(){window.location.href=a.href},180);
+  });
+})();
+</script>
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function(){
+    navigator.serviceWorker.register('service-worker.js').catch(function(){});
+  });
+}
+</script>
+</body>
+</html>

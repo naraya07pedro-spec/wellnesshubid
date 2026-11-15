@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WellnessHubID Coding Video Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *{box-sizing:border-box} body{margin:0;background:#030503;color:#f4f7f5;font-family:'Plus Jakarta Sans',system-ui,sans-serif;overflow:hidden}
+    .stage{width:100vw;height:100vh;display:grid;place-items:center;background:radial-gradient(circle at 50% 30%,rgba(119,255,159,.18),transparent 35%),linear-gradient(180deg,#030503,#08110b)}
+    .frame{position:relative;width:min(100vw,56.25vh);height:min(177.77vw,100vh);max-width:430px;max-height:765px;border-radius:34px;overflow:hidden;border:1px solid rgba(119,255,159,.24);background:linear-gradient(180deg,#07110a,#050705);box-shadow:0 30px 130px rgba(0,0,0,.68)}
+    .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(119,255,159,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(119,255,159,.07) 1px,transparent 1px);background-size:34px 34px;animation:grid 10s linear infinite;opacity:.48}
+    .scan{position:absolute;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#77ff9f,transparent);box-shadow:0 0 34px #77ff9f;animation:scan 3s ease-in-out infinite}
+    .logo{position:absolute;top:46px;left:50%;translate:-50% 0;width:154px;height:154px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#0b1a0f,#030503 68%);border:1px solid rgba(119,255,159,.25);box-shadow:0 0 0 18px rgba(119,255,159,.035),0 0 70px rgba(119,255,159,.28);animation:logo 10s ease both}
+    .logo img{width:108px;height:108px;border-radius:50%;object-fit:cover}
+    .title{position:absolute;top:225px;left:24px;right:24px;text-align:center;font-weight:900;font-size:35px;line-height:.96;letter-spacing:-.07em;animation:title 10s ease both}.title span{color:#77ff9f}
+    .panel{position:absolute;left:22px;right:22px;bottom:118px;border-radius:24px;padding:18px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);backdrop-filter:blur(14px);animation:panel 10s ease both}
+    .step{display:flex;align-items:center;gap:10px;margin:9px 0;padding:12px 13px;border-radius:16px;background:rgba(0,0,0,.22);border:1px solid rgba(119,255,159,.12);font-weight:900;font-size:14px;animation:step 10s ease both}.step b{color:#77ff9f}.step:nth-child(2){animation-delay:.12s}.step:nth-child(3){animation-delay:.24s}.step:nth-child(4){animation-delay:.36s}
+    .cta{position:absolute;left:32px;right:32px;bottom:44px;border-radius:999px;padding:17px;text-align:center;background:linear-gradient(180deg,#77ff9f,#33d46f);color:#061008;font-weight:900;box-shadow:0 18px 48px rgba(51,212,111,.32);animation:cta 10s ease both}
+    @keyframes grid{to{background-position:68px 68px}} @keyframes scan{0%,100%{top:0;opacity:.15}50%{top:76%;opacity:1}}
+    @keyframes logo{0%{opacity:0;scale:.72;filter:blur(12px)}12%,100%{opacity:1;scale:1;filter:blur(0)}}
+    @keyframes title{0%,15%{opacity:0;translate:0 18px;filter:blur(8px)}25%,100%{opacity:1;translate:0 0;filter:blur(0)}}
+    @keyframes panel{0%,33%{opacity:0;translate:0 28px;filter:blur(10px)}45%,100%{opacity:1;translate:0 0;filter:blur(0)}}
+    @keyframes step{0%,42%{opacity:0;translate:-18px 0}52%,100%{opacity:1;translate:0 0}}
+    @keyframes cta{0%,64%{opacity:0;scale:.94}76%,100%{opacity:1;scale:1}}
+  
+
+/* === V6.43 CLEAN SMOOTH BACKGROUND: REMOVE GREEN/BOX GRID ONLY === */
+.app-bg-grid,
+.grid-bg,
+.program-progress-panel::before,
+.life-phone-v60::before,
+.life-confetti-v60,
+.life-stage-fx-v84 .fx-noise{
+  display:none!important;
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+body.onboarding-only::before{
+  opacity:0!important;
+  background:none!important;
+  background-image:none!important;
+}
+
+</style>
+</head>
+<body>
+  <main class="stage" aria-label="WellnessHubID 10-second coded video preview">
+    <section class="frame">
+      <div class="grid"></div><div class="scan"></div>
+      <div class="logo"><img src="favicon.png" alt="WellnessHubID"></div>
+      <h1 class="title">Bingung mulai sehat <span>dari mana?</span></h1>
+      <div class="panel">
+        <div class="step"><b>01</b> Cek kebutuhan tubuh</div>
+        <div class="step"><b>02</b> Dapet menu murah</div>
+        <div class="step"><b>03</b> Mulai latihan ringan</div>
+        <div class="step"><b>04</b> Masuk misi harian</div>
+      </div>
+      <div class="cta">Mulai dari sini</div>
+    </section>
+  </main>
+</body>
+</html>
